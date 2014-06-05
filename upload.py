@@ -8,7 +8,7 @@ import getpass                      #password reading from commandline
 LOGIN_URL = "http://igem.org/Login"
 #DO NOT end base url with "/"
 BASE_URL = "http://2014.igem.org/wiki/index.php?title=Team:Aalto-Helsinki"
-AUTO_PAGES = ["INDEX","testpreview"]
+AUTO_PAGES = ["index","testpreview"]
 #-----------------------#
 
 # Wrangler class - parser object which parses HTML
@@ -35,7 +35,7 @@ def upload(page, file, headerfooter = False):
     global opener 
     #-------- get edit id --------#
     try:
-        if (page == "INDEX"):
+        if (page == "index"):
             resp = opener.open(BASE_URL+"&action=edit")
         else:
             resp = opener.open(BASE_URL+"/"+page+"&action=edit")
@@ -59,17 +59,17 @@ def upload(page, file, headerfooter = False):
     #---- read header & footer ---#
     if (headerfooter == True):
         try:
-            with open ("HEADER.html", "r") as myfile:
+            with open ("include/header.html", "r") as myfile:
                 header_data=myfile.read().replace('\n', '')
         except FileNotFoundError:
-            print("no HEADER.html found. Not including")
+            print("no include/header.html found. Not including")
             header_data = ""
 
         try:
-            with open ("FOOTER.html", "r") as myfile:
+            with open ("include/footer.html", "r") as myfile:
                 footer_data=myfile.read().replace('\n', '')
         except FileNotFoundError:
-            print("no FOOTER.html found. Not including")
+            print("no include/footer.html found. Not including")
             footer_data = ""
         file_data = header_data+file_data+footer_data
     #------- post new edit -------#

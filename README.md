@@ -23,8 +23,9 @@ file:		filename in current directory
 There is also an automatic option `python upload.py -auto`
 which reads the source defined pages to wiki.
 eg.
-AUTO_PAGES = ["members", "main"]
+AUTO_PAGES = ["members", "main", "INDEX"]
 will upload mambaers.html to wikipage "members" and so on.
+`INDEX` is a special entry. It updates the wiki main page (...index.php?title=Team:teamname) its contents are taken from INDEX.html
 
 You can also specify a header and footer to be included in every page.
-These can be stored in header.html and footer.html and are then automatically included when autoupdating.
+These can be stored in HEADER.html and FOOTER.html and are then automatically included when autoupdating. Please note that the names hav to be capitalized. This prevents collisions.

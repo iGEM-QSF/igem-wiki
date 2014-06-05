@@ -30,7 +30,7 @@ class Wrangler(HTMLParser):
 
 #http://stackoverflow.com/questions/189555/how-to-use-python-to-login-to-a-webpage-and-retrieve-cookies-for-later-usage                   
 #def main(argv=sys.argv):
-def upload(page, file):                        
+def upload(page, file, headerfooter = False):                        
     global opener 
     #-------- get edit id --------#
     try:
@@ -51,7 +51,23 @@ def upload(page, file):
     except FileNotFoundError:
         #print("File {:s} not found".format(file))
         return 2
-    
+     
+    #---- read header & footer ---#
+    if (headerfooter == True):
+        try:
+            with open ("header.html", "r") as myfile:
+                header_data=myfile.read().replace('\n', '')
+        except FileNotFoundError:
+            print("no header.html found. Not including")
+            header_data = ""
+
+        try:
+            with open ("footer.html", "r") as myfile:
+                footer_data=myfile.read().replace('\n', '')
+        except FileNotFoundError:
+            print("no footer.html found. Not including")
+            footer_data = ""
+        file_data = header_data+file_data+footer_data
     #------- post new edit -------#
     try:
         data['wpTextbox1'] = file_data
@@ -111,8 +127,9 @@ def main(argv=sys.argv):
         return 1
     #------- automation ---------#
     if (argv[1] == '-auto'):
+        print("Auto updating pages: ",",".join(AUTO_PAGES))
         for p in AUTO_PAGES:
-            r=upload(p,p+".html")
+            r=upload(p,p+".html", True)
             if (r == 2):
                 print("{:s}.html\t\tFile not found".format(p))
             elif (r== 1):

@@ -26,3 +26,5 @@ eg.
 AUTO_PAGES = ["members", "main"]
 will upload mambaers.html to wikipage "members" and so on.
 
+You can also specify a header and footer to be included in every page.
+These can be stored in header.html and footer.html and are then automatically included when autoupdating.

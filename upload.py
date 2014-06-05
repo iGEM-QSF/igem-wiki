@@ -6,8 +6,9 @@ import getpass                      #password reading from commandline
 #import urllib
 #------ SETTINGS -------#
 LOGIN_URL = "http://igem.org/Login"
-BASE_URL = "http://2014.igem.org/wiki/index.php?title=Team:Aalto-Helsinki/"
-AUTO_PAGES = ["testpreview"]
+#DO NOT end base url with "/"
+BASE_URL = "http://2014.igem.org/wiki/index.php?title=Team:Aalto-Helsinki"
+AUTO_PAGES = ["INDEX","testpreview"]
 #-----------------------#
 
 # Wrangler class - parser object which parses HTML
@@ -34,7 +35,10 @@ def upload(page, file, headerfooter = False):
     global opener 
     #-------- get edit id --------#
     try:
-        resp = opener.open(BASE_URL+page+"&action=edit")
+        if (page == "INDEX"):
+            resp = opener.open(BASE_URL+"&action=edit")
+        else:
+            resp = opener.open(BASE_URL+"/"+page+"&action=edit")
         content = resp.read()
         parser = Wrangler()
         parser.feed(content.decode('utf8'))
@@ -55,17 +59,17 @@ def upload(page, file, headerfooter = False):
     #---- read header & footer ---#
     if (headerfooter == True):
         try:
-            with open ("header.html", "r") as myfile:
+            with open ("HEADER.html", "r") as myfile:
                 header_data=myfile.read().replace('\n', '')
         except FileNotFoundError:
-            print("no header.html found. Not including")
+            print("no HEADER.html found. Not including")
             header_data = ""
 
         try:
-            with open ("footer.html", "r") as myfile:
+            with open ("FOOTER.html", "r") as myfile:
                 footer_data=myfile.read().replace('\n', '')
         except FileNotFoundError:
-            print("no footer.html found. Not including")
+            print("no FOOTER.html found. Not including")
             footer_data = ""
         file_data = header_data+file_data+footer_data
     #------- post new edit -------#

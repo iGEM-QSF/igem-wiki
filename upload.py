@@ -88,13 +88,13 @@ def login( username, password):
 
 def main(argv=sys.argv):
     #----- arguments -------------#
-    if (argv[1] != '-auto'):
-        try:
+    try:
+        if (argv[1] != '-auto'):
             page = argv[1]
             file = argv[2]
-        except IndexError:
-            print("Usage: upload.py wikipage filename\n\nwikipage\tThe subpage in the wiki.\n\t\teg. in igem.org/wiki/index.php?title=Team:teamname/members\n\t\twikipage=members\n\nfile\t\tfilename in current directory")
-            return
+    except IndexError:
+        print("Usage: upload.py wikipage filename\n\nwikipage\tThe subpage in the wiki.\n\t\teg. in igem.org/wiki/index.php?title=Team:teamname/members\n\t\twikipage=members\n\nfile\t\tfilename in current directory")
+        return
 
     #------- read input ----------#    
     try:

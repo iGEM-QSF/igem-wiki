@@ -100,6 +100,10 @@ def login( username, password):
         opener = urllib.request.build_opener( urllib.request.HTTPCookieProcessor(cookie))
         encoded_data = parse.urlencode(login_data)
         resp = opener.open(LOGIN_URL, encoded_data.encode('utf8'))
+        #check if login failed
+        response = resp.read()
+        if (response.find(b"That username") != -1):
+            return 2
     except urllib.error.URLError:
         print("Login server not found. Perhaps the URL is wrong in the code?")
         return 1
@@ -129,7 +133,11 @@ def main(argv=sys.argv):
         print("Aborting...")
         return 1
     print("Logging in")
-    if (login(username, password) != 0):
+    login_result = login(username, password) 
+    if (login_result == 2):
+        print("Invalid username/password")
+        return 1
+    elif (login_result != 0):
         print("Server error when logging in")
         return 1
     #------- automation ---------#
@@ -147,7 +155,11 @@ def main(argv=sys.argv):
                 print("{:s}.html\t\tUploaded".format(p))
     else:
         print("Uploading contents of \"{:s}\" to \"{:s}\"".format(file, page))
-        upload( page, file, True)
+        r = upload( page, file)
+        if (r == 2):
+            print("{:s}.html\t\tFile not found".format(file))
+        elif (r != 0):
+            print("Error occured")
     print("Done")
         
                 

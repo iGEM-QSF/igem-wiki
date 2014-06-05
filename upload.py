@@ -8,7 +8,7 @@ import getpass                      #password reading from commandline
 LOGIN_URL = "http://igem.org/Login"
 #DO NOT end base url with "/"
 BASE_URL = "http://2014.igem.org/wiki/index.php?title=Team:Aalto-Helsinki"
-AUTO_PAGES = ["index","testpreview", "Parts", "Project", "Team", "Notebook", "Sponsors"]
+AUTO_PAGES = ["index","testpreview", "Parts", "Project", "Team", "Notebook", "Sponsors", "header", "footer"]
 #-----------------------#
 
 # Wrangler class - parser object which parses HTML
@@ -147,7 +147,7 @@ def main(argv=sys.argv):
                 print("{:s}.html\t\tUploaded".format(p))
     else:
         print("Uploading contents of \"{:s}\" to \"{:s}\"".format(file, page))
-        upload( page, file)
+        upload( page, file, True)
     print("Done")
         
                 

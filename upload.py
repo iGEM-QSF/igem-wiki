@@ -78,7 +78,10 @@ def upload(page, file, headerfooter = False):
         #data['wpSave'] = 'Save page'
             
         encoded_data = parse.urlencode(data)
-        resp = opener.open("http://2014.igem.org/wiki/index.php?title=Team:Aalto-Helsinki/testpreview&action=submit", encoded_data.encode('utf8'))
+        if (page == "index"):
+            resp = opener.open(BASE_URL+"&action=submit", encoded_data.encode('utf8'))
+        else:
+            resp = opener.open(BASE_URL+"/"+page+"&action=submit", encoded_data.encode('utf8'))
         #print (resp.read())
         #headers = {"Content-type": "multipart/form-data;",
     except:

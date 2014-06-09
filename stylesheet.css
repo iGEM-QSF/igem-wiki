@@ -1,3 +1,21 @@
 p {
 	/* font-size:50px; */
 }
+
+.navbar td{
+	text-align:center;
+}
+
+.navbar .menu-link {
+	border:1px solid black;
+	height:45px;
+	background-color: #e7e7e7;
+}
+
+.menu-link a {
+	color:#000000;
+}
+
+.navbar td:hover{
+	background-color: #d3d3d3;
+}

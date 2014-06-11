@@ -51,7 +51,7 @@ def upload(page, file, headerfooter = False):
     #---- read requested file ----#
     try:
         with open (file, "r") as myfile:
-            file_data=myfile.read().replace('\n', '')
+            file_data=myfile.read()
     except FileNotFoundError:
         #print("File {:s} not found".format(file))
         return 2
@@ -60,21 +60,21 @@ def upload(page, file, headerfooter = False):
     if (headerfooter == True):
         try:
             with open ("include/header.html", "r") as myfile:
-                header_data=myfile.read().replace('\n', '')
+                header_data=myfile.read()
         except FileNotFoundError:
             print("no include/header.html found. Not including")
             header_data = ""
 
         try:
             with open ("include/footer.html", "r") as myfile:
-                footer_data=myfile.read().replace('\n', '')
+                footer_data=myfile.read()
         except FileNotFoundError:
             print("no include/footer.html found. Not including")
             footer_data = ""
-            
+
         try:
             with open ("include/sidebartemplate.html", "r") as myfile:
-                sidebar_data=myfile.read().replace('\n', '')
+                sidebar_data=myfile.read()
         except FileNotFoundError:
             print("no include/sidebartemplate.html found. Not including")
             sidebar_data = ""

@@ -71,7 +71,14 @@ def upload(page, file, headerfooter = False):
         except FileNotFoundError:
             print("no include/footer.html found. Not including")
             footer_data = ""
-        file_data = header_data+file_data+footer_data
+            
+        try:
+            with open ("include/sidebartemplate.html", "r") as myfile:
+                sidebar_data=myfile.read().replace('\n', '')
+        except FileNotFoundError:
+            print("no include/sidebartemplate.html found. Not including")
+            sidebar_data = ""
+        file_data = header_data+sidebar_data+file_data+footer_data
     #------- post new edit -------#
     try:
         data['wpTextbox1'] = file_data

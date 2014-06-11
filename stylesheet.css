@@ -20,14 +20,23 @@ p {
 	background-color: #d3d3d3;
 }
 
-#content {
+#pagecontent {
 	margin: 0 auto;
 	margin-top: 5em;
 	width: 50%;
 	padding: 1em;
 	border-radius: 10px;
-	background-color: gray;
 	color: white;
+}
+
+#welcomepage {
+	margin: 0 auto;
+	margin-top: 5em;
+	width: 50%;
+	padding: 1em;
+	border-radius: 10px;
+	color: white;
+	background-color: gray;
 }
 
 #sidebar.affix-top{

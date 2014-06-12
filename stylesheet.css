@@ -39,18 +39,44 @@ p {
 }
 
 #top-section {
-	height: 0px;
-	border: none;
-	width: 980px;
-	margin: 0 auto;
-	padding: 0 0 0 0;
-	background-color: transparent;
-	overflow: hide;
+  height: 0px;
+  border: none;
+  width: 980px;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+  background-color: transparent;
+  overflow: hide;
+  position: initial;
+}
+
+#menubar a {
+  color:#999999;
+}
+
+#menubar{
+  margin-left:245px;
+}
+
+.left-menu:hover {
+    color: #999999;
+    background-color: white
+}
+
+.right-menu li {
+    background-color: white;
+}
+.right-menu li a {
+    color: #999999;
+    background-color: white;
 }
 
 .sidebar-nav li a.active{
 	background-color: #999999;
 	color:white;
+}
+
+.sidebar-nav li a:hover{
+  background-color: #cccccc;
 }
 
 /*SIDEBAAAAAAAAARRRRRRR  STYYYYLEEEEEES  sidebar.css*/

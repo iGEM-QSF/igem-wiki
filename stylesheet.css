@@ -59,15 +59,15 @@ p {
 
 .left-menu:hover {
     color: #999999;
-    background-color: white
+    background-color: transparent;
 }
 
 .right-menu li {
-    background-color: white;
+    background-color: transparent;
 }
 .right-menu li a {
     color: #999999;
-    background-color: white;
+    background-color: transparent;
 }
 
 .sidebar-nav li a.active{

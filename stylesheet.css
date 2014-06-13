@@ -2,6 +2,10 @@ p {
 	/* font-size:50px; */
 }
 
+a,a:visited {
+  color:#999999;
+}
+
 .navbar td{
 	text-align:center;
 }
@@ -70,15 +74,6 @@ p {
     background-color: transparent;
 }
 
-.sidebar-nav li a.active{
-	background-color: #999999;
-	color:white;
-}
-
-.sidebar-nav li a:hover{
-  background-color: #cccccc;
-}
-
 /*SIDEBAAAAAAAAARRRRRRR  STYYYYLEEEEEES  sidebar.css*/
 
 #sidebar.affix-top{
@@ -133,9 +128,22 @@ p {
   text-decoration: none;
 }
 
+.sidebar-nav img {
+  margin-left:20px;
+}
+
 .sidebar-nav li a:hover {
-  color: #000;
+  color: white;
   text-decoration: none;
+  background-color: #cccccc;
+}
+
+.sidebar-nav li a:hover{
+}
+
+.sidebar-nav li a.active{
+  background-color: #999999;
+  color:white;
 }
 
 .sidebar-nav li a:active,

@@ -12,26 +12,113 @@
 				<a href="http://2014.igem.org/Team:Aalto-Helsinki/Team">
 					Team 
 				</a>
+				<ul>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Team-About">About us</a>
+					</li>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Team-Members">Members</a>
+					</li>	
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Team-Attributions">Attributions</a>
+					</li>	
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Team-Cooperation">Cooperation</a>
+					</li>	
+				</ul>
 			</li>
 			<li>
 				<a href="http://2014.igem.org/Team:Aalto-Helsinki/Project">
-					Project / Attributions
+					Project
 				</a>
+				<ul>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Project-Abstract">Abstract</a>
+					</li>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Project-Introduction">Introduction</a>
+					</li>	
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Project-Methods">Methods</a>
+					</li>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Project-Results">Results</a>
+					</li>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Project-Discussion">Discussion</a>
+					</li>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Project-Parts">Parts</a>
+					</li>
+				</ul>
 			</li>
 			<li>
-				<a href="http://2014.igem.org/Team:Aalto-Helsinki/Parts">
-					Parts / Modeling / Software
+				<a href="http://2014.igem.org/Team:Aalto-Helsinki/Modeling">
+					Modeling
 				</a>
+				<ul>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Modeling-Scent">Scent-Nuffusion</a>
+					</li>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Modeling-Time">Time Spent</a>
+					</li>	
+				</ul>
 			</li>
 			<li>
-				<a href="http://2014.igem.org/Team:Aalto-Helsinki/Notebook">
-					Notebook / Safety
+				<a href="http://2014.igem.org/Team:Aalto-Helsinki/Software">
+					Software
 				</a>
+				<ul>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Modeling-Seeker">BioBrick Seeker</a>
+					</li>
+				</ul>
 			</li>
 			<li>
-				<a href="http://2014.igem.org/Team:Aalto-Helsinki/Sponsors">
-					Sponsors 
+				<a href="http://2014.igem.org/Team:Aalto-Helsinki/Notes">
+					Notes
 				</a>
+				<ul>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Notes-Notebook">Notebook</a>
+					</li>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Notes-Safety">Safety</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="http://2014.igem.org/Team:Aalto-Helsinki/Human-Practices">
+					Human Practices 
+				</a>
+				<ul>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Human-Practices-Heureka">Heureka</a>
+					</li>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Human-Practices-SoS">SoS</a>
+					</li>	
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Human-Practices-Teaching-Videos">Teaching Videos</a>
+					</li>	
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Human-Practices-Social-Media">Social Media</a>
+					</li>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Human-Practices-Synthetic-Biology-For-Dummies">SynBio For Dummies</a>
+					</li>
+				</ul>
+			<li>
+				<a href="http://2014.igem.org/Team:Aalto-Helsinki/Qualifications">
+					Qualifications
+				</a>
+				<ul>
+					<li>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Qualifications-Medals">Medals</a>
+					</li>
+				</ul>
+			</li>
 			</li>
 			<a href="http://2014.igem.org/Main_Page">
 				<img src="http://2014.igem.org/wiki/images/5/5d/Aalto-helsinki-igem-black-100.png" width="55px">
@@ -41,6 +128,10 @@
 </div>
 <script>
 	$(document).ready(function() {
+	$('.sidebar-nav li ul li').hide();
+	console.log($('.sidebar-nav ul li a'));
+	$('.sidebar-nav li a .active').siblings.show();
+
 	if(location.pathname != "/Team:Aalto-Helsinki") {
 		$('#sidebar-wrapper a[href^="http://2014.igem.org' + location.pathname + '"]').addClass('active');
 	} else $('#sidebar-wrapper a.home').addClass('active');

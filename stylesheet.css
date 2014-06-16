@@ -128,6 +128,10 @@ a,a:visited {
   text-decoration: none;
 }
 
+.sidebar-nav li ul li{
+  list-style: none;
+}
+
 .sidebar-nav img {
   margin-left:20px;
 }

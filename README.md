@@ -6,7 +6,7 @@ Wiki pages for the Aalto-Helsinki iGEM-2014 team.
 * Installing the python upload tool
 1. download the lib at
 https://code.google.com/p/httplib2/downloads/list
-extract and run `python setup.py install`. If you are on mac, you need to install python3 and ´python3´ instead of ´python´ in the rest of the instructions.
+extract and run `python setup.py install`. If you are on mac, you need to install python3 and `python3` instead of `python` in the rest of the instructions.
 
 2. now it works
 

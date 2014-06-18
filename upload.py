@@ -8,7 +8,7 @@ import getpass                      #password reading from commandline
 LOGIN_URL = "http://igem.org/Login"
 #DO NOT end base url with "/"
 BASE_URL = "http://2014.igem.org/wiki/index.php?title=Team:Aalto-Helsinki"
-AUTO_PAGES = ["index","testpreview", "Parts", "Project", "Team", "About", "Notebook", "Sponsors"]
+AUTO_PAGES = ["index","testpreview", "Parts", "Project", "Team", "About", "Notebook", "Sponsors","Members","Attributions","Cooperation","Abstract","Introduction","Methods","Results","Discussion","Modeling","Scent","Time","Software","Seeker","Notes","Notebook","Safety","Human Practices","Heureka","SoS","Teaching-Videos","Social-Media","Synthetic-Biology-For-Dummies","Qualifications","Medals"]
 #-----------------------#
 
 # Wrangler class - parser object which parses HTML

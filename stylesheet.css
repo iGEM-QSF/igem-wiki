@@ -136,13 +136,18 @@ a,a:visited {
   margin-left:20px;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li a:hover, .sidebar-nav li ul li a.active:hover{
   color: white;
   text-decoration: none;
   background-color: #cccccc;
 }
 
 .sidebar-nav li a:hover{
+}
+
+.sidebar-nav a.active.submenu{
+  background-color: #999999;
+  color:white;
 }
 
 .sidebar-nav li a.active{

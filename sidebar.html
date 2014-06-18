@@ -14,16 +14,16 @@
 				</a>
 				<ul>
 					<li>
-						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Team-About">About us</a>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/About">About us</a>
 					</li>
 					<li>
-						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Team-Members">Members</a>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Members">Members</a>
 					</li>	
 					<li>
-						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Team-Attributions">Attributions</a>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a>
 					</li>	
 					<li>
-						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Team-Cooperation">Cooperation</a>
+						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Cooperation">Cooperation</a>
 					</li>	
 				</ul>
 			</li>
@@ -134,8 +134,10 @@
 	} else $('#sidebar-wrapper a.home').addClass('active');
 
 	$('.sidebar-nav li ul li').hide();
-	console.log($('.sidebar-nav li a.active'));
-	$('.sidebar-nav li a.active').parent().show();
+	console.log($('.sidebar-nav li a.active').siblings());
+
+	$('.sidebar-nav li a.active').siblings().children().show();
+	$('.sidebar-nav li ul li a.active').parent().siblings().show();
 	$('.sidebar-nav li ul li a.active').addClass("submenu");
 });
 </script>

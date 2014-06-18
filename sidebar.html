@@ -128,13 +128,14 @@
 </div>
 <script>
 	$(document).ready(function() {
-	$('.sidebar-nav li ul li').hide();
-	console.log($('.sidebar-nav ul li a'));
-	$('.sidebar-nav li a .active').siblings.show();
 
 	if(location.pathname != "/Team:Aalto-Helsinki") {
 		$('#sidebar-wrapper a[href^="http://2014.igem.org' + location.pathname + '"]').addClass('active');
 	} else $('#sidebar-wrapper a.home').addClass('active');
+
+	$('.sidebar-nav li ul li').hide();
+	console.log($('.sidebar-nav li a.active'));
+	$('.sidebar-nav li a.active').parent().show();
 });
 </script>
 </html>

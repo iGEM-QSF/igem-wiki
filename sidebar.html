@@ -137,6 +137,7 @@
 	console.log($('.sidebar-nav li a.active').siblings());
 
 	$('.sidebar-nav li a.active').siblings().children().show();
+	$('.sidebar-nav li ul li a.active').parent().show();
 	$('.sidebar-nav li ul li a.active').parent().siblings().show();
 	$('.sidebar-nav li ul li a.active').addClass("submenu");
 });

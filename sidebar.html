@@ -13,16 +13,16 @@
 					Team 
 				</a>
 				<ul>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/About">About us</a>
 					</li>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Members">Members</a>
 					</li>	
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a>
 					</li>	
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Cooperation">Cooperation</a>
 					</li>	
 				</ul>
@@ -32,22 +32,22 @@
 					Project
 				</a>
 				<ul>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Abstract">Abstract</a>
 					</li>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Introduction">Introduction</a>
 					</li>	
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Methods">Methods</a>
 					</li>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Results">Results</a>
 					</li>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Discussion">Discussion</a>
 					</li>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
 					</li>
 				</ul>
@@ -57,10 +57,10 @@
 					Modeling
 				</a>
 				<ul>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Scent">Scent-Nuffusion</a>
 					</li>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Time">Time Spent</a>
 					</li>	
 				</ul>
@@ -70,7 +70,7 @@
 					Software
 				</a>
 				<ul>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Seeker">BioBrick Seeker</a>
 					</li>
 				</ul>
@@ -80,10 +80,10 @@
 					Notes
 				</a>
 				<ul>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a>
 					</li>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Safety">Safety</a>
 					</li>
 				</ul>
@@ -93,19 +93,19 @@
 					Human Practices 
 				</a>
 				<ul>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Heureka">Heureka</a>
 					</li>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/SoS">SoS</a>
 					</li>	
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Teaching-Videos">Teaching Videos</a>
 					</li>	
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Social-Media">Social Media</a>
 					</li>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Synthetic-Biology-For-Dummies">SynBio For Dummies</a>
 					</li>
 				</ul>
@@ -114,7 +114,7 @@
 					Qualifications
 				</a>
 				<ul>
-					<li>
+					<li style="display: none;">
 						<a href="http://2014.igem.org/Team:Aalto-Helsinki/Medals">Medals</a>
 					</li>
 				</ul>
@@ -133,7 +133,7 @@
 		$('#sidebar-wrapper a[href^="http://2014.igem.org' + location.pathname + '"]').addClass('active');
 	} else $('#sidebar-wrapper a.home').addClass('active');
 
-	$('.sidebar-nav li ul li').hide();
+	//$('.sidebar-nav li ul li').hide();
 	console.log($('.sidebar-nav li a.active').siblings());
 
 	$('.sidebar-nav li a.active').siblings().children().show();

@@ -74,6 +74,10 @@ a,a:visited {
     background-color: transparent;
 }
 
+.clocktitle .clock {
+  margin-top:2em;
+}
+
 /*SIDEBAAAAAAAAARRRRRRR  STYYYYLEEEEEES  sidebar.css*/
 
 #sidebar.affix-top{

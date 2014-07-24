@@ -3,7 +3,11 @@ p {
 }
 
 a,a:visited {
-  color:#999999;
+  color:#0AA699;
+}
+
+a:hover {
+    color:#90F0E8;
 }
 
 .navbar td{
@@ -13,7 +17,7 @@ a,a:visited {
 .navbar .menu-link {
   border:1px solid black;
   height:45px;
-  background-color: #e7e7e7;
+  background-color: #0AA699;
 }
 
 .menu-link a {
@@ -21,7 +25,7 @@ a,a:visited {
 }
 
 .navbar td:hover{
-  background-color: #d3d3d3;
+  background-color: #0AA699;
 }
 
 #pagecontent {
@@ -54,7 +58,7 @@ a,a:visited {
 }
 
 #menubar a {
-  color:#999999;
+  color:#0AA699;
 }
 
 #menubar{
@@ -62,7 +66,7 @@ a,a:visited {
 }
 
 .left-menu:hover {
-    color: #999999;
+    color: #90F0E8;
     background-color: transparent;
 }
 
@@ -70,7 +74,7 @@ a,a:visited {
     background-color: transparent;
 }
 .right-menu li a {
-    color: #999999;
+    color: #0AA699;
     background-color: transparent;
 }
 
@@ -106,7 +110,6 @@ a,a:visited {
   overflow-y: auto;
   z-index: 1000;
   transition: all 0.4s ease 0s;
-  font-size: 90%;
 }
 
 #page-content-wrapper {
@@ -124,11 +127,11 @@ a,a:visited {
 
 .sidebar-nav li {
   line-height: 35px;
-  text-indent: 20px;
+  text-indent: 15px;
 }
 
 .sidebar-nav li a {
-  color: #999999;
+  color: #0AA699;
   display: block;
   text-decoration: none;
 }
@@ -144,25 +147,25 @@ a,a:visited {
 .sidebar-nav li a:hover, .sidebar-nav li ul li a.active:hover{
   color: white;
   text-decoration: none;
-  background-color: #cccccc;
+  background-color: #8BC4C0;
 }
 
 .sidebar-nav li a:hover{
 }
 
 .sidebar-nav a.active.submenu{
-  background-color: #999999;
+  background-color: #8BC4C0;
   color:white;
 }
 
 .sidebar-nav li a.active{
-  background-color: #999999;
+  background-color: #8BC4C0;
   color:white;
 }
 
 .sidebar-nav li ul li a.active{
   background-color:white;
-  color:#999999
+  color:#8BC4C0;
 }
 
 .sidebar-nav li a:active,
@@ -177,7 +180,7 @@ a,a:visited {
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #999999;
+  color: #0AA699;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {

@@ -36,16 +36,6 @@ a:hover {
   border-radius: 10px;
 }
 
-#welcomepage {
-  margin: 0 auto;
-  margin-top: 5em;
-  width: 50%;
-  padding: 1em;
-  border-radius: 10px;
-  color: white;
-  background-color: gray;
-}
-
 #top-section {
   height: 0px;
   border: none;

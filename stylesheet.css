@@ -25,7 +25,7 @@ AND LINK STYLES
 
 a, a:visited, #menubar a, .sidebar-nav li a {
   color:#0AA699;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:hover, #menubar a:hover {
@@ -39,7 +39,7 @@ a:hover, #menubar a:hover {
 .sidebar-nav li ul li a.active:hover {
   color: white;
   text-decoration: none;
-  background-color: #8BC4C0;
+  background-color: #0AA699;
 }
 
 /*

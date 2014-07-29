@@ -4,7 +4,7 @@ GENERAL CSS FOR EVERYTHING
 
 @font-face {
     font-family: "Omafantti";
-    src: url(http://www.example.org/mycustomfont.ttf) format("truetype");
+    src: url("http://igem-qsf.github.io/igem-wiki/fonts/BROKEN15.TTF") format("truetype");
 }
 
 p {

@@ -2,12 +2,18 @@
 GENERAL CSS FOR EVERYTHING
 */
 
+@font-face {
+    font-family: "Omafantti";
+    src: url(http://www.example.org/mycustomfont.ttf) format("truetype");
+}
+
 p {
   /* font-size:50px; */
 }
 
 h1, h2, h3, h4, h5, h6 {
     border-bottom: 0px;
+    font-family: "Omafantti", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*

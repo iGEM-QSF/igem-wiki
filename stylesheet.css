@@ -1,9 +1,7 @@
 @font-face {
-  font-family: "TitilliumWeb";
-    src: url(fonts/TitilliumWeb-Regular.ttf) format("truetype");
+    font-family: "Omafantti";
+    src: url("http://igem-qsf.github.io/igem-wiki/fonts/BROKEN15.TTF") format("truetype");
 }
-
-*{font-family:"TitilliumWeb";}
 
 a:link, a:visited, a:active {
   color:#0AA699;

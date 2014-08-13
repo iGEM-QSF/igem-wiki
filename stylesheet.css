@@ -3,7 +3,7 @@
     src: url("http://igem-qsf.github.io/igem-wiki/fonts/BROKEN15.TTF") format("truetype");
 }
 
-a:link, a:visited, a:active {
+a:link, a:visited, a:active, .right-menu li a {
   color:#0AA699;
   text-decoration: none !important;
 }
@@ -68,6 +68,9 @@ header .navbar {
   margin-top: 0;
 }
 
+#menubar {
+}
+
 #top-section {
   height: 0px;
   border: none;
@@ -77,6 +80,12 @@ header .navbar {
   background-color: transparent;
   overflow: hide;
   position: initial;
+}
+
+.left-menu {
+}
+
+.right-menu {
 }
 
 .left-menu:hover {

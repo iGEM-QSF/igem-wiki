@@ -1,14 +1,16 @@
-Mathematical model
+<h1>Modeling>
 
-Gene circuit 
+<h2>Mathematical model</h2>
 
-Based on our gene circuit design, we identified all the species involved in our system and factors that affect their production rates. [etc]
+<h3>Gene circuit </h3>
 
-Simplifications 
+<p>Based on our gene circuit design, we identified all the species involved in our system and factors that affect their production rates. [etc]</p>
 
-We assumed that the species identified from our gene circuit are the only ones that affect the overall concentrations in our bacterial culture. The bonding of CI is assumed to be insignificant compared to overall concentration. The model is deterministic and doesn’t take into account any noise. The phosphorylation, decay, bonding etc are assumed to be a linear function of concentration [etc] 
+<h3>Simplifications</h3>
 
-Equations [to be inserted]
+<p>We assumed that the species identified from our gene circuit are the only ones that affect the overall concentrations in our bacterial culture. The bonding of CI is assumed to be insignificant compared to overall concentration. The model is deterministic and doesn’t take into account any noise. The phosphorylation, decay, bonding etc are assumed to be a linear function of concentration [etc] </p>
+
+<h3>Equations [to be inserted]</h3>
 
 YF1 
 FixJ 
@@ -20,27 +22,27 @@ A
 B 
 C  
 
-Lights 
+<h3>Lights </h3>
 
-[Blue light affects phosphorylation] 
-[Red light affects the rate of production as an idealized, completely arbitrary linear coefficient]
+<p>[Blue light affects phosphorylation] </p>
+<p>[Red light affects the rate of production as an idealized, completely arbitrary linear coefficient]</p>
 
 
-Simulation 
+<h2>Simulation</h2>
 
-Runge-Kutta method 
+<h3>Runge-Kutta method </h3>
 
-The dynamics of our system were approximated using 4th order Runge-Kutta method for the differential equations in our mathematical model [insert Runge-Kutta description] 
+<p>The dynamics of our system were approximated using 4th order Runge-Kutta method for the differential equations in our mathematical model [insert Runge-Kutta description]</p> 
 
-Parameters 
+<h3>Parameters </h3>
 
-[we used completely arbitrary estimates of actual parameters / we consulted the followin publications to obtain desider values: [insert list]] 
+<p>[we used completely arbitrary estimates of actual parameters / we consulted the followin publications to obtain desider values: [insert list]] </p>
 
-Program 
+<h3>Software implementation </h3>
 
-A computational model was created based on our mathematical model and the Runge-Kutta approximation. We made a real-time plotting function to illustrate the dynamics with each timestep. We added two light switches so that the user can have an impact on our simulation in real time. This all was then further developed into a presentable, user-friendly form that is accessible from our website. The simulation itself was developed using Python and translated into Javascript for web implementation [moar coming] 
+<p>A computational model was created based on our mathematical model and the Runge-Kutta approximation. We made a real-time plotting function to illustrate the dynamics with each timestep. We added two light switches so that the user can have an impact on our simulation in real time. This all was then further developed into a presentable, user-friendly form that is accessible from our website. The simulation itself was developed using Python and translated into Javascript for web implementation [moar coming] </p>
 
-Accuracy 
+<h3>Accuracy </h3>
 
-No noise, arbitrary parameters, simplified pathways and reaction equations -> over idealized, requires a lot of measurement of appropriate parameters and tuning to be realistic and accurate. Ideal for demonstration of our idea [insert in-depth error analysis]
+<p>No noise, arbitrary parameters, simplified pathways and reaction equations -> over idealized, requires a lot of measurement of appropriate parameters and tuning to be realistic and accurate. Ideal for demonstration of our idea [insert in-depth error analysis]</p>
 

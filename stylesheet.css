@@ -16,7 +16,6 @@ a:hover, a:visited, a:link, a:active {
 }
 a:not(.underline) {
     text-decoration: none !important;
-
 }
 
 #ahlogo{
@@ -73,29 +72,6 @@ header .navbar {
 
 /* Header päättyy */
 
-/* Yksittäisten sivujen ylägradientti grafiikasta valkoiseksi*/
-
-.top-graphic{
-    min-height:100vh;
-    background-image: url('http://www.aaltohelsinki.com/img/sepia_1920x1080_pack.jpg');
-    background-size: cover;
-}
-
-.top-graphic .content{
-    padding-top:30vh;
-    color:black;
-    text-align:justify;
-}
-
-.top-graphic .content img {
-    margin-top:10vh;
-}
-
-.top-graphic .content h1 {
-    margin-bottom:5%;
-    color:black;
-}
-
 /* Leipätekstin modifikaatio */
 
 .big-text{
@@ -105,19 +81,19 @@ header .navbar {
 }
 
 body{
-  background-color:black;
+  background-color:white;
     margin: 0;
     padding: 0;
 }
 
 article {
-  color:floralwhite;
-  padding-top: 5vh;
+  color:black;
+  padding-top: 10vh;
   padding-bottom: 5vh;
   padding-left: 15vw;
   padding-right: 15vw;
   min-height:85vh;
-    font-size:large;
+  font-size:large;
 }
 
 article h1 {
@@ -125,75 +101,6 @@ article h1 {
 }
 
 /* Pääsivun tyylit */
-
-.what{
-  padding-top: 20vh;
-  background-image:url('http://www.aaltohelsinki.com/img/sepia_1920x1080_pack.jpg');
-  background-size: cover;
-  min-height:100vh;
-  color: black;
-    text-align: center;
-}
-
-.team{
-  background-color: #912964;
-}
-
-.university-title {
-    color: rgb(81,81,81);
-    font-style: italic;
-    font-size: 20px;
-    margin-top: 0;
-}
-
-.idea {
-  background-color: #0A4958;
-}
-
-.follow {
-  background-color: white;
-  color: black;
-}
-
-.seekers {
-    color: black;
-    background-image:url('http://www.aaltohelsinki.com/img/kasi_vectored_gradient_transp.png');
-    background-size: 40%;
-    background-position:center;
-    background-repeat: no-repeat;
-}
-
-.seekers a.BBSeeker {
-    color:#B00C69;
-}
-
-.seekers a.TSeeker {
-    color:#399f70;
-}
-
-#sm-logo {
-    padding-bottom: 1em;
-}
-
-.support {
-  background-color: #F6E7D2;
-  color:black;
-}
-
-.more {
-    font-size:2em;
-    font-family: "Infinity", Verdana, Tahoma;
-}
-
-/* Välilehtisivujen tyylejä */
-
-.detail{
-    background-color:white;
-    color:black;
-    padding-top:0;
-    min-height:50vh;
-    padding-bottom: 0;
-}
 
 #sponsors {
   font-family: "Raleway-Regular", Verdana, Tahoma;
@@ -308,8 +215,6 @@ article h1 {
 footer {
   padding-top: 20px;
   color:white;
-  background-image:url('http://www.aaltohelsinki.com/img/turqous_pack.jpg');
-  background-size: cover;
   color: black;
 }
 
@@ -330,35 +235,6 @@ footer #navigation {
 footer .bottom {
   background-color:rgba(0,0,0,0.7);
   padding-bottom: 0.5vh;
-}
-
-/* Pääsivun footer */
-
-#mainfooter {
-    min-height:50vh;
-    background-image:url('http://www.aaltohelsinki.com/img/1920x1080_FOOTER_pack.jpg');
-}
-
-/* Tabisivujen footerien tyylit */
-
-#teamfooter, #projectfooter {
-    background-image:url('http://www.aaltohelsinki.com/img/turqos_1920x1080_pack.jpg');
-}
-
-#mainfooter #sponsors {
-  padding-top:20vh;
- }
-
-#teamfooter #sponsors, #projectfooter #sponsors{
-    padding-top:34vh;
-}
-
-#teamfooter .bottom, #projectfooter .bottom{
-    margin-top:17.5vh;
-}
-#sponsorfooter {
-    background-image: none;
-    background-color: #EDAC91;
 }
 
 #contact {

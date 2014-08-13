@@ -77,7 +77,7 @@ header .navbar {
 
 .top-graphic{
     min-height:100vh;
-    background-image: url('www.aaltohelsinki.com/img/sepia_1920x1080_pack.jpg');
+    background-image: url('http://www.aaltohelsinki.com/img/sepia_1920x1080_pack.jpg');
     background-size: cover;
 }
 
@@ -128,7 +128,7 @@ article h1 {
 
 .what{
   padding-top: 20vh;
-  background-image:url('www.aaltohelsinki.com/img/sepia_1920x1080_pack.jpg');
+  background-image:url('http://www.aaltohelsinki.com/img/sepia_1920x1080_pack.jpg');
   background-size: cover;
   min-height:100vh;
   color: black;
@@ -157,7 +157,7 @@ article h1 {
 
 .seekers {
     color: black;
-    background-image:url('www.aaltohelsinki.com/img/kasi_vectored_gradient_transp.png');
+    background-image:url('http://www.aaltohelsinki.com/img/kasi_vectored_gradient_transp.png');
     background-size: 40%;
     background-position:center;
     background-repeat: no-repeat;
@@ -232,7 +232,7 @@ article h1 {
 .partners {
   color: white;
   padding-top: 20vh;
-  background-image:url('www.aaltohelsinki.com/img/DSC_6156-2_pack.jpg');
+  background-image:url('http://www.aaltohelsinki.com/img/DSC_6156-2_pack.jpg');
   background-size: cover;
 }
 
@@ -308,7 +308,7 @@ article h1 {
 footer {
   padding-top: 20px;
   color:white;
-  background-image:url('www.aaltohelsinki.com/img/turqous_pack.jpg');
+  background-image:url('http://www.aaltohelsinki.com/img/turqous_pack.jpg');
   background-size: cover;
   color: black;
 }
@@ -336,13 +336,13 @@ footer .bottom {
 
 #mainfooter {
     min-height:50vh;
-    background-image:url('www.aaltohelsinki.com/img/1920x1080_FOOTER_pack.jpg');
+    background-image:url('http://www.aaltohelsinki.com/img/1920x1080_FOOTER_pack.jpg');
 }
 
 /* Tabisivujen footerien tyylit */
 
 #teamfooter, #projectfooter {
-    background-image:url('www.aaltohelsinki.com/img/turqos_1920x1080_pack.jpg');
+    background-image:url('http://www.aaltohelsinki.com/img/turqos_1920x1080_pack.jpg');
 }
 
 #mainfooter #sponsors {

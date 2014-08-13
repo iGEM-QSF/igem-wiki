@@ -5,10 +5,14 @@
 
 *{font-family:"TitilliumWeb";}
 
-a:link {color:#FFFFFF;}
-a:visited {color:#FFFFFF;}
-a:hover {color:#50BCBC;}
-a:active {color:black;}
+a:link, a:visited, a:active {
+  color:#0AA699;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color:#90F0E8;
+}
 
 a:hover, a:visited, a:link, a:active {
     /* poistin ton !importantin. kyllä linkit pitää normitekstissä alleviivata eikä se nyt onnistu
@@ -16,9 +20,6 @@ a:hover, a:visited, a:link, a:active {
 }
 a:not(.underline) {
     text-decoration: none !important;
-}
-
-#ahlogo{
 }
 
 #logo{
@@ -33,7 +34,6 @@ header {
 }
 
 header a {
-  color: white;
   padding-right: 3vw;
   font-size: 1.5em;
 }
@@ -62,8 +62,31 @@ header #lang {
 }
 
 header .navbar {
-  background-color:rgba(0,0,0,0.7);
+  background-color:rgba(255,255,255,0.7);
   border:0px;
+}
+
+.navbar{
+  margin-top: 0;
+}
+
+#top-section {
+  height: 0px;
+  border: none;
+  width: 980px;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+  background-color: transparent;
+  overflow: hide;
+  position: initial;
+}
+
+.left-menu:hover {
+  background-color: transparent;
+}
+
+.right-menu li a {
+  background-color: transparent;
 }
 
 #navigation {
@@ -74,16 +97,10 @@ header .navbar {
 
 /* Leipätekstin modifikaatio */
 
-.big-text{
-    margin-bottom: 5%;
-    font-size:x-large;
-    margin-right:5%;
-}
-
 body{
   background-color:white;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 article {
@@ -101,114 +118,6 @@ article h1 {
 }
 
 /* Pääsivun tyylit */
-
-#sponsors {
-  font-family: "Raleway-Regular", Verdana, Tahoma;
-}
-
-#sponsors .row {
-    margin-right:0;
-}
-
-.img-cheesy {
-    margin: 3em auto;
-    text-align: center;
-    font-style: italic;
-   }
-.img-cheesy img {
-    text-align: center;
-    margin: 0 auto;
-    padding: 0;
-}
-.img-cheesy i {
-    margin: 0;
-    padding: 0;
-}
-
-.blacklinks {
-   
-}
-.blacklinks a{
-    color: black;
-    text-decoration: underline;
-}
-.view-padding {
-    padding-top: 8vh;
-}
-/* partnerit sivun taulukko */
-.partners {
-  color: white;
-  padding-top: 20vh;
-  background-image:url('http://www.aaltohelsinki.com/img/DSC_6156-2_pack.jpg');
-  background-size: cover;
-}
-
-.content-partners {
-  margin-bottom: 0;
-  padding-bottom: 15vh;
-}
-
-.sponsor-pack {
-    font-size: 1.1em;
-    font-weight: 400;
-    margin: 0 auto;
-    border: 0px solid rgb(0,0,0);
-
-    background-color: rgba(10,10,10,0.4);
-    width: 80%;
-    position: relative;
-
-}
-
-
-.sponsor-pack h1{
-    font-size: 1.8em;
-    text-align: center;
-    padding: 0.5em 0;
-}
-.sponsor-pack .sisalto, .sponsor-list .sisalto {
-    margin: 0 auto;
-    width: 80%;
-}
-/* naa ympyrat on oikeastan ribboneita. ne on niiku ihkusälää */
-.sponsor-circle {
-     position: absolute;
-    right: 1em;
-     width:0;
-     height:80px;
-     border-right:25px solid rgb(180,00,100);
-     border-left:25px solid rgb(190,0,100);
-     border-bottom:30px solid transparent;
-
-}
-
-
-.sponsor-circle.second {
-     border-right:25px solid rgb(250,150,00);
-     border-left:25px solid rgb(250,160,00);
-     border-bottom:30px solid transparent;
-}
-.sponsor-circle.third {
-    border-right:25px solid rgb(00,110,60);
-     border-left:25px solid rgb(00,120,60);
-     border-bottom:30px solid transparent;
-}
-
-.sponsor-list {
-    padding: 1em;
-    font-size: 1.1em;
-    font-weight: 400;
-    margin: 0 auto;
-    margin-top: 5em;
-    border: 0px solid rgb(0,0,0);
-    width: 80%;
-
-    background-color: rgba(120, 63, 68, 0.45);
-}
-
-.sponsor-list h1 {
-    margin-top: 0;
-}
 
 /* Footerin tyylit */
 
@@ -242,28 +151,6 @@ footer .bottom {
     color:white;
 }
 
-#sponsors .row {
-    margin-right:0;
-}
-.valign-outer {
-  display: table;
-    width: 100%;
-    height: 85vh;
-
-    //padding: 20vh 0;
-}
-
-.valign-inner {
-  display: table-cell;
-  vertical-align: middle;
-
-}
-.valign-inner-center {
-  margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-
-}
 @media (max-width: 700px) {
   header #logo {
     display: none;

@@ -1,89 +1,74 @@
-/*
-GENERAL CSS FOR EVERYTHING
-*/
-
 @font-face {
     font-family: "Omafantti";
     src: url("http://igem-qsf.github.io/igem-wiki/fonts/BROKEN15.TTF") format("truetype");
 }
 
-p {
-  /* font-size:50px; */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    border-bottom: 0px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-/*
-GENERAL END
-*/
-
-
-
-/*
-LINKCOLORS
-ALL LINK (A)
-AND HOVER (A:HOVER) COLORS
-AND LINK STYLES
-*/
-
-a, a:visited, #menubar a, .sidebar-nav li a {
+a:link, a:visited, a:active, .right-menu li a {
   color:#0AA699;
   text-decoration: none !important;
 }
 
-a:hover, #menubar a:hover {
-    color:#90F0E8;
+a:hover {
+  color:#90F0E8;
 }
 
-.sidebar-nav a.active.submenu,
-.sidebar-nav li a:hover,
-.sidebar-nav li a.active,
-.sidebar-nav li ul li a.active,
-.sidebar-nav li ul li a.active:hover {
-  color: white;
-  text-decoration: none;
-  background-color: #0AA699;
+a:hover, a:visited, a:link, a:active {
+    /* poistin ton !importantin. kyllä linkit pitää normitekstissä alleviivata eikä se nyt onnistu
+     * text-decoration: none !important; */
+}
+a:not(.underline) {
+    text-decoration: none !important;
 }
 
-/*
-COLORS END
-*/
-
-
-
-#menubar{
-  margin-left:200px;
+#logo{
+  height: 8em;
+    padding-bottom: 1em;
 }
 
-.left-menu:hover {
-  background-color: transparent;
+/* Header-jutut */
+
+header {
+  color:white;
 }
 
-.right-menu li a {
-  background-color: transparent;
+header a {
+  padding-right: 3vw;
+  font-size: 1.5em;
 }
 
-.navbar td{
-  text-align:center;
+.last-link {
+  padding-right:1vw;
 }
 
-.navbar .menu-link {
-  border:1px solid black;
-  height:45px;
+header h1{
+  font-size: 1.35em;
+  padding-right: 0;
+  padding-left: 1.5vw;
 }
 
-#welcomepage {
+header #logo {
+  margin-top: 1.5em;
+  padding-left:1em;
+  height: 1.5em;
+  margin-right:0.2em;
+
 }
 
-#pagecontent {
-  margin: 0 auto;
-  margin-top: 5em;
-  width: 50%;
-  padding: 1em;
-  border-radius: 10px;
+header #lang {
+    margin-top: 3em;
+    font-size: 0.6em;
+}
+
+header .navbar {
+  background-color:rgba(255,255,255,0.7);
+  border:0px;
+}
+
+.navbar{
+  margin-top: 0;
+}
+
+#menubar {
 }
 
 #top-section {
@@ -97,126 +82,89 @@ COLORS END
   position: initial;
 }
 
-
-
-/*
-SIDEBAR STYLES  sidebar.css
-(linkcolors/background included in LINKCOLORS)
-*/
-
-#sidebar.affix-top{
-  position: static;
-  margin-top:30px;
-  width:228px;
+.left-menu {
 }
 
-#sidebar.affix {
-  position: fixed;
-  top:70px;
-  width:228px;
+.right-menu {
 }
 
-#wrapper {
-  padding-left: 200px;
-  transition: all 0.4s ease 0s;
+.left-menu:hover {
+  background-color: transparent;
 }
 
-#sidebar-wrapper {
-  margin-left: -250px;
-  left: 250px;
-  width: 200px;
-  position: fixed;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 1000;
-  transition: all 0.4s ease 0s;
+.right-menu li a {
+  background-color: transparent;
 }
 
-#page-content-wrapper {
-  width: 100%;
+#navigation {
+  margin-top: 2.5em;
 }
 
-.sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 200;
-  list-style: none;
+/* Header päättyy */
+
+/* Leipätekstin modifikaatio */
+
+body{
+  background-color:white;
   margin: 0;
   padding: 0;
 }
 
-.sidebar-nav li {
-  line-height: 35px;
-  text-indent: 18px;
+article {
+  color:black;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  min-height:85vh;
+  font-size:large;
 }
 
-.sidebar-nav li a {
-  /* display: block; */
+article h1 {
+    font-family: "Kirvy-Regular", Verdana, Tahoma;
 }
 
-.sidebar-nav li ul li{
-  list-style: none;
+/* Pääsivun tyylit */
+
+/* Footerin tyylit */
+
+footer {
+  padding-top: 20px;
+  color:white;
+  color: black;
 }
 
-.sidebar-nav img {
-  margin-left:20px;
+footer a {
+  color: white;
+  padding-left: 1.5vw;
 }
 
-.sidebar-nav > .sidebar-brand {
-  height: 65px;
-  line-height: 60px;
-  font-size: 18px;
+footer a:hover {
+  color: white;
 }
 
-.content-header {
-  height: 65px;
-  line-height: 65px;
+footer #navigation {
+  padding-top: 1vh;
+  margin-bottom: 1vh;
 }
 
-.content-header h1 {
-  margin: 0;
-  margin-left: 20px;
-  line-height: 65px;
-  display: inline-block;
+footer .bottom {
+  background-color:rgba(0,0,0,0.7);
+  padding-bottom: 0.5vh;
 }
 
-#menu-toggle {
-  display: none;
+#contact {
+    font-size: 10px;
+    color:white;
 }
 
-.inset {
-  padding: 20px;
+@media (max-width: 700px) {
+  header #logo {
+    display: none;
+  }
+    /* partnerit sivun taulukko responsiiviseksi ilman bootstrappia joka ei toimi */
+    .sponsor-pack {
+        width: 100%;
+        font-size: 0.8em;
+    }
 }
-
-@media (max-width:767px) {
-
-#wrapper {
-  padding-left: 0;
-}
-
-#sidebar-wrapper {
-  left: 0;
-}
-
-#wrapper.active {
-  position: relative;
-  left: 250px;
-}
-
-#wrapper.active #sidebar-wrapper {
-  left: 250px;
-  width: 250px;
-  transition: all 0.4s ease 0s;
-}
-
-#menu-toggle {
-  display: inline-block;
-}
-
-.inset {
-  padding: 15px;
-}
-
-/*
-SIDEBAR END
-*/

@@ -14,6 +14,10 @@ a:hover {
   color:#90F0E8;
 }
 
+#globalWrapper, #content {
+  margin-top: -10px;
+}
+
 /* Yleiset päättyy */
 
 /* Header-jutut */
@@ -31,11 +35,6 @@ header a {
 header .navbar {
   background-color:rgba(255,255,255,0.7);
   border:0px;
-}
-
-.splash{
-  min-height:100vh;
-  background-size: cover;
 }
 
 #main {
@@ -108,8 +107,9 @@ article h1 {
 
 /* Yleisten sivujen tyylit */
 
-#globalWrapper, #content {
-  margin-top: -10px;
+.splash{
+  min-height:100vh;
+  background-size: cover;
 }
 
 

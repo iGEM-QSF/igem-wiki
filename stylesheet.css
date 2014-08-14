@@ -33,6 +33,15 @@ header .navbar {
   border:0px;
 }
 
+.splash{
+  min-height:100vh;
+  background-size: cover;
+}
+
+#main {
+  background-image: url('http://aaltohelsinki.com/img/turqos_1920x1080_pack.jpg');
+}
+
 .navbar{
   margin-top: 0;
 }

@@ -1,7 +1,7 @@
 /* Yleiset */
 
 @font-face {
-    font-family: "Omafantti";
+    font-family: "Omafontti";
     src: url("http://igem-qsf.github.io/igem-wiki/fonts/BROKEN15.TTF") format("truetype");
 }
 
@@ -57,6 +57,10 @@ header .navbar {
   position: initial;
 }
 
+#menubar {
+  top: 0px;
+}
+
 #menubar, #menubar a {
   color: #0AA699;
 }
@@ -90,9 +94,17 @@ article {
 }
 
 article h1 {
-    font-family: "Kirvy-Regular", Verdana, Tahoma;
+  font-family: "Kirvy-Regular", Verdana, Tahoma;
 }
 
-/* Pääsivun tyylit */
+/* Yleisten sivujen tyylit */
+
+#globalWrapper, #content {
+  margin-top: -10px;
+}
+
+
+
+/* Erillisten sivujen tyylit*/
 
 /* Footerin tyylit */

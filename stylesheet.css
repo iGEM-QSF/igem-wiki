@@ -42,6 +42,10 @@ header .navbar {
   background-image: url('http://aaltohelsinki.com/img/12.jpg');
 }
 
+#software {
+  background-image: url('http://2014.igem.org/wiki/images/2/2f/Aalto_Helsinki_Flappy_coli.png');
+}
+
 .navbar{
   margin-top: 0;
 }

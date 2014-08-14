@@ -14,10 +14,6 @@ a:hover {
   color:#90F0E8;
 }
 
-#globalWrapper, #content {
-  margin-top: -10px;
-}
-
 /* Yleiset päättyy */
 
 /* Header-jutut */
@@ -110,6 +106,7 @@ article h1 {
 .splash{
   min-height:100vh;
   background-size: cover;
+  margin-top: -20px;
 }
 
 

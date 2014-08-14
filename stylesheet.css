@@ -1,3 +1,5 @@
+/* Yleiset */
+
 @font-face {
     font-family: "Omafantti";
     src: url("http://igem-qsf.github.io/igem-wiki/fonts/BROKEN15.TTF") format("truetype");
@@ -12,18 +14,7 @@ a:hover {
   color:#90F0E8;
 }
 
-a:hover, a:visited, a:link, a:active {
-    /* poistin ton !importantin. kyllä linkit pitää normitekstissä alleviivata eikä se nyt onnistu
-     * text-decoration: none !important; */
-}
-a:not(.underline) {
-    text-decoration: none !important;
-}
-
-#logo{
-  height: 8em;
-    padding-bottom: 1em;
-}
+/* Yleiset päättyy */
 
 /* Header-jutut */
 
@@ -32,31 +23,9 @@ header {
 }
 
 header a {
-  padding-right: 3vw;
-  font-size: 1.5em;
-}
-
-.last-link {
-  padding-right:1vw;
-}
-
-header h1{
-  font-size: 1.35em;
-  padding-right: 0;
+  padding-right: 1.5vw;
   padding-left: 1.5vw;
-}
-
-header #logo {
-  margin-top: 1.5em;
-  padding-left:1em;
-  height: 1.5em;
-  margin-right:0.2em;
-
-}
-
-header #lang {
-    margin-top: 3em;
-    font-size: 0.6em;
+  font-size: 1.5em;
 }
 
 header .navbar {
@@ -68,8 +37,14 @@ header .navbar {
   margin-top: 0;
 }
 
-#menubar {
+#navigation {
+  margin-top: 1.5em;
 }
+
+/* Header päättyy */
+
+
+/* Pakolliset pikku valikot */
 
 #top-section {
   height: 0px;
@@ -82,25 +57,19 @@ header .navbar {
   position: initial;
 }
 
-.left-menu {
+#menubar, #menubar a {
+  color: #0AA699;
 }
 
-.right-menu {
+#menubar, #menubar a:hover {
+  color: #90F0E8;
 }
 
-.left-menu:hover {
+#menubar:hover, #menubar li a {
   background-color: transparent;
 }
 
-.right-menu li a {
-  background-color: transparent;
-}
-
-#navigation {
-  margin-top: 2.5em;
-}
-
-/* Header päättyy */
+/* Pakolliset pikku valikot päättyy */
 
 /* Leipätekstin modifikaatio */
 
@@ -127,44 +96,3 @@ article h1 {
 /* Pääsivun tyylit */
 
 /* Footerin tyylit */
-
-footer {
-  padding-top: 20px;
-  color:white;
-  color: black;
-}
-
-footer a {
-  color: white;
-  padding-left: 1.5vw;
-}
-
-footer a:hover {
-  color: white;
-}
-
-footer #navigation {
-  padding-top: 1vh;
-  margin-bottom: 1vh;
-}
-
-footer .bottom {
-  background-color:rgba(0,0,0,0.7);
-  padding-bottom: 0.5vh;
-}
-
-#contact {
-    font-size: 10px;
-    color:white;
-}
-
-@media (max-width: 700px) {
-  header #logo {
-    display: none;
-  }
-    /* partnerit sivun taulukko responsiiviseksi ilman bootstrappia joka ei toimi */
-    .sponsor-pack {
-        width: 100%;
-        font-size: 0.8em;
-    }
-}

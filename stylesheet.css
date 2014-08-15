@@ -34,6 +34,7 @@ h1 {
 
 header {
   color:white;
+  font-size: normal;
 }
 
 header a {
@@ -81,6 +82,7 @@ header .navbar {
 
 #menubar {
   top: 0px;
+  font-size: normal;
 }
 
 #menubar, #menubar a {

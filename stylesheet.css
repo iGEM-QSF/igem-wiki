@@ -51,6 +51,10 @@ header .navbar {
   background-image: url('http://aaltohelsinki.com/img/12.jpg');
 }
 
+#software {
+  background-image: url('http://2014.igem.org/wiki/images/0/03/Aalto_Helsinki_Simulation.png');
+}
+
 .navbar{
   margin-top: 0;
 }

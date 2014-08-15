@@ -18,11 +18,24 @@ body {
   color: black;
   min-height: 85vh;
   font-size: large;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+article {
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+  padding-left: 15vw;
+  padding-right: 15vw;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Special, "Helvetica Neue", Arial;
   border-bottom: none;
+}
+
+h1, h2 {
+  font-family: Special, "Helvetica Neue", Arial;
 }
 
 /* Yleiset päättyy */
@@ -91,22 +104,8 @@ header a.active {
 
 /* Pakolliset pikku valikot päättyy */
 
-/* Leipätekstin modifikaatio */
 
-body{
-  background-color:white;
-  margin: 0;
-  padding: 0;
-}
-
-article {
-  padding-top: 10vh;
-  padding-bottom: 5vh;
-  padding-left: 15vw;
-  padding-right: 15vw;
-}
-
-/* Yhteiset tyylittelyt eri osille */
+/* Splashien yhteiset tyylit */
 
 .splash{
   display: table;
@@ -134,7 +133,7 @@ article {
   font-style: italic;
 }
 
-/* Yhteiset tyylittelyt loppu */
+/* Splash-tyylittelyt loppu */
 
 
 /* Erillisten sivujen tyylit*/
@@ -147,11 +146,29 @@ article {
   background-image: url('http://2014.igem.org/wiki/images/0/03/Aalto_Helsinki_Simulation.png');
 }
 
-#research {
+#researchsplash {
   background-image: url('http://2014.igem.org/wiki/images/1/13/Aalto-Helsinki-Research-Placeholder.png');
 }
 
-/* Erillisten sivujen tyylit */
+/* Erillisten sivujen tyylit loppu */
+
 
 /* Footerin tyylit */
 
+footer {
+  text-align: center;
+  background: white;
+}
+
+#logorow {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footerlogo {
+  display: inline-block;
+  padding: 20px;
+  max-width: 200px;
+}
+
+/* Footerin tyylit loppu */

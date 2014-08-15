@@ -44,8 +44,8 @@ header .navbar {
   border:0px;
 }
 
-.active {
-  color:pink;
+header a.active {
+  color:black;
 }
 
 .navbar{

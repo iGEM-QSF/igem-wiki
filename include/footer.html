@@ -1,4 +1,12 @@
 </div>
 </body>
+<script>
+	$(document).ready(function() {
+
+	if(location.pathname != "/Team:Aalto-Helsinki") {
+		$('#navigation a[href^="http://2014.igem.org' + location.pathname + '"]').addClass('active');
+	} else $('#navigation a.home').addClass('active');
+});
+</script>
 </html>
 {{:Team:Aalto-Helsinki/footer}}

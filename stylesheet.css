@@ -1,95 +1,69 @@
-/*
-GENERAL CSS FOR EVERYTHING
-*/
+/* Yleiset */
 
 @font-face {
-    font-family: "Omafantti";
+    font-family: "Omafontti";
     src: url("http://igem-qsf.github.io/igem-wiki/fonts/BROKEN15.TTF") format("truetype");
 }
 
-p {
-  /* font-size:50px; */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    border-bottom: 0px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-/*
-GENERAL END
-*/
-
-
-
-/*
-LINKCOLORS
-ALL LINK (A)
-AND HOVER (A:HOVER) COLORS
-AND LINK STYLES
-*/
-
-a, a:visited, #menubar a, .sidebar-nav li a {
-  color:#0AA699;
+a:link, a:visited, a:active, .right-menu li a {
+  color: #0AA699;
   text-decoration: none !important;
 }
 
-a:hover, #menubar a:hover {
-    color:#90F0E8;
+a:hover {
+  color: #90F0E8;
 }
 
-.sidebar-nav a.active.submenu,
-.sidebar-nav li a:hover,
-.sidebar-nav li a.active,
-.sidebar-nav li ul li a.active,
-.sidebar-nav li ul li a.active:hover {
+body {
+  color: black;
+  min-height: 85vh;
+  font-size: large;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  border-bottom: none;
+}
+
+h1 {
+  font-family: "Kirvy-Regular", Verdana, Tahoma;
+}
+
+/* Yleiset päättyy */
+
+/* Header-jutut */
+
+header {
   color: white;
-  text-decoration: none;
-  background-color: #0AA699;
+  font-size: large;
 }
 
-/*
-COLORS END
-*/
-
-
-
-#menubar{
-  margin-left:200px;
+header a {
+  padding-right: 1.5vw;
+  padding-left: 1.5vw;
 }
 
-.left-menu:hover {
-  background-color: transparent;
+header .navbar {
+  background-color:rgba(255,255,255,0.7);
+  border:0px;
 }
 
-.right-menu li a {
-  background-color: transparent;
+.navbar{
+  margin-top: 0;
 }
 
-.navbar td{
-  text-align:center;
+#navigation {
+  margin-top: 1.5em;
 }
 
-.navbar .menu-link {
-  border:1px solid black;
-  height:45px;
-}
+/* Header päättyy */
 
-#welcomepage {
-}
 
-#pagecontent {
-  margin: 0 auto;
-  margin-top: 5em;
-  width: 50%;
-  padding: 1em;
-  border-radius: 10px;
-}
+/* Pakolliset pikku valikot */
 
 #top-section {
   height: 0px;
   border: none;
-  width: 980px;
+  width: 0px;
   margin: 0 auto;
   padding: 0 0 0 0;
   background-color: transparent;
@@ -97,126 +71,78 @@ COLORS END
   position: initial;
 }
 
-
-
-/*
-SIDEBAR STYLES  sidebar.css
-(linkcolors/background included in LINKCOLORS)
-*/
-
-#sidebar.affix-top{
-  position: static;
-  margin-top:30px;
-  width:228px;
+#menubar {
+  top: 0px;
+  font-size: small;
 }
 
-#sidebar.affix {
-  position: fixed;
-  top:70px;
-  width:228px;
+#menubar, #menubar a {
+  color: #0AA699;
 }
 
-#wrapper {
-  padding-left: 200px;
-  transition: all 0.4s ease 0s;
+#menubar, #menubar a:hover {
+  color: #90F0E8;
 }
 
-#sidebar-wrapper {
-  margin-left: -250px;
-  left: 250px;
-  width: 200px;
-  position: fixed;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 1000;
-  transition: all 0.4s ease 0s;
+#menubar:hover, #menubar li a {
+  background-color: transparent;
 }
 
-#page-content-wrapper {
-  width: 100%;
-}
+/* Pakolliset pikku valikot päättyy */
 
-.sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 200;
-  list-style: none;
+/* Leipätekstin modifikaatio */
+
+body{
+  background-color:white;
   margin: 0;
   padding: 0;
 }
 
-.sidebar-nav li {
-  line-height: 35px;
-  text-indent: 18px;
+article {
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+  padding-left: 15vw;
+  padding-right: 15vw;
 }
 
-.sidebar-nav li a {
-  /* display: block; */
+/* Yhteiset tyylittelyt eri osille */
+
+.splash{
+  display: table;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  margin-top: -10px;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  text-align: center;
 }
 
-.sidebar-nav li ul li{
-  list-style: none;
+.splash h1 {
+  font-size: 60px;
 }
 
-.sidebar-nav img {
-  margin-left:20px;
+.textinsplash {
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.sidebar-nav > .sidebar-brand {
-  height: 65px;
-  line-height: 60px;
-  font-size: 18px;
+/* Yhteiset tyylittelyt loppu */
+
+
+/* Erillisten sivujen tyylit*/
+
+#mainsplash {
+  background-image: url('http://aaltohelsinki.com/img/12.jpg');
 }
 
-.content-header {
-  height: 65px;
-  line-height: 65px;
+#softwaresplash {
+  background-image: url('http://2014.igem.org/wiki/images/0/03/Aalto_Helsinki_Simulation.png');
 }
 
-.content-header h1 {
-  margin: 0;
-  margin-left: 20px;
-  line-height: 65px;
-  display: inline-block;
-}
+/* Erillisten sivujen tyylit */
 
-#menu-toggle {
-  display: none;
-}
+/* Footerin tyylit */
 
-.inset {
-  padding: 20px;
-}
-
-@media (max-width:767px) {
-
-#wrapper {
-  padding-left: 0;
-}
-
-#sidebar-wrapper {
-  left: 0;
-}
-
-#wrapper.active {
-  position: relative;
-  left: 250px;
-}
-
-#wrapper.active #sidebar-wrapper {
-  left: 250px;
-  width: 250px;
-  transition: all 0.4s ease 0s;
-}
-
-#menu-toggle {
-  display: inline-block;
-}
-
-.inset {
-  padding: 15px;
-}
-
-/*
-SIDEBAR END
-*/

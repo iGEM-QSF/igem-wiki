@@ -33,27 +33,18 @@ h1 {
 /* Header-jutut */
 
 header {
-  color:white;
-  font-size: normal;
+  color: white;
+  font-size: small;
 }
 
 header a {
   padding-right: 1.5vw;
   padding-left: 1.5vw;
-  font-size: 1.5em;
 }
 
 header .navbar {
   background-color:rgba(255,255,255,0.7);
   border:0px;
-}
-
-#main {
-  background-image: url('http://aaltohelsinki.com/img/12.jpg');
-}
-
-#software {
-  background-image: url('http://2014.igem.org/wiki/images/0/03/Aalto_Helsinki_Simulation.png');
 }
 
 .navbar{
@@ -82,7 +73,7 @@ header .navbar {
 
 #menubar {
   top: 0px;
-  font-size: normal;
+  font-size: small;
 }
 
 #menubar, #menubar a {
@@ -116,6 +107,14 @@ article {
 
 /* Yleisten sivujen tyylit */
 
+#main {
+  background-image: url('http://aaltohelsinki.com/img/12.jpg');
+}
+
+#software {
+  background-image: url('http://2014.igem.org/wiki/images/0/03/Aalto_Helsinki_Simulation.png');
+}
+
 .splash{
   display: table;
   min-height:100vh;
@@ -126,6 +125,10 @@ article {
   padding-left: 15vw;
   padding-right: 15vw;
   text-align: center;
+}
+
+.splash h1 {
+  font-size: xx-large;
 }
 
 .texinsplash {

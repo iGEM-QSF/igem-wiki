@@ -121,12 +121,16 @@ article {
 }
 
 .splash h1 {
-  font-size: 60px;
+  font-size: 70px;
 }
 
 .textinsplash {
   display: table-cell;
   vertical-align: middle;
+}
+
+.textinsplash > p {
+  font-style: italic;
 }
 
 /* Yhteiset tyylittelyt loppu */

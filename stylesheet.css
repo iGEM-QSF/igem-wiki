@@ -17,7 +17,6 @@ a:hover {
 body {
   color: black;
   min-height: 85vh;
-  font-size: large;
   background-color: white;
   margin: 0;
   padding: 0;
@@ -38,6 +37,38 @@ h1, h2 {
   font-family: Special, "Helvetica Neue", Arial;
 }
 
+blockquote {
+  font-family: "Helvetica Neue", serif;
+  font-size: 24px;
+  font-style: italic;
+  line-height: 2;
+  position: relative;
+  color: #383838;
+  padding: 10px 10px;
+  margin: 60px 0 60px 0;
+  border-left: none;
+}
+
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 200px;
+  position: absolute;
+  left: -90px;
+  top: -120px;
+}
+
+blockquote cite {
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+ 
+blockquote cite:before {
+  content: "\2014 \2009";
+}
+
 /* Yleiset päättyy */
 
 /* Header-jutut */
@@ -52,21 +83,17 @@ header a {
   padding-left: 1.5vw;
 }
 
+header a.active {
+  color:black;
+}
+
 header .navbar {
   background-color:rgba(255,255,255,0.7);
   border:0px;
 }
 
-header a.active {
-  color:black;
-}
-
 .navbar{
   margin-top: 0;
-}
-
-#navigation {
-  margin-top: 1.5em;
 }
 
 /* Header päättyy */
@@ -87,7 +114,7 @@ header a.active {
 
 #menubar {
   top: 0px;
-  font-size: small;
+  font-size: x-small;
 }
 
 #menubar, #menubar a {
@@ -130,6 +157,7 @@ header a.active {
 }
 
 .textinsplash > p {
+  font-size: large;
   font-style: italic;
 }
 
@@ -167,6 +195,7 @@ footer {
 
 .footerlogo {
   display: inline-block;
+  vertical-align: middle;
   padding: 20px;
   max-width: 200px;
 }

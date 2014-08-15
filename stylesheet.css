@@ -105,15 +105,7 @@ article {
   padding-right: 15vw;
 }
 
-/* Yleisten sivujen tyylit */
-
-#main {
-  background-image: url('http://aaltohelsinki.com/img/12.jpg');
-}
-
-#software {
-  background-image: url('http://2014.igem.org/wiki/images/0/03/Aalto_Helsinki_Simulation.png');
-}
+/* Yhteiset tyylittelyt eri osille */
 
 .splash{
   display: table;
@@ -131,13 +123,26 @@ article {
   font-size: xx-large;
 }
 
-.texinsplash {
+.textinsplash {
   display: table-cell;
   display: inline-block;
   vertical-align: middle;
 }
 
+/* Yhteiset tyylittelyt loppu */
+
+
 /* Erillisten sivujen tyylit*/
+
+#main {
+  background-image: url('http://aaltohelsinki.com/img/12.jpg');
+}
+
+#software {
+  background-image: url('http://2014.igem.org/wiki/images/0/03/Aalto_Helsinki_Simulation.png');
+}
+
+/* Erillisten sivujen tyylit */
 
 /* Footerin tyylit */
 

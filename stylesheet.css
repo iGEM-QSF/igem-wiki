@@ -33,11 +33,6 @@ header .navbar {
   border:0px;
 }
 
-.splash{
-  min-height:100vh;
-  background-size: cover;
-}
-
 #main {
   background-image: url('http://aaltohelsinki.com/img/12.jpg');
 }
@@ -112,8 +107,10 @@ article h1 {
 
 /* Yleisten sivujen tyylit */
 
-#globalWrapper, #content {
-  margin-top: -10px;
+.splash{
+  min-height:100vh;
+  background-size: cover;
+  margin-top: -20px;
 }
 
 

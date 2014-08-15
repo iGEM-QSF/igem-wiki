@@ -134,11 +134,11 @@ article {
 
 /* Erillisten sivujen tyylit*/
 
-#main {
+#mainsplash {
   background-image: url('http://aaltohelsinki.com/img/12.jpg');
 }
 
-#software {
+#softwaresplash {
   background-image: url('http://2014.igem.org/wiki/images/0/03/Aalto_Helsinki_Simulation.png');
 }
 

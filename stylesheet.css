@@ -1,8 +1,8 @@
 /* Yleiset */
 
 @font-face {
-    font-family: "Omafontti";
-    src: url("http://igem-qsf.github.io/igem-wiki/fonts/BROKEN15.TTF") format("truetype");
+    font-family: Special;
+    src: url("http://igem-qsf.github.io/igem-wiki/fonts/DOWNCOME.TTF") format("truetype");
 }
 
 a:link, a:visited, a:active, .right-menu li a {
@@ -21,11 +21,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: Special, "Helvetica Neue", Arial;
   border-bottom: none;
-}
-
-h1 {
-  font-family: "Kirvy-Regular", Verdana, Tahoma;
 }
 
 /* Yleiset päättyy */
@@ -125,7 +122,7 @@ article {
 }
 
 .splash h1 {
-  font-size: 70px;
+  font-size: 100px;
 }
 
 .textinsplash {

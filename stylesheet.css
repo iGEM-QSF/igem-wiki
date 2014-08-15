@@ -6,18 +6,18 @@
 }
 
 a:link, a:visited, a:active, .right-menu li a {
-  color:#0AA699;
+  color: #0AA699;
   text-decoration: none !important;
 }
 
 a:hover {
-  color:#90F0E8;
+  color: #90F0E8;
 }
 
 body {
-  color:black;
-  min-height:85vh;
-  font-size:large;
+  color: black;
+  min-height: 85vh;
+  font-size: large;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,7 +34,7 @@ h1 {
 
 header {
   color: white;
-  font-size: small;
+  font-size: large;
 }
 
 header a {
@@ -109,7 +109,8 @@ article {
 
 .splash{
   display: table;
-  min-height:100vh;
+  min-height: 100vh;
+  width: 100%;
   background-size: cover;
   margin-top: -10px;
   padding-top: 10vh;
@@ -120,13 +121,16 @@ article {
 }
 
 .splash h1 {
-  font-size: 60px;
+  font-size: 70px;
 }
 
 .textinsplash {
   display: table-cell;
-  display: inline-block;
   vertical-align: middle;
+}
+
+.textinsplash > p {
+  font-style: italic;
 }
 
 /* Yhteiset tyylittelyt loppu */
@@ -134,11 +138,11 @@ article {
 
 /* Erillisten sivujen tyylit*/
 
-#main {
+#mainsplash {
   background-image: url('http://aaltohelsinki.com/img/12.jpg');
 }
 
-#software {
+#softwaresplash {
   background-image: url('http://2014.igem.org/wiki/images/0/03/Aalto_Helsinki_Simulation.png');
 }
 

@@ -47,6 +47,10 @@ header .navbar {
   border:0px;
 }
 
+.active {
+  color:pink;
+}
+
 .navbar{
   margin-top: 0;
 }

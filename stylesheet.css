@@ -137,6 +137,7 @@ header .navbar {
   display: table;
   min-height: 100vh;
   width: 100%;
+  background-image: url('http://2014.igem.org/wiki/images/f/fb/Aalto_Helsinki_Lights.png');
   background-size: cover;
   margin-top: -10px;
   padding-top: 10vh;

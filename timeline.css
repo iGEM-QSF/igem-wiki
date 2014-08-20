@@ -147,7 +147,7 @@ img { border: 0; max-width: 100%; }
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
-  z-index: 99999;
+  z-index: 1024;
 }
 
 .timeline li.timeline-inverted .tl-circ {

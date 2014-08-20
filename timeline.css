@@ -46,6 +46,7 @@ img { border: 0; max-width: 100%; }
 
 .timeline li.entry {
 	width: 47vw;
+	min-height: 115px;
 }
 
 .timeline li:before, .timeline li:after {

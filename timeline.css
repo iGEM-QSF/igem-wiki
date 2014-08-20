@@ -12,7 +12,7 @@ img { border: 0; max-width: 100%; }
   list-style: none;
   padding: 20px 0 20px;
   position: relative;
-  min-height:100vh;
+  min-height:4000px;
 }
 
 .timeline:before {
@@ -46,7 +46,6 @@ img { border: 0; max-width: 100%; }
 
 .timeline li.entry {
 	width: 47vw;
-	min-height: 115px;
 }
 
 .timeline li:before, .timeline li:after {
@@ -108,11 +107,12 @@ img { border: 0; max-width: 100%; }
   border: 0;
 }
 
-.timeline li.timeline-inverted .timeline-panel {
-  float: right;
+.timeline .entry li.timeline-inverted .timeline-panel {
+  	float: right;
 }
 
 .timeline-inverted {
+	clear:right;
 	float:right;
 }
 
@@ -135,7 +135,7 @@ img { border: 0; max-width: 100%; }
 .timeline li .tl-circ {
   position: absolute;
   top: 23px;
-  left: 104%;
+  left: 106%;
   text-align: center;
   background: #6a8db3;
   color: #fff;

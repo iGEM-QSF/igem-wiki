@@ -1,6 +1,68 @@
+img { border: 0; max-width: 100%; }
+
+.page-header h1 {
+  font-size: 3.26em;
+  text-align: center;
+  color: #efefef;
+  text-shadow: 1px 1px 0 #000;
+}
+
+/** timeline box structure **/
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+  min-height:100vh;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.tldate {
+  display: block;
+  width: 200px;
+  background: #414141;
+  border: 3px solid #212121;
+  color: #ededed;
+  margin: 0 auto;
+  padding: 3px 0;
+  font-weight: bold;
+  text-align: center;
+  -webkit-box-shadow: 0 0 11px rgba(0,0,0,0.35);
+}
+
+.timeline li {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.timeline li.entry {
+	width: 47vw;
+}
+
+.timeline li:before, .timeline li:after {
+  content: " ";
+  display: table;
+}
+.timeline .tldate {
+  clear: both;
+}
+.timeline li:before, .timeline li:after {
+  content: " ";
+  display: table;
+}
+
 /** timeline panels **/
 .timeline li .timeline-panel {
-  width: 46%;
+  width: 99%;
   float: left;
   background: #fff;
   border: 1px solid #d4d4d4;
@@ -13,7 +75,7 @@
   -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
 }
- 
+
 /** panel arrows **/
 .timeline li .timeline-panel:before {
   position: absolute;
@@ -26,7 +88,7 @@
   border-bottom: 15px solid transparent;
   content: " ";
 }
- 
+
 .timeline li .timeline-panel:after {
   position: absolute;
   top: 27px;
@@ -44,18 +106,22 @@
   display: none;
   border: 0;
 }
- 
+
 .timeline li.timeline-inverted .timeline-panel {
   float: right;
 }
- 
+
+.timeline-inverted {
+	float:right;
+}
+
 .timeline li.timeline-inverted .timeline-panel:before {
   border-left-width: 0;
   border-right-width: 15px;
   left: -15px;
   right: auto;
 }
- 
+
 .timeline li.timeline-inverted .timeline-panel:after {
   border-left-width: 0;
   border-right-width: 14px;
@@ -63,51 +129,49 @@
   right: auto;
 }
 
-body { background: #333; }
 
-img { border: 0; max-width: 100%; }
- 
-.page-header h1 {
-  font-size: 3.26em;
-  text-align: center;
-  color: #efefef;
-  text-shadow: 1px 1px 0 #000;
-}
- 
-/** timeline box structure **/
-.timeline {
-  list-style: none;
-  padding: 20px 0 20px;
-  position: relative;
-}
- 
-.timeline:before {
-  top: 0;
-  bottom: 0;
+/** timeline circle icons **/
+.timeline li .tl-circ {
   position: absolute;
-  content: " ";
-  width: 3px;
-  background-color: #eee;
-  left: 50%;
-  margin-left: -1.5px;
-}
- 
-.tldate {
-  display: block;
-  width: 200px;
-  background: #414141;
-  border: 3px solid #212121;
-  color: #ededed;
-  margin: 0 auto;
-  padding: 3px 0;
-  font-weight: bold;
+  top: 23px;
+  left: 104%;
   text-align: center;
-  -webkit-box-shadow: 0 0 11px rgba(0,0,0,0.35);
+  background: #6a8db3;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin-left: -16px;
+  border: 3px solid #90acc7;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  z-index: 99999;
 }
- 
-.timeline li {
-  margin-bottom: 25px;
-  position: relative;
+
+.timeline li.timeline-inverted .tl-circ {
+	left:-4%;
+}
+
+
+/** timeline content **/
+
+.tl-heading h4 {
+  margin: 0;
+  color: #c25b4e;
+}
+
+.tl-body p, .tl-body ul {
+  margin-bottom: 0;
+}
+
+.tl-body > p + p {
+  margin-top: 5px;
+}
+
+footer {
+	clear:both;
 }
 
 /** media queries **/
@@ -116,43 +180,43 @@ img { border: 0; max-width: 100%; }
     width: 44%;
   }
 }
- 
+
 @media (max-width: 700px) {
   .page-header h1 { font-size: 1.8em; }
- 
+  
   ul.timeline:before {
     left: 40px;
   }
- 
+  
   .tldate { width: 140px; }
- 
+
   ul.timeline li .timeline-panel {
     width: calc(100% - 90px);
     width: -moz-calc(100% - 90px);
     width: -webkit-calc(100% - 90px);
   }
- 
+
   ul.timeline li .tl-circ {
     top: 22px;
     left: 22px;
     margin-left: 0;
- 
+
   }
   ul.timeline > li > .tldate {
     margin: 0;
   }
- 
+
   ul.timeline > li > .timeline-panel {
     float: right;
   }
- 
+
   ul.timeline > li > .timeline-panel:before {
     border-left-width: 0;
     border-right-width: 15px;
     left: -15px;
     right: auto;
   }
- 
+
   ul.timeline > li > .timeline-panel:after {
     border-left-width: 0;
     border-right-width: 14px;

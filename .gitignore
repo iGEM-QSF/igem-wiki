@@ -1,1 +1,4 @@
 *.swp
+.DS_Store
+fonts/.DS_Store
+include/.DS_Store

@@ -10,7 +10,7 @@ img { border: 0; max-width: 100%; }
 /** timeline box structure **/
 .timeline {
   list-style: none;
-  padding: 20px 0 20px;
+  padding: 0px 20 0px 0px;
   position: relative;
   min-height:4000px;
 }
@@ -20,9 +20,9 @@ img { border: 0; max-width: 100%; }
   bottom: 0;
   position: absolute;
   content: " ";
-  width: 3px;
+  width: 4px;
   background-color: #eee;
-  left: 50%;
+  left: 49.4%;
   margin-left: -1.5px;
 }
 

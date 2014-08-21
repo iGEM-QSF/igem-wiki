@@ -196,6 +196,10 @@ header .navbar {
   color:white;
 }
 
+.green {
+  background-color: #399f70;
+}
+
 .PCB {
   background-color: gray;
 }

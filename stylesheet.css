@@ -64,7 +64,7 @@ blockquote cite {
   display: block;
   margin-top: 5px;
 }
- 
+
 blockquote cite:before {
   content: "\2014 \2009";
 }
@@ -224,6 +224,14 @@ footer {
   display: inline-block;
   vertical-align: middle;
   padding: 20px;
+}
+
+.footerlogo:hover .on, .footerlogo .off {
+  display:none;
+}
+
+.footerlogo:hover .off {
+  display:block;
 }
 
 /* Footerin tyylit loppu */

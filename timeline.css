@@ -40,7 +40,6 @@ img { border: 0; max-width: 100%; }
 }
 
 .timeline li {
-  margin-bottom: 25px;
   position: relative;
 }
 
@@ -74,6 +73,7 @@ img { border: 0; max-width: 100%; }
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 25px;
 }
 
 /** panel arrows **/
@@ -151,8 +151,8 @@ img { border: 0; max-width: 100%; }
   z-index: 1024;
 }
 
-.timeline li.timeline-inverted .tl-circ {
-	left:-4%;
+.timeline li.timeline-inverted .timeline-panel {
+	margin-left: 6px;
 }
 
 

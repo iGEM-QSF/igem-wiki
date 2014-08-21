@@ -27,6 +27,7 @@ article {
   padding-bottom: 5vh;
   padding-left: 15vw;
   padding-right: 15vw;
+  min-height: 50vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -180,6 +181,24 @@ header .navbar {
 
 /* Erillisten sivujen tyylit loppu */
 
+
+/* Articlejen backgroundit */
+.turqu {
+  background-color: #A06699;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+  color:white;
+}
+
+.PCB {
+  background-color: gray;
+}
 
 /* Footerin tyylit */
 

@@ -34,9 +34,9 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
 }
 
-h1, h2 {
+/* h1, h2 {
   font-family: Special, "Helvetica Neue", Arial;
-}
+} */
 
 blockquote {
   font-family: "Helvetica Neue", serif;
@@ -218,6 +218,11 @@ footer {
 #logorow {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.footerimg {
+  max-height: 200px;
+  max-width: 300px;
 }
 
 .footerlogo {

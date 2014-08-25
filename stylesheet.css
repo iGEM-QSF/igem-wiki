@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
 }
 
+#bodyContent h1, #bodyContent h2 {
+  margin-bottom: 0;
+}
+
 /* h1, h2 {
   font-family: Special, "Helvetica Neue", Arial;
 } */
@@ -140,6 +144,7 @@ header .navbar {
   width: 100%;
   background-image: url('http://2014.igem.org/wiki/images/f/fb/Aalto_Helsinki_Lights.png');
   background-size: cover;
+  color: white;
   margin-top: -10px;
   padding-top: 10vh;
   padding-bottom: 5vh;
@@ -183,6 +188,8 @@ header .navbar {
 
 
 /* Articlejen backgroundit */
+
+/*
 .turqu {
   background-color: #0AA699;
 }
@@ -207,6 +214,7 @@ header .navbar {
 .PCB {
   background-color: gray;
 }
+*/
 
 /* Footerin tyylit */
 
@@ -220,8 +228,8 @@ footer {
 }
 
 .footerimg {
-  max-height: 150px;
-  max-width: 300px;
+  max-height: 100px;
+  max-width: 250px;
 }
 
 .footerlogo {

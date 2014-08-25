@@ -194,6 +194,10 @@ header .navbar {
   background-color: #0AA699;
 }
 
+.turqu a, .green a {
+  color: white;
+}
+
 .white {
   background-color: white;
 }

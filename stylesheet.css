@@ -38,9 +38,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-/* h1, h2 {
-  font-family: Special, "Helvetica Neue", Arial;
-} */
+.logo {
+  width: 100%;
+}
 
 blockquote {
   font-family: "Helvetica Neue", serif;

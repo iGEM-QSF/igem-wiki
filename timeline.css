@@ -152,6 +152,9 @@ img { border: 0; max-width: 100%; }
 	margin-left: 6px;
 }
 
+.month {
+	clear:both;
+}
 
 /** timeline content **/
 

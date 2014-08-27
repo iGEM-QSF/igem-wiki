@@ -75,7 +75,7 @@ blockquote cite:before {
 
 /* Yleiset päättyy */
 
-/* Header- ja alavalikkojutut */
+/* Header- ja pikkuvalikkojutut */
 
 header {
   color: white;
@@ -91,7 +91,7 @@ header a.active {
   color:black;
 }
 
-header .navbar, .alavalikko {
+header .navbar, .extrabar {
   background-color:rgba(255,255,255,0.8);
   border:0px;
   border-radius: 0;
@@ -104,11 +104,27 @@ header .navbar {
   border-radius: 0px;
 }
 
-.alavalikko {
+.extrabar {
+  width:100%;
+  text-align: center;
   padding-top: 0px;
   padding-bottom: 5px;
   min-height: 20px;
   border-radius: 0px;
+}
+
+.extrabar a {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.affix {
+  top: 45px;
+  width: 100%;
+}
+
+.affix-top {
+  float:left;
 }
 
 .navbar{
@@ -117,20 +133,7 @@ header .navbar {
 
 /* Header päättyy */
 
-/* pikkuvalikon tyylit */
-.affix {
-  top:57px;
-  width:100%;
-}
 
-.affix-top {
-  float:left;
-}
-
-.extrabar {
-  width:100%;
-  text-align: center;
-}
 
 /* Pakolliset pikku valikot */
 

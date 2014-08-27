@@ -75,7 +75,7 @@ blockquote cite:before {
 
 /* Yleiset päättyy */
 
-/* Header-jutut */
+/* Header- ja alavalikkojutut */
 
 header {
   color: white;
@@ -91,9 +91,23 @@ header a.active {
   color:black;
 }
 
-header .navbar, .extrabar {
+header .navbar, .alavalikko {
   background-color:rgba(255,255,255,0.8);
   border:0px;
+}
+
+header .navbar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  min-height: 30px;
+  border-radius: 0px;
+}
+
+.alavalikko {
+  padding-top: 0px;
+  padding-bottom: 5px;
+  min-height: 20px;
+  border-radius: 0px;
 }
 
 .navbar{

@@ -187,7 +187,9 @@ header .navbar, .extrabar {
 }
 
 #softwaresplash {
-  background-image: url('http://2014.igem.org/wiki/images/7/7f/Aalto-Helsinki-Software-placeholder.png');
+  background-color: black;
+  background-image: none;
+/*  background-image: url('http://2014.igem.org/wiki/images/7/7f/Aalto-Helsinki-Software-placeholder.png'); */
 }
 
 #researchsplash {
@@ -199,7 +201,7 @@ header .navbar, .extrabar {
 
 /* Articlejen backgroundit */
 
-/*
+
 .turqu {
   background-color: #0AA699;
 }
@@ -207,6 +209,8 @@ header .navbar, .extrabar {
 .turqu a, .green a {
   color: white;
 }
+
+/*
 
 .white {
   background-color: white;

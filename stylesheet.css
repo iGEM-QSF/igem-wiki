@@ -108,6 +108,10 @@ header .navbar, .extrabar {
   width:100%;
 }
 
+.affix-top {
+  float:left;
+}
+
 .extrabar {
   width:100%;
   text-align: center;

@@ -4,6 +4,18 @@
     </div>
 </div>
 
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<div class="navbar navbar-default extrabar" data-spy="affix">
+    <nav>
+        <a href="#Software">Software</a>
+        <a href="#Seekers">Seekers</a>
+        <a href="#Other">Other Projects</a>
+        <a href="#Simulation">Simulation</a>
+    </nav>
+</div>
+
 <article class="turqu">
 <h1>Software</h1>
 <p>From the start, we planned to develop software tools to make the work of our team easier. We also want to share the tools with the iGEM Community to help everyone. </p>
@@ -57,3 +69,11 @@
 <p>All of the code (including a more in-detail Python graph simulation) is available at the project's <a href="http://github.com/iGEM-QSF/SimCircus">GitHub page.</a></p>
 
 </article>
+
+<script type="text/javascript">
+	$('.extrabar').affix({
+      offset: {
+        top: $('.splash').height() * 1.095
+      }
+});
+</script>

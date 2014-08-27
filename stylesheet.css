@@ -75,7 +75,7 @@ blockquote cite:before {
 
 /* Yleiset päättyy */
 
-/* Header-jutut */
+/* Header- ja pikkuvalikkojutut */
 
 header {
   color: white;
@@ -91,9 +91,40 @@ header a.active {
   color:black;
 }
 
-header .navbar {
+header .navbar, .extrabar {
   background-color:rgba(255,255,255,0.8);
   border:0px;
+  border-radius: 0;
+}
+
+header .navbar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  min-height: 30px;
+  border-radius: 0px;
+}
+
+.extrabar {
+  width:100%;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  min-height: 20px;
+  border-radius: 0px;
+}
+
+.extrabar a {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.affix {
+  top: 45px;
+  width: 100%;
+}
+
+.affix-top {
+  float:left;
 }
 
 .navbar{
@@ -101,6 +132,7 @@ header .navbar {
 }
 
 /* Header päättyy */
+
 
 
 /* Pakolliset pikku valikot */
@@ -177,7 +209,9 @@ header .navbar {
 }
 
 #softwaresplash {
-  background-image: url('http://2014.igem.org/wiki/images/7/7f/Aalto-Helsinki-Software-placeholder.png');
+  background-color: black;
+  background-image: none;
+/*  background-image: url('http://2014.igem.org/wiki/images/7/7f/Aalto-Helsinki-Software-placeholder.png'); */
 }
 
 #researchsplash {
@@ -189,7 +223,7 @@ header .navbar {
 
 /* Articlejen backgroundit */
 
-/*
+
 .turqu {
   background-color: #0AA699;
 }
@@ -197,6 +231,8 @@ header .navbar {
 .turqu a, .green a {
   color: white;
 }
+
+/*
 
 .white {
   background-color: white;

@@ -6,9 +6,22 @@
 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-    <div class= "navbar navbar-default navbar-fixed-top">
-        <div class="text-center col-sm-8" id="navigation">
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#myNav").affix({
+        offset: { 
+            top: 125 
+     	}
+    });
+    $("#myNav").on('affixed.bs.affix', function(){
+        alert("The left navigation menu has been affixed. Now it doesn't scroll with the page.");
+    });
+});
+</script>
+
+<div data-spy="affix" data-target="#myScrollspy">
+    <div class= "navbar navbar-default" id="myScrollspy">
+        <div id="myNav">
             <nav>
                 <a href="#Software">Software</a>
                 <a href="#Seekers">Seekers</a>
@@ -17,7 +30,6 @@
             </nav>
         </div>
     </div>
-</div>
 
 <article class="turqu">
 <h1>Software</h1>
@@ -72,3 +84,4 @@
 <p>All of the code (including a more in-detail Python graph simulation) is available at the project's <a href="http://github.com/iGEM-QSF/SimCircus">GitHub page.</a></p>
 
 </article>
+</div>

@@ -77,6 +77,10 @@ blockquote cite:before {
 
 /* Header- ja pikkuvalikkojutut */
 
+.navbar{
+  margin-top: 0;
+}
+
 header {
   color: white;
   font-size: large;
@@ -125,10 +129,6 @@ header .navbar {
 
 .affix-top {
   float:left;
-}
-
-.navbar{
-  margin-top: 0;
 }
 
 /* Header päättyy */

@@ -4,32 +4,17 @@
     </div>
 </div>
 
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function(){
-    $("#myNav").affix({
-        offset: { 
-            top: 125 
-     	}
-    });
-    $("#myNav").on('affixed.bs.affix', function(){
-        alert("The left navigation menu has been affixed. Now it doesn't scroll with the page.");
-    });
-});
-</script>
-
-<div data-spy="affix" data-target="#myScrollspy">
-    <div class= "navbar navbar-default" id="myScrollspy">
-        <div id="myNav">
-            <nav>
-                <a href="#Software">Software</a>
-                <a href="#Seekers">Seekers</a>
-                <a href="#Other">Other Projects</a>
-                <a href="#Simulation">Simulation</a>
-            </nav>
-        </div>
-    </div>
+<div class="navbar navbar-default extrabar" data-spy="affix">
+    <nav>
+        <a href="#Software">Software</a>
+        <a href="#Seekers">Seekers</a>
+        <a href="#Other">Other Projects</a>
+        <a href="#Simulation">Simulation</a>
+    </nav>
+</div>
 
 <article class="turqu">
 <h1>Software</h1>
@@ -84,4 +69,11 @@ $(document).ready(function(){
 <p>All of the code (including a more in-detail Python graph simulation) is available at the project's <a href="http://github.com/iGEM-QSF/SimCircus">GitHub page.</a></p>
 
 </article>
-</div>
+
+<script type="text/javascript">
+	$('#nav').affix({
+      offset: {
+        top: $('.splash').height()
+      }
+}); 
+</script>

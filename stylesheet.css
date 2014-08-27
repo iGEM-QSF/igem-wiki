@@ -94,6 +94,7 @@ header a.active {
 header .navbar, .alavalikko {
   background-color:rgba(255,255,255,0.8);
   border:0px;
+  border-radius: 0;
 }
 
 header .navbar {

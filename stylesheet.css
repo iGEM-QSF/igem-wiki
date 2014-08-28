@@ -135,7 +135,10 @@ header .navbar {
 
 /* Header päättyy */
 
-
+/* Sivun sisäisten linkkien offset */
+.link {
+  padding-top: 32px;
+}
 
 /* Pakolliset pikku valikot */
 

@@ -30,6 +30,10 @@ article {
   min-height: 50vh;
 }
 
+.link {
+  padding-top: 42px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
 }
@@ -139,11 +143,6 @@ header .navbar {
 }
 
 /* Header päättyy */
-
-/* Sivun sisäisten linkkien offset */
-.link {
-  padding-top: 32px;
-}
 
 /* Pakolliset pikku valikot */
 

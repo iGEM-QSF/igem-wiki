@@ -128,6 +128,7 @@ def main(argv=sys.argv):
     try:
         print("-- iGEM wiki quickify --\ncmd + d to abort.")
         username = input("Username: ")
+        username = username.encode("utf8")
         password = getpass.getpass('Password: ')
         #input("Password: ")
     except EOFError:

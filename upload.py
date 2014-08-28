@@ -31,7 +31,7 @@ class Wrangler(HTMLParser):
 
 #http://stackoverflow.com/questions/189555/how-to-use-python-to-login-to-a-webpage-and-retrieve-cookies-for-later-usage                   
 #def main(argv=sys.argv):
-def upload(page, file, headerfooter = False):                        
+def upload(page, file, headerfooter = True):                        
     global opener 
     #-------- get edit id --------#
     try:
@@ -72,13 +72,7 @@ def upload(page, file, headerfooter = False):
             print("no include/footer.html found. Not including")
             footer_data = ""
 
-        try:
-            with open ("include/sidebartemplate.html", "r") as myfile:
-                sidebar_data=myfile.read()
-        except FileNotFoundError:
-            print("no include/sidebartemplate.html found. Not including")
-            sidebar_data = ""
-        file_data = header_data+sidebar_data+file_data+footer_data
+        file_data = header_data+file_data+footer_data
     #------- post new edit -------#
     try:
         data['wpTextbox1'] = file_data

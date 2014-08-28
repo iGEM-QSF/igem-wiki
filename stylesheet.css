@@ -91,7 +91,7 @@ header a {
   padding-left: 1.5vw;
 }
 
-header a.active {
+header a.active, .extrabar a.active {
   color:black;
 }
 

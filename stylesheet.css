@@ -34,6 +34,11 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
 }
 
+h2 {
+  font-size: 38px;
+  padding-bottom: 30px;
+}
+
 #bodyContent h1, #bodyContent h2 {
   margin-bottom: 0;
 }

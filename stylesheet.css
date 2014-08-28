@@ -23,15 +23,24 @@ body {
 }
 
 article {
-  padding-top: 10vh;
+  padding-top: 5px;
   padding-bottom: 5vh;
   padding-left: 15vw;
   padding-right: 15vw;
   min-height: 50vh;
 }
 
+.link {
+  padding-top: 50px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
+}
+
+h2 {
+  font-size: 38px;
+  padding-bottom: 30px;
 }
 
 #bodyContent h1, #bodyContent h2 {
@@ -134,11 +143,6 @@ header .navbar {
 }
 
 /* Header päättyy */
-
-/* Sivun sisäisten linkkien offset */
-.link {
-  padding-top: 32px;
-}
 
 /* Pakolliset pikku valikot */
 

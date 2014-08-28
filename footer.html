@@ -63,7 +63,6 @@
 </script>
 <script type="text/javascript">
 $('.update').waypoint(function(direction) {
-  console.log($(this));
   var selector = "#" + ($(this)[0].classList[1]) + "-submenu";
   $('.extrabar a.active').removeClass("active");
   $(selector).addClass("active");

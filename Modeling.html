@@ -7,23 +7,34 @@
 <article>
 <h2>Mathematical model</h2>
 
-<h3>Gene circuit </h3>
+<h3>Overview </h3>
 
-<p>Based on our gene circuit design, we identified all the species involved in our system and factors that affect their production rates. [etc]</p>
+<p>Here, we will discuss the dynamics and interactions of chemical species introduced in the research section. We have developed a simplified mathematical model describing our system and based on that, an interactive simulation that can be controlled in real time. Based on this, we created a simplified visualization available on our web page. With this, the intended working of our system can be easily demonstrated to any audience.
+</p>
 </article>
 <article>
 <h3>Simplifications</h3>
 
-<p>We assumed that the species identified from our gene circuit are the only ones that affect the overall concentrations in our bacterial culture. The bonding of CI is assumed to be insignificant compared to overall concentration. The model is deterministic and doesn’t take into account any noise. The phosphorylation, decay, bonding etc are assumed to be a linear function of concentration [etc] </p>
-</article>
-<article>
-<h3>Equations [to be inserted]</h3>
+<p>The first model that was constructed before our lab work even begun involves many harsh simplifications. Our aim was to get a general picture of how the system could work in ideal conditions and how stable it was. 
 
-<img src="http://2014.igem.org/wiki/images/0/0a/Aalto_Helsinki_Equations.png" class="img-responsive"> 
-
-	
-</article>
+We assumed that the species identified from our gene circuit are the only ones that affect the overall concentrations in our bacterial culture. The bonding of CI to OR sites is assumed to be insignificant compared to overall concentration. The model is also strictly deterministic and doesn’t take into account any noise. The phosphorylation, decay, bonding and production of proteins are assumed to be linear functions of concentration. 
+</p>
 <article>
+<h3>Equations [to be inserted]</h3> 
+
+<p> Based on the assumptions made before, we arrived at following differential equations to describe the idealized dynamics of our system: 
+</p>
+
+<img src="http://2014.igem.org/wiki/images/0/0a/Aalto_Helsinki_Equations.png"> 
+
+<p>These equations describe the essential proteins our system (YF1, FixJ, Phosphorylated YF1, Phosphorylated FixJ, CI, TetR) Proteins are produced depending on the strength of  promoter and ribosome binding site, and also when phosphorylated protein (denoted with phos) is dephosphorylated back to its original form. The concentration of all proteins is reduced by decaying, which depends on the concentration of protein in question.
+</p>
+</article>
+<article> 
+<h3>Coefficients<h3>
+<p> P1, P2, PA and PB denote the relative strengths of promoters and Rbs1&Rbs2 the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted Deg). I(B) is the combined effect of blue light that affects the phosphorylation of YF1. The phosphorylation of FixJ is assumed to depend on phosphorylation coefficient C(phos) and the concentration of phosphorylated YF1. The dephosphorylation here depends on a respective dephosphorylation constant DP(1&2 for YF1 and FixJ).
+</p>
+
 <h3>Lights </h3>
 
 <p>[Blue light affects phosphorylation] </p>

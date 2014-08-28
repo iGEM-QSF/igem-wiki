@@ -10,7 +10,7 @@
 
 <div class="navbar navbar-default extrabar" data-spy="affix">
     <nav>
-        <a id="Software-submenu" href="#Software">Software</a>
+        <a id="Software-submenu" class="active" href="#Software">Software</a>
         <a id="Seekers-submenu" href="#Seekers">Seekers</a>
         <a id="Other-submenu" href="#Other">Other Projects</a>
         <a id="Simulation-submenu" href="#Simulation">Simulation</a>
@@ -80,11 +80,3 @@
 
 </article>
 <div class="update Simulation"></div>
-<script type="text/javascript">
-$('.update').waypoint(function(direction) {
-  console.log($(this));
-  var selector = "#" + ($(this)[0].classList[1]) + "-submenu";
-  $('.extrabar a.active').removeClass("active");
-  $(selector).addClass("active");
-});
-</script>

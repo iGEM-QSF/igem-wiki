@@ -61,6 +61,14 @@
       }
 });
 </script>
+<script type="text/javascript">
+$('.update').waypoint(function(direction) {
+  console.log($(this));
+  var selector = "#" + ($(this)[0].classList[1]) + "-submenu";
+  $('.extrabar a.active').removeClass("active");
+  $(selector).addClass("active");
+});
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

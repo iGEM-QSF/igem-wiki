@@ -115,6 +115,7 @@ header .navbar {
   padding-bottom: 5px;
   min-height: 20px;
   border-radius: 0px;
+  z-index:1;
 }
 
 .extrabar a {

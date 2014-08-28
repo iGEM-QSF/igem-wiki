@@ -130,6 +130,7 @@ header .navbar {
 
 .affix-top {
   float:left;
+  visibility: hidden;
 }
 
 /* Header päättyy */

@@ -10,15 +10,15 @@
 
 <div class="navbar navbar-default extrabar" data-spy="affix">
     <nav>
-        <a href="#Software">Software</a>
-        <a href="#Seekers">Seekers</a>
-        <a href="#Other">Other Projects</a>
-        <a href="#Simulation">Simulation</a>
+        <a id="Software-submenu" href="#Software">Software</a>
+        <a id="Seekers-submenu" href="#Seekers">Seekers</a>
+        <a id="Other-submenu" href="#Other">Other Projects</a>
+        <a id="Simulation-submenu" href="#Simulation">Simulation</a>
     </nav>
 </div>
 
 <article class="turqu">
-<h1 class="update">Software</h1>
+<h1 class="update" id="Software">Software</h1>
 <p>From the start, we planned to develop software tools to make the work of our team easier. We also want to share the tools with the iGEM Community to help everyone. </p>
 
 <p>All the code is available as open source on GitHub and is free to be reused, modified or expanded. All of the projects can be found through our GitHub organization <a href="http://github.com/iGEM-QSF">Quiet Sushi Force.</a>
@@ -26,7 +26,7 @@
 </article>
 
 <article class="plum">
-<h2 class="update">Seekers</h2>
+<h2 class="update" id="Seekers">Seekers</h2>
 
 <p>We made two different Seekers for making background research for iGEM projects a little easier. They are both written in JavaScript using the Angular.js library. The data in both is a massive JSON file that is easily modifiable and can be changed without doing any modifications to the code, so expanding the tools for the future only requires adding data. </p>
 
@@ -46,7 +46,7 @@
 <p>All of the code and installation instructions are available at the project's <a href="http://igem-qsf.github.io/iGEM-Team-Seeker/dist/">GitHub page.</a>
 </article>
 <article class="">
-<h2 class="update">Other software projects</h2>
+<h2 class="update" id="Other">Other software projects</h2>
 <p>A third one is the <a href="http://github.com/iGEM-QSF/igem-wiki">iGEM Wiki Quickifier.</a>, a tool to upload content to a particular team wiki without using the cumbersome wiki interface. It allows you to write all the pages as proper HTML and add template tags while uploading, so that they don't come in the way of writing actual content. It's work in progress and changing it to upload to other wikis than ours is not implemented, but if you know a bit of Python, it's easily done.</p>
 
 <p>All of the code and installation instructions are available at the project's <a href="http://github.com/iGEM-QSF/igem-wiki">GitHub page.</a></p>
@@ -62,7 +62,7 @@
 </article>
 
 <article class="PCB">
-<h2 class="update">Simulation</h2>
+<h2 class="update" id="Simulation">Simulation</h2>
 <p><img src="http://2014.igem.org/wiki/images/0/03/Aalto_Helsinki_Simulation.png" class="img-responsive"></a></p>
 
 <p>To demonstrate our work to the general public in an event called Summer of Startups Demo Day, we made a <a href="http://aaltohelsinki.com/simulation">simulation</a> that shows our system in action. It shows an animated bacteria plate with adjustable light intensity sliders to remotely control the bacteria. The proteins the bacteria produce are colors, so you can see how the changes in light intensity correlate to the color of the colonies on the plate. The simulation also has a nice grap that shows the protein levels in one second intervals so you can see more clearly what's going on in the cell.</p>
@@ -72,6 +72,9 @@
 </article>
 <script type="text/javascript">
 $('.update').waypoint(function(direction) {
-  alert('Waypoint hit');
+  var selector = "#" + ($(this)[0].id) + "-submenu";
+  console.log(selector);
+  //$(selector).append("active");
+  $(selector).setActive();
 });
 </script>

@@ -30,6 +30,11 @@ article {
   min-height: 50vh;
 }
 
+.row {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .link {
   padding-top: 50px;
 }

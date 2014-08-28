@@ -33,6 +33,19 @@ article {
 .row {
   padding-top: 15px;
   padding-bottom: 15px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  width: auto;
+  height: auto;
 }
 
 .link {
@@ -88,6 +101,7 @@ blockquote cite:before {
 }
 
 /* Yleiset päättyy */
+
 
 /* Header- ja pikkuvalikkojutut */
 
@@ -148,6 +162,7 @@ header .navbar {
 }
 
 /* Header päättyy */
+
 
 /* Pakolliset pikku valikot */
 
@@ -269,6 +284,20 @@ header .navbar {
   background-color: gray;
 }
 */
+
+
+/* BG (Kuvataustat) */
+
+.bg {
+  background-size: cover;
+}
+
+.bg-test {
+  background-image: url('http://2014.igem.org/wiki/images/b/bf/Aalto_Helsinki_Tyhjalabra.jpg');
+}
+
+/* BG (Kuvataustat) loppu */
+
 
 /* Footerin tyylit */
 

@@ -23,7 +23,7 @@ body {
 }
 
 article {
-  padding-top: 10vh;
+  padding-top: 0px;
   padding-bottom: 5vh;
   padding-left: 15vw;
   padding-right: 15vw;
@@ -31,7 +31,7 @@ article {
 }
 
 .link {
-  padding-top: 42px;
+  padding-top: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -31,23 +31,29 @@ article {
 }
 
 .row {
-  padding-top: 15px;
-  padding-bottom: 15px;
   overflow: hidden;
   position: relative;
   width: 100%;
 }
 
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+@media only screen and (min-width : 992px) {
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
+@media only screen and (max-width : 992px) {
+  .row {
+    margin-top: -10px;
+  }
+}
 
 .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-
+  padding: 5px;
+  margin: 10px;
 }
 
 .link {
@@ -292,12 +298,11 @@ header .navbar {
 
 .bg {
   background-size: cover;
-  background-image: url('http://2014.igem.org/wiki/images/b/bf/Aalto_Helsinki_Tyhjalabra.jpg');
   overflow: hidden;
 }
 
 .bg-test {
-  
+  background-image: url('http://2014.igem.org/wiki/images/b/bf/Aalto_Helsinki_Tyhjalabra.jpg');
 }
 
 /* BG (Kuvataustat) loppu */

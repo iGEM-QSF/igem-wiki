@@ -25,14 +25,14 @@ class Wrangler(HTMLParser):
                         name = i[1]
                         value = [c for c in attrs if c[0]=='value'][0][1]
                         self.ids[name]=value
-                 
 
-            
 
-#http://stackoverflow.com/questions/189555/how-to-use-python-to-login-to-a-webpage-and-retrieve-cookies-for-later-usage                   
+
+
+#http://stackoverflow.com/questions/189555/how-to-use-python-to-login-to-a-webpage-and-retrieve-cookies-for-later-usage
 #def main(argv=sys.argv):
-def upload(page, file, headerfooter = True):                        
-    global opener 
+def upload(page, file, headerfooter = True):
+    global opener
     #-------- get edit id --------#
     try:
         if (page == "index"):
@@ -47,7 +47,7 @@ def upload(page, file, headerfooter = True):
     except:
         print("Error:", sys.exc_info()[0])
         return 3
-    
+
     #---- read requested file ----#
     try:
         with open (file, "r") as myfile:
@@ -55,7 +55,7 @@ def upload(page, file, headerfooter = True):
     except FileNotFoundError:
         #print("File {:s} not found".format(file))
         return 2
-     
+
     #---- read header & footer ---#
     if (headerfooter == True):
         try:
@@ -77,7 +77,7 @@ def upload(page, file, headerfooter = True):
     try:
         data['wpTextbox1'] = file_data
         #data['wpSave'] = 'Save page'
-            
+
         encoded_data = parse.urlencode(data)
         if (page == "index"):
             resp = opener.open(BASE_URL+"&action=submit", encoded_data.encode('utf8'))
@@ -124,7 +124,7 @@ def main(argv=sys.argv):
         print("Usage: upload.py wikipage filename\n\nwikipage\tThe subpage in the wiki.\n\t\teg. in igem.org/wiki/index.php?title=Team:teamname/members\n\t\twikipage=members\n\nfile\t\tfilename in current directory")
         return
 
-    #------- read input ----------#    
+    #------- read input ----------#
     try:
         print("-- iGEM wiki quickify --\ncmd + d to abort.")
         username = input("Username: ")
@@ -135,7 +135,7 @@ def main(argv=sys.argv):
         print("Aborting...")
         return 1
     print("Logging in")
-    login_result = login(username, password) 
+    login_result = login(username, password)
     if (login_result == 2):
         print("Invalid username/password")
         return 1
@@ -163,6 +163,6 @@ def main(argv=sys.argv):
         elif (r != 0):
             print("Error occured")
     print("Done")
-        
-                
+
+
 main()

@@ -92,7 +92,7 @@ blockquote cite:before {
   overflow: hidden;
   position: relative;
   width: 100%;
-  margin: 10px 0px;
+  margin: 5px 0px;
   padding: 0px;
 }
 
@@ -110,6 +110,10 @@ blockquote cite:before {
   margin-top: 5px;
 }
 
+.img-center {
+  text-align: center;
+}
+
 .bg {
   background-size: cover;
   overflow: hidden;
@@ -121,6 +125,19 @@ blockquote cite:before {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .feat-left{
+    margin-right: 5px;
+  }
+
+  .feat-center {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .feat-right {
+    margin-left: 5px;
   }
 }
 

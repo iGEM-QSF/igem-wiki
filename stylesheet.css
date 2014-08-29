@@ -88,15 +88,31 @@ blockquote cite:before {
 
 /* Row-, col- ja img -säädöt */
 
-.kuvateksti {
-  text-decoration: italic;
-  font-size: small;
-}
-
 .row {
   overflow: hidden;
   position: relative;
   width: 100%;
+  margin: 10px 0px;
+  padding: 0px;
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.text-col {
+  padding-left: 10px;
+}
+
+.kuvateksti {
+  font-size: small;
+  margin-top: 5px;
+}
+
+.bg {
+  background-size: cover;
+  overflow: hidden;
 }
 
 @media only screen and (min-width : 992px) {
@@ -112,16 +128,6 @@ blockquote cite:before {
   .row {
     margin-top: -10px;
   }
-}
-
-.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-  padding: 5px;
-  margin: 10px;
-}
-
-.bg {
-  background-size: cover;
-  overflow: hidden;
 }
 
 /* Row-, col- ja img-säädöt loppu */

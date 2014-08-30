@@ -299,7 +299,7 @@ header .navbar {
   display: table;
   height: 100vh;
   width: 100%;
-  background-image: url('http://2014.igem.org/wiki/images/f/fb/Aalto_Helsinki_Lights.png');
+  background-image: url('http://aaltohelsinki.com/img/12.jpg');
   background-size: cover;
   color: white;
   margin-top: -10px;
@@ -348,7 +348,6 @@ header .navbar {
 
 /* Articlejen backgroundit */
 
-
 .turqu {
   background-color: #0AA699;
 }
@@ -381,11 +380,13 @@ header .navbar {
 }
 */
 
+/* Articlejen backgroundit loppu */
+
 
 /* BG (Kuvataustat) */
 
 .bg-test {
-  background-image: url('http://2014.igem.org/wiki/images/b/bf/Aalto_Helsinki_Tyhjalabra.jpg');
+  background-image: url('http://2014.igem.org/wiki/images/e/ec/Aalto_Helsinki_Placeholderpicture.jpg');
 }
 
 /* BG (Kuvataustat) loppu */

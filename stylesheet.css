@@ -445,4 +445,10 @@ footer {
   display:block;
 }
 
+#yhteystiedot {
+  text-align: center;
+  font-size: small;
+  padding-bottom: 10px;
+}
+
 /* Footerin tyylit loppu */

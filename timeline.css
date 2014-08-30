@@ -21,7 +21,7 @@ img { border: 0; max-width: 100%; }
   position: absolute;
   content: " ";
   width: 4px;
-  background-color: #eee;
+  background-color: #90F0E8;
   left: 49.4%;
   margin-left: -1.5px;
 }
@@ -61,15 +61,9 @@ img { border: 0; max-width: 100%; }
   width: 99%;
   float: left;
   background: #fff;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #0AA699;
   padding: 20px;
   position: relative;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
   margin-bottom: 25px;
 }
 
@@ -80,8 +74,8 @@ img { border: 0; max-width: 100%; }
   right: -15px;
   display: inline-block;
   border-top: 15px solid transparent;
-  border-left: 15px solid #ccc;
-  border-right: 0 solid #ccc;
+  border-left: 15px solid #0AA699;
+  border-right: 0 solid #0AA699;
   border-bottom: 15px solid transparent;
   content: " ";
 }

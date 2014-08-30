@@ -116,15 +116,24 @@ blockquote cite:before {
   padding-right: 20px;
 }
 
+.img-100 .img-responsive {
+  width: 100%;
+}
+
 .kuvateksti {
   font-size: small;
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .img-center {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+.img-center .img-responsive {
+  display: inline;
 }
 
 .feat {

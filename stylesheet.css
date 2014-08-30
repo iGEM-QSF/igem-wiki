@@ -93,17 +93,27 @@ blockquote cite:before {
   overflow: hidden;
   position: relative;
   width: 100%;
-  margin: 10px 0px;
+  margin: 0px 0px;
   padding: 0px;
 }
 
 .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
   padding: 0px;
-  margin: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.text-col {
-  padding-left: 10px;
+.bg {
+  background-size: cover;
+  overflow: hidden;
+}
+
+.text-col-right {
+  padding-left: 20px;
+}
+
+.text-col-left {
+  padding-right: 20px;
 }
 
 .kuvateksti {
@@ -114,11 +124,40 @@ blockquote cite:before {
 .img-center {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.bg {
-  background-size: cover;
-  overflow: hidden;
+.feat {
+  opacity: 0.95;
+}
+
+.feat:hover {
+  opacity: 1.0;
+}
+
+.feattext-container-tall {
+  display: table;
+  min-height: 400px;
+  min-height: 50vh;
+}
+
+.feattext-container-wide {
+  display: table;
+  min-height: 200px;
+  min-height: 30vh;
+}
+
+.feattext-cell {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.feattext-p {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: -5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  color: white;
 }
 
 @media only screen and (min-width : 992px) {
@@ -141,12 +180,11 @@ blockquote cite:before {
   .feat-right {
     margin-left: 5px;
   }
+
 }
 
-@media only screen and (max-width : 992px) {
-  .row {
-    margin-top: -10px;
-  }
+@media only screen and (min-width : 992px) {
+
 }
 
 /* Row-, col- ja img-säädöt loppu */

@@ -21,7 +21,7 @@ img { border: 0; max-width: 100%; }
   position: absolute;
   content: " ";
   width: 4px;
-  background-color: #90F0E8;
+  background-color: rgba(194, 240, 236, 0.42);
   left: 49.4%;
   margin-left: -1.5px;
 }

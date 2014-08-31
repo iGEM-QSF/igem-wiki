@@ -102,10 +102,21 @@ blockquote cite:before {
   margin-bottom: 20px;
 }
 
-.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+.margintop {
+  margin-top: 40px;
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
   padding: 0px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.col-md-2 h3, .col-md-4 h3, .col-md-6 h3,
+.col-md-2 h4, .col-md-4 h4, .col-md-6 h4,
+.col-md-2 h5, .col-md-4 h5, .col-md-6 h5 {
+  margin-top: 0px;
 }
 
 .bg {
@@ -350,6 +361,7 @@ header .navbar {
 .sponsorrow .col-md-4 {
   padding: 10px;
   text-align: -webkit-center;
+  text-align: -moz-center
 }
 
 .sponsorlogo {

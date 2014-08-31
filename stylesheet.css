@@ -279,14 +279,14 @@ header .navbar {
 /* Pakolliset pikku valikot */
 
 #top-section {
-  height: 0px;
+  height: 0;
+  width: 100%;
+  left: 0;
   border: none;
-  width: 0px;
   margin: 0 auto;
   padding: 0 0 0 0;
   background-color: transparent;
-  overflow: hide;
-  position: initial;
+  position: absolute;
 }
 
 #menubar {

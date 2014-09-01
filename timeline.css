@@ -61,7 +61,7 @@ img { border: 0; max-width: 100%; }
   width: 99%;
   float: left;
   background: #fff;
-  border: 1px solid #0AA699;
+  border: 2px solid rgba(143, 202, 197, 0.67);
   padding: 20px;
   position: relative;
   margin-bottom: 25px;
@@ -74,8 +74,8 @@ img { border: 0; max-width: 100%; }
   right: -15px;
   display: inline-block;
   border-top: 15px solid transparent;
-  border-left: 15px solid #0AA699;
-  border-right: 0 solid #0AA699;
+  border-left: 13px solid rgba(143, 202, 197, 0.67);
+  border-right: 0 solid rgba(143, 202, 197, 0.67);
   border-bottom: 15px solid transparent;
   content: " ";
 }
@@ -99,7 +99,7 @@ img { border: 0; max-width: 100%; }
 }
 
 .timeline .entry li.timeline-inverted .timeline-panel {
-  	float: right;
+  float: right;
 }
 
 .timeline-inverted {

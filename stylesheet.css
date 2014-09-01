@@ -52,7 +52,6 @@ h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small,
 .h4 .small, .h5 .small, .h6 .small {
   line-height: inherit;
   color: rgba(156, 207, 203, 1);
-  font-style: italic;
 }
 
 #bodyContent h1, #bodyContent h2 {
@@ -106,6 +105,17 @@ blockquote cite:before {
   padding: 0;
 }
 
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  padding: 0;
+}
+
+.col-md-2 h3, .col-md-4 h3, .col-md-6 h3, .col-md-8 h3,
+.col-md-2 h4, .col-md-4 h4, .col-md-6 h4, .col-md-8 h4,
+.col-md-2 h5, .col-md-4 h5, .col-md-6 h5, .col-md-8 h5 {
+  margin-top: 0;
+}
+
 .memberrow {
   margin-top: 2em;
   margin-bottom: 2em;
@@ -116,11 +126,11 @@ blockquote cite:before {
 }
 
 .text-col-right {
-  padding-left: 2em;
+  padding-left: 1em;
 }
 
 .text-col-left {
-  padding-right: 2em;
+  padding-right: 1em;
 }
 
 .img-100 .img-responsive {
@@ -205,17 +215,6 @@ blockquote cite:before {
 }
 
 @media only screen and (min-width : 992px) {
-}
-
-.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
-.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-  padding: 0;
-}
-
-.col-md-2 h3, .col-md-4 h3, .col-md-6 h3, .col-md-8 h3,
-.col-md-2 h4, .col-md-4 h4, .col-md-6 h4, .col-md-8 h4,
-.col-md-2 h5, .col-md-4 h5, .col-md-6 h5, .col-md-8 h5 {
-  margin-top: 0;
 }
 
 /* Kuvien ja rivien asettelu loppu */

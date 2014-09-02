@@ -20,6 +20,7 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
+  word-wrap: break-word;
 }
 
 article {
@@ -39,9 +40,13 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
 }
 
+h1 {
+  font-size: 7em;
+}
+
 h2 {
-  font-size: 38px;
-  padding-bottom: 30px;
+  font-size: 2.5em;
+  padding-bottom: 0.5em;
   text-align: center;
 }
 
@@ -211,9 +216,6 @@ blockquote cite:before {
 
 }
 
-@media only screen and (min-width : 992px) {
-}
-
 /* Kuvien ja rivien asettelu loppu */
 
 
@@ -321,15 +323,7 @@ header .navbar {
   background-size: cover;
   color: white;
   margin-top: -10px;
-  padding-top: 10vh;
-  padding-bottom: 5vh;
-  padding-left: 15vw;
-  padding-right: 15vw;
   text-align: center;
-}
-
-.splash h1 {
-  font-size: 100px;
 }
 
 .textinsplash {
@@ -374,10 +368,12 @@ header .navbar {
   max-height: 150px;
 }
 
+
 /* Research */
 #researchsplash {
   background-image: url('http://2014.igem.org/wiki/images/1/13/Aalto-Helsinki-Research-Placeholder.png');
 }
+
 
 /* Cooperation */
 #cooperationsplash {
@@ -441,7 +437,7 @@ footer {
 }
 
 #logorow {
-  padding: 100px;
+  padding: 2em;
 }
 
 .footerimg {
@@ -452,7 +448,7 @@ footer {
 .footerlogo {
   display: inline-block;
   vertical-align: middle;
-  padding: 20px;
+  padding: 1.5em;
 }
 
 .footerlogo:hover .on, .footerlogo .off {
@@ -466,7 +462,7 @@ footer {
 #yhteystiedot {
   text-align: center;
   font-size: small;
-  padding-bottom: 10px;
+  padding: 0.5em;
 }
 
 /* Footerin tyylit loppu */
@@ -474,14 +470,24 @@ footer {
 
 /* Padit ja puhelimet */
 
-@media only screen and (max-width : 500px) {
+@media only screen and (max-width : 992px) {
 
   .splash {
-    display: none;
+    background-image: none;
+    background-color: black;
+    min-height: 300px;
   }
 
-  #bodyContent {
-    margin-top: 50px;
+  #mainsplash {
+    background-image: none;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  .bodyContent {
+    padding-top: 5em;
   }
 
   #menubar {
@@ -489,14 +495,36 @@ footer {
     white-space: pre-line;
   }
 
+  article {
+    padding: 5em 1em;
+  }
+
   .row {
     margin: 0;
+  }
+
+  #logorow {
+    padding: none;
+  }
+
+  .footerlogo {
+    padding: 1.5em 0em
   }
 
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
   .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     margin-top: 1em;
     padding: 0;
+  }
+
+  header .navbar {
+    min-height: 30px;
+    border-radius: 0px;
+    padding: 0.5em 0;
+  }
+
+  .mobile-hide {
+    display: none;
   }
 }
 

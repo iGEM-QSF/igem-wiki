@@ -340,15 +340,26 @@ header .navbar {
   width: 100%;
 }
 
+@media only screen and (min-width : 992px) {
+
+    #mainsplash {
+    background-image: url('http://aaltohelsinki.com/img/12.jpg');
+  }
+
+  #researchsplash {
+    background-image: url('http://2014.igem.org/wiki/images/1/13/Aalto-Helsinki-Research-Placeholder.png');
+  }
+
+  #cooperationsplash {
+    background-image: url('http://2014.igem.org/wiki/images/7/7f/Aalto-Helsinki-Software-placeholder.png');
+  }
+
+}
+
 /* Splash-tyylittelyt loppu */
 
 
 /* SIVUJEN OMIA tyylejä */
-
-/* Main */
-#mainsplash {
-  background-image: url('http://aaltohelsinki.com/img/12.jpg');
-}
 
 
 
@@ -368,17 +379,6 @@ header .navbar {
   max-height: 150px;
 }
 
-
-/* Research */
-#researchsplash {
-  background-image: url('http://2014.igem.org/wiki/images/1/13/Aalto-Helsinki-Research-Placeholder.png');
-}
-
-
-/* Cooperation */
-#cooperationsplash {
-  background-image: url('http://2014.igem.org/wiki/images/7/7f/Aalto-Helsinki-Software-placeholder.png');
-}
 
 /* SIVUJEN OMAT tyylit loppu */
 

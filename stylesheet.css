@@ -449,6 +449,8 @@ footer {
 
 @media only screen and (max-width : 992px) {
 
+
+  /* Yleiset */
   .splash {
     background-image: none;
     background-color: black;
@@ -472,6 +474,24 @@ footer {
     padding-top: 5em;
   }
 
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+  .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    margin-top: 1em;
+    padding: 0;
+  }
+
+  article {
+    padding: 5em 1em;
+    min-height: 50px;
+    font-size: 16px;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+
+  /* Headerit sun muut */
   #navigation {
     padding: 0;
   }
@@ -489,6 +509,10 @@ footer {
     text-align: left;
   }
 
+  .left-menu ul {
+    margin-right: 0.2em;
+  }
+
   .left-menu li a {
     padding: 0px 2px 0px 2px
   }
@@ -499,16 +523,17 @@ footer {
     text-align: right;
   }
 
+
+  .right-menu ul {
+    margin-right: 0.2em;
+  }
+
   .right-menu li a {
     padding: 0 2px 0 2px;
   }
 
   li#pt-userpage, li#pt-anonuserpage, li#pt-login {
     padding-left: 0;
-  }
-
-  #menubar ul {
-    margin: 0;
   }
 
   header .navbar {
@@ -526,16 +551,6 @@ footer {
     display: none;
   }
 
-  article {
-    padding: 5em 1em;
-    min-height: 50px;
-    font-size: 16px;
-  }
-
-  .row {
-    margin: 0;
-  }
-
   #logorow {
     padding: none;
   }
@@ -544,12 +559,8 @@ footer {
     padding: 1.5em 0em
   }
 
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
-  .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-    margin-top: 1em;
-    padding: 0;
-  }
 
+  /* Muut */
   .mobile-hide {
     display: none;
   }

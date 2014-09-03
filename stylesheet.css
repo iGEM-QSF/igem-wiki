@@ -23,13 +23,15 @@ body {
   word-wrap: break-word;
 }
 
-article {
-  padding-top: 5px;
-  padding-bottom: 5vh;
-  padding-left: 15vw;
-  padding-right: 15vw;
-  min-height: 50vh;
-  font-size: 16px;
+@media only screen and (min-width : 992px) {
+  article {
+    padding-top: 5px;
+    padding-bottom: 5vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    min-height: 50vh;
+    font-size: 16px;
+  }
 }
 
 .link {
@@ -317,10 +319,7 @@ header .navbar {
 
 .splash{
   display: table;
-  height: 100vh;
   width: 100%;
-  background-image: url('http://aaltohelsinki.com/img/12.jpg');
-  background-size: cover;
   color: white;
   margin-top: -10px;
   text-align: center;
@@ -342,7 +341,13 @@ header .navbar {
 
 @media only screen and (min-width : 992px) {
 
-    #mainsplash {
+  .splash {
+    background-image: url('http://aaltohelsinki.com/img/12.jpg');
+    background-size: cover;
+    height: 100vh;
+  }
+
+  #mainsplash {
     background-image: url('http://aaltohelsinki.com/img/12.jpg');
   }
 
@@ -475,7 +480,12 @@ footer {
   .splash {
     background-image: none;
     background-color: black;
-    min-height: 300px;
+    min-height: 500px;
+    display: table;
+    width: 100%;
+    color: white;
+    margin-top: -10px;
+    text-align: center;
   }
 
   #mainsplash {
@@ -497,6 +507,8 @@ footer {
 
   article {
     padding: 5em 1em;
+    min-height: 50px;
+    font-size: 16px;
   }
 
   .row {

@@ -98,129 +98,6 @@ blockquote cite:before {
 /* Yleiset päättyy */
 
 
-/* Kuvien ja rivien asettelua */
-
-.row {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  margin: 1em 0;
-  padding: 0;
-}
-
-.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
-.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-  padding: 0;
-}
-
-.col-md-2 h3, .col-md-4 h3, .col-md-6 h3, .col-md-8 h3,
-.col-md-2 h4, .col-md-4 h4, .col-md-6 h4, .col-md-8 h4,
-.col-md-2 h5, .col-md-4 h5, .col-md-6 h5, .col-md-8 h5 {
-  margin-top: 0em;
-}
-
-.memberrow {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-.margintop {
-  margin-top: 2em;
-}
-
-.text-col-right {
-  padding-left: 1em;
-}
-
-.text-col-left {
-  padding-right: 1em;
-}
-
-.img-100 .img-responsive {
-  width: 100%;
-}
-
-.kuvateksti {
-  font-size: small;
-  margin-top: 1em;
-  margin-bottom: 3em;
-}
-
-.img-center {
-  text-align: center;
-  margin-top: 2em;
-}
-
-.img-center .img-responsive {
-  display: inline;
-}
-
-.bg {
-  background-size: cover;
-  overflow: hidden;
-}
-
-/* Featured */
-.feat {
-  opacity: 0.95;
-}
-
-.feat:hover {
-  opacity: 1.0;
-}
-
-.feattext-container-tall {
-  display: table;
-  height: 400px;
-  height: 50vh;
-}
-
-.feattext-container-wide {
-  display: table;
-  height: 200px;
-  height: 30vh;
-}
-
-.feattext-cell {
-  display: table-cell;
-  vertical-align: bottom;
-}
-
-.feattext-p {
-  background-color: rgba(255, 255, 255, 0.3);
-  margin: -0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 1em;
-  color: white;
-}
-
-/* Tätä ei tarvita puhelimille ku sotkis vaan */
-@media only screen and (min-width : 992px) {
-  .row-eq-height {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .feat-left{
-    margin-right: 0.5em;
-  }
-
-  .feat-center {
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-  }
-
-  .feat-right {
-    margin-left: 0.5em;
-  }
-
-}
-
-/* Kuvien ja rivien asettelu loppu */
-
-
 /* Header- ja pikkuvalikkojutut */
 
 .navbar{
@@ -232,9 +109,11 @@ header {
   font-size: large;
 }
 
-header a {
-  padding-right: 1vw;
-  padding-left: 1vw;
+@media only screen and (min-width : 992px) {
+  header a {
+    padding-right: 1vw;
+    padding-left: 1vw;
+  }
 }
 
 header a.active, .extrabar a.active {
@@ -315,6 +194,127 @@ header .navbar {
 /* Pakolliset pikku valikot päättyy */
 
 
+/* Kuvien ja rivien asettelua */
+
+.row {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  padding: 0;
+}
+
+.col-md-2 h3, .col-md-4 h3, .col-md-6 h3, .col-md-8 h3,
+.col-md-2 h4, .col-md-4 h4, .col-md-6 h4, .col-md-8 h4,
+.col-md-2 h5, .col-md-4 h5, .col-md-6 h5, .col-md-8 h5 {
+  margin-top: 0em;
+}
+
+.memberrow {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.margintop {
+  margin-top: 2em;
+}
+
+.text-col-right {
+  padding-left: 1em;
+}
+
+.text-col-left {
+  padding-right: 1em;
+}
+
+.img-100 .img-responsive {
+  width: 100%;
+}
+
+.kuvateksti {
+  font-size: small;
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+.img-center {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.img-center .img-responsive {
+  display: inline;
+}
+
+.bg {
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Featured */
+.feat {
+  opacity: 0.95;
+}
+
+.feat:hover {
+  opacity: 1.0;
+}
+
+.feattext-container-tall {
+  display: table;
+  height: 400px;
+}
+
+.feattext-container-wide {
+  display: table;
+  height: 200px;
+}
+
+.feattext-cell {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.feattext-p {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: -0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  color: white;
+}
+
+/* Tätä ei tarvita puhelimille ku sotkis vaan */
+@media only screen and (min-width : 992px) {
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .feat-left{
+    margin-right: 0.5em;
+  }
+
+  .feat-center {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+  }
+
+  .feat-right {
+    margin-left: 0.5em;
+  }
+
+}
+
+/* Kuvien ja rivien asettelu loppu */
+
+
 /* Splashien yhteiset tyylit */
 
 .splash{
@@ -366,9 +366,6 @@ header .navbar {
 
 /* SIVUJEN OMIA tyylejä */
 
-
-
-/* Team */
 .sponsorrow {
   min-height: 200px;
   align-items: center;
@@ -384,7 +381,6 @@ header .navbar {
   max-height: 150px;
 }
 
-
 /* SIVUJEN OMAT tyylit loppu */
 
 
@@ -397,30 +393,6 @@ header .navbar {
 .turqu a, .green a {
   color: white;
 }
-
-/*
-
-.white {
-  background-color: white;
-}
-
-.black {
-  background-color: black;
-  color:white;
-}
-
-.green {
-  background-color: #399f70;
-}
-
-.plum {
-  background-color:#B00C69;
-}
-
-.PCB {
-  background-color: gray;
-}
-*/
 
 /* Articlejen backgroundit loppu */
 
@@ -500,9 +472,54 @@ footer {
     padding-top: 5em;
   }
 
+  #navigation {
+    padding: 0;
+  }
+
   #menubar {
-    width: 100px;
-    white-space: pre-line;
+    font-family: inherit;
+    white-space: normal;
+    width: 300px;
+    z-index: 1;
+  }
+
+  .left-menu {
+    margin-top: 60px;
+    left: 0;
+    text-align: left;
+  }
+
+  .left-menu li a {
+    padding: 0px 2px 0px 2px
+  }
+
+  .right-menu {
+    margin-top: 60px;
+    right: 0;
+    text-align: right;
+  }
+
+  .right-menu li a {
+    padding: 0 2px 0 2px;
+  }
+
+  li#pt-userpage, li#pt-anonuserpage, li#pt-login {
+    padding-left: 0;
+  }
+
+  header .navbar {
+    font-size: 16px;
+    border-radius: 0px;
+    padding: 0.5em 0;
+  }
+
+  header a {
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+  }
+
+  .affix-top, .affix, .extrabar a, .extrabar {
+    display: none;
   }
 
   article {
@@ -529,15 +546,10 @@ footer {
     padding: 0;
   }
 
-  header .navbar {
-    min-height: 30px;
-    border-radius: 0px;
-    padding: 0.5em 0;
-  }
-
   .mobile-hide {
     display: none;
   }
+
 }
 
 /* Padit ja puhelimet loppu */

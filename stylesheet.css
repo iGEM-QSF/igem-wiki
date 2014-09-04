@@ -20,15 +20,18 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
+  word-wrap: break-word;
 }
 
-article {
-  padding-top: 5px;
-  padding-bottom: 5vh;
-  padding-left: 15vw;
-  padding-right: 15vw;
-  min-height: 50vh;
-  font-size: 16px;
+@media only screen and (min-width : 992px) {
+  article {
+    padding-top: 5px;
+    padding-bottom: 5vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    min-height: 50vh;
+    font-size: 16px;
+  }
 }
 
 .link {
@@ -39,28 +42,37 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
 }
 
+h1 {
+  font-size: 7em;
+}
+
 h2 {
-  font-size: 38px;
-  padding-bottom: 30px;
+  font-size: 2.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
+.h1 small, .h2 small, .h3 small, .h4 small, .h5 small,
+.h6 small, h1 .small, h2 .small, h3 .small, h4 .small,
+h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small,
+.h4 .small, .h5 .small, .h6 .small {
+  line-height: inherit;
+  color: rgba(156, 207, 203, 1);
 }
 
 #bodyContent h1, #bodyContent h2 {
   margin-bottom: 0;
 }
 
-.omalogo {
-  width: 100%;
-}
-
 blockquote {
-  font-family: "Helvetica Neue", serif;
-  font-size: 24px;
   font-style: italic;
-  line-height: 2;
   position: relative;
-  padding: 0 0 0 80px;
-  margin: 60px -20px 60px 0;
   border-left: none;
+  line-height: 1.8;
+  font-size: 1.3em;
+  padding: 0 0 0 120px;
+  margin: 2em 0 2em 0;
 }
 
 blockquote:before {
@@ -68,15 +80,15 @@ blockquote:before {
   content: "\201C";
   font-size: 200px;
   position: absolute;
-  left: -30px;
+  left: 0;
   top: -115px;
 }
 
 blockquote cite {
-  color: #999999;
-  font-size: 14px;
+  color: rgba(156, 207, 203, 1);
+  font-size: 0.6em;
   display: block;
-  margin-top: 5px;
+  margin-top: 0.5em;
 }
 
 blockquote cite:before {
@@ -84,53 +96,6 @@ blockquote cite:before {
 }
 
 /* Yleiset päättyy */
-
-
-/* Row-, col- ja img -säädöt */
-
-.row {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  margin: 10px 0px;
-  padding: 0px;
-}
-
-.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-  padding: 0px;
-  margin: 0px;
-}
-
-.text-col {
-  padding-left: 10px;
-}
-
-.kuvateksti {
-  font-size: small;
-  margin-top: 5px;
-}
-
-.bg {
-  background-size: cover;
-  overflow: hidden;
-}
-
-@media only screen and (min-width : 992px) {
-  .row-eq-height {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media only screen and (max-width : 992px) {
-  .row {
-    margin-top: -10px;
-  }
-}
-
-/* Row-, col- ja img-säädöt loppu */
 
 
 /* Header- ja pikkuvalikkojutut */
@@ -144,9 +109,11 @@ header {
   font-size: large;
 }
 
-header a {
-  padding-right: 1vw;
-  padding-left: 1vw;
+@media only screen and (min-width : 992px) {
+  header a {
+    padding-right: 1vw;
+    padding-left: 1vw;
+  }
 }
 
 header a.active, .extrabar a.active {
@@ -197,14 +164,14 @@ header .navbar {
 /* Pakolliset pikku valikot */
 
 #top-section {
-  height: 0px;
+  height: 0;
+  width: 100%;
+  left: 0;
   border: none;
-  width: 0px;
   margin: 0 auto;
   padding: 0 0 0 0;
   background-color: transparent;
-  overflow: hide;
-  position: initial;
+  position: absolute;
 }
 
 #menubar {
@@ -227,25 +194,135 @@ header .navbar {
 /* Pakolliset pikku valikot päättyy */
 
 
+/* Kuvien ja rivien asettelua */
+
+.row {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  padding: 0;
+}
+
+.col-md-2 h3, .col-md-4 h3, .col-md-6 h3, .col-md-8 h3,
+.col-md-2 h4, .col-md-4 h4, .col-md-6 h4, .col-md-8 h4,
+.col-md-2 h5, .col-md-4 h5, .col-md-6 h5, .col-md-8 h5 {
+  margin-top: 0em;
+}
+
+.memberrow {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.margintop {
+  margin-top: 2em;
+}
+
+.text-col-right {
+  padding-left: 1em;
+}
+
+.text-col-left {
+  padding-right: 1em;
+}
+
+.img-100 .img-responsive {
+  width: 100%;
+}
+
+.kuvateksti {
+  font-size: small;
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+.img-center {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.img-center .img-responsive {
+  display: inline;
+}
+
+.bg {
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Featured */
+.feat {
+  opacity: 0.95;
+}
+
+.feat:hover {
+  opacity: 1.0;
+}
+
+.feattext-container-tall {
+  display: table;
+  height: 400px;
+}
+
+.feattext-container-wide {
+  display: table;
+  height: 200px;
+}
+
+.feattext-cell {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.feattext-p {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: -0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  color: white;
+}
+
+/* Tätä ei tarvita puhelimille ku sotkis vaan */
+@media only screen and (min-width : 992px) {
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .feat-left{
+    margin-right: 0.5em;
+  }
+
+  .feat-center {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+  }
+
+  .feat-right {
+    margin-left: 0.5em;
+  }
+
+}
+
+/* Kuvien ja rivien asettelu loppu */
+
+
 /* Splashien yhteiset tyylit */
 
 .splash{
   display: table;
-  height: 100vh;
   width: 100%;
-  background-image: url('http://2014.igem.org/wiki/images/f/fb/Aalto_Helsinki_Lights.png');
-  background-size: cover;
   color: white;
   margin-top: -10px;
-  padding-top: 10vh;
-  padding-bottom: 5vh;
-  padding-left: 15vw;
-  padding-right: 15vw;
   text-align: center;
-}
-
-.splash h1 {
-  font-size: 100px;
 }
 
 .textinsplash {
@@ -258,30 +335,56 @@ header .navbar {
   font-style: italic;
 }
 
+.omalogo {
+  width: 100%;
+}
+
+@media only screen and (min-width : 992px) {
+
+  .splash {
+    background-image: url('http://aaltohelsinki.com/img/12.jpg');
+    background-size: cover;
+    height: 100vh;
+  }
+
+  #mainsplash {
+    background-image: url('http://aaltohelsinki.com/img/12.jpg');
+  }
+
+  #researchsplash {
+    background-image: url('http://2014.igem.org/wiki/images/1/13/Aalto-Helsinki-Research-Placeholder.png');
+  }
+
+  #cooperationsplash {
+    background-image: url('http://2014.igem.org/wiki/images/7/7f/Aalto-Helsinki-Software-placeholder.png');
+  }
+
+}
+
 /* Splash-tyylittelyt loppu */
 
 
-/* Erillisten sivujen tyylit*/
+/* SIVUJEN OMIA tyylejä */
 
-#mainsplash {
-  background-image: url('http://aaltohelsinki.com/img/12.jpg');
+.sponsorrow {
+  min-height: 200px;
+  align-items: center;
 }
 
-#softwaresplash {
-  background-color: black;
-  background-image: none;
-/*  background-image: url('http://2014.igem.org/wiki/images/7/7f/Aalto-Helsinki-Software-placeholder.png'); */
+.sponsorrow .col-md-4 {
+  padding: 10px;
+  text-align: -webkit-center;
+  text-align: -moz-center
 }
 
-#researchsplash {
-  background-image: url('http://2014.igem.org/wiki/images/1/13/Aalto-Helsinki-Research-Placeholder.png');
+.sponsorlogo {
+  max-height: 150px;
 }
 
-/* Erillisten sivujen tyylit loppu */
+/* SIVUJEN OMAT tyylit loppu */
 
 
 /* Articlejen backgroundit */
-
 
 .turqu {
   background-color: #0AA699;
@@ -291,35 +394,13 @@ header .navbar {
   color: white;
 }
 
-/*
-
-.white {
-  background-color: white;
-}
-
-.black {
-  background-color: black;
-  color:white;
-}
-
-.green {
-  background-color: #399f70;
-}
-
-.plum {
-  background-color:#B00C69;
-}
-
-.PCB {
-  background-color: gray;
-}
-*/
+/* Articlejen backgroundit loppu */
 
 
 /* BG (Kuvataustat) */
 
 .bg-test {
-  background-image: url('http://2014.igem.org/wiki/images/b/bf/Aalto_Helsinki_Tyhjalabra.jpg');
+  background-image: url('http://2014.igem.org/wiki/images/e/ec/Aalto_Helsinki_Placeholderpicture.jpg');
 }
 
 /* BG (Kuvataustat) loppu */
@@ -333,7 +414,7 @@ footer {
 }
 
 #logorow {
-  padding: 100px;
+  padding: 2em;
 }
 
 .footerimg {
@@ -344,7 +425,7 @@ footer {
 .footerlogo {
   display: inline-block;
   vertical-align: middle;
-  padding: 20px;
+  padding: 1.5em;
 }
 
 .footerlogo:hover .on, .footerlogo .off {
@@ -355,4 +436,135 @@ footer {
   display:block;
 }
 
+#yhteystiedot {
+  text-align: center;
+  font-size: small;
+  padding: 0.5em;
+}
+
 /* Footerin tyylit loppu */
+
+
+/* Padit ja puhelimet */
+
+@media only screen and (max-width : 992px) {
+
+
+  /* Yleiset */
+  .splash {
+    background-image: none;
+    background-color: black;
+    min-height: 500px;
+    display: table;
+    width: 100%;
+    color: white;
+    margin-top: -10px;
+    text-align: center;
+  }
+
+  #mainsplash {
+    background-image: none;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  .bodyContent {
+    padding-top: 5em;
+  }
+
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+  .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    margin-top: 1em;
+    padding: 0;
+  }
+
+  article {
+    padding: 5em 1em;
+    min-height: 50px;
+    font-size: 16px;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+
+  /* Headerit sun muut */
+  #navigation {
+    padding: 0;
+  }
+
+  #menubar {
+    font-family: inherit;
+    white-space: normal;
+    width: 300px;
+    z-index: 1;
+  }
+
+  .left-menu {
+    margin-top: 60px;
+    left: 0;
+    text-align: left;
+  }
+
+  .left-menu ul {
+    margin-right: 0.2em;
+  }
+
+  .left-menu li a {
+    padding: 0px 2px 0px 2px
+  }
+
+  .right-menu {
+    margin-top: 60px;
+    right: 0;
+    text-align: right;
+  }
+
+
+  .right-menu ul {
+    margin-right: 0.2em;
+  }
+
+  .right-menu li a {
+    padding: 0 2px 0 2px;
+  }
+
+  li#pt-userpage, li#pt-anonuserpage, li#pt-login {
+    padding-left: 0;
+  }
+
+  header .navbar {
+    font-size: 16px;
+    border-radius: 0px;
+    padding: 0.5em 0;
+  }
+
+  header a {
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+  }
+
+  .affix-top, .affix, .extrabar a, .extrabar {
+    display: none;
+  }
+
+  #logorow {
+    padding: none;
+  }
+
+  .footerlogo {
+    padding: 1.5em 0em
+  }
+
+
+  /* Muut */
+  .mobile-hide {
+    display: none;
+  }
+
+}
+
+/* Padit ja puhelimet loppu */

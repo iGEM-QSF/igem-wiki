@@ -76,14 +76,36 @@
   <h2>Our Research Methods</h2>
   <h3>LED-rig for excitation</h3>
   <p>
-  We designed a new kind of device from scratch. Inspired by the Tabor labs
+  To be able to shine light on our bacteria we designed a new kind of device from scratch. Inspired by the rig developed by Tabor labs<sup>1</sup> we decided to build a simpler one, onli with blue LED:s.<br /><br />
+  Luckily we have some electronic knowledge in our team too. With Pietu designing the rig we built a foam-padded transportable rig that can be put in an incubator overnight.<br /><br />
+  <h4>Microcontroller</h4>
+  The core of the rig is an Arduino Nano<sup>2</sup> microcontroller. The Arduino is responsible for the logic behind our illumination patterns.
+  The patterns in our experiments are fairly simple and could in theory be done without the Arduino, but we chose to use it due to its wide popularity and because we now could make advanced (and cool) animations on our rig. Also the Arduino acts as a 5v voltage regulator which provides the voltage for the second part of the rig:
+  the Adafruit 16-channel 16-bit PWM controller<sup>3</sup>.<br /><br />
+  
+  <h4>LED:s</h4>
+  Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. In our project we used miniature leds because of their small power and small heat generation. It is important that the LED:s wont heat up the bacteria remarkably.
+  Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift<sup>3</sup>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the led on and off very fast, up to frequencies of 1.6kHz. By varying the time the led is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.<br /><br />
+  Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for this task. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino. Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements.<br />
+  <h4>Constructing</h4>
+  We wanted to be able to illuminante a bacteria culture with a single led. We choose to culture our bacteria on microtiter-plates. This choice was also affected by the microplate reader we used to measure fluorescence (the GFP). We had the chance to get to use a Varioskan<sup>5</sup>.<br />
+  We designed our system so that a unmodified 96 well microtiter plate could be inerted easily. Our LEDs are attached to a lid that can be placed on the microtiter plate. 16 LEDs will illuminate the wells on columns 11,9,7,5 and rows B, D, F, H.
+  <br />
+  <br />
+  The LEDs we had a peak value of 470nm. This value is specified by the manufacturer, but the spectra of individual leds can vary considerably. Therefore we will measure the spectra od our LED:s with a spectrophotometer to be sure of the excitation wavelength.
+  <br />We have yet to invent a way to measure the LED intensity. If you have ideas, pleaser contact us!
+  <br /><br />
   <ol>
-  	<li>E.J. Olson, L.A. Hartsough, B.P. Landry, R. Shroff, J.J. Tabor,<br />
+  	<li> E.J. Olson, L.A. Hartsough, B.P. Landry, R. Shroff, J.J. Tabor,<br />
 "Characterizing bacterial gene circuit dynamics with optically programmed gene expression signals."<br />
 Nature Methods 11(4), 449-455 (2014).</li></li>
+	<li>Arduino Nano microcontroller, http://arduino.cc/en/Main/arduinoBoardNano</li>
+	<li>Adafruit 16-channel PWM shield, https://learn.adafruit.com/adafruit-16-channel-pwm-slash-servo-shield?view=all</li>
+	<li>S. Muthu, F. Schuurmans and M. Pashley, “Red, Green and Blue LED based white light generation: Issues and Control,” 37th Annual IEEEIAS meeting, Vol. 1, pp. 327 – 333 (2002)</li>
+	<li>http://www.thermoscientific.com/content/tfs/en/product/varioskan-flash-multimode-reader.html</li>
   </ol>
   </p>
-
+fl
 </article>
 <div class="update Methods"></div>
 <div class="update Results"></div>

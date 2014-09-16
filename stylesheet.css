@@ -58,7 +58,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
 h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small,
 .h4 .small, .h5 .small, .h6 .small {
   line-height: inherit;
-  color: rgba(156, 207, 203, 1);
+  color: rgba(51, 97, 93, 1);
 }
 
 #bodyContent h1, #bodyContent h2 {
@@ -85,7 +85,7 @@ blockquote:before {
 }
 
 blockquote cite {
-  color: rgba(156, 207, 203, 1);
+  color: rgba(51, 97, 93, 1);
   font-size: 0.6em;
   display: block;
   margin-top: 0.5em;

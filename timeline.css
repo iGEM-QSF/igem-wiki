@@ -57,7 +57,8 @@ img { border: 0; max-width: 100%; }
   width: 99%;
   float: left;
   background: #fff;
-  border: 2px solid rgba(143, 202, 197, 0.67);
+  border: 1px solid rgba(143, 202, 197, 0.67);
+  border-radius: 20px;
   padding: 20px;
   position: relative;
   margin-bottom: 25px;
@@ -70,7 +71,7 @@ img { border: 0; max-width: 100%; }
   right: -15px;
   display: inline-block;
   border-top: 15px solid transparent;
-  border-left: 13px solid rgba(143, 202, 197, 0.67);
+  border-left: 15px solid rgba(143, 202, 197, 0.67);
   border-right: 0 solid rgba(143, 202, 197, 0.67);
   border-bottom: 15px solid transparent;
   content: " ";

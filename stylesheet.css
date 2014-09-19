@@ -332,7 +332,14 @@ header .navbar {
 
 .textinsplash > p {
   font-size: large;
-  font-style: italic;
+}
+
+.lyhytrow {
+  min-height: 20%;
+}
+
+.pitkarow {
+  min-height: 60%;
 }
 
 .omalogo {

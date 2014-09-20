@@ -327,6 +327,7 @@ header .navbar {
 
 .bigsplashtext {
   font-size: 1.4em;
+  margin: 0 10px;
 }
 
 .isosplashrow {
@@ -357,13 +358,11 @@ header .navbar {
   opacity: 1;
 }
 
-.splashcrcontainer {
-}
-
 .splashcopyright {
-  display: inline-block;
-  vertical-align: bottom;
   font-size: small;
+  float: right;
+  text-align: right;
+  margin: 10px;
 }
 
 .textinsplash {

@@ -332,7 +332,27 @@ header .navbar {
 
 .textinsplash > p {
   font-size: large;
-  font-style: italic;
+}
+
+.lyhytrow {
+  min-height: 20%;
+}
+
+.pitkarow {
+  min-height: 60%;
+}
+
+.igem-logo {
+  width: 100px;
+  margin-top: 60px;
+  right: 100px;
+  margin-right: 30px;
+  float: right;
+  opacity: 0.7;
+}
+
+.igem-logo:hover {
+  opacity: 1;
 }
 
 .omalogo {

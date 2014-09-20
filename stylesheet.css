@@ -325,6 +325,47 @@ header .navbar {
   text-align: center;
 }
 
+.bigsplashtext {
+  font-size: 1.4em;
+}
+
+.isosplashrow {
+  min-height: 40%;
+}
+
+.minisplashrow {
+  min-height: 15%;
+}
+
+.semisplashrow {
+  min-height: 30%;
+}
+
+.splashalavalikko {
+  text-align: left;
+  margin-left: 40px;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+.splashalavalikko a {
+  color: white;
+  opacity: 0.7;
+}
+
+.splashalavalikko a:hover {
+  opacity: 1;
+}
+
+.splashcrcontainer {
+}
+
+.splashcopyright {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: small;
+}
+
 .textinsplash {
   display: table-cell;
   vertical-align: middle;
@@ -334,19 +375,11 @@ header .navbar {
   font-size: large;
 }
 
-.lyhytrow {
-  min-height: 20%;
-}
-
-.pitkarow {
-  min-height: 60%;
-}
-
 .igem-logo {
   width: 100px;
   margin-top: 60px;
   right: 100px;
-  margin-right: 30px;
+  margin-right: 40px;
   float: right;
   opacity: 0.7;
 }

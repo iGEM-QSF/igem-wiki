@@ -38,6 +38,10 @@ body {
   padding-top: 50px;
 }
 
+.paddingtop {
+  padding-top: 100px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
 }
@@ -315,7 +319,7 @@ header .navbar {
 /* Kuvien ja rivien asettelu loppu */
 
 
-/* Splashien yhteiset tyylit */
+/* Splashit */
 
 .splash{
   display: table;
@@ -346,9 +350,13 @@ header .navbar {
   opacity: 1;
 }
 
+.cprightcontainer {
+  float: right;
+  margin: 10px;
+}
+
 .splashcopyright {
   font-size: small;
-  float: right;
   text-align: right;
   margin: 10px;
 }
@@ -382,25 +390,17 @@ header .navbar {
 @media only screen and (min-width : 992px) {
 
   .splash {
+    min-height: 100vh;
     background-image: url('http://aaltohelsinki.com/img/12.jpg');
     background-size: cover;
-    height: 100vh;
   }
 
   .splashesittely {
-    padding-top: 5em;
+    min-height: 400px;
   }
 
-  #mainsplash {
-    background-image: url('http://aaltohelsinki.com/img/12.jpg');
-  }
+  .splashalavalikko {
 
-  #researchsplash {
-    background-image: url('http://2014.igem.org/wiki/images/1/13/Aalto-Helsinki-Research-Placeholder.png');
-  }
-
-  #cooperationsplash {
-    background-image: url('http://2014.igem.org/wiki/images/7/7f/Aalto-Helsinki-Software-placeholder.png');
   }
 
 }

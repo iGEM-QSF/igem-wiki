@@ -330,18 +330,6 @@ header .navbar {
   margin: 0 10px;
 }
 
-.isosplashrow {
-  min-height: 40%;
-}
-
-.minisplashrow {
-  min-height: 15%;
-}
-
-.semisplashrow {
-  min-height: 30%;
-}
-
 .splashalavalikko {
   text-align: left;
   margin-left: 40px;
@@ -399,6 +387,10 @@ header .navbar {
     height: 100vh;
   }
 
+  .splashesittely {
+    padding-top: 5em;
+  }
+
   #mainsplash {
     background-image: url('http://aaltohelsinki.com/img/12.jpg');
   }
@@ -411,6 +403,27 @@ header .navbar {
     background-image: url('http://2014.igem.org/wiki/images/7/7f/Aalto-Helsinki-Software-placeholder.png');
   }
 
+}
+
+@media only screen and (max-width : 992px) {
+
+  .splash {
+    background-image: none;
+    background-color: black;
+    min-height: 500px;
+    width: 100%;
+    color: white;
+    margin-top: -10px;
+    text-align: center;
+  }
+
+  #mainsplash {
+    background-image: none;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
 }
 
 /* Splash-tyylittelyt loppu */
@@ -503,24 +516,6 @@ footer {
 
 
   /* Yleiset */
-  .splash {
-    background-image: none;
-    background-color: black;
-    min-height: 500px;
-    display: table;
-    width: 100%;
-    color: white;
-    margin-top: -10px;
-    text-align: center;
-  }
-
-  #mainsplash {
-    background-image: none;
-  }
-
-  h1 {
-    font-size: 3.5em;
-  }
 
   .bodyContent {
     padding-top: 5em;

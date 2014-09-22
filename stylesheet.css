@@ -1,8 +1,17 @@
 /* Yleiset */
 
 @font-face {
-    font-family: "TMHUitA";
-    src: url("http://igem-qsf.github.io/igem-wiki/fonts/ThrowMyHandsUpintheAir.ttf") format("truetype");
+  font-family: 'TMHUitA';
+  src: url('http://igem-qsf.github.io/igem-wiki/fonts/ThrowMyHandsUpintheAir.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Varalla';
+  src: url('http://igem-qsf.github.io/igem-wiki/fonts/Hangyaboly.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'TMHUitA', 'Varalla';
 }
 
 a:link, a:visited, a:active, .right-menu li a {
@@ -21,10 +30,6 @@ body {
   margin: 0;
   padding: 0;
   word-wrap: break-word;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "TMHUitA";
 }
 
 @media only screen and (min-width : 992px) {

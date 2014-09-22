@@ -350,6 +350,18 @@ header .navbar {
   opacity: 1;
 }
 
+.transp {
+  opacity: 0.7;
+}
+
+.transp:hover {
+  opacity: 1;
+}
+
+.nuoli {
+  max-height: 100px;
+}
+
 .cprightcontainer {
   float: right;
   margin: 10px;

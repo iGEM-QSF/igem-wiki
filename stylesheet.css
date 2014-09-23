@@ -26,6 +26,11 @@ body {
   word-wrap: break-word;
 }
 
+.cpright {
+  text-align: right;
+  padding-right: 1em;
+}
+
 @media only screen and (min-width : 992px) {
   article {
     padding-top: 5px;
@@ -287,14 +292,14 @@ header .navbar {
 }
 
 .feattext-p {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(95, 95, 95, 0.42);
   margin: -0.5em;
   padding-bottom: 0.5em;
   padding-left: 1em;
+  padding-right: 1em;
   color: white;
 }
 
-/* Tätä ei tarvita puhelimille ku sotkis vaan */
 @media only screen and (min-width : 992px) {
   .row-eq-height {
     display: -webkit-box;
@@ -561,6 +566,39 @@ header .navbar {
 
 .bg-test {
   background-image: url('http://2014.igem.org/wiki/images/e/ec/Aalto_Helsinki_Placeholderpicture.jpg');
+}
+
+.bg-bbseeker {
+  background-image: url('http://2014.igem.org/wiki/images/d/dd/Aalto_Helsinki_Feat_BBSeeker.jpg');
+}
+
+
+.bg-team {
+  background-image: url('http://2014.igem.org/wiki/images/a/a3/Aalto_Helsinki_Feat_Team.jpg');
+}
+
+.bg-business {
+  background-image: url('http://2014.igem.org/wiki/images/e/e6/Aalto_Helsinki_Feat_Business.jpg');
+}
+
+.bg-research {
+  background-image: url('http://2014.igem.org/wiki/images/7/7c/Aalto_Helsinki_Feat_Research.jpg');
+}
+
+.bg-modeling {
+  background-image: url('http://2014.igem.org/wiki/images/1/17/Aalto_Helsinki_Feat_Modeling.jpg');
+}
+
+.bg-cooperation {
+  background-image: url('http://2014.igem.org/wiki/images/f/f7/Aalto_Helsinki_Feat_Cooperation.jpg');
+}
+
+.bg-outreach {
+  background-image: url('http://2014.igem.org/wiki/images/5/5e/Aalto_Helsinki_Feat_Outreach.jpg');
+}
+
+.bg-journal {
+  background-image: url('http://2014.igem.org/wiki/images/c/c5/Aalto_Helsinki_Feat_Journal.jpg');
 }
 
 /* BG (Kuvataustat) loppu */

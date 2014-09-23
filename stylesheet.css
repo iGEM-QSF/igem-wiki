@@ -64,7 +64,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
 h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small,
 .h4 .small, .h5 .small, .h6 .small {
   line-height: inherit;
-  color: rgba(51, 97, 93, 1);
+  color: rgba(100, 153, 148, 1);
 }
 
 #bodyContent h1, #bodyContent h2 {
@@ -401,30 +401,57 @@ header .navbar {
 @media only screen and (max-width : 992px) {
 
   .splash {
-    background-image: none;
-    background-color: black;
     min-height: 500px;
     width: 100%;
     color: white;
     text-align: center;
   }
 
+  .igem-logo {
+    margin-top: 80px;
+  }
+
   .splashcopyright {
     text-align: right;
-    padding: 40px 20px;
+    padding: 60px 40px;
+  }
+
+  h1 {
+    font-size: 3.5em;
   }
 
   #mainsplash {
-    background-image: none;
+    background-image: url('http://2014.igem.org/wiki/images/5/5a/Aalto_Helsinki_Splashs_Main.jpg');
+  }
+
+  #teamsplash {
+    background-image: url('http://2014.igem.org/wiki/images/7/75/Aalto_Helsinki_Splashs_Team.jpg');
   }
 
   #businesssplash {
     background-image: url('http://2014.igem.org/wiki/images/3/3f/Aalto_Helsinki_Splashs_Business.jpg');
   }
 
-  h1 {
-    font-size: 3.5em;
+  #researchsplash {
+    background-image: url('http://2014.igem.org/wiki/images/4/4a/Aalto_Helsinki_Splashs_Research.jpg');
   }
+
+  #modelingsplash {
+    background-image: url('http://2014.igem.org/wiki/images/7/7d/Aalto_Helsinki_Splashs_Modeling.jpg');
+  }
+
+  #cooperationsplash {
+    background-image: url('http://2014.igem.org/wiki/images/9/9e/Aalto_Helsinki_Splashs_Cooperation.jpg');
+  }
+
+  #outreachsplash {
+    background-image: url('http://2014.igem.org/wiki/images/4/45/Aalto_Helsinki_Splashs_Outreach.jpg');
+  }
+
+  #journalsplash {
+    background-image: url('http://2014.igem.org/wiki/images/2/2d/Aalto_Helsinki_Splashs_Journal.jpg');
+  }
+
 }
 
 @media only screen and (min-width : 992px) {
@@ -432,7 +459,6 @@ header .navbar {
   .splash {
     position: relative;
     min-height: 820px;
-    background-image: url('http://aaltohelsinki.com/img/12.jpg');
   }
 
   .splashesittely {
@@ -447,21 +473,49 @@ header .navbar {
 
   .splashcopyright {
     font-size: small;
-    padding: 40px 20px;
+    padding: 60px 40px;
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+
+  #mainsplash {
+    background-image: url('http://2014.igem.org/wiki/images/6/60/Aalto_Helsinki_Splash_Main.jpg');
+  }
+
+  #teamsplash {
+    background-image: url('http://2014.igem.org/wiki/images/f/f1/Aalto_Helsinki_Splash_Team.jpg');
   }
 
   #businesssplash {
     background-image: url('http://2014.igem.org/wiki/images/8/80/Aalto_Helsinki_Splash_Business.jpg');
   }
 
+  #researchsplash {
+    background-image: url('http://2014.igem.org/wiki/images/c/cb/Aalto_Helsinki_Splash_Research.jpg');
+  }
+
+  #modelingsplash {
+    background-image: url('http://2014.igem.org/wiki/images/7/73/Aalto_Helsinki_Splash_Modeling.jpg');
+  }
+
+  #cooperationsplash {
+    background-image: url('http://2014.igem.org/wiki/images/f/f5/Aalto_Helsinki_Splash_Cooperation.jpg');
+  }
+
+  #outreachsplash {
+    background-image: url('http://2014.igem.org/wiki/images/e/e3/Aalto_Helsinki_Splash_Outreach.jpg');
+  }
+
+  #journalsplash {
+    background-image: url('http://2014.igem.org/wiki/images/8/82/Aalto_Helsinki_Splash_Journal.jpg');
+  }
+
 }
 
 @media only screen and (min-width : 1472px) {
   .splash {
-    min-height: 1000px;
+    min-height: 1030px;
   }
 }
 

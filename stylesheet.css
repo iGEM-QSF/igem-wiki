@@ -279,25 +279,29 @@ header .navbar {
 .feattext-container-tall {
   display: table;
   height: 400px;
+  width: 100%;
 }
 
 .feattext-container-wide {
   display: table;
   height: 300px;
+  width: 100%;
 }
 
 .feattext-cell {
   display: table-cell;
   vertical-align: bottom;
+  width: 100%;
 }
 
 .feattext-p {
   background-color: rgba(95, 95, 95, 0.42);
-  margin: -0.5em;
+  margin-bottom: -0.5em;
   padding-bottom: 0.5em;
   padding-left: 1em;
   padding-right: 1em;
   color: white;
+  width: 100%;
 }
 
 @media only screen and (min-width : 992px) {

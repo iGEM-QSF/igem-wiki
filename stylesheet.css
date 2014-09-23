@@ -410,7 +410,7 @@ header .navbar {
 @media only screen and (max-width : 992px) {
 
   .splash {
-    min-height: 500px;
+    min-height: 700px;
     width: 100%;
     color: white;
     text-align: center;

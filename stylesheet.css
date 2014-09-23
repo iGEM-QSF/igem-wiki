@@ -20,7 +20,6 @@ a:hover {
 
 body {
   color: black;
-  min-height: 85vh;
   background-color: white;
   margin: 0;
   padding: 0;
@@ -30,10 +29,9 @@ body {
 @media only screen and (min-width : 992px) {
   article {
     padding-top: 5px;
-    padding-bottom: 5vh;
-    padding-left: 15vw;
-    padding-right: 15vw;
-    min-height: 50vh;
+    padding-bottom: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
     font-size: 16px;
   }
 }
@@ -326,11 +324,11 @@ header .navbar {
 /* Splashit */
 
 .splash{
-  display: table;
   width: 100%;
   color: white;
-  margin-top: -10px;
+  margin-top: -14px;
   text-align: center;
+  background-size: cover;
 }
 
 .bigsplashtext {
@@ -340,7 +338,7 @@ header .navbar {
 
 .splashalavalikko {
   text-align: left;
-  margin-left: 40px;
+  padding: 80px 40px;
   font-size: 1.5em;
   line-height: 1.5;
 }
@@ -352,6 +350,10 @@ header .navbar {
 
 .splashalavalikko a:hover {
   opacity: 1;
+}
+
+.scroller {
+  padding: 40px;
 }
 
 .transp {
@@ -366,28 +368,17 @@ header .navbar {
   text-align: center;
 }
 
+.transp a {
+  color: white;
+  opacity: 0.7;
+}
+
+.transp a:hover {
+  opacity: 1;
+}
+
 .nuoli {
   max-height: 50px;
-}
-
-.cprightcontainer {
-  float: right;
-  margin: 10px;
-}
-
-.splashcopyright {
-  font-size: small;
-  text-align: right;
-  margin: 10px;
-}
-
-.textinsplash {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.textinsplash > p {
-  font-size: large;
 }
 
 .igem-logo {
@@ -407,24 +398,6 @@ header .navbar {
   width: 100%;
 }
 
-@media only screen and (min-width : 992px) {
-
-  .splash {
-    min-height: 100vh;
-    background-image: url('http://aaltohelsinki.com/img/12.jpg');
-    background-size: cover;
-  }
-
-  .splashesittely {
-    min-height: 400px;
-  }
-
-  .splashalavalikko {
-
-  }
-
-}
-
 @media only screen and (max-width : 992px) {
 
   .splash {
@@ -433,18 +406,66 @@ header .navbar {
     min-height: 500px;
     width: 100%;
     color: white;
-    margin-top: -10px;
     text-align: center;
+  }
+
+  .splashcopyright {
+    text-align: right;
+    padding: 40px 20px;
   }
 
   #mainsplash {
     background-image: none;
   }
 
+  #businesssplash {
+    background-image: url('http://2014.igem.org/wiki/images/3/3f/Aalto_Helsinki_Splashs_Business.jpg');
+  }
+
   h1 {
     font-size: 3.5em;
   }
 }
+
+@media only screen and (min-width : 992px) {
+
+  .splash {
+    position: relative;
+    min-height: 820px;
+    background-image: url('http://aaltohelsinki.com/img/12.jpg');
+  }
+
+  .splashesittely {
+    min-height: 400px;
+  }
+
+  .splashalavalikko {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .splashcopyright {
+    font-size: small;
+    padding: 40px 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  #businesssplash {
+    background-image: url('http://2014.igem.org/wiki/images/8/80/Aalto_Helsinki_Splash_Business.jpg');
+  }
+
+}
+
+@media only screen and (min-width : 1472px) {
+  .splash {
+    min-height: 1000px;
+  }
+}
+
+
 
 /* Splash-tyylittelyt loppu */
 

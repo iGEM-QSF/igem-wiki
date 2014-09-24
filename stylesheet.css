@@ -298,8 +298,8 @@ header .navbar {
   background-color: rgba(95, 95, 95, 0.42);
   margin-bottom: -0.5em;
   padding-bottom: 0.5em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   color: white;
   width: 100%;
 }
@@ -411,6 +411,7 @@ header .navbar {
 
 .omalogot {
   width: 60%;
+  padding-top: 1em;
 }
 
 @media only screen and (max-width : 992px) {

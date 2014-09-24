@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 7em;
+  font-size: 6em;
 }
 
 h2 {
@@ -362,7 +362,8 @@ header .navbar {
 }
 
 .scroller {
-  padding: 40px;
+  padding-bottom: 40px;
+  padding-top: 10px;
 }
 
 .transp {
@@ -405,6 +406,11 @@ header .navbar {
 
 .omalogo {
   width: 100%;
+  padding-bottom: 1em;
+}
+
+.omalogot {
+  width: 60%;
 }
 
 @media only screen and (max-width : 992px) {
@@ -536,8 +542,8 @@ header .navbar {
 /* SIVUJEN OMIA tyylejä */
 
 .sponsorrow {
-  min-height: 200px;
   align-items: center;
+  margin: 20px 0;
 }
 
 .sponsorrow .col-md-4 {

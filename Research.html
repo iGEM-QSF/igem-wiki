@@ -29,7 +29,7 @@
     </div>
 
 	<div class="splashalavalikko">
-		<a href="#Switch">The Switch Specifics</a><br>
+		<a href="#Switch">The Switch</a><br>
         <a href="#Parts">Parts</a><br>
         <a href="#Background">Background</a><br>
         <a href="#Methods">Our Research Methods</a><br>
@@ -60,9 +60,37 @@
 <div class="update Switch"></div>
 <article>
 	<div class="link" id="Switch"></div>
-	<h2>The Switch Specifics</h2>
+	<h2>The Three-Channel Switch</h2>
 	<p>
-		Our aim was to develop a switch with three distinct states and each of them represents an arbitrary gene. In contrast to Uppsala 2012’s solution of such a switch, we designed a mechanism that can be fully controlled with only one wavelength. Such a switch can be used for example in bioreactors to achieve higher level of control over the bioprocess and to switch between different phases of the process. The benefit of our system is that it reserves only one channel of communication but it would still enable an accurate control over the three states.
+		We engineered a three-channel switch that can be controlled with the intensity of blue light. By utilizing the mechanisms of lambda repressor and linking it to a blue light sensor protein, we are able to swiftly switch between the expressions of three different genes. This mechanism could provide a nearly real-time control over the chosen genes, which could advance a variety of industrial bioprocesses and speed up various research projects. The switch is built so that one can decide the genes themselves without needing to modify the actual mechanism at all.
+	</p>
+	<p>
+		We chose YF1 fusion protein as the light receptor protein. It is unphosphorylated in blue light and becomes phosphorylated in darkness. A phosphorylated YF1 protein can activate FixJ protein, which can then bind to FixK^2 binding site and activate the production of repressor protein CI. Thus, CI protein is not produced in blue light.
+	</p>
+	<p>
+		We used lambda repressor protein CI to switch between the genes.  Only gene A is active when there is no repressor protein CI. At medium concentrations of CI, gene A becomes deactivated and gene B is activated. At high concentrations of CI, only gene C is active. 
+	</p>
+	<p>
+		So, to put it all together, in blue light the switch chooses gene A, in dim blue light gene B, and in darkness gene C. The image illustrates this functionality.
+	</p>
+
+	<p>
+		/lamppukuva/
+		[kuvateksti] In blue light the switch chooses gene A, in dim blue light gene B, and in darkness gene C.
+	</p>
+
+	<p>
+		Legend
+		YF1 fusion protein = blue-light sensor that becomes unphosphorylated in blue light and phosphorylated (activated) in darkness
+		FixJ protein = activates promoter FixK^2 when it is in phosphorylated form
+		FixK^2 binding site = activates the production of CI when FixJ binds to it
+		lambda (λ) repressor protein CI = a protein that can repress and/or activate the transcription of two different genes
+		O^R  tripartite operator site = an operator site to which CI binds, downstream from O^L in λ phage 
+		O^L tripartite operator site = and operator site to which CI binds, upstream from O^R in λ phage
+		P^RM promoter = a promoter that is active only when there’s no CI protein
+		P^R promoter = a promoter that is active only when there’s little CI protein, too much or too little inhibit the production
+		genes A-B = the three genes that you could insert to our system and they would be expressed as explained here
+		Tetracycline repressor protein TetR = can bind to TetR repressible promoter sites and inhibit gene transcription
 	</p>
 
 </article>
@@ -71,7 +99,31 @@
 <article>
 	<div class="link" id="Parts"></div>
 
-  <h2>Parts</h2>
+  	<h2>Parts</h2>
+
+  	<p>
+  		/parts-lista-igem-template-säätö/
+  	</p>
+  	<p>
+  		The final construct ended up being fairly large. The gene circuit consists of two different segments: the light sensor that produces CI according to the intensity of light and the actual switch that responds to the differences in the concentration of repressor protein CI.
+  	</p>
+	<p>
+		We used fairly many already existing parts that were in the 2014 iGEM BioBrick Distribution. The parts we created ourselves are /mitä me nyt saadaan lähetettyä/. /selitystä kustakin partista ja että mitä se tekee/.
+	</p>
+	<p>
+		Here’s a list of all the parts we used in our gene switch. They are in the same order as in our gene circuit and each of them is color coded as follows: /hienot värikoodisysteemit/. /makee luettelo niistä brickeistä/.
+	</p>
+
+	<p>
+		This is the complete sequence that we put together. The color codes are the same as in the previous list. Gene A has 20 Xs as placeholders, gene B has 20 Xs and gene C has 20 Xs. As anyone could decide the genes themselves, the placeholders are just to show the correct place in the sequence.
+	</p>
+	<p>
+		In addition to these parts, we also used a GFP part for testing the response times of YF1. /ja mitä muuta nyt ollaankaan testailtu/
+	</p>
+	<p>
+		/genecircuitkuva/
+		[kuvateksti] This is our gene circuit. The upper part is the light sensing segment that produces the CI protein and the lower part reacts to differences in the CI concentration and switches the gene channel. The turquoise arrows are promoters, the turquoise circles are operator sites, the light blue circles are ribosome binding sites, the gray squares are expressed genes. The promoter of YF1 gene can be any constitutive promoter.
+	</p>
   
 </article>
 <div class="update Parts"></div>

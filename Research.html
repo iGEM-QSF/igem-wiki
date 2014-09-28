@@ -12,7 +12,7 @@
 		<div class="col-md-6">
 			<h1>Research</h1>
 			<p class="bigsplashtext">
-				We engineered a three-channel switch that allows you to choose which of its three genes is active. It's designed so that you can also choose the expressed genes yourself.
+				We engineered a three-channel switch that allows you to choose which of its three genes is active. It's designed so that you can choose the expressed genes yourself.
 			</p>
 		</div>
 		<div class="col-md-3">
@@ -29,12 +29,13 @@
     </div>
 
 	<div class="splashalavalikko">
-		<a href="#Switch">The Switch Specifics</a><br>
+		<a href="#Switch">The Switch</a><br>
         <a href="#Parts">Parts</a><br>
         <a href="#Background">Background</a><br>
-        <a href="#Methods">Our Research Methods</a><br>
+        <a href="#Methods">Methods</a><br>
         <a href="#Results">Results</a><br>
 		<a href="#Discussion">Discussion</a><br>
+		<a href="#References">References</a><br>
     </div>
 
 	<div class = "splashcopyright">
@@ -49,20 +50,56 @@
 <script src="http://2014.igem.org/Team:Aalto-Helsinki/waypoints.min.js?action=raw&ctype=text/js"></script>
 <div class="navbar navbar-default extrabar" data-spy="affix">
     <nav>
-        <a id="Switch-submenu" class="active" href="#Switch">The Switch Specifics</a>
+        <a id="Switch-submenu" class="active" href="#Switch">The Switch</a>
         <a id="Parts-submenu" href="#Parts">Parts</a>
         <a id="Background-submenu" href="#Background">Background</a>
-        <a id="Methods-submenu" href="#Methods">Our Research Methods</a>
+        <a id="Methods-submenu" href="#Methods">Methods</a>
         <a id="Results-submenu" href="#Results">Results</a>
-        <a id="Discussion-submenu" href="#Discussion">Discussion</a> 
+        <a id="Discussion-submenu" href="#Discussion">Discussion</a>
+        <a id="References-submenu" href="#References">References</a> 
     </nav>
 </div>
 <div class="update Switch"></div>
 <article>
 	<div class="link" id="Switch"></div>
-	<h2>The Switch Specifics</h2>
+	<h2>The Three-Channel Switch</h2>
 	<p>
-		Our aim was to develop a switch with three distinct states and each of them represents an arbitrary gene. In contrast to Uppsala 2012’s solution of such a switch, we designed a mechanism that can be fully controlled with only one wavelength. Such a switch can be used for example in bioreactors to achieve higher level of control over the bioprocess and to switch between different phases of the process. The benefit of our system is that it reserves only one channel of communication but it would still enable an accurate control over the three states.
+		We engineered a three-channel switch that can be controlled with the intensity of blue light. By utilizing the mechanisms of lambda (λ) repressor and linking it to a blue light sensor protein, we are able to swiftly switch between the expressions of three different genes. This mechanism could provide a nearly real-time control over the chosen genes, which could advance a variety of industrial bioprocesses and speed up various research projects. The switch is built so that one can decide the genes themselves without needing to modify the actual mechanism at all.
+	</p>
+
+	<div class="row margintop">
+		<div class="col-md-8 text-col-left">
+			<p>
+				We chose YF1 fusion protein as the light receptor protein. It is unphosphorylated in blue light and becomes phosphorylated in darkness. A phosphorylated YF1 protein can activate FixJ protein, which can then bind to FixK^2 binding site and activate the production of λ repressor protein CI. Thus, CI protein is not produced in bright blue light but the production begins when the blue light is dimmed down.
+			</p>
+			<p>
+				We used lambda repressor protein CI to switch between the genes.  Only gene A is active when there is no repressor protein CI. At medium concentrations of CI, gene A becomes deactivated and gene B is activated. At high concentrations of CI, only gene C is active. The acticity and deactivity of the gene C is based on tetracycline repressor protein that is produced with genes A and B. When neither of those genes are active, gene C is activated. The activities of genes A and B are controlled with an interesting mechanism of lambda repressor, which is explained thoroughly in the background part on this page. 
+			</p>
+			<p>
+				So, to put it all together, in blue light the switch chooses gene A, in dim blue light gene B, and in darkness gene C. The image illustrates this functionality.
+			</p>
+		</div>
+		<div class="col-md-4 img-100">
+			<img src="http://2014.igem.org/wiki/images/f/fe/Aalto_Helsinki_Lamppukuva.png" class="img-responsive">
+			<p class="kuvateksti">
+				In blue light the switch chooses gene A, in dim blue light gene B, and in darkness gene C. The changes are based on differences in the concentration of the λ repressor protein CI.
+			</p>
+		</div>
+	</div>
+
+	<p>
+		Legend
+		
+		YF1 fusion protein = blue-light sensor that becomes unphosphorylated in blue light and phosphorylated (activated) in darkness
+		FixJ protein = activates promoter FixK^2 when it is in phosphorylated form
+		FixK^2 binding site = activates the production of CI when FixJ binds to it
+		lambda (λ) repressor protein CI = a protein that can repress and/or activate the transcription of two different genes
+		O^R  tripartite operator site = an operator site to which CI binds, downstream from O^L in λ phage 
+		O^L tripartite operator site = and operator site to which CI binds, upstream from O^R in λ phage
+		P^RM promoter = a promoter that is active only when there’s no CI protein
+		P^R promoter = a promoter that is active only when there’s little CI protein, too much or too little inhibit the production
+		genes A-B = the three genes that you could insert to our system and they would be expressed as explained here
+		Tetracycline repressor protein TetR = can bind to TetR repressible promoter sites and inhibit gene transcription
 	</p>
 
 </article>
@@ -71,7 +108,31 @@
 <article>
 	<div class="link" id="Parts"></div>
 
-  <h2>Parts</h2>
+  	<h2>Parts</h2>
+
+  	<p>
+  		/parts-lista-igem-template-säätö/
+  	</p>
+  	<p>
+  		The final construct ended up being fairly large. The gene circuit consists of two different segments: the light sensor that produces CI according to the intensity of light and the actual switch that responds to the differences in the concentration of repressor protein CI.
+  	</p>
+	<p>
+		We used fairly many already existing parts that were in the 2014 iGEM BioBrick Distribution. The parts we created ourselves are /mitä me nyt saadaan lähetettyä/. /selitystä kustakin partista ja että mitä se tekee/.
+	</p>
+	<p>
+		Here’s a list of all the parts we used in our gene switch. They are in the same order as in our gene circuit and each of them is color coded as follows: /hienot värikoodisysteemit/. /makee luettelo niistä brickeistä/.
+	</p>
+
+	<p>
+		This is the complete sequence that we put together. The color codes are the same as in the previous list. Gene A has 20 Xs as placeholders, gene B has 20 Xs and gene C has 20 Xs. As anyone could decide the genes themselves, the placeholders are just to show the correct place in the sequence.
+	</p>
+	<p>
+		In addition to these parts, we also used a GFP part for testing the response times of YF1. /ja mitä muuta nyt ollaankaan testailtu/
+	</p>
+	<p>
+		/genecircuitkuva/ http://2014.igem.org/wiki/images/f/f4/Aalto_Helsinki_Gene_Circuit.png
+		[kuvateksti] This is our gene circuit. The upper part is the light sensing segment that produces the CI protein and the lower part reacts to differences in the CI concentration and switches the gene channel. The turquoise arrows are promoters, the turquoise circles are operator sites, the light blue circles are ribosome binding sites, the gray squares are expressed genes. The promoter of YF1 gene can be any constitutive promoter.
+	</p>
   
 </article>
 <div class="update Parts"></div>
@@ -80,11 +141,19 @@
 	<div class="link" id="Background"></div>
 
 	<h2>Background</h2>
+
+	<h3>How the Research Began</h3>
 	<p>
-		Using our Team Seeker tool, we first found out who are the teams and key players who have done similar research. We were primarily interested in light receptors, genetic switches, lambda repressor and effective transcription factors. As the first iGEM team from Finland, our aim was to build a solid base on our work and minimize the need to design our own BioBricks.
+		/miten alotettiin tutkiminen ja miten nyt mitäkin sit keksittiin/
 	</p>
+
+
+
+	<h3>Lambda (λ) Repressor</h3>
 	<p>
-		The Peking 2012 team [1] designed an ultra-sensitive light sensor for luminescence. They combined a LOV domain, dimerizing domain and a DNA-binding LexA domain. Such protein becomes active when the cells are illuminated with 440 - 480 nm light. In active form, the dimerizing domains facilitate formation of LexA dimer which is able to bind DNA and repress transcription in only such form. Whereas their light sensing system seems to work very well there were two issues with it. Firstly, their light sensing system was not available and secondly, it might have been too sensitive; controlling the light at very low intensities could be rather challenging.
+		/lambda-repressor toiminta, eli miten CI bindaa ja mitäkin repressoituu, looppaus/
+		OR-, OL-vertailu
+		miten ajateltu muokata omaan systeemiin
 	</p>
 	<p>
 		The Uppsala 2011 team [2] <br>
@@ -164,3 +233,11 @@ fl
 
 </article>
 <div class="update Discussion"></div>
+<div class="update References"></div>
+<article>
+	<div class="link" id="References"></div>
+
+  <h2>References</h2>
+
+</article>
+<div class="update References"></div>

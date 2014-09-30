@@ -26,6 +26,11 @@ body {
   word-wrap: break-word;
 }
 
+ul {
+  list-style-type: none;
+  list-style-image: none;
+}
+
 .cpright {
   text-align: right;
   padding-right: 1em;

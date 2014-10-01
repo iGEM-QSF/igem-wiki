@@ -30,11 +30,13 @@
 
 	<div class="splashalavalikko">
 		<a href="#Switch">The Switch</a><br>
-        <a href="#Parts">Parts</a><br>
         <a href="#Background">Background</a><br>
+        <a href="#Hypothesis">Hypothesis</a><br>
+        <a href="#Parts">Parts</a><br>
         <a href="#Methods">Methods</a><br>
         <a href="#Results">Results</a><br>
 		<a href="#Discussion">Discussion</a><br>
+        <a href="#Conclusions">Conclusions</a><br>
 		<a href="#References">References</a><br>
     </div>
 
@@ -51,11 +53,13 @@
 <div class="navbar navbar-default extrabar" data-spy="affix">
     <nav>
         <a id="Switch-submenu" class="active" href="#Switch">The Switch</a>
-        <a id="Parts-submenu" href="#Parts">Parts</a>
         <a id="Background-submenu" href="#Background">Background</a>
+        <a id="Hypothesis-submenu" href="#Hypothesis">Hypothesis</a>
+        <a id="Parts-submenu" href="#Parts">Parts</a>
         <a id="Methods-submenu" href="#Methods">Methods</a>
         <a id="Results-submenu" href="#Results">Results</a>
         <a id="Discussion-submenu" href="#Discussion">Discussion</a>
+        <a id="Conclusions-submenu" href="#Conclusions">Conclusions</a>
         <a id="References-submenu" href="#References">References</a>
     </nav>
 </div>
@@ -107,56 +111,33 @@
 
 </article>
 <div class="update Switch"></div>
-<div class="update Parts"></div>
-<article>
-	<div class="link" id="Parts"></div>
-
-  	<h2>Parts</h2>
-
-  	<p>
-  		The final construct ended up being fairly large. The gene circuit consists of two different segments: the light sensor that produces CI according to the intensity of light and the actual switch that responds to the differences in the concentration of repressor protein CI.
-  	</p>
-	<p>
-		We used fairly many already existing parts that were in the 2014 iGEM BioBrick Distribution. The parts we created ourselves are /mitä me nyt saadaan lähetettyä/. /selitystä kustakin partista ja että mitä se tekee/.
-	</p>
-	<p>
-		Here’s a list of all the parts we used in our gene switch. They are in the same order as in our gene circuit and each of them is color coded as follows: /hienot värikoodisysteemit/. /makee luettelo niistä brickeistä/.
-	</p>
-
-	<p>
-		This is the complete sequence that we put together. The color codes are the same as in the previous list. <i>Gene A</i> has 20 Xs as placeholders, <i>gene B</i> has 20 Xs and <i>gene C</i> has 20 Xs. As anyone could decide the genes themselves, the placeholders are just to show the correct place in the sequence.
-	</p>
-	<p>
-		In addition to these parts, we also used a GFP part for testing the response times of YF1. /ja mitä muuta nyt ollaankaan testailtu/
-	</p>
-	<div class="row">
-		<div class="img-center">
-			<img src="http://2014.igem.org/wiki/images/f/f4/Aalto_Helsinki_Gene_Circuit.png" class="img-responsive">
-			<p class="kuvateksti">
-                This is our gene circuit. The upper part is the light sensing segment that produces the CI protein and the lower part reacts to differences in the CI concentration and switches the gene channel. The turquoise arrows are promoters, the turquoise circles are operator sites, the light blue circles are ribosome binding sites, the gray squares are expressed genes. The promoter of YF1 gene can be any constitutive promoter.
-            </p>
-        </div>
-    </div>
-
-</article>
-<div class="update Parts"></div>
 <div class="update Background"></div>
 <article>
 	<div class="link" id="Background"></div>
 
 	<h2>Background</h2>
-
-	<h3>How the Research Began</h3>
+	<h3>Idea development</h3>
 	<p>
 		/miten alotettiin tutkiminen ja miten nyt mitäkin sit keksittiin/
 	</p>
-
-
-
+    <h3>Earlier research</h3>
+    <p>
+        Uppsala, STJU, Tabor
+    </p>
+    <h3>Light receptor</h3>
 	<h3>Lambda (λ) Repressor</h3>
 	<p>
-		/lambda-repressor toiminta, eli miten CI bindaa ja mitäkin repressoituu, looppaus/
-		<i>O<sub>R</sub>-</i>, <i>O<sub>L</sub></i>-vertailu
+		Lambda repressor plays a crucial role in our switch. The repressor is part of the lambda phage and it regulates the lysogenic an lytic states of the virus. The lambda phage genetic material can be integrated in the host genome as prophage. This phase is called lysogenic cycle and during that state, the host cell can proliferate and function normally. However, in lytic cycle the phage genetic material is separate from the host genome and it is hevily expressed to produce more viruses which eventually lyse the host cell (hence the name). Lambda repressor is the region in the lambda phage that is responsible for regulating the current state in infected host. This phage has some very interesting characteristics that are described in this subsection.
+    </p>
+    <p>
+        In the center of the lambda repressor there is a lambda repressor protein CI. This protein represses the genes in the lytic cycle and maintains the lysogenic state. Moreover, this protein is autoregulated in a very special manner. CI dimerizes and binds into its own promoter (P<sub>RM</sub>) upregulating its own production. However, in high concentrations, CI represses its production maintaining it on an appropriate level. Dimerized CI represses a lytic cycle transcription factor Cro by bindig to operator regions before P<sub>R</sub>. The lambda phage changes the state from lysogenic cycle to lytic cycle (i.e. lysogenic induction) when the host is exposed to DNA damaging factors, such as UV light. The damage activates the SOS reponse and production of RecA protein involved in repair and maintenance of DNA. RecA has protease activity and it cleaves CI resulting in drop of CI dimer concentration, derepression of Cro and lysogenic induction. Dodd et al (2001) showed that the concentration of CI affects the capability for lysogenic induction. Thus, it is important that lambda phage maintains the CI concentration in sepcific frame in order to be able to switch to lytic cycle when the opportunity arises. High concentration ledads to inability of lysogenic induction whereas low concentration results in too high induction sensitivity.
+    </p>
+    <p>
+        The interaction of CI protein and lambda repressor promoters is well illustrated in the figure (Dodd et al. 2001). The repressor region consists of two promoters, P<sub>RM</sub> and P<sub>R</sub> separated by common operator sites (O<sub>R</sub> 1, 2 and 3). The CI protein dimers bind DNA in these three operator sites. Johnson et al. (1979) showed that CI binds cooperatively on the three operator sites. The O<sub>R1</sub> has the highest affinity for the CI dimer which recruits another dimer to O<sub>R2</sub> site. This blocks the transcription of the P<sub>R</sub> promoter and activates P<sub>RM</sub> promoter blocking Cro production and activating CI production, respectively. Bell et al. (2000) suggested that these CI dimers at the two operator sites form a tetramer. Very similar interaction is observed between two of the three O<sub>L</sub> operator sites which are located 2,4kb away from O<sub>R</sub> operator. It was early that CI also binds to O<sub>R3</sub> and O<sub>L3</sub> sites, but in substantially higher CI concentrations (Johnson et al., 1979). This leads to repression of P<sub>RM</sub> promoter. Maurer et al. (1980) showed that 50% repression of P<sub>RM</sub> requires 15 times the normal lysogenic concentration. However, the mechanism of P<sub>RM</sub> repression is not result of only CI dimer binding in the O<sub>R3</sub> site.
+    </p>
+    <p>
+        Dodd et al. (2001) showed that two tetramers at O<sub>L</sub> and O<sub>R</sub> sites form an octamer by looping the DNA. They proposed that this DNA looping juxtaposes O<sub>R3</sub> and O<sub>L3</sub> sites and allows them to be linked by a CI tetramer. This, in turn, would silence the P<sub>RM</sub> promoter. Thus, the lambda repressor has three different states regulated by CI concentration: lytic (low CI concentration, P<sub>R</sub> is active and P<sub>RM</sub> is inactive), lysogenic (moderate CI concentration, P<sub>R</sub> is inactive and P<sub>RM</sub> is active) and repressing lysogenic (high CI concentration, P<sub>R</sub> is inactive and P<sub>RM</sub> is inactive). This is the underlying principle of our three-channel switch. In our approach, we regulate the CI concentration with blue light intensity and replace the Cro and CI with other genes of interest. This way, we are able to use the characteristics of lambda repressor to construct the mechanism behind the three-channel switch.
+    </p>
 		miten ajateltu muokata omaan systeemiin
 	</p>
 	<p>
@@ -174,22 +155,58 @@
 		We are currently assembling the prototype of our system.
 	</p>
 
-	<h3>References</h3>
-	<ol>
-		<li>Peking 2012 iGEM Team: http://2012.igem.org/Team:Peking</li>
-		<li>Uppsala-Sweden 2011 iGEM Team: http://2011.igem.org/Team:Uppsala-Sweden </li>
-		<li>SJTU BioX Shanghai 2013 iGEM Team: http://2013.igem.org/Team:SJTU-BioX-Shanghai</li>
-	</ol>
-
 </article>
 <div class="update Background"></div>
+<div class="update Hypothesis"></div>
+<article>
+    <div class="link" id="Hypothesis"></div>
+
+  <h2>Hypothesis</h2>
+  <p>
+      Light-to-CI, BioBrick convenience, OR=OL
+  </p>
+
+</article>
+<div class="update Hypothesis"></div>
+<div class="update Parts"></div>
+<article>
+    <div class="link" id="Parts"></div>
+
+    <h2>Parts</h2>
+
+    <p>
+        /parts-lista-igem-template-säätö/
+    </p>
+    <p>
+        The final construct ended up being fairly large. The gene circuit consists of two different segments: the light sensor that produces CI according to the intensity of light and the actual switch that responds to the differences in the concentration of repressor protein CI.
+    </p>
+    <p>
+        We used fairly many already existing parts that were in the 2014 iGEM BioBrick Distribution. The parts we created ourselves are /mitä me nyt saadaan lähetettyä/. /selitystä kustakin partista ja että mitä se tekee/.
+    </p>
+    <p>
+        Here’s a list of all the parts we used in our gene switch. They are in the same order as in our gene circuit and each of them is color coded as follows: /hienot värikoodisysteemit/. /makee luettelo niistä brickeistä/.
+    </p>
+
+    <p>
+        This is the complete sequence that we put together. The color codes are the same as in the previous list. <i>Gene A</i> has 20 Xs as placeholders, <i>gene B</i> has 20 Xs and <i>gene C</i> has 20 Xs. As anyone could decide the genes themselves, the placeholders are just to show the correct place in the sequence.
+    </p>
+    <p>
+        In addition to these parts, we also used a GFP part for testing the response times of YF1. /ja mitä muuta nyt ollaankaan testailtu/
+    </p>
+    <p>
+        /genecircuitkuva/ http://2014.igem.org/wiki/images/f/f4/Aalto_Helsinki_Gene_Circuit.png
+        [kuvateksti] This is our gene circuit. The upper part is the light sensing segment that produces the CI protein and the lower part reacts to differences in the CI concentration and switches the gene channel. The turquoise arrows are promoters, the turquoise circles are operator sites, the light blue circles are ribosome binding sites, the gray squares are expressed genes. The promoter of YF1 gene can be any constitutive promoter.
+    </p>
+
+</article>
+<div class="update Parts"></div>
 <div class="update Methods"></div>
 <article>
 	<div class="link" id="Methods"></div>
   <h2>Our Research Methods</h2>
   <h3>LED-rig for excitation</h3>
   <p>
-  To be able to shine light on our bacteria we designed a new kind of device from scratch. Inspired by the rig developed by Tabor labs<sup>1</sup> we decided to build a simpler one, onli with blue LED:s.<br /><br />
+  To be able to shine light on our bacteria we designed a new kind of device from scratch. Inspired by the rig developed by Tabor labs<sup>1</sup> we decided to build a simpler one, only with blue LED:s.<br /><br />
   Luckily we have some electronic knowledge in our team too. With Pietu designing the rig we built a foam-padded transportable rig that can be put in an incubator overnight.<br /><br />
   <h4>Microcontroller</h4>
   The core of the rig is an Arduino Nano<sup>2</sup> microcontroller. The Arduino is responsible for the logic behind our illumination patterns.
@@ -198,14 +215,14 @@
 
   <h4>LED:s</h4>
   Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. In our project we used miniature leds because of their small power and small heat generation. It is important that the LED:s wont heat up the bacteria remarkably.
-  Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift<sup>3</sup>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the led on and off very fast, up to frequencies of 1.6kHz. By varying the time the led is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.<br /><br />
+  Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift<sup>3</sup>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the led on and off very in very short interval, up to frequencies of 1.6kHz. By varying the time the led is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.<br /><br />
   Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for this task. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino. Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements.<br />
   <h4>Constructing</h4>
-  We wanted to be able to illuminante a bacteria culture with a single led. We choose to culture our bacteria on microtiter-plates. This choice was also affected by the microplate reader we used to measure fluorescence (the GFP). We had the chance to get to use a Varioskan<sup>5</sup>.<br />
-  We designed our system so that a unmodified 96 well microtiter plate could be inerted easily. Our LEDs are attached to a lid that can be placed on the microtiter plate. 16 LEDs will illuminate the wells on columns 11,9,7,5 and rows B, D, F, H.
+  We wanted to be able to illuminante a bacterial culture with a single led at multiple different intensities. We choose to grow our bacteria on microtiter plates. This choice was also affected by the fact that we had an access to a fluorometer (Thermo Scientific Varioskan<sup>5</sup>) that measures fluorescence out of such microtiter plates.<br />
+  We designed our LED rig so that an unmodified 96 well microtiter plate with the test cultures can be easily inerted. Our LEDs are attached to a lid that can be placed on a standard microtiter plate. 16 LEDs will illuminate the wells on columns 11,9,7,5 and rows B, D, F, H.
   <br />
   <br />
-  The LEDs we had a peak value of 470nm. This value is specified by the manufacturer, but the spectra of individual leds can vary considerably. Therefore we will measure the spectra od our LED:s with a spectrophotometer to be sure of the excitation wavelength.
+  Our LEDs' spectrum peak at the value of 470nm. This value is specified by the manufacturer but the spectra of individual leds can vary considerably. Therefore we will measure the spectra of our LED:s with a spectrophotometer to be sure of the excitation wavelength.
   <br />We have yet to invent a way to measure the LED intensity. If you have ideas, pleaser contact us!
   <br /><br />
   <ol>
@@ -234,14 +251,32 @@ fl
 	<div class="link" id="Discussion"></div>
 
   <h2>Discussion</h2>
+  <p>
+        Mutaatiot operaattorialueisiin
+        Plasmidissa ei DNA:ssa
+  </p>
 
 </article>
 <div class="update Discussion"></div>
+<div class="update Conclusions"></div>
+<article>
+    <div class="link" id="Conclusions"></div>
+
+  <h2>Conclusions</h2>
+
+</article>
+<div class="update Conclusions"></div>
 <div class="update References"></div>
 <article>
 	<div class="link" id="References"></div>
 
   <h2>References</h2>
+
+    <ol>
+        <li>Peking 2012 iGEM Team: http://2012.igem.org/Team:Peking</li>
+        <li>Uppsala-Sweden 2011 iGEM Team: http://2011.igem.org/Team:Uppsala-Sweden </li>
+        <li>SJTU BioX Shanghai 2013 iGEM Team: http://2013.igem.org/Team:SJTU-BioX-Shanghai</li>
+    </ol>
 
 </article>
 <div class="update References"></div>

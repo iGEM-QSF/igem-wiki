@@ -26,6 +26,11 @@ body {
   word-wrap: break-word;
 }
 
+ul {
+  list-style-type: none;
+  list-style-image: none;
+}
+
 .cpright {
   text-align: right;
   padding-right: 1em;
@@ -172,7 +177,7 @@ header .navbar {
 /* Header päättyy */
 
 
-/* Pakolliset pikku valikot */
+/* Pakolliset pikku valikot ja parts*/
 
 #top-section {
   height: 0;
@@ -202,7 +207,12 @@ header .navbar {
   background-color: transparent;
 }
 
-/* Pakolliset pikku valikot päättyy */
+#groupparts {
+  min-height: 0;
+  min-width: 0;
+}
+
+/* Pakolliset pikku valikot ja parts päättyy */
 
 
 /* Kuvien ja rivien asettelua */

@@ -118,13 +118,47 @@
 	<h2>Background</h2>
 	<h3>Idea development</h3>
 	<p>
-		/miten alotettiin tutkiminen ja miten nyt mitäkin sit keksittiin/
+        In the beginning of our project, from March 2013, we focused solely on coming up with new ideas, building the public team website and applying for Summer of Startups 2014 and foundations with deadlines in spring. In our team meetings, we had different types of brainstorming sessions where all of us could presenet even the craziest ideas. We found a shared folder in the cloud where anybody could write up new ideas. We came up with disco bacteria that glow in sync with music, new kinds of bacterial drinks that change flavour with storing temperature, remote controllable bacteria, oil-eating bacteria, tooth paste bacteria that keeps up the mouth hygiene despite forgetting to brush the teeth, etc. On evening we had a vote and everybody gave a score from 1 to 5 for each idea. We made an idea gradient where the ideas were ranked according to the score from bottom left to top right.
+    </p>
+    <p>
+        We chose the top 5 ideas and presented them to our advisors and researchers from Aalto University, VTT and University of Helsinki to get feedback and comment on the feasibility. After all, none of us had never done anything even close to this before. As a result of this feedback, further idea development and admission to Summer of Startups, we decided to work on the idea with a project name "nest box." It's a container resembling a traditional Finnish nest box but it includes bacteria producing different fragrances. These bacteria could be controlled using light concealed inside the box. The user can decide which fragrance to produce by a press of a button and this action would be translated into light signal to control the gene expression in the bacteria. Such a system is concrete and understandable for the public audience and it would help to build a positive image of synthetic biology in Finland. In theory, such system could be used in conference rooms, hotels, living rooms, saunas, movie theaters... The scent marketing is an expanding business and our idea had the potential to add something new to it. Furthermore, it was a concrete product which made our participation in Summer of Startups a lot easier.
 	</p>
+    <p>
+        We started our practice project mid May and Summer of Startups early June. As we got forward, we realized that our idea is not very realistic. Implementation of such a separate unmaintained container would be very challenging and in addition, we cannot bring genetically modified bacteria outside laboratory conditions (it's defined in the gene technology legislation). We decided to solely focus on one element of our nest box idea. Constructing the interface between the bacteria and the user or a computer is not trivial. So, we redefined our direction which was maintained to the end. We wanted to develop a three channel switch that would allow us to activate one of the three genes at a time using only the intensity of single wavelength light. We could then connect this switch with fragrance producing genes, for example.
+    </p>
     <h3>Earlier research</h3>
     <p>
         Uppsala, STJU, Tabor
+    <h3>Light sensing system</h3>
+    <p>
+        First of all, to be able to control gene expression with light, we needed a light receptor protein. It would react to certain wavelength of light and mediate the signal to the DNA level and initiate the response. We found different alternatives in the iGEM registry but most of them were not properly characterized. We did not found reliable experiences of the use of such light receptors or when we found them, the receptor protein was not available. Our requirements for the light receptro system were following: 1) it has worked for other iGEM teams 2) it should work in <i>E. coli</i> 3) it is available in the registry 4) it does not require any cofactors or special strains 5) short response time and sensitivity. In this section, we discuss about the different alternatives we found and what made us choose the YF1 protein. We also introduce the mechanism how the light signal is conveyed in our system.
     </p>
-    <h3>Light receptor</h3>
+    <p>
+        Phytochrome interacting factors (PIF's) were used by some previous iGEM teams, including Freiburg 2013 and TU Munich 2012. The actual red light sensing protein is called Phytochrome B and in the active form it binds to the PIF. Thus, the cell also needs to express Phytochrome B. However, these PIFs were derived from <i>Arabidopsis thaliana</i>, which is an eukaryotic organism. Moreover, the response mechanism would require fusing the two proteins to the actual DNA binding domain and transcription factor. Unfortunately, Freiburg team only succeeded in 1.3 fold induction of gene expression after 48 hours of incubation in red light and TU Munich did not manage to implement the light sensing part in their kill switch.
+    </p>
+    <p>
+        The Peking 2012 team designed an ultra-sensitive light sensor for luminescence. They combined a LOV domain, a dimerizing domain and a DNA-binding LexA domain. Such protein becomes active when the cells are illuminated with 440 - 480 nm light. In active form, the dimerizing domains facilitate formation of LexA dimer which is able to bind DNA and repress transcription in only such form. Whereas their light sensing system seems to work very well there were three issues with it. Firstly, their light sensing system was not available and secondly, it might have been too sensitive; controlling the light at very low intensities could be rather challenging. Furthermore, LexA is a part of SOS system already part of <i>E. coli</i> so it might interfere with indigenous <i>E. coli</i> genes. However, according to Peking 2012, mutated version of LexA could solve this problem.
+    </p>
+    <p>
+        <a href="http://parts.igem.org/Part:BBa_I15010">Cph8</a> is a fusion of Cph1 red photoreceptor domain (660nm) and EnvZ histidine kinase domain. In absence of red light, EnvZ is active and it phosphorylates endogenous OmpR which in trun activates OmpC promoter. Red light activates Cph1 which inhbits EnvZ kinase domain function. However, as both EnvZ, OmpR and OmpC are endogenous in <i>E. coli</i>, reliable use would require EnvZ deficient strain. The activation Cph1 requires Phycocyanobilin which can be produced with <a href="http://parts.igem.org/Part:BBa_I15008">heme oxygenase</a> and <a href="http://parts.igem.org/Part:BBa_I15009">ferrodoxin oxidoreductase</a>. The Cph8 was decribed by Levskaya et al. (2005) and they achieved nearly 10-fold induction. However, as EnvZ and OmpR are involved in indigenous osmolarity response, phosphorylated OmpR might also interfere with promoters encoding membrane porins.
+    </p>
+    <p>
+        CcaS is a cyanobacteriochrome that gets activated by autophosphorylation. This is upregulated by green light (535nm). The activated CcaS phosphorylates its response regulator CCaR which then induces the promoter P<sub>cpcG2</sub> (Hirose et al., 2008; Tabor et al., 2011). As Cph8 system, this light receptor also requires Phycocyanobilin to function. In addition, CcaS is inactivated in red light (672nm) allowing higher degree of control and fast response times. According to the experiments by Tabor et al. (2011), the promoter P<sub>cpcG2</sub> showed only 2-fold induction in green light. The transcription response is somewhat linear to the light intensity of 0.01 W/m<sup>2</sup> after which is rapidly saturates. Although CcaR and CcaS BioBricks are indeed available although the experiences of other iGEM teams were very few and poorly described.
+    </p>
+    <p>
+        YF1 is an engineered blue light (previous experiments in 430nm) sensor protein that consists of two initially separate domains, LOV domain (sensory domain) from YtvA and histidine kinase domain (effector domain) from FixL. This fusionprotein was designed and constructed by Möglich et al. (2009). YF1, nor it's precursors, do not exist naturally in <i>E. coli</i> nor reportedly interfere with indigenous <i>E. coli</i> genes but according to Möglich et al. (2009) the sensor works well in <i>E. coli</i>: it's capable of 70-fold supression of the target promoter when illuminated with blue light. The sensor does not require additional, foreign molecules in order to get activated by blue light. The gene is only 1132 bp long and it has been used by previous iGEM teams, including Uppsala 2011, STJU BioX Shanghai and Tokyo NoKoGen. Thus, we evaluated YF1 to be the most suitable for our three channel switch.
+    </p>
+    <p>
+        Based on the work of Möglich et al. (2009) we describe the mechanism of YF1 blue light sensor in greater detail. YF1 is a water soluble chimeric fusionprotein that contains two domains linked together with a Jα linker sequence. The N terminal domain is a flavin nucleotide binding LOV domain (light-oxygen-voltage, a sub group of PAS sensor domains) from <i>Bacillus subtilis</i> YtvA. This domain incorporates noncovalently flavin mononucleotide and blue light facilitates formation of a covalent bond with a cysteine residue of the LOV domain. This induces a conformational change in this light sensory domain.
+    </p>
+    <p>
+        The C terminal domain of YF1 is a histidine kinase, the FixL effector domain from <i>Bradyrhizobium japonicum</i>. The original protein, FixL, is involved in regulating the nitrate respiration and nitrate fixation. The histidine kinase functions only when it is phosphorylated. It has autophosphorylation activity that is regulated by the sensor domain. Autophosphorylated histidine kinase activates a FixJ response regulator by transferring a phosphoryl group. However, when the histidine kinase domain is unphosphorylated, it has actually phosphatase activity for the response regulator. Phosphorylated FixJ binds to FixK2 promoter initiating the expression of the corresponding genes. This system should be completely orthogonal in <i>E. coli</i>.
+    </p>
+    <p>
+        Möglich et al. (2009) proposed that the YF1 proteins form dimers. This would also bring the histdine kinase domains close to each other. It is proposed that the autophosphorylation actually work in trans within the dimer. They hypothesized the Jα helix linker to form a coiled coil with another YF1 protein. The linker would mediate the signal from the sensor domain to the effector domain inhibiting/enabling its kinase activity. The conformational change from the incorporated flavin domain is suggested to rotate the linker helix. The relative angle of the two domains greatly affect to the mechanism. If we add one amino acid to the Jα linker, the relative angle changes and the effect of the sensor domain is inverted: in presence of light the histidine kinase is active but in darkness, it is inactive. This presents interesting approaches and easy solution to invert the YF1 signal.
+    </p>
+        In our three channel switch, we fused a CI protein to the <i>Bradyrhizobium japonicum</i> FixK2 promoter. Thus, in the absence of blue light (470nm in our experiments), the angle between YF1 domains autophosphorylation of histidine kinase of YF1, which then transfers a phosphoryl group to FixJ activating it. The P-FixJ in binds to FixK2 promoter activating the CI transcription. The role of this CI protein in our switch is described in the next section.
+    </p>
 	<h3>Lambda (λ) Repressor</h3>
 	<p>
 		Lambda repressor plays a crucial role in our switch. The repressor is part of the lambda phage and it regulates the lysogenic an lytic states of the virus. The lambda phage genetic material can be integrated in the host genome as prophage. This phase is called lysogenic cycle and during that state, the host cell can proliferate and function normally. However, in lytic cycle the phage genetic material is separate from the host genome and it is hevily expressed to produce more viruses which eventually lyse the host cell (hence the name). Lambda repressor is the region in the lambda phage that is responsible for regulating the current state in infected host. This phage has some very interesting characteristics that are described in this subsection.
@@ -254,6 +288,7 @@ fl
   <p>
         Mutaatiot operaattorialueisiin
         Plasmidissa ei DNA:ssa
+        Solutason kohina solusyklissä
   </p>
 
 </article>
@@ -273,9 +308,40 @@ fl
   <h2>References</h2>
 
     <ol>
-        <li>Peking 2012 iGEM Team: http://2012.igem.org/Team:Peking</li>
-        <li>Uppsala-Sweden 2011 iGEM Team: http://2011.igem.org/Team:Uppsala-Sweden </li>
-        <li>SJTU BioX Shanghai 2013 iGEM Team: http://2013.igem.org/Team:SJTU-BioX-Shanghai</li>
+        <li>
+            Peking iGEM Team (2012), http://2012.igem.org/Team:Peking
+        </li>
+        <li>
+            Uppsala-Sweden iGEM Team (2011), http://2011.igem.org/Team:Uppsala-Sweden
+        </li>
+        <li>
+            SJTU BioX Shanghai iGEM Team, (2013), http://2013.igem.org/Team:SJTU-BioX-Shanghai
+        </li>
+        <li>
+            Dodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). OcDodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). Octamerization of lambda CI repressor is needed for effective repression of P(RM) and efficient switching from lysogeny. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301tame. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301
+        </li>
+        <li>
+            Hirose, Y., Shimada, T., Narikawa, R., Katayama, M., & Ikeuchi, M. (2008). Cyanobacteriochrome CcaS is the green light receptor that induces the expression of phycobilisome linker protein. Proceedings of the National Academy of Sciences of the United States of America, 105(28), 9528–33. doi:10.1073/pnas.0801826105
+        </li>
+        <li>
+            Johnson, A. D., Meyer, B. J., & Ptashne, M. (1979). Interactions between DNA-bound repressors govern regulation by the lambda phage repressor. Proceedings of the National Academy of Sciences of the United States of America, 76(10), 5061–5. Retrieved from http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=413079&tool=pmcentrez&rendertype=abstract
+        </li>
+        <li>
+            Johnson, A. D., Poteete, A. R., Lauer, G., Sauer, R. T., Ackers, G. K., & Ptashne, M. (1981). λ Repressor and cro—components of an efficient molecular switch. Nature, 294(5838), 217–223. doi:10.1038/294217a0
+        </li>
+        <li>
+            Levskaya, A., Chevalier, A. A., Tabor, J. J., Simpson, Z. B., Lavery, L. A., Levy, M., … Voigt, C. A. (2005). Synthetic biology: engineering Escherichia coli to see light. Nature, 438(7067), 441–2. doi:10.1038/nature04405
+        </li>
+        <li>
+            Möglich, A., Ayers, R. A., & Moffat, K. (2009). Design and signaling mechanism of light-regulated histidine kinases. Journal of Molecular Biology, 385(5), 1433–44. doi:10.1016/j.jmb.2008.12.017
+        </li>
+        <li>
+            Tabor, J. J., Levskaya, A., & Voigt, C. A. (2011). Multichromatic control of gene expression in Escherichia coli. Journal of Molecular Biology, 405(2), 315–24. doi:10.1016/j.jmb.2010.10.038
+        </li>
+        <li>
+            Zopf, C. J., Quinn, K., Zeidman, J., & Maheshri, N. (2013). Cell-cycle dependence of transcription dominates noise in gene expression. PLoS Computational Biology, 9(7), e1003161. doi:10.1371/journal.pcbi.1003161
+        </li>
+        **Linkit proteiineista, promoottoreista ja BioBrickeistä vastaaville sivuille maininnanyhteydessä?**
     </ol>
 
 </article>

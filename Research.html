@@ -138,8 +138,27 @@
     </p>
     <h3>Earlier Research</h3>
     <p>
-        Uppsala, STJU, Tabor
-    <h3>Searching for the Perfect Light Sensing System</h3>
+        Optical control over molecular interactions has been harnessed in metabolic signaling, dimerization systems and light activated adrenergic receptors and neuronal ion channels. Most importantly in terms of synthetic biology we can now regulate transcription with light. One of the foundational papers were written in 2005 by Levskaya et al. <em>Synthetic biology: engineering Escherichia coli to see light</em>. Since then, many different light sensors and light regulators have been built. This toolbox enables more precise spatial and temporal control over the synthetic biological systems. Hence, light regulation has been part of many iGEM projects. Light sensors are arguably one of the most important elements in controlling gene expression in synthetic biology. In contrast to chemicals, we have full control over light intensity.
+    </p>
+    <p>
+        The applications in previous iGEM teams include communication, kill switches and metabolic engineering, among many others. Previous teams have been very active in making BioBricks out of new light sensors published in research. Uppsala 2011 team designed a multichromatic light sensor system which regulates three independent genes. In their project the used blue, green and red light sensors and linked them to different chromoproteins. This way, different light signals produce different colors in bacteria. They added many useful BioBricks to the registry which has made also our project more feasible.
+    </p>
+    <p>
+        STJU BioX Shanghai 2013 team aimed to create a universal system to regulate genomic genes using blue, red and green light and CRISPR and <em>dCas9</em> protein. Their fundamental idea is to regulate production of sgRNA with different wavelengths. This would enable regulation of three different genomic genes within the chromosome presumably independently of each other. Switching the regulatory targets would be done by changing the sgRNAs. The Shanghai team also built a box with computer controlled LEDs of all three different color. In addition, they shared the software as well as the instructions how to build such a light regulation box. This was very interesting project as we built a light regulation system for three genes using LEDs and a microcontroller. STJU BioX Shanghai gave some inspiration to our LED control system.
+    </p>
+    <p>
+        Interestingly, also Freiburg 2013 team made a universal regulatory system using CRISPR and dCas9 protein but they targeted mammalian cells. In their concept, <em>dCas9</em> is guided to the site and the function to be carried out can be chosen remotely using different wavelengths of light. The effector either activates or represses the target gene or methylates a histone tail affecting the histone code at the site. The three effectors: repressor (KRAB), activator (VP16) and methyltransferase (G9a), can be controlled with red, blue and UV light. Such system would be able to regulate the target genes remotely in diverse ways.
+    </p>
+    <p>
+        Maybe the most interesting research group in this field is Jeffey Tabor's group. On their website they write: "We program living cells to sense, compute, and respond to information in their environments. Our programmable cells have applications in basic science, industry, and medicine." (http://www.taborlab.rice.edu/home, 5.20.2014). They have been involved in developing new light sensors, including CcaS/CcaR and Cph8. They also constructed a multichromatic gene regulation system combining both these receptors. In a very recent paper (Schmidl et al., 2014) they re-engineered Cph8 and CcaS/CcaR sensors to reduce cross-talk and leakiness and to increase the dynamic range.
+    </p>
+    <p>
+        Tähän ehkä vielä juttua Taborin rigistä (Olson et al., 2014)? <strong>Pietu?</strong>
+    </p>
+    <p>
+        In contrast to the previous research, our system attempts to regulate multiple targets with only one wavelenght of light. In the paper by Tabor et al. (2011) they say: "The development of multichromatic gene regulatory systems, where different light wavelengths regulate the expression of different genes, will allow more advanced control of synthetic and natural gene regulatory networks." Whereas we completely agree with that, we also claim if we're able to use single wavelengths more efficiently, we could achieve even greater level of control of the synthetic gene regulatory networks.
+    </p>
+    <h3>In Search of the Perfect Light Sensing System</h3>
     <p>
         First of all, to be able to control gene expression with light, we needed a light receptor protein. It would react to certain wavelength of light and mediate the signal to the DNA level and initiate the response. We found different alternatives in the iGEM registry but most of them were not properly characterized. We could not find reliable experiences of the use of such light receptors or, when we found them, the receptor protein was not available. Our requirements for the light receptor system were following: 1) it has worked for other iGEM teams 2) it should work in <i>E. coli</i> 3) it is available in the registry 4) it does not require any cofactors or special strains 5) short response time and sensitivity. In this section, we discuss about the different alternatives we found and what made us choose the YF1 protein. We also introduce the mechanism how the light signal is conveyed in our system.
     </p>
@@ -156,7 +175,7 @@
         CcaS is a cyanobacteriochrome that gets activated by autophosphorylation. This is upregulated by green light (535nm). The activated CcaS phosphorylates its response regulator CCaR which then induces the promoter <em>P</em><sub>cpcG2</sub> (Hirose et al., 2008; Tabor et al., 2011). As Cph8 system, this light receptor also requires Phycocyanobilin to function. In addition, CcaS is inactivated in red light (672nm) allowing higher degree of control and fast response times. According to the experiments by Tabor et al. (2011), the promoter <em>P</em><sub>cpcG2</sub> showed only 2-fold induction in green light. The transcription response is somewhat linear to the light intensity of 0.01 W/m<sup>2</sup> after which is rapidly saturates. Although CcaR and CcaS BioBricks are indeed available although the experiences of other iGEM teams were very few and poorly described.
     </p>
 
-    <h3>The Chosen Light Sensor: YF1</h3>
+    <h3>YF1 Light Sensor</h3>
     <p>
         YF1 is an engineered blue light (previous experiments in 430nm) sensor protein that consists of two initially separate domains, LOV domain (sensory domain) from YtvA and histidine kinase domain (effector domain) from FixL. This fusionprotein was designed and constructed by Möglich et al. (2009). YF1, nor it's precursors, do not exist naturally in <i>E. coli</i> nor reportedly interfere with indigenous <i>E. coli</i> genes but according to Möglich et al. (2009) the sensor works well in <i>E. coli</i>: it's capable of 70-fold supression of the target promoter when illuminated with blue light. The sensor does not require additional, foreign molecules in order to get activated by blue light. The gene is only 1132 bp long and it has been used by previous iGEM teams, including Uppsala 2011, STJU BioX Shanghai and Tokyo NoKoGen. Thus, we evaluated YF1 to be the most suitable for our three channel switch.
     </p>
@@ -261,7 +280,7 @@
 			</p>
 		</div>
 	</div>
-  	
+
   	<h4>Microcontroller</h4>
   	<p>
   		The core of the rig is an Arduino Nano<sup>2</sup> microcontroller. The Arduino is responsible for the logic behind our illumination patterns.
@@ -348,6 +367,9 @@
             SJTU BioX Shanghai iGEM Team, (2013), http://2013.igem.org/Team:SJTU-BioX-Shanghai
         </li>
         <li>
+            Bell, C. E., Frescura, P., Hochschild, A., & Lewis, M. (2000). Crystal Structure of the λ Repressor C-Terminal Domain Provides a Model for Cooperative Operator Binding. Cell, 101(7), 801–811. doi:10.1016/S0092-8674(00)80891-0
+        </li>
+        <li>
             Dodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). OcDodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). <em>Octamerization of lambda CI repressor is needed for effective repression of P(RM) and efficient switching from lysogeny</em>. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301tame. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301
         </li>
         <li>
@@ -364,6 +386,9 @@
         </li>
         <li>
             Möglich, A., Ayers, R. A., & Moffat, K. (2009). <em>Design and signaling mechanism of light-regulated histidine kinases</em>. Journal of Molecular Biology, 385(5), 1433–44. doi:10.1016/j.jmb.2008.12.017
+        </li>
+        <li>
+            Olson, E. J., Hartsough, L. A., Landry, B. P., Shroff, R., & Tabor, J. J. (2014). Characterizing bacterial gene circuit dynamics with optically programmed gene expression signals. Nature Methods, 11(4), 449–55. doi:10.1038/nmeth.2884
         </li>
         <li>
             Tabor, J. J., Levskaya, A., & Voigt, C. A. (2011). <em>Multichromatic control of gene expression in Escherichia coli</em>. Journal of Molecular Biology, 405(2), 315–24. doi:10.1016/j.jmb.2010.10.038

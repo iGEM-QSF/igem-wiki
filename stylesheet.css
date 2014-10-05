@@ -198,6 +198,7 @@ header .navbar {
 }
 
 #menubar {
+  width: 300px;
   top: 0px;
   font-size: x-small;
 }

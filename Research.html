@@ -211,12 +211,21 @@
 <article>
     <div class="link" id="Hypothesis"></div>
 
-  	<h2>Hypothesis</h2>
+  	<h2>Hypotheses</h2>
   	<p>
-  		Light-to-CI, BioBrick convenience, OR=OL, Looping, LVA-tagging
+  		The very first and critical assumption is that the concentration of CI would be controlled by light when it is put behind <em>FixK</em><sub>2</sub> promoter. Moreover, we assume that this effect will be more or less linear on the relevant region so that double light intensity leads eventually to double concentration. It is also very crucial that <em>FixK</em><sub>2</sub> promoter does not show significant leaky expression in absence of phosphorylated FixJ. We need to be able to keep CI concentration low enough to keep <em>P</em><sub>R</sub> promoter active in presence of strong blue light.
+    </p>
+    <p>
+        To better match the BioBrick standards and the idea about being able to ligate BioBricks together as is, we wanted to make our promoters unidirectional. The <em>P</em><sub>RM</sub> and <em>P</em><sub>R</sub> promoters, however, point to opposite directions. This would require flipping the BioBricks added to the preceding strand or using reverse complement BioBricks. This would not be very convenient. Hence, we make a duplication of the OR sites, one coupled with <em>P</em><sub>RM</sub> and the other connected to <em>P</em><sub>R</sub> promoter. We suggest we are able to repress <em>P</em><sub>R</sub> promoter and activate <em>P</em><sub>R</sub> promoter with CI dimers despite this duplication.
+    </p>
+    <p>
+        The third hypothesis is related to the DNA looping as a result of CI octamerization at the operator sites. Originally, DNA looping takes place between <em>O</em><sub>R</sub> and <em>O</em><sub>L</sub> sites by octamerization of CI dimers bound to operator sites 1 and 2 ab both locations. As <em>O</em><sub>R</sub> and <em>O</em><sub>L</sub> regions resemble each other in terms of CI affinity and as the interacting factor seems to be CI and not the DNA sequence, we hypothesize that <em>O</em><sub>L</sub> could be replaced by <em>O</em><sub>R</sub> region without losing the DNA looping capability. This would also underline the significance of the previous assumption: as we have duplicated the <em>O</em><sub>R</sub> sites we already have the hypotetical factors required for DNA looping and <em>P</em><sub>RM</sub> repression. Therefore, if we duplicate the <em>O</em><sub>R</sub> region and separate them with correct number of bases, we might be able to form the DNA loop between these regions without having a <em>O</em><sub>L</sub> region.
+    </p>
+    <p>
+        The lambda repressor functions in lambda profage when the virus is in the lysogenic state. This means the lambda repressor is integrated as a part of the genome. It has been shown that the DNA looping takes place in the infected <i>E. coli</i> cells. However, we have not found evidence that this would happen also in the plasmids containing the lambda repressor region. It is possible the supercoiled structure of the plasmid prevents the normal function of the lambda repressor. We have identified three possible scenarios. Firstly, the lambda repressor could function within the plasmid as is. Alternatively, the loop size formed by lambda repressor may be changed or it may be easier or more difficult to be formed but it may work with some modifications. The worst scenario is that the lambda repressor does not work at all in the plasmid context. In such case, our three channel switch could be integrater to the <em>E. coli</em> genome.
   	</p>
   	<p>
-  		Millanen juttu lopulta löytyy meidän switchistä?
+  		Lastly, we made some hypotheses regarding CI concentration. The wild type CI half life has been measured to be longer than 10 hours (Parsell et al., 1990). This would mean that it takes very long time to reduce the CI concentration that is, switch back from the channel C in our system. However, we can fuse an ssrA tag to the protein an target it for faster degradation within the cell. According to Keiler et al. (1996), such tagging can reduce the half life to 4 minutes. Hence, we used LVA tagged version of CI lambda repressor protein (<a href="http://parts.igem.org/Part:BBa_K327018">BBa_K327018</a>). This enables much shorter reaction time and nearly real-time control of CI concentration. However, it also lowers the highest possible concentration of CI. We hypothesize, that using strong enough promoter, we can reach sufficient CI concentrations for <em>P</em><sub>RM</sub> repression.
   	</p>
 
 </article>
@@ -382,6 +391,9 @@
             Johnson, A. D., Poteete, A. R., Lauer, G., Sauer, R. T., Ackers, G. K., & Ptashne, M. (1981). <em>λ Repressor and cro—components of an efficient molecular switch</em>. Nature, 294(5838), 217–223. doi:10.1038/294217a0
         </li>
         <li>
+            Keiler, K. C., Waller, P. R., & Sauer, R. T. (1996). Role of a peptide tagging system in degradation of proteins synthesized from damaged messenger RNA. Science (New York, N.Y.), 271(5251), 990–3. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/8584937
+        </li>
+        <li>
             Levskaya, A., Chevalier, A. A., Tabor, J. J., Simpson, Z. B., Lavery, L. A., Levy, M., … Voigt, C. A. (2005). <em>Synthetic biology: engineering Escherichia coli to see light</em>. Nature, 438(7067), 441–2. doi:10.1038/nature04405
         </li>
         <li>
@@ -389,6 +401,9 @@
         </li>
         <li>
             Olson, E. J., Hartsough, L. A., Landry, B. P., Shroff, R., & Tabor, J. J. (2014). Characterizing bacterial gene circuit dynamics with optically programmed gene expression signals. Nature Methods, 11(4), 449–55. doi:10.1038/nmeth.2884
+        </li>
+        <li>
+            Parsell, D. A., Silber, K. R., & Sauer, R. T. (1990). Carboxy-terminal determinants of intracellular protein degradation. Genes & Development, 4(2), 277–286. doi:10.1101/gad.4.2.277
         </li>
         <li>
             Tabor, J. J., Levskaya, A., & Voigt, C. A. (2011). <em>Multichromatic control of gene expression in Escherichia coli</em>. Journal of Molecular Biology, 405(2), 315–24. doi:10.1016/j.jmb.2010.10.038

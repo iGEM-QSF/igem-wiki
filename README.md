@@ -22,11 +22,10 @@ extract and run `python setup.py install`. If you are on mac, you need to instal
 With this tool you can update the wikipages without having to log in and click edit.
 It automatically transfers contents of a file to a page.
 `python upload.py <wikipage> <filename>`
-wikipage:	the subpage in the wiki.
+(wikipage:	the subpage in the wiki.
 			eg. in igem.org/wiki/index.php?title=Team:teamname/members
-			the wikipage is members
-			
-file:		filename in current directory
+			the wikipage is members;
+filename:	the name of the file you want to upload in current directory)
 
 There is also an automatic option `python upload.py -auto`
 which reads the source defined pages to wiki.

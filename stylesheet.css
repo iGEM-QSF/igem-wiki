@@ -30,6 +30,10 @@ ul {
   list-style-image: none;
 }
 
+#references > ul > li {
+  margin-bottom: 1em;
+}
+
 .cpright {
   text-align: right;
   padding-right: 1em;

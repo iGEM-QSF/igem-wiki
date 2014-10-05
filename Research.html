@@ -117,7 +117,7 @@
 
 	<h2>Background</h2>
 	<h3>Developing Our Idea</h3>
-    <div class="row margintop">
+    <div class="row">
 		<div class="col-md-9 text-col-left">
 			<p>
         		In the beginning of our project, from March 2013, we focused solely on coming up with new ideas for the project, building the public team website and applying for Summer of Startups 2014 and foundations with deadlines in spring. In our team meetings, we had different types of brainstorming sessions where all of us could present even the craziest ideas. We founded a shared folder where anybody could write down new ideas. We came up with disco bacteria that glow in sync with music, new kinds of bacterial drinks that change flavour with storing temperature, remote controllable bacteria, oil-eating bacteria, tooth paste bacteria that keeps up the mouth hygiene despite forgetting to brush the teeth, etc. On a Friday evening we had a vote and everybody gave a score from 1 to 5 for each idea. We made an idea gradient where the ideas were ranked according to the score from bottom left to top right.
@@ -244,13 +244,23 @@
 	<div class="link" id="Methods"></div>
   	<h2>Our Research Methods</h2>
 
-  	<h3>LED-rig the for Stimulation of Bacteria</h3>
-  	<p>
-  		To be able to shine light on our bacteria we designed a new kind of device from scratch. Inspired by the rig developed by Tabor labs<sup>1</sup> we decided to build a simpler one, only with blue LED:s.
-  	</p>
-  	<p>
-  		Luckily we have some electronic knowledge in our team too. With Pietu designing the rig we built a foam-padded transportable rig that can be put in an incubator overnight.
-  	</p>
+  	<h3>LED Rig</h3>
+  	<div class="row">
+		<div class="col-md-6 text-col-left">
+			<p>
+  				To be able to shine light on our bacteria we designed a new kind of device from scratch. Inspired by the rig developed by Tabor labs<sup>1</sup> we decided to build a simpler one, only with blue LED:s.
+  			</p>
+  			<p>
+  				Luckily we had some electronic knowledge in our team, too. With Pietu designing the rig we built a foam-padded transportable rig that can be put in an incubator overnight.
+  			</p>
+		</div>
+		<div class="col-md-6 img-100">
+			<img src="http://2014.igem.org/wiki/images/4/43/Aalto_Helsinki_Peityled.jpg" class="img-responsive">
+			<p class="kuvateksti">
+				Pietu presents the great LED rig.
+			</p>
+		</div>
+	</div>
   	
   	<h4>Microcontroller</h4>
   	<p>
@@ -260,7 +270,7 @@
   		The patterns in our experiments are fairly simple and could in theory be done without the Arduino, but we chose to use it due to its wide popularity and because we now could make advanced (and cool) animations on our rig. Also the Arduino acts as a 5v voltage regulator which provides the voltage for the second part of the rig: the Adafruit 16-channel 16-bit PWM controller<sup>3</sup>.
   	</p>
 
-  	<h4>LED:s</h4>
+  	<h4>LEDs</h4>
   	<p>
   		Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. In our project we used miniature leds because of their small power and small heat generation. It is important that the LED:s wont heat up the bacteria remarkably.
   	</p>
@@ -281,7 +291,7 @@
   		Our LEDs' spectrum peak at the value of 470nm. This value is specified by the manufacturer but the spectra of individual leds can vary considerably. Therefore we will measure the spectra of our LED:s with a spectrophotometer to be sure of the excitation wavelength.
   	</p>
   	<p>
-  		We have yet to invent a way to measure the LED intensity. If you have ideas, pleaser contact us!
+  		We have yet to invent a way to measure the LED intensity. If you have ideas, please contact us!
   	</p>
   	<ol>
   		<li> E.J. Olson, L.A. Hartsough, B.P. Landry, R. Shroff, J.J. Tabor, "Characterizing bacterial gene circuit dynamics with optically programmed gene expression signals." Nature Methods 11(4), 449-455 (2014).</li>

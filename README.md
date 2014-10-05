@@ -1,17 +1,22 @@
 igem-wiki
 =========
 
-Wiki pages for the Aalto-Helsinki iGEM-2014 team.
+These are the wiki pages for the Aalto-Helsinki iGEM-2014 team. The actual wiki can be found here: http://2014.igem.org/Team:Aalto-Helsinki.
+
+iGEM Wiki Quickifier
+====================
+
+With this upload tool (upload.py) we could upload content to a our team wiki without using the cumbersome wiki interface.
 
 * Installing the python upload tool
-1. download the lib at
+1. Download the lib at
 https://code.google.com/p/httplib2/downloads/list
-extract and run `python setup.py install`. If you are on mac, you need to install python3 and `python3` instead of `python` in the rest of the instructions.
+extract and run `python setup.py install`. If you are on mac, you need to install python3 and use `python3` instead of `python` in the rest of the instructions.
 
-2. now it works
+2. Now everything should be ready for use.
 
 3. Usage:
-It is used to update the wikipages without having to log in and click edit.
+With this tool you can update the wikipages without having to log in and click edit.
 It automatically transfers contents of a file to a page.
 `python upload.py <wikipage> <filename>`
 wikipage:	the subpage in the wiki.

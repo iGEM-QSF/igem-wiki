@@ -1,5 +1,9 @@
 img { border: 0; max-width: 100%; }
 
+.timeline .img-responsive {
+  width: 100%;
+}
+
 .page-header h1 {
   font-size: 3.26em;
   text-align: center;

@@ -454,6 +454,10 @@ header .navbar {
     font-size: 3.5em;
   }
 
+  .row-eq-height .img-responsive {
+    width: 100%;
+  }
+
   #mainsplash {
     background-image: url('http://2014.igem.org/wiki/images/5/5a/Aalto_Helsinki_Splashs_Main.jpg');
   }

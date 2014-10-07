@@ -1,12 +1,7 @@
 /* Yleiset */
 
-@font-face {
-  font-family: TMHUA;
-  src: url("http://igem-qsf.github.io/igem-wiki/fonts/ThrowMyHandsUpintheAir.ttf") format('truetype');
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "TMHUA", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 a:link, a:visited, a:active, .right-menu li a {

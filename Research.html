@@ -354,7 +354,47 @@
 <article>
 	<div class="link" id="Results"></div>
 
-  <h2>Results</h2>
+    <h2>Results</h2>
+    <h3>GFP fluorescence in high OD<sub>600</sub> under different light intensities</h3>
+    <p>
+        In this experiment, we measured how cells will react to different intensities of blue light when grown in same conditions and very high cell density. In such conditions, the cells are not able to proliferate in a way that would affect to the measurements in short time period. This was the first experiment using different intensities of LED lights at 470 nm wavelength. Our purpose was to find out, how cells would respond to light in steady and high cell density and does the previous conditions affect to the fluorescence during a long time period. In addition, we were to observe the relative change between the highest and the lowest level of fluorescence. We had two kinds of samples: bacteria grown (overnight culture at 37C) in the darkness and in lit environment (usual lab lightning in addition to desk lamp directed to our sample). We also had a negative and a positive control for the fluorescence measurements.
+    </p>
+    <p>
+        We constructed a testing device in order to estimate the concentration and the dynamics of the CI concentration. In the desting device, we replaced CI encoding sequence with GFP encoding sequence. The GFP was fused with LVA degradation tag. We excluded the lambda repressor and gene C parts. As a result, our testing device consisted of a blue light sensing element (constitutive promoter (<a href="http://parts.igem.org/Part:BBa_J23115">BBa_J23115</a>), RBS-YF1-RBS-FixJ (<a href="http://parts.igem.org/Part:BBa_K592016">BBa_K592016</a>) and a double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>)) and the testing element (FixK2 promoter (<a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a>), RBS (<a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a>), GFP-LVA (<a href="http://parts.igem.org/Part:BBa_K082003">BBa_K082003</a>) and double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>).
+    </p>
+    <p>
+        At first, all the samples were diluted to OD<sub>600</sub> 2,4. They were inserted to different wells on microtiter plates, where control samples both were incubated in dark at two different wells each, and dark and light samples were incubated in 9 different intensities of blue 470 nm light. The first measurements were taken after 4 hours of incubation and a second mesurement was taken after 23 hours of incubation. Both incubations had the temerature at 37 C and shaking 200 rpm. <strong>**Light intensity values and their log10 values**</strong>
+    </p>
+
+    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/4/42/Aaltohelsinki_dark_4.png" class="img-responsive"></img>
+            <p class="kuvateksti">
+                Figure 1: GFP fluorescence of light and dark sample after 4 hours of incubation in different blue light intensities. Control samples were measured only in darkness. Positive control value (101,5) was excluded from the picture to preserve resolution.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/4/49/Aaltohelsinki_1_23h.png" class="img-responsive"></img>
+            <p class="kuvateksti">
+                Figure 2: GFP fluorescence of light and dark sample after 23 hours of incubation in different blue light intensities. Control samples were measured only in darkness. Positive control value (176,9) was excluded from the picture to preserve resolution.
+            </p>
+        </div>
+    </div>
+    <p>
+        From both figures we can make speculation that bacteria grown in darkness are more fluoreschent compared to the light cultures. This may be because of many different reasons. One possible explanation is that the bacteria have simply accumulated GFP during the preceding over night incubation. Therefore, all measurement points for dark cultures would be shifted to higher level of fluorescent. However, we also know that the GFP-LVA fusion half life is short <strong>**REFERENCE: How short?**</strong> compared to the time period. Thus, such higher GFP concentrations should fade over time and settle close to the actual production rate. These figures suggest that long term elevation of GFP production might take place in our system. We would need further experiments to verify this.
+    </p>
+    <p>
+        When we observe the figure 1, we see a clear descending trend in the fluorescence towards higher intensities of light. This suggests that the bacteria indeed alter the rate of GFP production in response to the light even in very high cell densities. The brighter the light, the lower the GFP production and hence, the lower the fluorescence. The difference between bright light and darkness seems to be 1.5-2 fold. However, this effect could also be a result of the LED lights heating up the bacterial cultures and inhibiting proliferation and thus, leading to lower total GFP amount even if the per cell concentration would be constant. We also observe leaky production of GFP even in the bright light when we compare the fluorescence to the negative control strains without a GFP gene.
+    </p>
+    <p>
+        <strong>**23 hour measurement. Quality compared to the previous one. Loss of the trend?</strong>
+    </p>
+    <p>
+        <strong>Design for next experiment</strong>
+    </p>
 
 </article>
 <div class="update Results"></div>

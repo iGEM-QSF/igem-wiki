@@ -72,6 +72,12 @@
 	<p>
 		We engineered a three-channel switch that can be controlled with the intensity of blue light. By utilizing the mechanisms of lambda (λ) repressor and linking it to a blue light sensor protein, we would be able to swiftly switch between the expressions of three different genes. This mechanism could provide a nearly real-time control over the chosen genes, which could advance a variety of industrial bioprocesses, speed up research projects and benefit metabolic engineering. The switch has a modular structure, and thus, the users can decide the genes themselves without needing to modify the actual mechanism at all.
 	</p>
+    <p>
+        Previously gene regulation was controlled by chemical effectors, such as tetracycline and IPTG. In many cultures, a constat and uniform level of concentration is hard to maintain as the chemicals get absorbed, degraded and modified by the cells and environment. Moreover, export of these chemicals is hard and time consuming or even impossible and the response time is limited by the rate of chemical addition and diffusion. On top of all, the effector chemicals may even be toxic or bind unknown receptors leading to unwanted effects in the culture. (Schmidl et al., 2014)
+    </p>
+    <p>
+        Light signals, on the other hand, are non-toxic and we have full control over it: it is very easy to increase and decrease the light intensity. In many cases, light is orthogonal signal that is does not affect to the indigenous cell mechanisms and pathways. Such is the case in for ecample <em>E. coli</em>. We are also able to target light very specifically to single colonies or even single cells allowing unprecedented accuracy. This allows very precise spatial and temporal control over the light signal. And lastly, the light signals can be emitted using LEDs which are widely available, durable and very inexpensive even in a large scale.
+    </p>
 
 	<div class="row margintop">
 		<div class="col-md-8 text-col-left">
@@ -328,6 +334,20 @@
 		<li>S. Muthu, F. Schuurmans and M. Pashley, “Red, Green and Blue LED based white light generation: Issues and Control,” 37th Annual IEEEIAS meeting, Vol. 1, pp. 327 – 333 (2002)</li>
 		<li>http://www.thermoscientific.com/content/tfs/en/product/varioskan-flash-multimode-reader.html</li>
   	</ol>
+    <h3>Fluorescence measurements</h3>
+    <p>
+        Fluorescence measurements were carried out in Thermo Scientific Varioskan. It is a microtiter plate reader capable of exitation and measuring the corresponding fluorsecense at user defined wavelengths. All measurements were made with over night cell cultures diluted to the same cell density. In the LEDrig there are 16 different LEDs but also many additional wells that can be used for control samples. That way, we can ensure identical conditions between our test and control samples. We always used two controls: blue chromoprotein BioBrick (<a href="http://parts.igem.org/Part:BBa_K592009">BBa_K592009</a>) without a promoter as the negative control and constitutive GFP generator from Measurement Interlabs study (<a href="http://parts.igem.org/Part:BBa_I20260">BBa_I20260</a>) as the positive control. All experiments were carried out in <em>E. coli</em> TOP10 strain.
+    </p>
+    <p>All the Varioskan measurements used the following parameters:
+        <ol>
+            <li>Excitation wavelength: 470 nm</li>
+            <li>Emission wavelength: 511 nm</li>
+            <li>Bandwidth: 5nm</li>
+        </ol>
+    </p>
+    <p>
+        <strong>Minttu: voisitko kirjoittaa tähän, mikä GFP versio meillä on, millä aallonpituuksilla se eksitoidaan ja millä aallonpituudella se fluoresoi. Sitten kerro, millä perusteella me valittiin ne Varioskan-parametrit, jotka meillä on. Sä taisit olla paikalla silloin.</strong>
+    </p>
 </article>
 <div class="update Methods"></div>
 <div class="update Results"></div>
@@ -347,6 +367,12 @@
         Mutaatiot operaattorialueisiin
         Plasmidissa ei DNA:ssa
         Solutason kohina solusyklissä
+
+        Results: Possible room for improvement?
+        LED spectrum, power measurements and intensity measurements?
+        Heat production measurements?
+
+        Red light
   </p>
 
 </article>

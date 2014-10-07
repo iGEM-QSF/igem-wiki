@@ -356,6 +356,7 @@ header .navbar {
   margin-top: -14px;
   text-align: center;
   background-size: cover;
+  text-shadow: 2px 2px 8px #4D4D4D;
 }
 
 .bigsplashtext {
@@ -603,6 +604,18 @@ header .navbar {
 
 .bg-bbseeker {
   background-image: url('http://2014.igem.org/wiki/images/c/c1/Aalto_Helsinki_Feat_BBSeeker.png');
+}
+
+.bg-rollup {
+  background-image: url('http://2014.igem.org/wiki/images/2/29/Aalto_Helsinki_Feat_Rollup.png');
+}
+
+.bg-magiclab {
+  background-image: url('http://2014.igem.org/wiki/images/2/26/Aalto_Helsinki_Pinkitbakut6.jpg');
+}
+
+.bg-chimeras {
+  background-image: url('http://2014.igem.org/wiki/images/b/b3/Aalto_Helsinki_Kimeerakollaasi.png');
 }
 
 

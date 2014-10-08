@@ -346,7 +346,29 @@
         </ol>
     </p>
     <p>
-        <strong>Minttu: voisitko kirjoittaa tähän, mikä GFP versio meillä on, millä aallonpituuksilla se eksitoidaan ja millä aallonpituudella se fluoresoi. Sitten kerro, millä perusteella me valittiin ne Varioskan-parametrit, jotka meillä on. Sä taisit olla paikalla silloin.</strong>
+        The given parameters (from the Registry) for measuring GFP in our cells were
+        <ul>
+            <li>Excitation wavelength: 501 nm</li>
+            <li>Emission wavelength: 511 nm</li>
+        </ul>
+    <p>
+        In addition Ashikawa <em>et al</em>., (2011) proposed that the parameters for wild type GFP measurements would be
+        <ul>
+            <li>Excitation wavelength: 395 nm</li>
+            <li>Emission wavelength: 507 nm</li>
+            <li>Bandwidth: 12 nm</li>
+            <li>Measurement time: 500 ms</li>
+        </ul>
+    </p>
+    <p>
+        We tried measuring GFP using the wavelengths provided by the Registry and measurement time and bandwidth as Ashikawa <em>et al</em>. (2011) had used, but we got strange results. We assumed that that this was because the excitation and emission wavelengths were so close to each other. Therefore we decided to change the excitation wavelength to 470 nm, as it seemed to be another peak of excitation for GFP mut 3 according to Cormack <em>et al</em>., (1996) (<a ref="GFPCormack"></a>). For the same reason we also tried a narrower bandwidth of 5 nm, which is the other option available on Varioskan.
+    </p>
+    <img src="http://2014.igem.org/wiki/images/4/46/AaltoHelsinki_GFPCormick.png" ref="GFPCormack"></img>
+    <p class="kuvateksti">
+        <a ref="GFPCormack"></a> Excitation and emission spectra for wild type and mutant GFPs. (A) Excitation spectra (emission 540 nm). Excitation maxima: wt GFP 395 nm, GFP mut 1 488 nm, GFP mut 2 481 nm and GFP mut 3 501 nm. (B) Emission spectra (excitation 395 nm for wild type and 450 nm for mutant types). Emission maxima: wt GFP 508 nm, GFP mut 1 507 nm, GFP mut 2 507 nm and GFP mut 3 511 nm.
+    </p>
+    <p>
+        With the chosen parameters we got sensible results and our blank samples gave practically zero emission.
     </p>
 </article>
 <div class="update Methods"></div>
@@ -444,6 +466,8 @@
         </li>
         <li>
             Bell, C. E., Frescura, P., Hochschild, A., & Lewis, M. (2000). Crystal Structure of the λ Repressor C-Terminal Domain Provides a Model for Cooperative Operator Binding. Cell, 101(7), 801–811. doi:10.1016/S0092-8674(00)80891-0
+        </li>
+        <li>Cormack, B. P., Valdivia, R. H., & Falkow, S. (1996). <em>FACS-optimized mutants of the green fluorescent protein (GFP)</em>. Gene, 173(1), 33–8. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/8707053
         </li>
         <li>
             Dodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). OcDodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). <em>Octamerization of lambda CI repressor is needed for effective repression of P(RM) and efficient switching from lysogeny</em>. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301tame. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301

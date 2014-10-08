@@ -1,12 +1,7 @@
 /* Yleiset */
 
-@font-face {
-  font-family: TMHUA;
-  src: url("http://igem-qsf.github.io/igem-wiki/fonts/ThrowMyHandsUpintheAir.ttf") format('truetype');
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "TMHUA", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 a:link, a:visited, a:active, .right-menu li a {
@@ -356,6 +351,7 @@ header .navbar {
   margin-top: -14px;
   text-align: center;
   background-size: cover;
+  text-shadow: 2px 2px 8px #4D4D4D;
 }
 
 .bigsplashtext {
@@ -452,6 +448,10 @@ header .navbar {
 
   h1 {
     font-size: 3.5em;
+  }
+
+  .row-eq-height .img-responsive {
+    width: 100%;
   }
 
   #mainsplash {
@@ -599,6 +599,18 @@ header .navbar {
 
 .bg-bbseeker {
   background-image: url('http://2014.igem.org/wiki/images/c/c1/Aalto_Helsinki_Feat_BBSeeker.png');
+}
+
+.bg-rollup {
+  background-image: url('http://2014.igem.org/wiki/images/2/29/Aalto_Helsinki_Feat_Rollup.png');
+}
+
+.bg-magiclab {
+  background-image: url('http://2014.igem.org/wiki/images/2/26/Aalto_Helsinki_Pinkitbakut6.jpg');
+}
+
+.bg-chimeras {
+  background-image: url('http://2014.igem.org/wiki/images/b/b3/Aalto_Helsinki_Kimeerakollaasi.png');
 }
 
 

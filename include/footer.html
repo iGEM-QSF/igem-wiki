@@ -15,5 +15,30 @@
     }();
 });
 </script>
+<script type="text/javascript">
+    // Picture reference script
+    /*
+    USAGE:
+    tag img with a ref that is connected to the image, such as:
+    <img src="aaltohelsinki.com/testikuva.png" ref="varioskan" />
+    When you insert a reference in text, put a tag with a ref attribute:
+    <a ref="varioskan"></a>
+    Do not put href attribute, it will be replaced with a link to the image.
+    Moreover, inner html of the anchor tag will be "figure x" where x is the
+    correct figure number.
+    */
+    var images = $('img[ref]');
+    $.each(images, function(index, e){
+            var referenceName = e.getAttribute("ref");
+            if (!e.id){
+                e.setAttribute("id","figure"+(index+1));
+            }
+            $.each($('a[ref="'+referenceName+'"]'), function(j, e2){
+                e2.setAttribute("href","#"+e.id);
+                e2.innerHTML = "figure" + (index+1);
+            });
+        }
+    );
+</script>
 </html>
 {{:Team:Aalto-Helsinki/footer}}

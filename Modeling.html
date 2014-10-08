@@ -55,13 +55,20 @@
 
 <article>
 <div class="link" id="Math"></div>
+	<h2>Introduction</h2>
+
+	<p>
+		To get an idea of how our gene circuit would work on an ideal situation, we explored the structure and dynamics of our system by creating a mathematical model of the reaction kinetics and a real-time simulation. Wit the mathematical model, we started with no information ready whatsoever and derived differential equations to demonstrate how the use of blue light and the changes in phosphorylated YF1 and FixJ concentrations would control the production of our three target proteins. We labeled them simply A, B, and C, because the system is intended to be used with any user defined three genes coding different proteins.
+
+		Using our equations we constructed a simulation showing the effects of red and blue light on our system in real time. The user can control the input of both lights to see how they affect the production of proteins A, B and C. We experimented with different values for all constants and with trial-and-error iteration we arrived to a visualized simulation that can be used to demonstrate the intended funcion of our system. All in all, this is an idealization. Based on present and future measurement data, the parameters can be adjusted to better match the real world.
+	</p>
 
 	<h2>Mathematical model</h2>
 
 	<h3>Overview </h3>
 
 	<p>
-		Here, we will discuss the dynamics and interactions of chemical species introduced in the research section. We have developed a simplified mathematical model describing our system and based on that, an interactive simulation that can be controlled in real time. Based on this, we created a simplified visualization available on our web page. With this, the intended working of our system can be easily demonstrated to any audience.
+		Here, we will discuss the dynamics and interactions of different proteins and promoters introduced in the research section. We have developed a simplified mathematical model describing our system.
 	</p>
 
 	<h3>Simplifications</h3>
@@ -74,7 +81,7 @@
 		We assumed that the species identified from our gene circuit are the only ones that affect the overall concentrations in our bacterial culture. The bonding of CI to OR sites is assumed to be insignificant compared to overall concentration. The model is also strictly deterministic and doesn’t take into account any noise. The phosphorylation, decay, bonding and production of proteins are assumed to be linear functions of concentration.
 	</p>
 
-	<h3>Equations</h3>
+	<h3>Equations for dynamics</h3>
 
 	<p>
 		Based on the assumptions made before, we arrived at following differential equations to describe the idealized dynamics of our system:
@@ -93,12 +100,12 @@
 		These equations describe the essential proteins our system (YF1, FixJ, Phosphorylated YF1, Phosphorylated FixJ, CI, TetR) Proteins are produced depending on the strength of  promoter and ribosome binding site, and also when phosphorylated protein (denoted with phos) is dephosphorylated back to its original form. The concentration of all proteins is reduced by decaying, which depends on the concentration of protein in question.
 	</p>
 
-	<h3>Coefficients</h3>
+	<h3>Dynamics' coefficients</h3>
 	<p>
 		P1, P2, PA and PB denote the relative strengths of promoters and Rbs1&Rbs2 the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted Deg). I(B) is the combined effect of blue light that affects the phosphorylation of YF1. The phosphorylation of FixJ is assumed to depend on phosphorylation coefficient C(phos) and the concentration of phosphorylated YF1. The dephosphorylation here depends on a respective dephosphorylation constant DP(1&2 for YF1 and FixJ).
 	</p>
 
-	<h3>Promoters</h3>
+	<h3>Equations for promoter activities</h3>
 
 	<div class="row">
 		<div class="img-center">
@@ -109,7 +116,7 @@
 		</div>
 	</div>
 
-	<h3>Lights</h3>
+	<h3>Promoters' coefficients</h3>
 
 	<p>
 		Here, the C's denote the respective promoter's maximum activity. The N in front of CI and TetR concentrations is a normalization coefficient,

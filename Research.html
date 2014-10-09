@@ -31,7 +31,7 @@
 	<div class="splashalavalikko">
 		<a href="#Switch">The Switch</a><br>
         <a href="#Background">Background</a><br>
-        <a href="#Hypothesis">Hypothesis</a><br>
+        <a href="#Hypotheses">Hypotheses</a><br>
         <a href="#Parts">Parts</a><br>
         <a href="#Methods">Methods</a><br>
         <a href="#Results">Results</a><br>
@@ -54,7 +54,7 @@
     <nav>
         <a id="Switch-submenu" class="active" href="#Switch">The Switch</a>
         <a id="Background-submenu" href="#Background">Background</a>
-        <a id="Hypothesis-submenu" href="#Hypothesis">Hypothesis</a>
+        <a id="Hypotheses-submenu" href="#Hypotheses">Hypotheses</a>
         <a id="Parts-submenu" href="#Parts">Parts</a>
         <a id="Methods-submenu" href="#Methods">Methods</a>
         <a id="Results-submenu" href="#Results">Results</a>
@@ -106,7 +106,7 @@
 		<li><strong>FixJ protein</strong> = after being phosphorylated by YF1, this activates promoter <i>FixK<sub>2</sub></i></li>
 		<li><strong><em>FixK</em><sub>2</sub> binding site</strong> = activates the production of CI when FixJ binds to it</li>
 		<li><strong>lambda (λ) repressor protein CI</strong> = a protein that can repress and/or activate the transcription of two different genes</li>
-		<li><strong><em>O</em> <sub>R</sub> tripartite operator site</strong> = an operator site to which CI binds, downstream from <em>O</em><sub>L</sub> in λ phage</li>
+		<li><strong><em>O</em><sub>R</sub> tripartite operator site</strong> = an operator site to which CI binds, downstream from <em>O</em><sub>L</sub> in λ phage</li>
 		<li><strong><em>O</em><sub>L</sub> tripartite operator site</strong> = and operator site to which CI binds, upstream from <em>O</em><sub>R</sub> in λ phage</li>
 		<li><strong><em>P</em><sub>RM</sub> promoter</strong> = a promoter that is active only when there’s no CI protein</li>
 		<li><strong><em>P</em><sub>R</sub> promoter</strong> = a promoter that is active only when there’s little CI protein, too much or too little inhibit the production</li>
@@ -213,9 +213,9 @@
 
 </article>
 <div class="update Background"></div>
-<div class="update Hypothesis"></div>
+<div class="update Hypotheses"></div>
 <article>
-    <div class="link" id="Hypothesis"></div>
+    <div class="link" id="Hypotheses"></div>
 
   	<h2>Hypotheses</h2>
   	<p>
@@ -235,7 +235,7 @@
   	</p>
 
 </article>
-<div class="update Hypothesis"></div>
+<div class="update Hypotheses"></div>
 <div class="update Parts"></div>
 <article>
     <div class="link" id="Parts"></div>
@@ -338,6 +338,9 @@
     <p>
         Fluorescence measurements were carried out in Thermo Scientific Varioskan. It is a microtiter plate reader capable of exitation and measuring the corresponding fluorsecense at user defined wavelengths. All measurements were made with over night cell cultures diluted to the same cell density. In the LEDrig there are 16 different LEDs but also many additional wells that can be used for control samples. That way, we can ensure identical conditions between our test and control samples. We always used two controls: blue chromoprotein BioBrick (<a href="http://parts.igem.org/Part:BBa_K592009">BBa_K592009</a>) without a promoter as the negative control and constitutive GFP generator from Measurement Interlabs study (<a href="http://parts.igem.org/Part:BBa_I20260">BBa_I20260</a>) as the positive control. All experiments were carried out in <em>E. coli</em> TOP10 strain.
     </p>
+    <p>
+        Our LED rig is controlled with programmable Arduino Nano computer. <strong>**Link the script file</strong>. The light intensity parameters vary between 0 and 4095 where 0 corresponds to the dark state and 4095 the maximal intensity. The observed light intensity, however, was logarithmically dependent on the intensity parameter. Thus, having equispaced intensity paramters for the LEDs led to biased distribution of light. Almost all the LEDs were very bright. To get equal difference in the LED intensities, we set the parameters linearly according to the log<sub>10</sub> of the intensity parameter value. In other words, the intesity of the LED lights was proportional to the log<sub>10</sub> of the intensity parameter.
+    </p>
     <p>All the Varioskan measurements used the following parameters:
         <ol>
             <li>Excitation wavelength: 470 nm</li>
@@ -346,7 +349,29 @@
         </ol>
     </p>
     <p>
-        <strong>Minttu: voisitko kirjoittaa tähän, mikä GFP versio meillä on, millä aallonpituuksilla se eksitoidaan ja millä aallonpituudella se fluoresoi. Sitten kerro, millä perusteella me valittiin ne Varioskan-parametrit, jotka meillä on. Sä taisit olla paikalla silloin.</strong>
+        Cormack <em>et al</em>., (1996) reported the wavelengths of green fluorescent protein mutant 3 to be the following
+        <ul>
+            <li>Excitation wavelength: 501 nm</li>
+            <li>Emission wavelength: 511 nm</li>
+        </ul>
+    <p>
+        In addition Ashikawa <em>et al</em>., (2011) proposed that the parameters for wild type GFP measurements would be
+        <ul>
+            <li>Excitation wavelength: 395 nm</li>
+            <li>Emission wavelength: 507 nm</li>
+            <li>Bandwidth: 12 nm</li>
+            <li>Measurement time: 500 ms</li>
+        </ul>
+    </p>
+    <p>
+        We tried measuring GFP using the wavelengths provided by Cormack <em>et al</em>., (1996) and measurement time and bandwidth as Ashikawa <em>et al</em>., (2011) had used, but we got strange results. We assumed that that this was because the excitation and emission wavelengths were so close to each other. Therefore we decided to change the excitation wavelength to 470 nm, as it seemed to be another peak of excitation for GFP mut 3 according to Cormack <em>et al</em>., (1996) (<a ref="GFPCormack"></a>). For the same reason we also tried a narrower bandwidth of 5 nm, which is the other option available on Varioskan.
+    </p>
+    <img src="http://2014.igem.org/wiki/images/4/46/AaltoHelsinki_GFPCormick.png" ref="GFPCormack" class="img-responsive"></img>
+    <p class="kuvateksti">
+        <b><span ref="GFPCormack">.</span></b> Excitation and emission spectra for wild type and mutant GFPs. (A) Excitation spectra (emission 540 nm). Excitation maxima: wt GFP 395 nm, GFP mut 1 488 nm, GFP mut 2 481 nm and GFP mut 3 501 nm. (B) Emission spectra (excitation 395 nm for wild type and 450 nm for mutant types). Emission maxima: wt GFP 508 nm, GFP mut 1 507 nm, GFP mut 2 507 nm and GFP mut 3 511 nm.
+    </p>
+    <p>
+        With the chosen parameters we got sensible results and our blank samples gave practically zero emission.
     </p>
 </article>
 <div class="update Methods"></div>
@@ -363,34 +388,67 @@
         We constructed a testing device in order to estimate the concentration and the dynamics of the CI concentration. In the desting device, we replaced CI encoding sequence with GFP encoding sequence. The GFP was fused with LVA degradation tag. We excluded the lambda repressor and gene C parts. As a result, our testing device consisted of a blue light sensing element (constitutive promoter (<a href="http://parts.igem.org/Part:BBa_J23115">BBa_J23115</a>), RBS-YF1-RBS-FixJ (<a href="http://parts.igem.org/Part:BBa_K592016">BBa_K592016</a>) and a double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>)) and the testing element (FixK2 promoter (<a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a>), RBS (<a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a>), GFP-LVA (<a href="http://parts.igem.org/Part:BBa_K082003">BBa_K082003</a>) and double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>).
     </p>
     <p>
-        At first, all the samples were diluted to OD<sub>600</sub> 2,4. They were inserted to different wells on microtiter plates, where control samples both were incubated in dark at two different wells each, and dark and light samples were incubated in 9 different intensities of blue 470 nm light. The first measurements were taken after 4 hours of incubation and a second mesurement was taken after 23 hours of incubation. Both incubations had the temerature at 37 C and shaking 200 rpm. <strong>**Light intensity values and their log10 values**</strong>
+        At first, all the samples were diluted to OD<sub>600</sub> 2,4. They were inserted to different wells on microtiter plates, where control samples both were incubated in dark at two different wells each, and dark and light samples were incubated in 9 different intensities of blue 470 nm light (<a tab="intensities1"></a>). The first measurements were taken after 4 hours of incubation and a second mesurement was taken after 23 hours of incubation. Both incubations had the temperature at 37 C and shaking 200 rpm.
     </p>
 
     <div class="row">
         <div class="img-center">
-            <img src="http://2014.igem.org/wiki/images/4/42/Aaltohelsinki_dark_4.png" class="img-responsive"></img>
+            <table tab="intensities1">
+                <tr>
+                    <td>Intensity parameter</td>
+                    <td>4095</td>
+                    <td>1582</td>
+                    <td>650</td>
+                    <td>290</td>
+                    <td>120</td>
+                    <td>40</td>
+                    <td>10</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>log<sub>10</sub></td>
+                    <td>3.612</td>
+                    <td>3.199</td>
+                    <td>2.813</td>
+                    <td>2.463</td>
+                    <td>2.082</td>
+                    <td>1.612</td>
+                    <td>1.041</td>
+                    <td>0.301</td>
+                    <td>0.0</td>
+                </tr>
+            </table>
             <p class="kuvateksti">
-                Figure 1: GFP fluorescence of light and dark sample after 4 hours of incubation in different blue light intensities. Control samples were measured only in darkness. Positive control value (101,5) was excluded from the picture to preserve resolution.
+                <b><span tab="intensities1">.</span></b>: Different light intensity parameters and corresponding log<sub>10</sub> values used in this experiment.
             </p>
         </div>
     </div>
 
     <div class="row">
         <div class="img-center">
-            <img src="http://2014.igem.org/wiki/images/4/49/Aaltohelsinki_1_23h.png" class="img-responsive"></img>
+            <img src="http://2014.igem.org/wiki/images/4/42/Aaltohelsinki_dark_4.png" class="img-responsive" ref="results4h"></img>
             <p class="kuvateksti">
-                Figure 2: GFP fluorescence of light and dark sample after 23 hours of incubation in different blue light intensities. Control samples were measured only in darkness. Positive control value (176,9) was excluded from the picture to preserve resolution.
+                <b><span ref="results4h">.</span></b>: GFP fluorescence of light and dark sample after 4 hours of incubation in different blue light intensities. Control samples were measured only in darkness. Positive control value (101,5) was excluded from the picture to preserve resolution.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/4/49/Aaltohelsinki_1_23h.png" class="img-responsive" ref="results23h"></img>
+            <p class="kuvateksti">
+                <b><span ref="results23h">.</span></b>: GFP fluorescence of light and dark sample after 23 hours of incubation in different blue light intensities. Control samples were measured only in darkness. Positive control value (176,9) was excluded from the picture to preserve resolution.
             </p>
         </div>
     </div>
     <p>
-        From both figures we can make speculation that bacteria grown in darkness are more fluoreschent compared to the light cultures. This may be because of many different reasons. One possible explanation is that the bacteria have simply accumulated GFP during the preceding over night incubation. Therefore, all measurement points for dark cultures would be shifted to higher level of fluorescent. However, we also know that the GFP-LVA fusion half life is short <strong>**REFERENCE: How short?**</strong> compared to the time period. Thus, such higher GFP concentrations should fade over time and settle close to the actual production rate. These figures suggest that long term elevation of GFP production might take place in our system. We would need further experiments to verify this.
+        From both figures we can make speculation that bacteria grown in darkness are more fluoreschent compared to the light cultures. This may be because of many different reasons. One possible explanation is that the bacteria have simply accumulated GFP during the preceding over night incubation. Therefore, all measurement points for dark cultures would be shifted to higher level of fluorescent. However, we also know that the GFP-LVA fusion half life, around 40 minutes (Andersen et al., 1998), is rather short compared to the time period. Thus, such higher GFP concentrations should fade over time and settle close to the actual production rate. These figures suggest that long term elevation of GFP production might take place in our system. We would need further experiments to verify this.
     </p>
     <p>
-        When we observe the figure 1, we see a clear descending trend in the fluorescence towards higher intensities of light. This suggests that the bacteria indeed alter the rate of GFP production in response to the light even in very high cell densities. The brighter the light, the lower the GFP production and hence, the lower the fluorescence. The difference between bright light and darkness seems to be 1.5-2 fold. However, this effect could also be a result of the LED lights heating up the bacterial cultures and inhibiting proliferation and thus, leading to lower total GFP amount even if the per cell concentration would be constant. We also observe leaky production of GFP even in the bright light when we compare the fluorescence to the negative control strains without a GFP gene.
+        When we observe the <a ref="results4h"></a>, we see a clear descending trend in the fluorescence towards higher intensities of light. This suggests that the bacteria indeed alter the rate of GFP production in response to the light even in very high cell densities. The brighter the light, the lower the GFP production and hence, the lower the fluorescence. The difference between bright light and darkness seems to be 1.5-2 fold. However, this effect could also be a result of the LED lights heating up the bacterial cultures and inhibiting proliferation and thus, leading to lower total GFP amount even if the per cell concentration would be constant. We also observe leaky production of GFP even in the bright light when we compare the fluorescence to the negative control strains without a GFP gene.
     </p>
     <p>
-        <strong>**23 hour measurement. Quality compared to the previous one. Loss of the trend?</strong>
+        When compared to the 4 hour measurements, the <a ref="results23h"></a> does not have such a clear trend as in the <a ref="results4h"></a>. However, we also notice that the fluorescence values vary greatly and they are clearly lower compared to the values after 4 hours of incubation. This suggests that the response to the light stimuli is not as strong after long incubation and that the linear dependency on the light intensity seems to disappear. We must also take into account the length of the incubation with the original OD<sub>600</sub> of the cell culture. After such a long time in high cell density without adding fresh media will inherently lead to low wellfare, low transcription and protein synthesis rate and poor response to the light stimuli. In other words, the 23 hour incubation is clearly too long and leads to bad sample quality.
     </p>
     <p>
         <strong>Design for next experiment</strong>
@@ -443,7 +501,16 @@
             SJTU BioX Shanghai iGEM Team, (2013), http://2013.igem.org/Team:SJTU-BioX-Shanghai
         </li>
         <li>
+            Andersen, J. B., Sternberg, C., Poulsen, L. K., Bjorn, S. P., Givskov, M., & Molin, S. (1998). New unstable variants of green fluorescent protein for studies of transient gene expression in bacteria. Applied and Environmental Microbiology, 64(6), 2240–6. Retrieved from http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=106306&tool=pmcentrez&rendertype=abstract
+        </li>
+        <li>
+            Ashikawa, Y., Ihara, M., Matsuura, N., Fukunaga, Y., Kusakabe, Y., & Yamashita, A. (2011). <em>GFP-based evaluation system of recombinant expression through the secretory pathway in insect cells and its application to the extracellular domains of class C GPCRs</em>. Protein Science : A Publication of the Protein Society, 20(10), 1720–34. doi:10.1002/pro.707
+        </li>
+        <li>
             Bell, C. E., Frescura, P., Hochschild, A., & Lewis, M. (2000). Crystal Structure of the λ Repressor C-Terminal Domain Provides a Model for Cooperative Operator Binding. Cell, 101(7), 801–811. doi:10.1016/S0092-8674(00)80891-0
+        </li>
+        <li>
+            Cormack, B. P., Valdivia, R. H., & Falkow, S. (1996). <em>FACS-optimized mutants of the green fluorescent protein (GFP)</em>. Gene, 173(1), 33–8. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/8707053
         </li>
         <li>
             Dodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). OcDodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). <em>Octamerization of lambda CI repressor is needed for effective repression of P(RM) and efficient switching from lysogeny</em>. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301tame. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301

@@ -8,5 +8,80 @@
 	} else $('#navigation a.home').addClass('active');
 });
 </script>
+<script type="text/javascript">
+    // Picture reference script
+    /*
+    USAGE:
+    tag img with a ref that is connected to the image, such as:
+    <img src="aaltohelsinki.com/testikuva.png" ref="varioskan" />
+    When you insert a reference in text, put a tag with a ref attribute:
+    <a ref="varioskan"></a>
+    Do not put href attribute, it will be replaced with a link to the image.
+    Moreover, inner html of the anchor tag will be "figure x" where x is the
+    correct figure number. If span or anchor has "." as the inner html, the
+    caption will be capitalized.
+    */
+    var images = $('img[ref]');
+    $.each(images, function(index, e){
+            var referenceName = e.getAttribute("ref");
+            if (!e.id){
+                e.setAttribute("id","figure"+(index+1));
+            }
+            $.each($('a[ref="'+referenceName+'"]'), function(j, e2){
+                e2.setAttribute("href","#"+e.id);
+                if (e2.innerHTML == "."){
+                    e2.innerHTML = "Figure " + (index+1);
+                } else {
+                    e2.innerHTML = "figure " + (index+1);
+                }
+            });
+            $.each($('span[ref="'+referenceName+'"]'), function(j, e2){
+                e2.setAttribute("href","#"+e.id);
+                if (e2.innerHTML == "."){
+                    e2.innerHTML = "Figure " + (index+1);
+                } else {
+                    e2.innerHTML = "figure " + (index+1);
+                }
+            });
+        }
+    );
+
+    // Table reference script
+    /*
+    USAGE:
+    tag table with a tab that is connected to the table, such as:
+    <table ref="intensities" />
+    When you insert a reference in text, put a tag with a ref attribute:
+    <a tab="intensities"></a>
+    Do not put href attribute, it will be replaced with a link to the image.
+    Moreover, inner html of the anchor tag will be "table x" where x is the
+    correct table number. If span or anchor has "." as the inner html, the
+    caption will be capitalized.
+    */
+    var tables = $('table[tab]');
+    $.each(tables, function(index, e){
+            var tableName = e.getAttribute("tab");
+            if (!e.id){
+                e.setAttribute("id","figure"+(index+1));
+            }
+            $.each($('a[tab="'+tableName+'"]'), function(j, e2){
+                e2.setAttribute("href","#"+e.id);
+                if (e2.innerHTML == "."){
+                    e2.innerHTML = "Table " + (index+1);
+                } else {
+                    e2.innerHTML = "table " + (index+1);
+                }
+            });
+            $.each($('span[tab="'+tableName+'"]'), function(j, e2){
+                e2.setAttribute("href","#"+e.id);
+                if (e2.innerHTML == "."){
+                    e2.innerHTML = "Table " + (index+1);
+                } else {
+                    e2.innerHTML = "table " + (index+1);
+                }
+            });
+        }
+    );
+</script>
 </html>
 {{:Team:Aalto-Helsinki/footer}}

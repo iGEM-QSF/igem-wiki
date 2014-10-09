@@ -338,6 +338,9 @@
     <p>
         Fluorescence measurements were carried out in Thermo Scientific Varioskan. It is a microtiter plate reader capable of exitation and measuring the corresponding fluorsecense at user defined wavelengths. All measurements were made with over night cell cultures diluted to the same cell density. In the LEDrig there are 16 different LEDs but also many additional wells that can be used for control samples. That way, we can ensure identical conditions between our test and control samples. We always used two controls: blue chromoprotein BioBrick (<a href="http://parts.igem.org/Part:BBa_K592009">BBa_K592009</a>) without a promoter as the negative control and constitutive GFP generator from Measurement Interlabs study (<a href="http://parts.igem.org/Part:BBa_I20260">BBa_I20260</a>) as the positive control. All experiments were carried out in <em>E. coli</em> TOP10 strain.
     </p>
+    <p>
+        Our LED rig is controlled with programmable Arduino Nano computer. <strong>**Link the script file</strong>. The light intensity parameters vary between 0 and 4095 where 0 corresponds to the dark state and 4095 the maximal intensity. The observed light intensity, however, was logarithmically dependent on the intensity parameter. Thus, having equispaced intensity paramters for the LEDs led to biased distribution of light. Almost all the LEDs were very bright. To get equal difference in the LED intensities, we set the parameters linearly according to the log<sub>10</sub> of the intensity parameter value. In other words, the intesity of the LED lights was proportional to the log<sub>10</sub> of the intensity parameter.
+    </p>
     <p>All the Varioskan measurements used the following parameters:
         <ol>
             <li>Excitation wavelength: 470 nm</li>
@@ -385,8 +388,41 @@
         We constructed a testing device in order to estimate the concentration and the dynamics of the CI concentration. In the desting device, we replaced CI encoding sequence with GFP encoding sequence. The GFP was fused with LVA degradation tag. We excluded the lambda repressor and gene C parts. As a result, our testing device consisted of a blue light sensing element (constitutive promoter (<a href="http://parts.igem.org/Part:BBa_J23115">BBa_J23115</a>), RBS-YF1-RBS-FixJ (<a href="http://parts.igem.org/Part:BBa_K592016">BBa_K592016</a>) and a double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>)) and the testing element (FixK2 promoter (<a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a>), RBS (<a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a>), GFP-LVA (<a href="http://parts.igem.org/Part:BBa_K082003">BBa_K082003</a>) and double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>).
     </p>
     <p>
-        At first, all the samples were diluted to OD<sub>600</sub> 2,4. They were inserted to different wells on microtiter plates, where control samples both were incubated in dark at two different wells each, and dark and light samples were incubated in 9 different intensities of blue 470 nm light. The first measurements were taken after 4 hours of incubation and a second mesurement was taken after 23 hours of incubation. Both incubations had the temerature at 37 C and shaking 200 rpm. <strong>**Light intensity values and their log10 values**</strong>
+        At first, all the samples were diluted to OD<sub>600</sub> 2,4. They were inserted to different wells on microtiter plates, where control samples both were incubated in dark at two different wells each, and dark and light samples were incubated in 9 different intensities of blue 470 nm light. The first measurements were taken after 4 hours of incubation and a second mesurement was taken after 23 hours of incubation. Both incubations had the temerature at 37 C and shaking 200 rpm.
     </p>
+
+    <div class="row">
+        <div class="img-center">
+            <table>
+                <tr>
+                    <td>Intensity parameter</td>
+                    <td>4095</td>
+                    <td>1582</td>
+                    <td>650</td>
+                    <td>290</td>
+                    <td>120</td>
+                    <td>40</td>
+                    <td>10</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>log<sub>10</sub></td>
+                    <td>3.612</td>
+                    <td>3.199</td>
+                    <td>2.813</td>
+                    <td>2.463</td>
+                    <td>2.082</td>
+                    <td>1.612</td>
+                    <td>1.041</td>
+                    <td>0.301</td>
+                    <td>0.0</td>
+                </tr>
+            </table>
+            <p class="kuvateksti">
+                <b><span tab="intensities1">.</span></b>: Different light intensity parameters and corresponding log<sub>10</sub> values used in this experiment.
+            </p>
+        </div>
+    </div>
 
     <div class="row">
         <div class="img-center">

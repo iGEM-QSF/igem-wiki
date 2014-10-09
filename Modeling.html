@@ -29,6 +29,7 @@
     </div>
 
 	<div class="splashalavalikko">
+		<a href="#Intro">Introduction</a><br>
 		<a href="#Math">Mathematical Model</a><br>
         <a href="#Simulation">Simulation</a><br>
         <a href="#Accuracy">Accuracy</a><br>
@@ -46,15 +47,17 @@
 <script src="http://2014.igem.org/Team:Aalto-Helsinki/waypoints.min.js?action=raw&ctype=text/js"></script>
 <div class="navbar navbar-default extrabar" data-spy="affix">
     <nav>
-        <a id="Math-submenu" class="active" href="#Math">Mathematical Model</a>
+    	<a id="Intro-submenu" class="active" href="#Intro">Introduction</a>
+        <a id="Math-submenu" href="#Math">Mathematical Model</a>
         <a id="Simulation-submenu" href="#Simulation">Simulation</a>
         <a id="Accuracy-submenu" href="#Accuracy">Accuracy</a>
     </nav>
 </div>
-<div class="update Math"></div>
 
+<div class="update Intro"></div>
 <article>
-<div class="link" id="Math"></div>
+	<div class="link" id="Intro"></div>
+
 	<h2>Introduction</h2>
 
 	<p>
@@ -64,6 +67,12 @@
 	<p>
 		Using our equations we constructed a simulation showing the effects of red and blue light on our system in real time. The user can control the input of both lights to see how they affect the production of proteins A, B and C. We experimented with different values for all constants and with trial-and-error iteration we arrived to a visualized simulation that can be used to demonstrate the intended funcion of our system. All in all, this is an idealization. Based on present and future measurement data, the parameters can be adjusted to better match the real world.
 	</p>
+
+</article>
+<div class="update Intro"></div>
+<div class="update Math"></div>
+<article>
+<div class="link" id="Math"></div>
 
 	<h2>Mathematical model</h2>
 
@@ -175,10 +184,6 @@
 	<p>
 		A computational model was created based on our mathematical model and the RK4 approximation. We made a real-time plotting function to illustrate the dynamics with each timestep. We added two light switches so that the user can have an impact on our simulation in real time. This all was then further developed into a presentable, user-friendly form that is accessible from our website. The simulation itself was created using Python and translated into Javascript for web implementation.
 	</p>
-</article>
-
-<article class="PCB">
-	<h2>Simulation</h2>
 
 	<div class="row">
 		<div class="img-center">

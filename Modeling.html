@@ -42,6 +42,15 @@
     </div>
 </div>
 
+<!-- MathJax (LaTeX for the web) -->
+
+<!-- This part is only if you want to use $...$ delimiters -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
 <script src="http://2014.igem.org/Team:Aalto-Helsinki/jquery-1.11.0.min.js?action=raw&ctype=text/js"></script>
 <script src="http://2014.igem.org/Team:Aalto-Helsinki/bootstrap.min.js?action=raw&ctype=text/js"></script>
 <script src="http://2014.igem.org/Team:Aalto-Helsinki/waypoints.min.js?action=raw&ctype=text/js"></script>
@@ -108,6 +117,31 @@
 	</div>
 
 	<p>
+		\begin{eqnarray*}
+		& & P_2  = C_{P_2}N[CI] \\
+		\\
+		& & P_A =
+		\begin{cases}
+		C_{P_A}N[CI] \quad \text{if} \quad N[CI] \leq 1 \\
+		0 \quad \text{if} \quad N[CI] > 1
+		\end{cases} \\
+		\\
+		& & P_B =
+		\begin{cases}
+		C_{P_B}N[CI] \quad \text{if} \quad N[CI] < 1 \\
+		C_{P_B}(1-(N[CI] - 1)) \quad \text{if} \quad 1 \leq N[CI] < 2 \\
+		0 \quad \text{if} \quad N[CI] \geq 2
+		\end{cases} \\
+		\\
+		& & P_C =
+		\begin{cases}
+		C_{P_A}(1-N_2[TetR]) \quad \text{if} \quad N_2[TetR] \leq 1 \\
+		0 \quad \text{if} \quad N_2[TetR] > 1
+		\end{cases}
+		\end{eqnarray*}
+	</p>
+
+	<p>
 		These equations describe the essential proteins our system (YF1, FixJ, Phosphorylated YF1, Phosphorylated FixJ, CI, TetR) Proteins are produced depending on the strength of  promoter and ribosome binding site, and also when phosphorylated protein (denoted with phos) is dephosphorylated back to its original form. The concentration of all proteins reduces by decaying, which depends on the concentration of protein in question.
 	</p>
 
@@ -163,7 +197,7 @@
 	<p>
 		The dynamics of our system were approximated using 4th order Runge-Kutta (RK4) method for the differential equations in our mathematical model. The point of this method is to approximate the function in question by it's derivatives without having to solve the function itself. The starting values of each concentrations are assumed to be zero, so y(0) = 0. With this, the simulation computes the next datapoint adding the derivative times a timestep (h) to previous concentrations. The method uses a mean value of different derivatives (the different k's below) during this timestep h to get a more accurate approximation.
 	</p>
-	
+
 	<div class="row row-eq-height">
       <div class="col-md-6 feat-left">
         <img src="http://2014.igem.org/wiki/images/6/63/Aalto_Helsinki_IGEM_rungekutta.png" class="img-responsive"></img>

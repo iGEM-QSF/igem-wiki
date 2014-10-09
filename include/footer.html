@@ -28,7 +28,19 @@
             }
             $.each($('a[ref="'+referenceName+'"]'), function(j, e2){
                 e2.setAttribute("href","#"+e.id);
-                e2.innerHTML = "figure " + (index+1);
+                if (e2.innerHTML == "."){
+                    e2.innerHTML = "Figure " + (index+1);
+                } else {
+                    e2.innerHTML = "figure " + (index+1);
+                }
+            });
+            $.each($('span[ref="'+referenceName+'"]'), function(j, e2){
+                e2.setAttribute("href","#"+e.id);
+                if (e2.innerHTML == "."){
+                    e2.innerHTML = "Figure " + (index+1);
+                } else {
+                    e2.innerHTML = "figure " + (index+1);
+                }
             });
         }
     );

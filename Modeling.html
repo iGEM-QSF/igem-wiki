@@ -32,7 +32,7 @@
 		<a href="#Intro">Introduction</a><br>
 		<a href="#Math">Mathematical Model</a><br>
         <a href="#Simulation">Simulation</a><br>
-        <a href="#Accuracy">Accuracy</a><br>
+        <a href="#Discussion">Discussion</a><br>
     </div>
 
 	<div class = "splashcopyright">
@@ -71,7 +71,7 @@ Otto Lamminpää
     	<a id="Intro-submenu" class="active" href="#Intro">Introduction</a>
         <a id="Math-submenu" href="#Math">Mathematical Model</a>
         <a id="Simulation-submenu" href="#Simulation">Simulation</a>
-        <a id="Accuracy-submenu" href="#Accuracy">Accuracy</a>
+        <a id="Discussion-submenu" href="#Discussion">Discussion</a>
     </nav>
 </div>
 
@@ -82,11 +82,11 @@ Otto Lamminpää
 	<h2>Introduction</h2>
 
 	<p>
-		To get an idea of how our gene circuit would work on an ideal situation, we explored the structure and dynamics of our system by creating a mathematical model of the reaction kinetics and a real-time simulation. Wit the mathematical model, we started with no information ready whatsoever and derived differential equations to demonstrate how the use of blue light and the changes in phosphorylated YF1 and FixJ concentrations would control the production of our three target proteins. We labeled them simply A, B, and C, because the system is intended to be used with any user defined three genes coding different proteins.
+		To get an idea of how our gene circuit would work on an ideal situation, we explored the structure and dynamics of our system by creating a mathematical model of the reaction kinetics and a real-time simulation. Wit the mathematical model, we started with no information ready whatsoever and derived differential equations to demonstrate how the use of blue light and the changes in phosphorylated $YF1$ and $FixJ$ concentrations would control the production of our three target proteins. We labeled them simply $A$, $B$, and $C$, because the system is intended to be used with any user defined three genes coding different proteins.
 	</p>
 
 	<p>
-		Using our equations we constructed a simulation showing the effects of red and blue light on our system in real time. The user can control the input of both lights to see how they affect the production of proteins A, B and C. We experimented with different values for all constants and with trial-and-error iteration we arrived to a visualized simulation that can be used to demonstrate the intended funcion of our system. All in all, this is an idealization. Based on present and future measurement data, the parameters can be adjusted to better match the real world.
+		Using our equations we constructed a simulation showing the effects of red and blue light on our system in real time. The user can control the input of both lights to see how they affect the production of proteins $A$, $B$ and $C$. We experimented with different values for all constants and with trial-and-error iteration we arrived to a visualized simulation that can be used to demonstrate the intended funcion of our system. All in all, this is an idealization. Based on present and future measurement data, the parameters can be adjusted to better match the real world.
 	</p>
 
 </article>
@@ -106,7 +106,7 @@ Otto Lamminpää
 	<h3>Simplifications</h3>
 
 	<p>
-		We assumed that the species identified from our gene circuit are the only ones that affect the overall concentrations in our bacterial culture. The bonding of CI to OR sites is assumed to be insignificant compared to the overall concentration. The model is also strictly deterministic and doesn’t take into account any noise. The phosphorylation, decay, bonding and production of proteins are assumed to be linear functions of concentration. We further assumed that the phsophorylation of FixJ by phosphorylated YF1 would not involve phosphor
+		We assumed that the species identified from our gene circuit are the only ones that affect the overall concentrations inside the bacteria. The bonding of $CI$ to $O_R$ sites is assumed to be insignificant compared to the overall concentration. The model is also strictly deterministic and doesn’t take into account any noise. The phosphorylation, decay, bonding and production of proteins are assumed to be linear functions of concentration. We further assumed that the phsophorylation of $FixJ$ by phosphorylated $YF1$ would not involve phosphorous transition between the reacting molecules
 	</p>
 
 	<p>
@@ -168,7 +168,7 @@ Otto Lamminpää
 
 	<h3>Dynamics' coefficients</h3>
 	<p>
-		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of promoters and $Rbs_1$&$Rbs_2$ the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $YF1$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $YF1$. The dephosphorylation here depends on a respective dephosphorylation coefficient $DP$(1&2 for $YF1$ and $FixJ$).
+		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of promoters. These change and $Rbs_1$&$Rbs_2$ the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $YF1$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $YF1$. The dephosphorylation here depends on a respective dephosphorylation coefficient $DP$(1&2 for $YF1$ and $FixJ$).
 	</p>
 
 	<h3>Equations for promoter activities</h3>
@@ -210,7 +210,7 @@ Otto Lamminpää
 
 	<p>
 		Here, the $C_{P_n}$'s denote the respective promoter's maximum activity. The $N$ in front of $CI$ and $TetR$ concentrations is a normalization coefficient,
-		which is needed to map the fitting part of concentrations' values to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The fuctions definitions must also change so that they never take negative values, which would make no sense when talking about promoter activities.
+		which is needed to map the fitting part of concentrations' values to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The fuctions definitions must also change so that they never take negative values, which would make no sense when talking about promoter activities. We have simplified the model so that the promoter activities only depend on the concentration of $[CI]$ protein. We also assumed that the binding of $CI$ had insignificant effect on it's concentration, and that the amount of $CI$ binded to the $O_R$ sites was propotional to $CI$ concentration.
 	</p>
 
 </article>
@@ -224,7 +224,7 @@ Otto Lamminpää
 	<h3>Overview </h3>
 
 	<p>
-		Based on our mathematical model, we created an interactive simulation and a graphical user interface for it. This visualization, although idealized, is ideal for demonstrating the intended functioning of our gene circuit and gene switch system. We included two swithces, one for red and one for blue light. With these, the user can see the effect of light intensity to a bacterial coulture in real time. Here, proteins A, B and C are represented by GFP, RFP and BFP, so the bacteria change color in different circumstances. The original simulation was written in Python and later translated into Javascript, and it can be viewed on our web page by anyone. The source code can be found on our GitHub page.
+		Based on our mathematical model, we created an interactive simulation and a graphical user interface for it. This visualization, although idealized, is ideal for demonstrating the intended functioning of our gene circuit and gene switch system. We included two swithces, one for red and one for blue light. With these, the user can see the effect of light intensity to a bacterial coulture in real time. Here, proteins A, B and C are represented by GFP, RFP and BFP, so the bacteria change color in different circumstances.
 	<p/>
 
 	<h3>Lights </h3>
@@ -239,7 +239,7 @@ Otto Lamminpää
 	<h3>Runge-Kutta method </h3>
 
 	<p>
-		The dynamics of our system were approximated using 4th order Runge-Kutta (RK4) method for the differential equations in our mathematical model. The point of this method is to approximate the function in question by it's derivatives without having to solve the function itself. The starting values of each concentrations are assumed to be zero, so y(0) = 0. With this, the simulation computes the next datapoint adding the derivative times a timestep (h) to previous concentrations. The method uses a mean value of different derivatives (the different k's below) during this timestep h to get a more accurate approximation.
+		The dynamics of our system were approximated using 4th order Runge-Kutta (RK4) method for the differential equations in our mathematical model. The point of this method is to approximate the function in question by it's derivatives without having to solve the function itself. The starting values of each concentration are assumed to be zero, so $y(0) = 0$. The simulation computes the next datapoint adding the derivative times a timestep $h$ to previous concentrations. The method uses a mean value of different derivatives (the different k's below) during this timestep h to get a more accurate approximation.
 	</p>
 <!--
 	<div class="row row-eq-height">
@@ -277,7 +277,7 @@ Otto Lamminpää
 	<h3>Software implementation</h3>
 
 	<p>
-		A computational model was created based on our mathematical model and the RK4 approximation. We made a real-time plotting function to illustrate the dynamics with each timestep. We added two light switches so that the user can have an impact on our simulation in real time. This all was then further developed into a presentable, user-friendly form that is accessible from our website. The simulation itself was created using Python and translated into Javascript for web implementation.
+		A computational model was created based on our mathematical model and the RK4 approximation. We made a real-time plotting function to illustrate the dynamics in a simple and clead graphic UI. We added two light switches so that the user can have an impact on our simulation in real time. This all was then further developed into a presentable, user-friendly form that is accessible from our website. The simulation itself was created using Python and translated into Javascript for web implementation.
 	</p>
 
 	<div class="row">
@@ -300,20 +300,23 @@ Otto Lamminpää
 </article>
 
 <div class="update Simulation"></div>
-<div class="update Accuracy"></div>
+<div class="update Discussion"></div>
 
 <article>
-	<div class="link" id="Accuracy"></div>
+	<div class="link" id="Discussion"></div>
 
-	<h2>Accuracy </h2>
+	<h2>Discussion</h2>
 
 	<p>
-		No noise was implemented in our simulation, so the results are over-idealized. This is generally very far from the truth in all biological systems, but having no noise gave us a pretty good idea of how things should work in a best case scenario.
-
+		In biological systems, a huge number of variables affect the outcome of any process. Most of them are unknown, as in our case, so models generally include some noise to approximate these unknown factors. However, our model is simplified: it takes no noice in consideration. Therefore all interactions produce smooth, good-looking curves in the graphic output. From another point of view, the clear graphipcs produced by the simulation are easily interpretable, so even someone not familiar with science can clearly see what's going on "behind the scenes" of our system.
 	</p>
 
 	<p>
-		 So far we have also used arbitrary parameters, simplified reaction pathways and reaction equations. In it's current state the simulation gives a good idea on how the system should work. Making it realistic and really accurate requires a lot of measurement of appropriate parameters and tuning. Still, this version is ideal for demonstration of our idea.
+		So far we have also used arbitrary parameters, simplified reaction pathways and reaction equations. The parameters were acquired by estimation and empirically testing. Full experimental data wasn't available when the simulation was created, so derivation of differential equations by using the law of mass-action wasn't possible. All reaction mechanisms are our own estimations of what's going on inside the bacteria.
+	</p>
+
+	<p>
+		In it's current state the simulation gives a good idea on how the system should work. Making it realistic and really accurate requires a lot of measurement of appropriate parameters, research on apprpriate scientific publications, and loads of tuning. Still, this version is ideal for demonstration of our idea. bringing the visual UI a lot of business value. Assuming we had a working three-channel switch, marketing and advertising our technologies and solutions would be considerably more fruitful thanks to the credibility brought by the client trying the technology himself in a real-time simulation.
 	</p>
 
 </article>

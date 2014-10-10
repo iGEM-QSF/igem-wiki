@@ -149,11 +149,11 @@ Otto Lamminpää
 		<li><strong>$[\text{YF1}]$</strong> = concentration of $\text{YF1}$ protein</li>
 		<li><strong>$[\text{YF1}]_{phos}$</strong> = concentration of phosphorylated $\text{YF1}$ protein</li>
 		<li><strong>$[FixJ]$</strong> = concentration of $FixJ$ protein</li>
-		<li><strong>$FixJ]_{phos}$</strong> = concentration of phosphorylated $FixJ$ protein</li>
+		<li><strong>$[FixJ]_{phos}$</strong> = concentration of phosphorylated $FixJ$ protein</li>
 		<li><strong>$[CI]$</strong> = concentration of $CI$ protein</li>
 		<li><strong>$[TetR]$</strong> = concentration of $TetR$ protein</li>
 		<li><strong>$P_1$</strong> = relative strength of the first promoter in gene circuit</li>
-		<li><strong>$P_2$</strong> = relative strength of the §FixK_2§ promoter</li>
+		<li><strong>$P_2$</strong> = relative strength of the $FixK_2$ promoter</li>
 		<li><strong>$P_A$</strong> = relative strength of the $P_R$ promoter, codes gene A</li>
 		<li><strong>$P_B$</strong> = relative strength of the $P_{RM}$ promoter, codes gene B</li>
 		<li><strong>$Rbs$</strong> = relative strengths of ribosome binding sites</li>
@@ -163,12 +163,12 @@ Otto Lamminpää
     </ul>
 
 	<p>
-		These equations describe the essential proteins our system (YF1, FixJ, Phosphorylated YF1, Phosphorylated FixJ, CI, TetR) Proteins are produced depending on the strength of  promoter and ribosome binding site, and also when phosphorylated protein (denoted with phos) is dephosphorylated back to its original form. The concentration of all proteins reduces by decaying, which depends on the concentration of protein in question.
+		These equations describe the essential proteins our system ($\text{YF1}$, $FixJ$, Phosphorylated $\text{YF1}$, Phosphorylated $FixJ$, $CI$, $TetR$). Proteins are produced with rates that depend on the strength of respective promoter and ribosome binding site, and also when phosphorylated protein (denoted with phos) is dephosphorylated back to its original form. The concentration of all proteins reduces by degradation, the rate of which depends on the concentration of protein in question.
 	</p>
 
 	<h3>Dynamics' coefficients</h3>
 	<p>
-		P1, P2, PA and PB denote the relative strengths of promoters and Rbs1&Rbs2 the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted Deg). I(B) is the combined effect of blue light that affects the phosphorylation of YF1. The phosphorylation of FixJ is assumed to depend on phosphorylation coefficient C(phos) and the concentration of phosphorylated YF1. The dephosphorylation here depends on a respective dephosphorylation constant DP(1&2 for YF1 and FixJ).
+		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of promoters and $Rbs_1$&$Rbs2_$ the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $text{YF1}$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $text{YF1}$. The dephosphorylation here depends on a respective dephosphorylation coefficient $DP$(1&2 for $text{YF1}$ and $FixJ$).
 	</p>
 
 	<h3>Equations for promoter activities</h3>
@@ -209,9 +209,8 @@ Otto Lamminpää
 	<h3>Promoters' coefficients</h3>
 
 	<p>
-		Here, the C's denote the respective promoter's maximum activity. The N in front of CI and TetR concentrations is a normalization coefficient,
-		which is needed to adjust the concentration so that it decreases the promotor activity from 1 to 0 times the maximum. The fuctions definitions
-		must also change so that they never take negative values, which would make no sense when talking about promoter activities.
+		Here, the $C_{P_n}$'s denote the respective promoter's maximum activity. The $N$ in front of $CI$ and $TetR$ concentrations is a normalization coefficient,
+		which is needed to map the fitting part of concentrations' values to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The fuctions definitions must also change so that they never take negative values, which would make no sense when talking about promoter activities.
 	</p>
 
 </article>
@@ -231,7 +230,7 @@ Otto Lamminpää
 	<h3>Lights </h3>
 
 	<p>
-		In our system, the communication between user and the bacteria happens via shining blue light to the coulture. Blue light phosphorylates the YF1-protein, which is the key to controlling the overall protein production inside the bacterium. In the simulation, this is represented by change in the I(B) parameter from the mathematical model. This takes values between 0 and 1, and the rest of system behaves as described earlier.
+		In our system, the communication between user and the bacteria happens via illumination of blue light to the coulture. Blue light phosphorylates the $\text{YF1}$-protein, which is the key to controlling the overall protein production inside the bacterium. In the simulation, this is represented by change in the $I_B$ parameter from the mathematical model. This takes values between 0 and 1, and the rest of system behaves as described earlier.
 	</p>
 	<p>
 		Our original design had also an intensity switch, operated by red light. Due to time constraits, this wasn't yet implemented in our gene circuit. In the simulation, we added a second user controlled parameter in front of every promoter. This takes values between 0 and 1, representing the no production at all -state and the production at maximum promoter activity. With this, the user has control of all protein concentrations. The assumed mechanism is idealized and has a linear effect on the activity.

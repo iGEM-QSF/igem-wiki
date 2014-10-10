@@ -46,6 +46,16 @@ ul {
   .memberrow > .col-md-8 {
     padding-top: 100px;
   }
+
+  .modelimg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .modellatex {
+    display: none;
+  }
 }
 
 .link {

@@ -12,7 +12,8 @@
 		<div class="col-md-6">
 			<h1>Modeling</h1>
 			<p class="bigsplashtext">
-				To test our theory and how well our test results fit, we did some modeling, too. $\int_0^\infty{xdx} = g0tH4X3D$
+				To test our theory and how well our test results fit, we calculated the dynamics of our switch.<br>
+				$\int_0^\infty{xdx} = g0tH4X3D$
 			</p>
 		</div>
 		<div class="col-md-3">
@@ -104,8 +105,8 @@
 	<p>
 		Based on the assumptions made before, we arrived at following differential equations to describe the idealized dynamics of our system:
 	</p>
-<!--
-	<div class="row">
+
+	<div class="row modelimg">
 		<div class="img-center">
 			<img src="http://2014.igem.org/wiki/images/0/0a/Aalto_Helsinki_Equations.png" class="img-responsive"></img>
 			<p class="kuvateksti">
@@ -113,9 +114,8 @@
 			</p>
 		</div>
 	</div>
--->
 
-	<p>
+	<p class="modellatex">
 		\begin{eqnarray*}
 		& & \frac{d[YF1]}{dt} = P_1Rbs_1 + DP_1[YF1]_{phos} - (Deg_{YF1}+I_B)[YF1] \\ \quad \\
 		& & \frac{d[YF1]_{phos}}{dt} = I_B[YF1] - (Deg_{\text{YF1}} + DP_1)[YF1]_{phos} \\
@@ -130,23 +130,27 @@
 		\end{eqnarray*}
 	</p>
 
-	<h3 class="text-center">Legend</h3>
-    <ul class="text-center">
-		<li><strong>$[YF1]$</strong> = concentration of $YF1$ protein</li>
-		<li><strong>$[YF1]_{phos}$</strong> = concentration of phosphorylated $YF1$ protein</li>
-		<li><strong>$[FixJ]$</strong> = concentration of $FixJ$ protein</li>
-		<li><strong>$[FixJ]_{phos}$</strong> = concentration of phosphorylated $FixJ$ protein</li>
-		<li><strong>$[CI]$</strong> = concentration of $CI$ protein</li>
-		<li><strong>$[TetR]$</strong> = concentration of $TetR$ protein</li>
-		<li><strong>$P_1$</strong> = relative strength of the first promoter in gene circuit</li>
-		<li><strong>$P_2$</strong> = relative strength of the $FixK_2$ promoter</li>
-		<li><strong>$P_A$</strong> = relative strength of the $P_R$ promoter, codes gene A</li>
-		<li><strong>$P_B$</strong> = relative strength of the $P_{RM}$ promoter, codes gene B</li>
-		<li><strong>$Rbs$</strong> = relative strengths of ribosome binding sites</li>
-		<li><strong>$Deg$</strong> = degradation coefficient</li>
-		<li><strong>$C_{phos}$</strong> = phosphorylation coefficient</li>
-		<li><strong>$DP$</strong> = de-phosphorylation coefficient</li>
-    </ul>
+    <div class="row row-eq-height">
+      <div class="center-block">
+        <ul>
+        	<h3>Legend</h3>
+			<li><strong>$[YF1]$</strong> = concentration of $YF1$ protein</li>
+			<li><strong>$[YF1]_{phos}$</strong> = concentration of phosphorylated $YF1$ protein</li>
+			<li><strong>$[FixJ]$</strong> = concentration of $FixJ$ protein</li>
+			<li><strong>$[FixJ]_{phos}$</strong> = concentration of phosphorylated $FixJ$ protein</li>
+			<li><strong>$[CI]$</strong> = concentration of $CI$ protein</li>
+			<li><strong>$[TetR]$</strong> = concentration of $TetR$ protein</li>
+			<li><strong>$P_1$</strong> = relative strength of the first promoter in gene circuit</li>
+			<li><strong>$P_2$</strong> = relative strength of the $FixK_2$ promoter</li>
+			<li><strong>$P_A$</strong> = relative strength of the $P_R$ promoter, codes gene A</li>
+			<li><strong>$P_B$</strong> = relative strength of the $P_{RM}$ promoter, codes gene B</li>
+			<li><strong>$Rbs$</strong> = relative strengths of ribosome binding sites</li>
+			<li><strong>$Deg$</strong> = degradation coefficient</li>
+			<li><strong>$C_{phos}$</strong> = phosphorylation coefficient</li>
+			<li><strong>$DP$</strong> = de-phosphorylation coefficient</li>
+	    </ul>
+      </div>
+    </div>
 
 	<p>
 		These equations describe the essential proteins our system ($YF1$, $FixJ$, Phosphorylated $YF1$, Phosphorylated $FixJ$, $CI$, $TetR$). Proteins are produced with rates that depend on the strength of respective promoter and ribosome binding site, and also when phosphorylated protein (denoted with phos) is dephosphorylated back to its original form. The concentration of all proteins reduces by degradation, the rate of which depends on the concentration of protein in question.
@@ -158,8 +162,8 @@
 	</p>
 
 	<h3>Equations for promoter activities</h3>
-<!--
-	<div class="row">
+
+	<div class="row modelimg">
 		<div class="img-center">
 			<img src="http://2014.igem.org/wiki/images/a/a0/Aalto_Helsinki_Promoters.png" class="img-responsive"></img>
 			<p class="kuvateksti">
@@ -167,8 +171,8 @@
 			</p>
 		</div>
 	</div>
--->
-	<p>
+
+	<p class="modellatex">
 		\begin{eqnarray*}
 		& & P_2  = C_{P_2}N[CI] \\
 		\\
@@ -227,24 +231,17 @@
 	<p>
 		The dynamics of our system were approximated using 4th order Runge-Kutta (RK4) method for the differential equations in our mathematical model. The point of this method is to approximate the function in question by it's derivatives without having to solve the function itself. The starting values of each concentration are assumed to be zero, so $y(0) = 0$. The simulation computes the next datapoint adding the derivative times a timestep $h$ to previous concentrations. The method uses a mean value of different derivatives (the different k's below) during this timestep h to get a more accurate approximation.
 	</p>
-<!--
-	<div class="row row-eq-height">
-      <div class="col-md-6 feat-left">
-        <img src="http://2014.igem.org/wiki/images/6/63/Aalto_Helsinki_IGEM_rungekutta.png" class="img-responsive"></img>
-        <p class="kuvateksti">
-			RK4 equations
-		</p>
-      </div>
-      <div class="col-md-6 feat-right">
-        <img src="http://2014.igem.org/wiki/images/6/63/Aalto_Helsinki_IGEM_rungekutta.png" class="img-responsive"></img>
-        <p class="kuvateksti">
-			RK4 equations
-		</p>
-      </div>
-    </div>
--->
 
-	<p>
+    <div class="row modelimg">
+		<div class="img-center">
+			<img src="http://2014.igem.org/wiki/images/6/63/Aalto_Helsinki_IGEM_rungekutta.png" class="img-responsive"></img>
+			<p class="kuvateksti">
+				RK4 equations.
+			</p>
+		</div>
+	</div>
+
+	<p class="modellatex">
 		\begin{eqnarray*}
 		& & y' = f(t,y(t)), \quad y(t_0) = y_0 \\
 		\\

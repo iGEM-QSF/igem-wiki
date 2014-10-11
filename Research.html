@@ -452,11 +452,14 @@
     <p>
         When compared to the 4 hour measurements, the <a ref="results23h"></a> does not have such a clear trend as in the <a ref="results4h"></a>. However, we also notice that the fluorescence values vary greatly and they are clearly lower compared to the values after 4 hours of incubation. This suggests that the response to the light stimuli is not as strong after long incubation and that the linear dependency on the light intensity seems to disappear. We must also take into account the length of the incubation with the original OD<sub>600</sub> of the cell culture. After such a long time in high cell density without adding fresh media will inherently lead to low wellfare, low transcription and protein synthesis rate and poor response to the light stimuli. In other words, the 23 hour incubation is clearly too long and leads to bad sample quality.
     </p>
+
     <h3>GFP fluorescence of our light response element compared to constitutive GFP production strain and non-fluorescent strain</h3>
     <p>
-        We designed new experiments based on the previous results. First of all, we need to address how positive and negative control respond to light. It may very well be that some of the effects are due to warming effects of the LED lights. Moreover, we need to measure the light response in growing cultures with lower cell density. <strong>2x samples</strong>
+        We designed new experiments based on the previous results. First of all, we need to address how positive and negative control respond to light. We need to address the possibility that some of the effects are due to warming effects of the LED lights. Moreover, we need to measure the light response in bacterial  cultures in logarithmic growth state with lower cell density.
     </p>
-
+    <p>
+        We prepared three different samples (light response element, positive control and negative control) and placed them under five different intensities of blue light (<a tab="intensities2"></a>). The lowest intensity is actually a well without a led light, that is, darkness. However, we designate this intesity with parameter value of 1 instead of zero (which would translate to -infinity on the logarithmic scale). We had duplicate samples of our light response element and we measured the their average fluorescence in this experiment.
+    </p>
     <div class="row">
         <div class="img-center">
             <table tab="intensities2">
@@ -482,23 +485,49 @@
             </p>
         </div>
     </div>
-
+    <p>
+        We aimed to measure the GFP fluorescence regularly, every one hour throughout the experiment. The experiments lasted for approximately six hours yielding six different time points. This means 30 datapoints per sample. However, as the measurement device was reserved at times, the timepoints are not exactly regular. In addition, we noticed that between our 4th and 5th measurement, the batteries of our LEDrig had died and the LED intensities had all dimmed significantly. At this point, the batteries were immediately changed to fully charged ones.
+    </p>
     <div class="row">
         <div class="img-center">
             <img src="http://2014.igem.org/wiki/images/a/a0/Aaltohelsinki_sample_timeseries.png" class="img-responsive" ref="timeseries"></img>
+            <img src="http://2014.igem.org/wiki/images/0/0b/Aaltohelsinki_timeseries_legend.png" class="img-responsive"></img>
             <p class="kuvateksti">
-                <b><span ref="timeseries">.</span></b>: GFP fluorescence of our light response element at different intensities in different times. The intensity is a 10 base logarithm of the parameter values given in <a tab="intensities2"></a> and the fluorescence is an average of two different samples. Negative control has calculated as the average of all the time points at the given intensity. The positive control is in the <a ref="samplevspositive"></a>. The times indicated are times of the day, not incubation times.
+                <b><span ref="timeseries">.</span></b>: GFP fluorescence of our light response element at different intensities in different times (upper figure). The intensity is a 10 base logarithm of the parameter values given in <a tab="intensities2"></a> and the fluorescence is an average of two different samples. Negative control has calculated as the average of all the time points at the given intensity. The legend is in the figure below. The positive control is in the <a ref="samplevspositive"></a> and the intensity values in the <a tab="intensities2"></a>. The times indicated are times of the day, not incubation times.
             </p>
         </div>
     </div>
+    <p>
+        The <a ref="timeseries"></a> is very good example of the light response element capabilities. The first measurement is taken right after the dilutions before the incubation in blue light. We notice the fluorescence is constant for each sample (blue line, 10:43). However, already after one hour of incubation (green, 11:53), we can see a clear response effect to incubation in blue light. Bacteria grown in low intensity have a much higher fluorescence level compared to the those grown in high intensity blue light. The difference is over 4 fold. We also note the effect of light intensity to the fluorescence is nearly linear. We also need to take into account that the intensity level 0 is not comparable to the other values as the difference between darkness and very dimm light was hard to evaluate at the logarithmic scale.
+    </p>
+    <p>
+        When the incubation is continued (red and turqoise), the fluorescence also tend to increase at every point of measurement. The fluorescence at the highest blue light intensity increases but so does the fluorescence at the lowest intensity. In fact, they change at the same rate relative to each other so that the 4 fold difference is maintained. This suggests that this change in fluorescence is caused by the growth of bacteria in the sample leading to a GFP expression multiplied by scalar representing the cell density. In other words, the effect of blue light on the single cell level may be constant after the second measurement. Therefore, the full response to blue light intensity may take place already between the first and second measurement. This would imply very fast response times.
+    </p>
+    <p>
+        However, we observe a great difference at the 5th timepoint (violet, 15:43) when fluorescence rockets even at higher blue light intensities. This is due to batteries running low in our LEDrig. Interestingly, this incident reveals some very interesting dynamics in our light response element. Clearly, the effect og the batteris running low has emerged after the measurement at 14 o'clock. Our light response element has achieved the same fluorescence values as the samples incubated in dark since the beginning. This has happened in a time shorter than one and half hours which is the time difference between the measurements. As the main component of the fluorescence is GFP-LVA, the samples incubated in bright light have reached the full production capasity when compared to the most fluorescent samples. Moreover, this time has been enough to accumulate GFP long enough to reach seemingly steady state (degradation rate and production rate being equal). Therefore, the response is likely to be a lot shorter than the limiting one and half hours.
+    </p>
+    <p>
+        The last timepoint also reveals some very interesting features in our response element. As the light intensities were restored after the perturbation we incubated the samples in the original light intensities for 75 minutes prior to doing the last measurement. When we exmine these fluorescence values (orange, 16:49) we can see that the values were restored back to the same level as the measurements before the perturbation. Also the linear dependency and 4 fold fluorescence differences were retained. This means that our system seems to react very fast to increase in the blue light intensity.
+    </p>
+    <p>
+        Control!
+    </p>
     <div class="row">
         <div class="img-center">
             <img src="http://2014.igem.org/wiki/images/4/48/Aaltohelsinki_sample_vs_positive.png" class="img-responsive" ref="samplevspositive"></img>
             <p class="kuvateksti">
-                <b><span ref="samplevspositive">.</span></b>: GFP fluorescence of our light response element compared to the positive control. The 3D plot shows the difference in fluorescence between our sample and the constant GFP producing strain (transformed with Measurement Interlabs plasmid with <a href="http://parts.igem.org/Part:BBa_I20260">BBa_I20260</a>). The times indicated are times of the day, not incubation times.
+                <b><span ref="samplevspositive">.</span></b>: GFP fluorescence of our light response element compared to the positive control. The 3D plot with respect to time, fluorescence and intensity shows the difference in fluorescence between our sample and the constant GFP producing strain (TOP10 transformed with Measurement Interlabs plasmid with <a href="http://parts.igem.org/Part:BBa_I20260">BBa_I20260</a>). The times indicated are times of the day, not incubation times.
             </p>
         </div>
     </div>
+    <p>
+        One question is still yet to be addressed: does the LEDs interact with heat or is light indeed the mechanism that affects do the fluorescence? Or maybe the blue light interferes straight with GFP inhibiting its fluorescence? To rule out these effects we compare our samples to a positive and neagtive control strains. We observe the effect of the blue light on strain producing GFP at a constant rate and on strain without GFP encoding sequence.
+    </p>
+    <p>
+        In the <a ref="timeseries"></a>, we have plotted average value of negative control strain fluorescence as a function of blue light intensity. The values were averaged over all six timepoints. As we see, the fluorescence levels are clearly lower than any of the measurements with our light response element. Moreover, the value is nearly constant, only decreasing slightly towards higher intensities. This suggests that light intensity has some minor diminishing effects on fluorescence measured at 511 nm. However, these differences are negligible when compared to the differences in fluorescence observed with the light response element. Moreover, this also suggests that the fluorescence levels are clearly elevated even at the highest blue light intensities.
+    </p>
+        In <a ref="samplevspositive"></a> we have compared our light response element with a strain producing GFP at a constant rate. First of all, we see that the fluorescence levels are on the different level of magnitude. This presumably is due to significantly longer half-life and presumably higher transription rate. This is supported by the fact that the fluorescence accumulates through the time (although the effect is largely contributed by the dividing cells). The main intrest is, however, to compare the effect of blue light to the fluorescence. First of all, we observe inclination to higher fluorescence levels at higher blue light intensities. This is opposing our previous observation with negative control. Moreover, this change is exactly opposite to what is observed in our light response element, which supports our hypothesis. The higher fluorescence may be, among many other possible reasons, result of LEDs heating up the sample a little bit and enabling the cells to proliferate a little bit faster during the measurements carried out in room temperature. We also need to take into account that as we only had on sample, the fluorescence values are subject to fluctuation and we cannot reliably conclude that there would be an increasing trend towards higher intensities in fluorescence of the positive control strain.
+    </p>
     <h3>Induction dynamics and GFP fluorescence under varying light intensity</h3>
 </article>
 <div class="update Results"></div>
@@ -518,6 +547,8 @@
 
         Red light
         Phosphorylation transfer
+        Leakiness
+        Non-saturating intensity response
   </p>
 
 </article>

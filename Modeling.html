@@ -22,7 +22,7 @@
 
 	<div class= "row splashala">
         <div class ="col-md-12 transp scroller">
-            <a href="#Math">
+            <a href="#Intro">
                 Scroll down to read more
                 <img src="http://2014.igem.org/wiki/images/3/3e/Aalto_Helsinki_Nuoli.png" class="img-responsive center-block transp nuoli">
             </a>
@@ -69,7 +69,7 @@
 	<h2>Introduction</h2>
 
 	<p>
-		To get an idea of how our gene circuit would work on an ideal situation, we explored the structure and dynamics of our system by creating a mathematical model of the reaction kinetics and a real-time simulation. Wit the mathematical model, we started with no information ready whatsoever and derived differential equations to demonstrate how the use of blue light and the changes in phosphorylated $YF1$ and $FixJ$ concentrations would control the production of our three target proteins. We labeled them simply $A$, $B$, and $C$, because the system is intended to be used with any user defined three genes coding different proteins.
+		To get an idea of how our gene circuit would work on an ideal situation, we explored the structure and dynamics of our system by creating a mathematical model of the reaction kinetics and a real-time simulation. With the mathematical model, we started with no information ready whatsoever and derived differential equations to demonstrate how the use of blue light and the changes in phosphorylated $YF1$ and $FixJ$ concentrations would control the production of our three target proteins. We labeled them simply $A$, $B$, and $C$, because the system is intended to be used with any user defined three genes coding different proteins.
 	</p>
 
 	<p>
@@ -208,13 +208,13 @@
 	<h3>Overview </h3>
 
 	<p>
-		Based on our mathematical model, we created an interactive simulation and a graphical user interface for it. This visualization, although idealized, is ideal for demonstrating the intended functioning of our gene circuit and gene switch system. We included two swithces, one for red and one for blue light. With these, the user can see the effect of light intensity to a bacterial coulture in real time. Here, proteins A, B and C are represented by GFP, RFP and BFP, so the bacteria change color in different circumstances.
+		Based on our mathematical model, we created an interactive simulation and a graphical user interface for it. This visualization, although idealized, is ideal for demonstrating the intended functioning of our gene circuit and gene switch system. We included two swithces, one for red and one for blue light. With these, the user can see the effect of light intensity to a bacterial culture in real time. Here, proteins A, B and C are represented by GFP, RFP and BFP, so the bacteria change color in different circumstances.
 	<p/>
 
 	<h3>Lights </h3>
 
 	<p>
-		In our system, the communication between user and the bacteria happens via illumination of blue light to the coulture. Blue light phosphorylates the $YF1$-protein, which is the key to controlling the overall protein production inside the bacterium. In the simulation, this is represented by change in the $I_B$ parameter from the mathematical model. This takes values between 0 and 1, and the rest of system behaves as described earlier.
+		In our system, the communication between user and the bacteria happens via illumination of blue light to the culture. Blue light phosphorylates the $YF1$-protein, which is the key to controlling the overall protein production inside the bacterium. In the simulation, this is represented by change in the $I_B$ parameter from the mathematical model. This takes values between 0 and 1, and the rest of system behaves as described earlier.
 	</p>
 	<p>
 		Our original design had also an intensity switch, operated by red light. Due to time constraits, this wasn't yet implemented in our gene circuit. In the simulation, we added a second user controlled parameter in front of every promoter. This takes values between 0 and 1, representing the no production at all -state and the production at maximum promoter activity. With this, the user has control of all protein concentrations. The assumed mechanism is idealized and has a linear effect on the activity.

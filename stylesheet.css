@@ -595,8 +595,9 @@ header .navbar {
   text-align: -moz-center
 }
 
-.sponsorlogo {
+#sponsorlogo {
   max-height: 150px;
+  width: auto;
 }
 
 /* SIVUJEN OMAT tyylit loppu */

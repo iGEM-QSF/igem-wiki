@@ -352,14 +352,6 @@ Their rig is naturally much better calibrated than ours. They precondition the c
     <p>
         Our LED rig is controlled with programmable Arduino Nano computer. <strong>**Link the script file</strong>. The light intensity parameters vary between 0 and 4095 where 0 corresponds to the dark state and 4095 the maximal intensity. The observed light intensity, however, was logarithmically dependent on the intensity parameter. Thus, having equispaced intensity paramters for the LEDs led to biased distribution of light. Almost all the LEDs were very bright. To get equal difference in the LED intensities, we set the parameters linearly according to the log<sub>10</sub> of the intensity parameter value. In other words, the intesity of the LED lights was proportional to the log<sub>10</sub> of the intensity parameter.
     </p>
-    <p>All the Varioskan measurements used the following parameters:
-        <ol>
-            <li>Excitation wavelength: 470 nm</li>
-            <li>Emission wavelength: 511 nm</li>
-            <li>Bandwidth: 5nm</li>
-            <li>Measurement time: 500 ms</li>
-        </ol>
-    </p>
     <p>
         Cormack <em>et al</em>., (1996) reported the wavelengths of green fluorescent protein mutant 3 to be the following
         <ul>
@@ -368,23 +360,29 @@ Their rig is naturally much better calibrated than ours. They precondition the c
         </ul>
     </p>
     <p>
-        In addition Ashikawa <em>et al</em>., (2011) proposed that the parameters for wild type GFP measurements would be
+        In addition Ashikawa <em>et al</em>., (2011) had used the following parameters in measuring GFP
         <ul>
-            <li>Excitation wavelength: 395 nm</li>
-            <li>Emission wavelength: 507 nm</li>
             <li>Bandwidth: 12 nm</li>
             <li>Measurement time: 500 ms</li>
         </ul>
     </p>
     <p>
-        We tried measuring GFP using the wavelengths provided by Cormack <em>et al</em>., (1996) and measurement time and bandwidth as Ashikawa <em>et al</em>., (2011) had used, but we got strange results. We assumed that that this was because the excitation and emission wavelengths were so close to each other. Therefore we decided to change the excitation wavelength to 470 nm, as it seemed to be another peak of excitation for GFP mut 3 according to Cormack <em>et al</em>., (1996) (<a ref="GFPCormack"></a>). For the same reason we also tried a narrower bandwidth of 5 nm, which is the other option available on Varioskan.
+        We tried measuring GFP using the parameters provided by Cormack <em>et al</em>., (1996) and Ashikawa <em>et al</em>., (2011), but we got strange results. We assumed that that this was because the excitation and emission wavelengths were so close to each other. Therefore we decided to change the excitation wavelength to 470 nm, as it seemed to be another peak of excitation for GFP mut 3 according to Cormack <em>et al</em>., (1996) (<a ref="GFPCormack"></a>). For the same reason we also tried a narrower bandwidth of 5 nm, which is the other option available on Varioskan.
     </p>
     <img src="http://2014.igem.org/wiki/images/4/46/AaltoHelsinki_GFPCormick.png" ref="GFPCormack" class="img-responsive"></img>
     <p class="kuvateksti">
         <b><span ref="GFPCormack">.</span></b> Excitation and emission spectra for wild type and mutant GFPs. (A) Excitation spectra (emission 540 nm). Excitation maxima: wt GFP 395 nm, GFP mut 1 488 nm, GFP mut 2 481 nm and GFP mut 3 501 nm. (B) Emission spectra (excitation 395 nm for wild type and 450 nm for mutant types). Emission maxima: wt GFP 508 nm, GFP mut 1 507 nm, GFP mut 2 507 nm and GFP mut 3 511 nm.
     </p>
+    <p>In the end we settled for the following:
+        <ul>
+            <li>Excitation wavelength: 470 nm</li>
+            <li>Emission wavelength: 511 nm</li>
+            <li>Bandwidth: 5nm</li>
+            <li>Measurement time: 500 ms</li>
+        </ul>
+    </p>
     <p>
-        With the chosen parameters we got sensible results and our blank samples gave practically zero emission.
+        With the chosen values we got sensible results and our blank samples gave practically zero emission.
     </p>
 </article>
 <div class="update Methods"></div>

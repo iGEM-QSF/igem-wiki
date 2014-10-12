@@ -142,6 +142,16 @@
     <p>
         We started our BioBrick learning practice project mid May and Summer of Startups early June. As we got forward, we realized that our idea is not very realistic. Implementation of such a separate unmaintained container would be very challenging and in addition, we cannot bring genetically modified bacteria outside laboratory conditions (it's defined in the gene technology legislation). We decided to solely focus on one element of our nest box idea. Constructing the interface between the bacteria and the user or a computer is not trivial. So, we redefined our direction which was maintained to the end. We wanted to develop a three channel switch that would allow us to activate one of the three genes at a time using only the intensity of single wavelength light. We could then connect this switch with fragrance producing genes, for example.
     </p>
+
+    <div class="row row-eq-height">
+      <div class="col-md-6 feat-left">
+        <img src="http://2014.igem.org/wiki/images/3/3b/Aalto_Helsinki_Pinkitbakut2.jpg" class="img-responsive"></img>
+      </div>
+      <div class="col-md-6 feat-right">
+        <img src="http://2014.igem.org/wiki/images/3/3d/Aalto_Helsinki_Pinkitbakut3.jpg" class="img-responsive">
+      </div>
+    </div>
+
     <h3>Earlier Research</h3>
     <p>
         Optical control over molecular interactions has been harnessed in metabolic signaling, dimerization systems and light activated adrenergic receptors and neuronal ion channels. Most importantly in terms of synthetic biology we can now regulate transcription with light. One of the foundational papers were written in 2005 by Levskaya et al. <em>Synthetic biology: engineering Escherichia coli to see light</em>. Since then, many different light sensors and light regulators have been built. This toolbox enables more precise spatial and temporal control over the synthetic biological systems. Hence, light regulation has been part of many iGEM projects. Light sensors are arguably one of the most important elements in controlling gene expression in synthetic biology. In contrast to chemicals, we have full control over light intensity.
@@ -149,35 +159,74 @@
     <p>
         The applications in previous iGEM teams include communication, kill switches and metabolic engineering, among many others. Previous teams have been very active in making BioBricks out of new light sensors published in research. Uppsala 2011 team designed a multichromatic light sensor system which regulates three independent genes. In their project the used blue, green and red light sensors and linked them to different chromoproteins. This way, different light signals produce different colors in bacteria. They added many useful BioBricks to the registry which has made also our project more feasible.
     </p>
-    <p>
-        STJU BioX Shanghai 2013 team aimed to create a universal system to regulate genomic genes using blue, red and green light and CRISPR and <em>dCas9</em> protein. Their fundamental idea is to regulate production of sgRNA with different wavelengths. This would enable regulation of three different genomic genes within the chromosome presumably independently of each other. Switching the regulatory targets would be done by changing the sgRNAs. The Shanghai team also built a box with computer controlled LEDs of all three different color. In addition, they shared the software as well as the instructions how to build such a light regulation box. This was very interesting project as we built a light regulation system for three genes using LEDs and a microcontroller. STJU BioX Shanghai gave some inspiration to our LED control system.
-    </p>
-    <p>
-        Interestingly, also Freiburg 2013 team made a universal regulatory system using CRISPR and dCas9 protein but they targeted mammalian cells. In their concept, <em>dCas9</em> is guided to the site and the function to be carried out can be chosen remotely using different wavelengths of light. The effector either activates or represses the target gene or methylates a histone tail affecting the histone code at the site. The three effectors: repressor (KRAB), activator (VP16) and methyltransferase (G9a), can be controlled with red, blue and UV light. Such system would be able to regulate the target genes remotely in diverse ways.
-    </p>
+    <div class="row">
+		<div class="col-md-8 text-col-left">
+			<p>
+        		STJU BioX Shanghai 2013 team aimed to create a universal system to regulate genomic genes using blue, red and green light and CRISPR and <em>dCas9</em> protein. Their fundamental idea is to regulate production of sgRNA with different wavelengths. This would enable regulation of three different genomic genes within the chromosome presumably independently of each other. Switching the regulatory targets would be done by changing the sgRNAs. The Shanghai team also built a box with computer controlled LEDs of all three different color. In addition, they shared the software as well as the instructions how to build such a light regulation box. This was very interesting project as we built a light regulation system for three genes using LEDs and a microcontroller. STJU BioX Shanghai gave some inspiration to our LED control system.
+    		</p>
+		</div>
+		<div class="col-md-4 img-100">
+			<img src="http://2014.igem.org/wiki/images/f/fc/Aalto_Helsinki_STJU_Different.png" class="img-responsive"></img>
+			<p class="kuvateksti">
+				Image taken and slightly modified from <a href="http://2013.igem.org/Team:SJTU-BioX-Shanghai">STJU BioX Shanghai 2013 Team's wiki</a>.
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8 text-col-left">
+			<p>
+        		Interestingly, also Freiburg 2013 team made a universal regulatory system using CRISPR and dCas9 protein but they targeted mammalian cells. In their concept, <em>dCas9</em> is guided to the site and the function to be carried out can be chosen remotely using different wavelengths of light. The effector either activates or represses the target gene or methylates a histone tail affecting the histone code at the site. The three effectors: repressor (KRAB), activator (VP16) and methyltransferase (G9a), can be controlled with red, blue and UV light. Such system would be able to regulate the target genes remotely in diverse ways.
+    		</p>
+		</div>
+		<div class="col-md-4 img-100">
+			<img src="http://2013.igem.org/wiki/images/3/35/Freiburg2013_L45.jpg" class="img-responsive"></img>
+			<p class="kuvateksti">
+				Image of <a href="http://2013.igem.org/Team:Freiburg">Freiburg 2013 Team</a>.
+			</p>
+		</div>
+	</div>
     <p>
         Maybe the most interesting research group in this field is Jeffey Tabor's group. On their website they write: "We program living cells to sense, compute, and respond to information in their environments. Our programmable cells have applications in basic science, industry, and medicine." (http://www.taborlab.rice.edu/home, 5.20.2014). They have been involved in developing new light sensors, including CcaS/CcaR and Cph8. They also constructed a multichromatic gene regulation system combining both these receptors. In a very recent paper (Schmidl et al., 2014) they re-engineered Cph8 and CcaS/CcaR sensors to reduce cross-talk and leakiness and to increase the dynamic range.
     </p>
     <p>
-       Our setup was heavily inspired by Tabor lab. In their experiments they perform light exposure to bacterial cultures using a Light Tube Array, LTA. The LTA consists of 64 individually exposable slots for tubes and it can be placed inside an incubator in order to gather big amounts of data with precise control.
-
-Very little technical data was available of the rig hardware, so we designed our own. They still work using the same principles.
-
-Their rig is naturally much better calibrated than ours. They precondition the cultures with a "staggered start", which assures similar starting conditions for each tube (Olson et al., 2014, Supplementary Note 1). We did not perform this kind of starting procedure, but all our cultures were grown in the dark in similar conditions to minimize the different starting conditions.
+       	Our setup was heavily inspired by Tabor lab. In their experiments they perform light exposure to bacterial cultures using a Light Tube Array, LTA. The LTA consists of 64 individually exposable slots for tubes and it can be placed inside an incubator in order to gather big amounts of data with precise control.
+    </p>
+    <p>
+		Very little technical data was available of the rig hardware, so we designed our own. They still work using the same principles.
+	</p>
+	<p>
+		Their rig is naturally much better calibrated than ours. They precondition the cultures with a "staggered start", which assures similar starting conditions for each tube (Olson et al., 2014, Supplementary Note 1). We did not perform this kind of starting procedure, but all our cultures were grown in the dark in similar conditions to minimize the different starting conditions.
     </p>
     <p>
        Possible additional considerations that sould be taken into account when handling our data is that our rig runs of batteries. The depletion of the batteries results in lower power supply, although this should be covered to some extent by the on-board voltage regulator.
        Also tabor labs point out that newly produced fluorescence proteins do not exhibit a fluorescence signature until maturation has completed (Olson et al., 2014, Supplementary Note 2). This means that the actual fluorescence measured does not represent exactly the protein concentration. Their approach was to do a "post treatement" for the grown cultures to ensure protein maturation. We entirely ignored this procedure, mainly due to time concerns and the possible mis-exposure that could occur during such treatment.
-   </p>
+   	</p>
     <p>
         In contrast to the previous research, our system attempts to regulate multiple targets with only one wavelenght of light. In the paper by Tabor et al. (2011) they say: "The development of multichromatic gene regulatory systems, where different light wavelengths regulate the expression of different genes, will allow more advanced control of synthetic and natural gene regulatory networks." Whereas we completely agree with that, we also claim if we're able to use single wavelengths more efficiently, we could achieve even greater level of control of the synthetic gene regulatory networks.
     </p>
+    <div class="row row-eq-height">
+      	<div class="col-md-4 feat-left">
+        	<img src="http://2014.igem.org/wiki/images/9/9c/Aalto_Helsinki_Luminescence_Cocktail.jpg" class="img-responsive">
+     	</div>
+      	<div class="col-md-4 feat-center">
+        	<img src="http://2014.igem.org/wiki/images/7/7a/Aalto_Helsinki_Luminescence2.jpg" class="img-responsive"></img>
+      	</div>
+      	<div class="col-md-4 feat-right">
+        	<img src="http://2014.igem.org/wiki/images/3/3b/Aalto_Helsinki_Luminescence1.jpg" class="img-responsive"></img>
+      	</div>
+    </div>
+    <div class="cpright">
+    	<p class ="kuvateksti">
+      		Images from <a href="http://2010.igem.org/Team:Cambridge">Cambridge 2010 Team</a> displaying bioluminescence.
+    	</p>
+    </div>
+
     <h3>In Search of the Perfect Light Sensing System</h3>
     <p>
         First of all, to be able to control gene expression with light, we needed a light receptor protein. It would react to certain wavelength of light and mediate the signal to the DNA level and initiate the response. We found different alternatives in the iGEM registry but most of them were not properly characterized. We could not find reliable experiences of the use of such light receptors or, when we found them, the receptor protein was not available. Our requirements for the light receptor system were following: 1) it has worked for other iGEM teams 2) it should work in <i>E. coli</i> 3) it is available in the registry 4) it does not require any cofactors or special strains 5) short response time and sensitivity. In this section, we discuss about the different alternatives we found and what made us choose the YF1 protein. We also introduce the mechanism how the light signal is conveyed in our system.
     </p>
     <p>
-        Phytochrome interacting factors (PIF's) were used by some previous iGEM teams, including Freiburg 2013 and TU Munich 2012. The actual red light sensing protein is called Phytochrome B and in the active form it binds to the PIF (<a href="http://parts.igem.org/Part:BBa_K1150005" >BBa_K1150005 or <a href="http://parts.igem.org/Part:BBa_K365000" >BBa_K365000</a>). Thus, the cell also needs to express Phytochrome B. However, these PIFs were derived from <i>Arabidopsis thaliana</i>, which is an eukaryotic organism. Moreover, the response mechanism would require fusing the two proteins to the actual DNA binding domain and transcription factor. Unfortunately, Freiburg team only succeeded in 1.3 fold induction of gene expression after 48 hours of incubation in red light and TU Munich did not manage to implement the light sensing part in their kill switch.
+        Phytochrome interacting factors (PIF's) were used by some previous iGEM teams, including Freiburg 2013 and TU Munich 2012. The actual red light sensing protein is called Phytochrome B and in the active form it binds to the PIF (<a href="http://parts.igem.org/Part:BBa_K1150005" >BBa_K1150005 or <a href="http://parts.igem.org/Part:BBa_K365000">BBa_K365000</a>). Thus, the cell also needs to express Phytochrome B. However, these PIFs were derived from <i>Arabidopsis thaliana</i>, which is an eukaryotic organism. Moreover, the response mechanism would require fusing the two proteins to the actual DNA binding domain and transcription factor. Unfortunately, Freiburg team only succeeded in 1.3 fold induction of gene expression after 48 hours of incubation in red light and TU Munich did not manage to implement the light sensing part in their kill switch.
     </p>
     <p>
         The Peking 2012 team designed an ultra-sensitive light sensor for luminescence. They combined a LOV domain, a dimerizing domain and a DNA-binding LexA domain. Such protein becomes active when the cells are illuminated with 440 - 480 nm light. In active form, the dimerizing domains facilitate formation of LexA dimer which is able to bind DNA and repress transcription in only such form. Whereas their light sensing system seems to work very well there were three issues with it. Firstly, their light sensing system was not available and secondly, it might have been too sensitive; controlling the light at very low intensities could be rather challenging. Furthermore, LexA is a part of SOS system already part of <i>E. coli</i> so it might interfere with indigenous <i>E. coli</i> genes. However, according to Peking 2012, mutated version of LexA could solve this problem.
@@ -287,25 +336,29 @@ Their rig is naturally much better calibrated than ours. They precondition the c
   	<h2>Methods</h2>
 
   	<h3>Lab Protocols</h3>
-  	<p>Here are the protocols we used in the lab as a <a href="http://2014.igem.org/wiki/images/0/02/Aalto_Helsinki_Protocols.pdf">pdf file (click)</a>.</p>
+  	<p>
+  		Here are the protocols we used in the lab as a <a href="http://2014.igem.org/wiki/images/0/02/Aalto_Helsinki_Protocols.pdf">pdf file (click)</a>.
+  	</p>
+
+  	<div class="row row-eq-height">
+      <div class="col-md-4 feat-left">
+        <img src="http://2014.igem.org/wiki/images/6/69/Aalto_Helsinki_Gel_Hoht2.jpg" class="img-responsive"></img>
+      </div>
+      <div class="col-md-4 feat-center">
+        <img src="http://2014.igem.org/wiki/images/f/fb/Aalto_Helsinki_Maljatorni.jpg" class="img-responsive"></img>
+      </div>
+      <div class="col-md-4 feat-right">
+        <img src="http://2014.igem.org/wiki/images/9/93/Aalto_Helsinki_Malja.jpg" class="img-responsive">
+      </div>
+    </div>
 
   	<h3>LED Rig</h3>
-  	<div class="row">
-		<div class="col-md-6 text-col-left">
-			<p>
-  				To be able to expose our bacteria to light in a controlled manner, we designed a new kind of device from scratch. Inspired by the LTA developed by Tabor lab <sup>1</sup> we decided to build a simpler one, only with blue LED:s.
-  			</p>
-  			<p>
-  				Luckily we had some electronic knowledge in our team, too. With Pietu designing the rig we built a foam-padded transportable rig that can be put in an incubator overnight.
-  			</p>
-		</div>
-		<div class="col-md-6 img-100">
-			<img src="http://2014.igem.org/wiki/images/4/43/Aalto_Helsinki_Peityled.jpg" class="img-responsive">
-			<p class="kuvateksti">
-				Pietu presents the great LED rig.
-			</p>
-		</div>
-	</div>
+	<p>
+  		To be able to expose our bacteria to light in a controlled manner, we designed a new kind of device from scratch. Inspired by the LTA developed by Tabor lab <sup>1</sup> we decided to build a simpler one, only with blue LED:s.
+  	</p>
+  	<p>
+  		Luckily we had some electronic knowledge in our team, too. With Pietu designing the rig we built a foam-padded transportable rig that can be put in an incubator overnight.
+  	</p>
 
   	<h4>Microcontroller</h4>
   	<p>
@@ -325,6 +378,19 @@ Their rig is naturally much better calibrated than ours. They precondition the c
   	<p>
   		Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for this task. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino. Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements. The LED:s we used are 3mm Blue 430nm leds with an intensity of 300...500mcd, 40° angle, Vf@20mA:3,6V. If you are building the same setup as us we recommend you to get good quality LED:s from a known manufacturer who can supply a specifications sheet for the components.
   	</p>
+
+  	<div class="row row-eq-height">
+      <div class="col-md-4 feat-left">
+        <img src="http://2014.igem.org/wiki/images/4/43/Aalto_Helsinki_Peityled.jpg" class="img-responsive">
+      </div>
+      <div class="col-md-4 feat-center">
+        <img src="http://2014.igem.org/wiki/images/e/e1/Aalto_Helsinki_LEDrig4.jpg" class="img-responsive"></img>
+      </div>
+      <div class="col-md-4 feat-right">
+        <img src="http://2014.igem.org/wiki/images/e/ed/Aalto_Helsinki_LEDrig2.jpg" class="img-responsive"></img>
+      </div>
+    </div>
+
   	<h4>Constructing</h4>
   	<p>
   		We wanted to be able to illuminante a bacterial culture with a single led at multiple different intensities. We choose to grow our bacteria on microtiter plates. This choice was also affected by the fact that we had an access to a fluorometer (Thermo Scientific Varioskan) that measures fluorescence out of such microtiter plates.
@@ -350,20 +416,20 @@ Their rig is naturally much better calibrated than ours. They precondition the c
             </p>
         </div>
     </div>
-  	<h4>Technical details</h4>
+  	<h4>Technical Details</h4>
   	<ul>
 		<li>Arduino Nano microcontroller, http://arduino.cc/en/Main/arduinoBoardNano</li>
 		<li>Adafruit 16-channel PWM shield, https://learn.adafruit.com/adafruit-16-channel-pwm-slash-servo-shield?view=all</li>
 		<li>http://www.thermoscientific.com/content/tfs/en/product/varioskan-flash-multimode-reader.html</li>
   	</ul>
-    <h3>Fluorescence measurements</h3>
+    <h3>Fluorescence Measurements</h3>
     <p>
         Fluorescence measurements were carried out in Thermo Scientific Varioskan. It is a microtiter plate reader capable of exitation and measuring the corresponding fluorsecense at user defined wavelengths. All measurements were made with over night cell cultures diluted to the same cell density. In the LEDrig there are 16 different LEDs but also many additional wells that can be used for control samples. That way, we can ensure identical conditions between our test and control samples. We always used two controls: blue chromoprotein BioBrick (<a href="http://parts.igem.org/Part:BBa_K592009">BBa_K592009</a>) without a promoter as the negative control and constitutive GFP generator from Measurement Interlabs study (<a href="http://parts.igem.org/Part:BBa_I20260">BBa_I20260</a>) as the positive control. All experiments were carried out in <em>E. coli</em> Top10 strain.
     </p>
     <p>
         Our LED rig is controlled with programmable Arduino Nano computer. <strong>**Link the script file</strong>. The light intensity parameters vary between 0 and 4095 where 0 corresponds to the dark state and 4095 the maximal intensity. The observed light intensity, however, was logarithmically dependent on the intensity parameter. Thus, having equispaced intensity paramters for the LEDs led to biased distribution of light. Almost all the LEDs were very bright. To get equal difference in the LED intensities, we set the parameters linearly according to the log<sub>10</sub> of the intensity parameter value. In other words, the intesity of the LED lights was proportional to the log<sub>10</sub> of the intensity parameter.
     </p>
-    <h4>Choosing the correct parameters</h4>
+    <h4>Choosing the Correct Parameters</h4>
     <p>
         Cormack <em>et al</em>., (1996) reported the wavelengths of green fluorescent protein mutant 3 to be the following
         <ul>
@@ -403,12 +469,12 @@ Their rig is naturally much better calibrated than ours. They precondition the c
 	<div class="link" id="Results"></div>
 
     <h2>Results</h2>
-    <h3>GFP fluorescence in high OD<sub>600</sub> under different light intensities</h3>
+    <h3>GFP Fluorescence in High OD<sub>600</sub> Under Different Light Intensities</h3>
     <p>
         In this experiment, we measured how cells will react to different intensities of blue light when grown in same conditions and very high cell density. In such conditions, the cells are not able to proliferate in a way that would affect to the measurements in short time period. This was the first experiment using different intensities of LED lights at 470 nm wavelength. Our purpose was to find out, how cells would respond to light in steady and high cell density and does the previous conditions affect to the fluorescence during a long time period. In addition, we were to observe the relative change between the highest and the lowest level of fluorescence. We had two kinds of samples: bacteria grown (overnight culture at 37C) in the darkness and in lit environment (usual lab lightning in addition to desk lamp directed to our sample). We also had a negative and a positive control for the fluorescence measurements.
     </p>
     <p>
-        We constructed a testing device in order to estimate the concentration and the dynamics of the CI concentration. In the desting device, we replaced CI encoding sequence with GFP encoding sequence. The GFP was fused with LVA degradation tag. We excluded the lambda repressor and gene C parts. As a result, our testing device consisted of a blue light sensing element (constitutive promoter (<a href="http://parts.igem.org/Part:BBa_J23115">BBa_J23115</a>), RBS-YF1-RBS-FixJ (<a href="http://parts.igem.org/Part:BBa_K592016">BBa_K592016</a>) and a double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>)) and the testing element (FixK2 promoter (<a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a>), RBS (<a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a>), GFP-LVA (<a href="http://parts.igem.org/Part:BBa_K082003">BBa_K082003</a>) and double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>).
+        We constructed a testing device in order to estimate the concentration and the dynamics of the CI concentration. In the desting device, we replaced CI encoding sequence with GFP encoding sequence. The GFP was fused with LVA degradation tag. We excluded the lambda repressor and gene C parts. As a result, our testing device consisted of a blue light sensing element (constitutive promoter (<a href="http://parts.igem.org/Part:BBa_J23115">BBa_J23115</a>), RBS-YF1-RBS-FixJ (<a href="http://parts.igem.org/Part:BBa_K592016">BBa_K592016</a>) and a double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>) and the testing element (FixK2 promoter (<a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a>), RBS (<a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a>), GFP-LVA (<a href="http://parts.igem.org/Part:BBa_K082003">BBa_K082003</a>) and double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>).
     </p>
     <p>
         At first, all the samples were diluted to OD<sub>600</sub> 2,4. They were inserted to different wells on microtiter plates, where control samples both were incubated in dark at two different wells each, and dark and light samples were incubated in 9 different intensities of blue 470 nm light (<a tab="intensities1"></a>). The first measurements were taken after 4 hours of incubation and a second mesurement was taken after 23 hours of incubation. Both incubations had the temperature at 37 C and shaking 200 rpm.
@@ -474,7 +540,7 @@ Their rig is naturally much better calibrated than ours. They precondition the c
         When compared to the 4 hour measurements, the <a ref="results23h"></a> does not have such a clear trend as in the <a ref="results4h"></a>. However, we also notice that the fluorescence values vary greatly and they are clearly lower compared to the values after 4 hours of incubation. This suggests that the response to the light stimuli is not as strong after long incubation and that the linear dependency on the light intensity seems to disappear. We must also take into account the length of the incubation with the original OD<sub>600</sub> of the cell culture. After such a long time in high cell density without adding fresh media will inherently lead to low wellfare, low transcription and protein synthesis rate and poor response to the light stimuli. In other words, the 23 hour incubation is clearly too long and leads to bad sample quality.
     </p>
 
-    <h3>GFP fluorescence of our light response element compared to constitutive GFP production strain and non-fluorescent strain</h3>
+    <h3>GFP Fluorescence of Our Light Response Element Compared to Constitutive GFP Production Strain and Non-Fluorescent Strain</h3>
     <p>
         We designed new experiments based on the previous results. First of all, we need to address how positive and negative control respond to light. We need to address the possibility that some of the effects are due to warming effects of the LED lights. Moreover, we need to measure the light response in bacterial  cultures in logarithmic growth state with lower cell density.
     </p>

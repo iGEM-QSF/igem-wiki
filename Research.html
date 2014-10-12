@@ -416,55 +416,62 @@
 		  	<p>
 		  		The patterns in our experiments are fairly simple and could in theory be done without the Arduino, but we chose to use it due to its wide popularity and because we now could make advanced (and cool) animations on our rig. Also the Arduino acts as a 5v voltage regulator which provides the voltage for the second part of the rig: the Adafruit 16-channel 16-bit PWM controller.
 		  	</p>
+
+		  	<h4>LEDs</h4>
+		    <p>
+		        Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. In our project we used miniature leds because of their small power and small heat generation. It is important that the LED:s wont heat up the bacteria remarkably.
+		    </p>
+		    <p>
+		    	Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift  (Muthu et al., 2002)</em>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the led on and off very in very short interval, up to frequencies of 1.6kHz. By varying the time the led is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.
+		    </p>
+		    <p>
+		    	Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for this task. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino. Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements. The LED:s we used are 5mm Blue 470nm leds with an intensity of 1800mcd, 15° angle, Vf@20mA:3,5V (Liteon: LTL-2P3TBK). If you are building the same setup as us we recommend you to get good quality LED:s from a known manufacturer who can supply a specifications sheet for the components.
+		    </p>
+
+		    <h4>Constructing</h4>
+		  	<p>
+		  		We wanted to be able to illuminante a bacterial culture with a single led at multiple different intensities. We choose to grow our bacteria on microtiter plates. This choice was also affected by the fact that we had an access to a fluorometer (Thermo Scientific Varioskan) that measures fluorescence out of such microtiter plates.
+		  	</p>
+		  	<p>
+		  		We designed our LED rig so that an unmodified 96 well microtiter plate with the test cultures can be easily inerted. Our LEDs are attached to a lid that can be placed on a standard microtiter plate. 16 LEDs will illuminate the wells on columns 11,9,7,5 and rows B, D, F, H.
+		  	</p>
+		  	<p>
+		  		Our LEDs' spectrum peak at the value of 470nm. This value is specified by the manufacturer but the spectra of individual leds can vary considerably. Therefore we will measure the spectra of our LED:s with a spectrophotometer to be sure of the excitation wavelength.
+		  	</p>
+		  	<p>
+		        The Arduino source code used for the measurements is available on our github pages, and is discussed below.
+		  	</p>
+		  	<p>
+		  		Calibration of our device has not been done yet.
+		  		We have yet to measure the LED intensity. <strong>TODO: calibration</strong>
+		  	</p>
+		  	
+		  	<h4>Technical Details</h4>
+		  	<ul>
+				<li>Arduino Nano microcontroller, http://arduino.cc/en/Main/arduinoBoardNano</li>
+				<li>Adafruit 16-channel PWM shield, https://learn.adafruit.com/adafruit-16-channel-pwm-slash-servo-shield?view=all</li>
+				<li>http://www.thermoscientific.com/content/tfs/en/product/varioskan-flash-multimode-reader.html</li>
+		  	</ul>
         </div>
         <div class="col-md-4 img-100">
             <img src="http://2014.igem.org/wiki/images/e/e1/Aalto_Helsinki_LEDrig4.jpg" class="img-responsive"></img>
             <p class="kuvateksti">
                 This is the LED rig we constructed.
             </p>
+            <br>
+            <img src="http://2014.igem.org/wiki/images/4/43/Aalto_Helsinki_Peityled.jpg" class="img-responsive"></img>
+            <p class="kuvateksti">
+            	Pietu presenting the LED rig.
+            </p>
+            <br>
+            <img src="http://2014.igem.org/wiki/images/2/23/Aalto_Helsinki_LEDrig3.jpg" class="img-responsive"></img>
+            <p class="kuvateksti">
+            	LED rig close-up.
+            </p>
         </div>
     </div>
 
-    <h4>LEDs</h4>
-    <p>
-        Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. In our project we used miniature leds because of their small power and small heat generation. It is important that the LED:s wont heat up the bacteria remarkably.
-    </p>
-    <p>
-    	Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift  (Muthu et al., 2002)</em>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the led on and off very in very short interval, up to frequencies of 1.6kHz. By varying the time the led is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.
-    </p>
-    <p>
-    	Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for this task. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino. Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements. The LED:s we used are 5mm Blue 470nm leds with an intensity of 1800mcd, 15° angle, Vf@20mA:3,5V (Liteon: LTL-2P3TBK). If you are building the same setup as us we recommend you to get good quality LED:s from a known manufacturer who can supply a specifications sheet for the components.
-    </p>
-
-  	<div class="row row-eq-height">
-      	<div class="col-md-6 feat-left">
-        	<img src="http://2014.igem.org/wiki/images/e/ed/Aalto_Helsinki_LEDrig2.jpg" class="img-responsive"></img>
-      	</div>
-      	<div class="col-md-6 feat-center">
-        	<img src="http://2014.igem.org/wiki/images/4/43/Aalto_Helsinki_Peityled.jpg" class="img-responsive"></img>
-      	</div>
-      	<div class="col-md-6 feat-right">
-        	<img src="http://2014.igem.org/wiki/images/2/23/Aalto_Helsinki_LEDrig3.jpg" class="img-responsive"></img>
-      	</div>
-    </div>
-
-  	<h4>Constructing</h4>
-  	<p>
-  		We wanted to be able to illuminante a bacterial culture with a single led at multiple different intensities. We choose to grow our bacteria on microtiter plates. This choice was also affected by the fact that we had an access to a fluorometer (Thermo Scientific Varioskan) that measures fluorescence out of such microtiter plates.
-  	</p>
-  	<p>
-  		We designed our LED rig so that an unmodified 96 well microtiter plate with the test cultures can be easily inerted. Our LEDs are attached to a lid that can be placed on a standard microtiter plate. 16 LEDs will illuminate the wells on columns 11,9,7,5 and rows B, D, F, H.
-  	</p>
-  	<p>
-  		Our LEDs' spectrum peak at the value of 470nm. This value is specified by the manufacturer but the spectra of individual leds can vary considerably. Therefore we will measure the spectra of our LED:s with a spectrophotometer to be sure of the excitation wavelength.
-  	</p>
-  	<p>
-        The Arduino source code used for the measurements is available on our github pages, and is discussed below.
-  	</p>
-  	<p>
-  		Calibration of our device has not been done yet.
-  		We have yet to measure the LED intensity. <strong>TODO: calibration</strong>
-  	</p>
+  	
   	<div class="row">
         <div class="img-center">
             <a href="http://www.youtube.com/embed/azzMXd8zj1E" target="_blank"><img src="http://2014.igem.org/wiki/images/e/ee/Aalto_Helsinki_LEDrig_Video.png" class="img-responsive"></a>
@@ -473,12 +480,7 @@
             </p>
         </div>
     </div>
-  	<h4>Technical Details</h4>
-  	<ul>
-		<li>Arduino Nano microcontroller, http://arduino.cc/en/Main/arduinoBoardNano</li>
-		<li>Adafruit 16-channel PWM shield, https://learn.adafruit.com/adafruit-16-channel-pwm-slash-servo-shield?view=all</li>
-		<li>http://www.thermoscientific.com/content/tfs/en/product/varioskan-flash-multimode-reader.html</li>
-  	</ul>
+
     <h3>Fluorescence Measurements</h3>
     <p>
         Fluorescence measurements were carried out in Thermo Scientific Varioskan. It is a microtiter plate reader capable of exitation and measuring the corresponding fluorsecense at user defined wavelengths. All measurements were made with over night cell cultures diluted to the same cell density. In the LEDrig there are 16 different LEDs but also many additional wells that can be used for control samples. That way, we can ensure identical conditions between our test and control samples. We always used two controls: blue chromoprotein BioBrick (<a href="http://parts.igem.org/Part:BBa_K592009">BBa_K592009</a>) without a promoter as the negative control and constitutive GFP generator from Measurement Interlabs study (<a href="http://parts.igem.org/Part:BBa_I20260">BBa_I20260</a>) as the positive control. All experiments were carried out in <em>E. coli</em> Top10 strain.

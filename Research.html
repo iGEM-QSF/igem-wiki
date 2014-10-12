@@ -660,6 +660,7 @@
         In <a ref="samplevspositive"></a> we have compared our light response element with a strain producing GFP at a constant rate. First of all, we see that the fluorescence levels are on the different level of magnitude. This presumably is due to significantly longer half-life and presumably higher transription rate. This is supported by the fact that the fluorescence accumulates through the time (although the effect is largely contributed by the dividing cells). The main intrest is, however, to compare the effect of blue light to the fluorescence. First of all, we observe inclination to higher fluorescence levels at higher blue light intensities. This is opposing our previous observation with negative control. Moreover, this change is exactly opposite to what is observed in our light response element, which supports our hypothesis. The higher fluorescence may be, among many other possible reasons, result of LEDs heating up the sample a little bit and enabling the cells to proliferate a little bit faster during the measurements carried out in room temperature. We also need to take into account that as we only had on sample, the fluorescence values are subject to fluctuation and we cannot reliably conclude that there would be an increasing trend towards higher intensities in fluorescence of the positive control strain.
     </p>
     <h3>Induction Dynamics and GFP Fluorescence Under Varying Light Intensity</h3>
+    <strong>What OD?</strong>
     <p>
         As we noticed in the previous measurement results, the response dynamics are too fast to be observed in the time scale of one hour. We designed a new experiment which aims to measure how fast the bacteria are able to respond to the differences in light intensity. There are two main factors in this feature: delay in transcription activation/deactivation and half-life of the protein being measured. We can define that the delay includes all the steps from YF1 phosphorylation to protein translation.
     </p>
@@ -711,17 +712,28 @@
             </p>
         </div>
     </div>
-
+    <p>
+        The LED-dark plate was first incubated in the LED rig and after the first four timepoints, the plate was put into complete darkness. In the <a ref="ledsteady"></a> we see that the fluorescence levels diverge immediately and they are separate already in the second timepoint. Higher intensity levels lead again to lower fluorescence. However, each line also has an increasing trend during the 4 first timepoints which again may be result of bacterial growth. Already in the 5th timepoint the correlation between the intensities and fluorescence has disappeared. This state is comparable to the samples incubated in environmental light <a ref="light"></a>. In contrast to dark-LED measurements, the 4 fold difference is present only in the 2nd and 4th timepoint. This may be due to fluctuations in temperature between the measurements.
+    </p>
+    <p>
+        The fluorescence profiles in the <a ref="ledblink"></a> are very similar to that of <a ref="ledsteady"></a>. Whereas the fluorescence at the low intensity levels seem to remain somewhat unchanged, the high intensity curves have higher fluorescence in 2nd to 4th timepoint compared to the constant light. The separation of different fluorescence levels is not as big as in the steady light. This strengthens our former hypothesis of the fluorescence being dependent on the average intensity, not the highest or lowest value. The efficiency multiplier seems to be on the same scale as in the dark-LED measurements.
+    </p>
     <div class="row">
         <div class="img-center">
             <img src="http://2014.igem.org/wiki/images/9/92/Aaltohelsinki_intensityseries_light.png" class="img-responsive" ref="light"></img>
             <p class="kuvateksti">
-                <b><span ref="light">.</span></b>: Fluorescence of our light response element in environmental light. The samples were incubated in normal lab lighining. The times indicated are times of the day, not incubation times.
+                <b><span ref="light">.</span></b>: Fluorescence of our light response element in environmental light. The samples were incubated in normal lab lightining. The times indicated are times of the day, not incubation times.
             </p>
         </div>
     </div>
     <p>
-        difficulties: room temperature, others using the machine, measuring takes some time, blink phase?
+        The last plate was incubated in constant coditions (37 Celsius degrees and constan environmental light) throughtout the experiment. Moreover, the conditions for all 20 samples were identical. The results are shown in the <a ref="light"></a>. Our first observation is that all the sample fluorescence levels are very close to each other and all the samples have the same profile. It seems like only one sample has values different to the others (the sample with highest fluorescence in the end of the experiment). We also note that the fluorescence is very low in the first timepoint but already second timepoint has the same fluorescence levels as the rest of the points. This also suggest fast response to the change in conditions (here, change from the room temperature to 37 Celsius degrees right after the dilution). The fluorescence levels seems to correspond the constant blue light intensity 2.49 in <a ref="darksteady"></a>.
+    </p>
+    <p>
+        When we compare the results from constant light incubation, we see that the fluorescence level does not change significantly after the second timepoint. This contrasts to our hypothesis that cellular growth would affect the fluorescence levels. Otherwise we should able to see steady rise in fluorescence throughout time. As we see a steady growth in control sample fluorescence we can confirm that the cells are indeed growing in the experiment (assuming that the fluorescence in control sample is proportional to the cell density). The reason for such a steady fluorescence level remains to be undiscovered.
+    </p>
+    <p>
+        Even though we aimed to have as frequent measurements as possible, 20 minutes seems to be the shortes interval in the measurements. This limit is affected by many different factors. First of all, we need to be able to maintain the incubation temperature as well as possible. The measurements were carried out in room temperature which cools down our samples. We need to have long enough incubation period in between the measurements in order to let the cells thrive. Moreover, the measurements take some time, about 3 minutes per plate. It is reasonable to have incubation in 37 Celsius degrees for at least twice the time taken for measurements. Finally, there were other scientist using the Varioskan machine which caused variability in our measurement interval.
     </p>
 </article>
 <div class="update Results"></div>
@@ -731,6 +743,7 @@
 
   <h2>Discussion</h2>
   <p>
+        efficient repression and short half-life
         Mutaatiot operaattorialueisiin
         Plasmidissa ei DNA:ssa
         Solutason kohina solusyklissä
@@ -746,6 +759,7 @@
         Why we didn't get further?
 
         What's next?
+        OD measurements: Fluorescence as a function of OD
   </p>
 
 </article>

@@ -260,11 +260,11 @@ header .navbar {
 }
 
 .text-col-right {
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 .text-col-left {
-  padding-right: 1em;
+  padding-right: 2em;
 }
 
 .img-100 .img-responsive {

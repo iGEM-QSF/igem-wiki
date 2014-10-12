@@ -122,11 +122,17 @@
 	<div class="link" id="Background"></div>
 
 	<h2>Background</h2>
+	<h3>Developing Our Idea</h3>
     <div class="row">
 		<div class="col-md-8 text-col-left">
-			<h3>Developing Our Idea</h3>
 			<p>
         		In the beginning of our project, from March 2013, we focused solely on coming up with new ideas for the project, building the <a href="http://2014.igem.org/Team:Aalto-Helsinki/Outreach#Media">public team website</a> and applying for <a href="http://2014.igem.org/Team:Aalto-Helsinki/Business#Sos">Summer of Startups 2014</a> program and foundations with deadlines in spring. In our team meetings, we had different types of brainstorming sessions where all of us could present even the craziest ideas. We founded a shared folder where anybody could write down new ideas. We came up with disco bacteria that glow in sync with music, new kinds of bacterial drinks that change flavour with storing temperature, remote controllable bacteria, oil-eating bacteria, tooth paste bacteria that keeps up the mouth hygiene despite forgetting to brush the teeth, etc. On a Friday evening we had a vote and everybody gave a score from 1 to 5 for each idea. We made an idea gradient where the ideas were ranked according to the score from bottom left to top right.
+    		</p>
+    		<p>
+        		We chose the top 5 ideas and presented them to our advisors and researchers from Aalto University, VTT and University of Helsinki to get feedback and comment on the feasibility. After all, none of us had never done anything even close to this before. As a result of this feedback, further idea development and admission to Summer of Startups, we decided to work on the idea with a project name "nest box." It's a container resembling a traditional Finnish nest box but it includes bacteria producing different fragrances. These bacteria could be controlled using light concealed inside the box. The user can decide which fragrance to produce by a press of a button and this action would be translated into light signal to control the gene expression in the bacteria. Such a system is concrete and understandable for the public audience and it would help to build a positive image of synthetic biology in Finland. In theory, such system could be used in conference rooms, hotels, living rooms, saunas, movie theaters... The scent marketing is an expanding business and our idea had the potential to add something new to it. Furthermore, it was a concrete product which made our participation in Summer of Startups a lot easier.
+			</p>
+			<p>
+        		We started our BioBrick learning practice project mid May and the Summer of Startups program early June. As we got forward, we realized that our idea is not very realistic. Implementation of such a separate unmaintained container would be very challenging and in addition, we cannot bring genetically modified bacteria outside laboratory conditions (it's defined in the gene technology legislation). We decided to solely focus on one element of our nest box idea. Constructing the interface between the bacteria and the user or a computer is not trivial. So, we redefined our direction which was maintained to the end. We wanted to develop a three channel switch that would allow us to activate one of the three genes at a time using only the intensity of single wavelength light. We could then connect this switch with fragrance producing genes, for example.
     		</p>
 		</div>
 		<div class="col-md-4 img-100">
@@ -134,24 +140,12 @@
 			<p class="kuvateksti">
 				This is the amazing post-it idea gradient that we made.
 			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-8 text-col-left">
-			<p>
-        		We chose the top 5 ideas and presented them to our advisors and researchers from Aalto University, VTT and University of Helsinki to get feedback and comment on the feasibility. After all, none of us had never done anything even close to this before. As a result of this feedback, further idea development and admission to Summer of Startups, we decided to work on the idea with a project name "nest box." It's a container resembling a traditional Finnish nest box but it includes bacteria producing different fragrances. These bacteria could be controlled using light concealed inside the box. The user can decide which fragrance to produce by a press of a button and this action would be translated into light signal to control the gene expression in the bacteria. Such a system is concrete and understandable for the public audience and it would help to build a positive image of synthetic biology in Finland. In theory, such system could be used in conference rooms, hotels, living rooms, saunas, movie theaters... The scent marketing is an expanding business and our idea had the potential to add something new to it. Furthermore, it was a concrete product which made our participation in Summer of Startups a lot easier.
-			</p>
-		</div>
-		<div class="col-md-4 img-100">
 			<img src="http://2014.igem.org/wiki/images/2/2c/Aalto_Helsinki_Ideointia.jpg" class="img-responsive">
 			<p class="kuvateksti">
 				Our ideas on whiteboard. Photo by Stewart Dowden.
 			</p>
 		</div>
 	</div>
-    <p>
-        We started our BioBrick learning practice project mid May and the Summer of Startups program early June. As we got forward, we realized that our idea is not very realistic. Implementation of such a separate unmaintained container would be very challenging and in addition, we cannot bring genetically modified bacteria outside laboratory conditions (it's defined in the gene technology legislation). We decided to solely focus on one element of our nest box idea. Constructing the interface between the bacteria and the user or a computer is not trivial. So, we redefined our direction which was maintained to the end. We wanted to develop a three channel switch that would allow us to activate one of the three genes at a time using only the intensity of single wavelength light. We could then connect this switch with fragrance producing genes, for example.
-    </p>
 
     <div class="row row-eq-height">
       <div class="col-md-6 feat-left">
@@ -174,30 +168,25 @@
 			<p>
         		STJU BioX Shanghai 2013 team aimed to create a universal system to regulate genomic genes using blue, red and green light and CRISPR and <em>dCas9</em> protein. Their fundamental idea is to regulate production of sgRNA with different wavelengths. This would enable regulation of three different genomic genes within the chromosome presumably independently of each other. Switching the regulatory targets would be done by changing the sgRNAs. The Shanghai team also built a box with computer controlled LEDs of all three different color. In addition, they shared the software as well as the instructions how to build such a light regulation box. This was very interesting project as we built a light regulation system for three genes using LEDs and a microcontroller. STJU BioX Shanghai gave some inspiration to our LED control system.
     		</p>
+    		<p>
+        		Interestingly, also Freiburg 2013 team made a universal regulatory system using CRISPR and dCas9 protein but they targeted mammalian cells. In their concept, <em>dCas9</em> is guided to the site and the function to be carried out can be chosen remotely using different wavelengths of light. The effector either activates or represses the target gene or methylates a histone tail affecting the histone code at the site. The three effectors: repressor (KRAB), activator (VP16) and methyltransferase (G9a), can be controlled with red, blue and UV light. Such system would be able to regulate the target genes remotely in diverse ways.
+    		</p>
+    		<p>
+        		Maybe the most interesting research group in this field is Jeffey Tabor's group. On their website they write: "We program living cells to sense, compute, and respond to information in their environments. Our programmable cells have applications in basic science, industry, and medicine." (http://www.taborlab.rice.edu/home, 5.20.2014). They have been involved in developing new light sensors, including CcaS/CcaR and Cph8. They also constructed a multichromatic gene regulation system combining both these receptors. In a very recent paper (Schmidl et al., 2014) they re-engineered Cph8 and CcaS/CcaR sensors to reduce cross-talk and leakiness and to increase the dynamic range.
+    		</p>
 		</div>
 		<div class="col-md-4 img-100">
 			<img src="http://2014.igem.org/wiki/images/f/fc/Aalto_Helsinki_STJU_Different.png" class="img-responsive"></img>
 			<p class="kuvateksti">
 				Image taken and slightly modified from <a href="http://2013.igem.org/Team:SJTU-BioX-Shanghai">STJU BioX Shanghai 2013 Team's wiki</a>.
 			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-8 text-col-left">
-			<p>
-        		Interestingly, also Freiburg 2013 team made a universal regulatory system using CRISPR and dCas9 protein but they targeted mammalian cells. In their concept, <em>dCas9</em> is guided to the site and the function to be carried out can be chosen remotely using different wavelengths of light. The effector either activates or represses the target gene or methylates a histone tail affecting the histone code at the site. The three effectors: repressor (KRAB), activator (VP16) and methyltransferase (G9a), can be controlled with red, blue and UV light. Such system would be able to regulate the target genes remotely in diverse ways.
-    		</p>
-		</div>
-		<div class="col-md-4 img-100">
 			<img src="http://2013.igem.org/wiki/images/3/35/Freiburg2013_L45.jpg" class="img-responsive"></img>
 			<p class="kuvateksti">
 				Image of <a href="http://2013.igem.org/Team:Freiburg">Freiburg 2013 Team</a>.
 			</p>
 		</div>
 	</div>
-    <p>
-        Maybe the most interesting research group in this field is Jeffey Tabor's group. On their website they write: "We program living cells to sense, compute, and respond to information in their environments. Our programmable cells have applications in basic science, industry, and medicine." (http://www.taborlab.rice.edu/home, 5.20.2014). They have been involved in developing new light sensors, including CcaS/CcaR and Cph8. They also constructed a multichromatic gene regulation system combining both these receptors. In a very recent paper (Schmidl et al., 2014) they re-engineered Cph8 and CcaS/CcaR sensors to reduce cross-talk and leakiness and to increase the dynamic range.
-    </p>
+    
     <p>
        	Our setup was heavily inspired by Tabor lab. In their experiments they perform light exposure to bacterial cultures using a Light Tube Array, LTA. The LTA consists of 64 individually exposable slots for tubes and it can be placed inside an incubator in order to gather big amounts of data with precise control.
     </p>

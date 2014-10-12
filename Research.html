@@ -122,9 +122,9 @@
 	<div class="link" id="Background"></div>
 
 	<h2>Background</h2>
-	<h3>Developing Our Idea</h3>
     <div class="row">
 		<div class="col-md-8 text-col-left">
+			<h3>Developing Our Idea</h3>
 			<p>
         		In the beginning of our project, from March 2013, we focused solely on coming up with new ideas for the project, building the <a href="http://2014.igem.org/Team:Aalto-Helsinki/Outreach#Media">public team website</a> and applying for <a href="http://2014.igem.org/Team:Aalto-Helsinki/Business#Sos">Summer of Startups 2014</a> program and foundations with deadlines in spring. In our team meetings, we had different types of brainstorming sessions where all of us could present even the craziest ideas. We founded a shared folder where anybody could write down new ideas. We came up with disco bacteria that glow in sync with music, new kinds of bacterial drinks that change flavour with storing temperature, remote controllable bacteria, oil-eating bacteria, tooth paste bacteria that keeps up the mouth hygiene despite forgetting to brush the teeth, etc. On a Friday evening we had a vote and everybody gave a score from 1 to 5 for each idea. We made an idea gradient where the ideas were ranked according to the score from bottom left to top right.
     		</p>
@@ -216,7 +216,7 @@
     </p>
     <div class="row row-eq-height">
       	<div class="col-md-6 feat-left">
-        	<img src="http://2014.igem.org/wiki/images/1/1c/Aalto_Helsinki_Labrassa1.jpg" class="img-responsive">
+        	<img src="http://2014.igem.org/wiki/images/1/1c/Aalto_Helsinki_Labrassa1.jpg" class="img-responsive"></img>
      	</div>
       	<div class="col-md-6 feat-right">
         	<img src="http://2014.igem.org/wiki/images/d/de/Aalto_Helsinki_Labrassa2.jpg" class="img-responsive"></img>
@@ -269,6 +269,17 @@
     <p>
         Dodd et al. (2001) showed that two tetramers at <em>O</em><sub>L</sub> and <em>O</em><sub>R</sub> sites form an octamer by looping the DNA. They proposed that this DNA looping juxtaposes <em>O</em><sub>R</sub>3 and <em>O</em><sub>L</sub>3 sites and allows them to be linked by a CI tetramer. This, in turn, would silence the <em>P</em><sub>RM</sub> promoter. Thus, the lambda repressor has three different states regulated by CI concentration: lytic (low CI concentration, <em>P</em><sub>R</sub> is active and <em>P</em><sub>RM</sub> is inactive), lysogenic (moderate CI concentration, <em>P</em><sub>R</sub> is inactive and <em>P</em><sub>RM</sub> is active) and repressing lysogenic (high CI concentration, <em>P</em><sub>R</sub> is inactive and <em>P</em><sub>RM</sub> is inactive). This is the underlying principle of our three-channel switch. In our approach, we regulate the CI concentration with blue light intensity and replace the <i>cro</i> and <i>cI</i> genes of lambda repressor with other genes of interest while producing CI elsewhere. This way, we are able to use the characteristics of lambda repressor to construct the mechanism behind the three-channel switch.
     </p>
+    <div class="row row-eq-height">
+      <div class="col-md-4 feat-left">
+        <img src="http://2014.igem.org/wiki/images/6/69/Aalto_Helsinki_Gel_Hoht2.jpg" class="img-responsive"></img>
+      </div>
+      <div class="col-md-4 feat-center">
+        <img src="http://2014.igem.org/wiki/images/f/fb/Aalto_Helsinki_Maljatorni.jpg" class="img-responsive"></img>
+      </div>
+      <div class="col-md-4 feat-right">
+        <img src="http://2014.igem.org/wiki/images/9/93/Aalto_Helsinki_Malja.jpg" class="img-responsive">
+      </div>
+    </div>
 
 </article>
 <div class="update Background"></div>
@@ -388,46 +399,23 @@
   		<li>Agarose Gel Electrophoresis</li>
   	</ul>
 
-  	<div class="row row-eq-height">
-      <div class="col-md-4 feat-left">
-        <img src="http://2014.igem.org/wiki/images/6/69/Aalto_Helsinki_Gel_Hoht2.jpg" class="img-responsive"></img>
-      </div>
-      <div class="col-md-4 feat-center">
-        <img src="http://2014.igem.org/wiki/images/f/fb/Aalto_Helsinki_Maljatorni.jpg" class="img-responsive"></img>
-      </div>
-      <div class="col-md-4 feat-right">
-        <img src="http://2014.igem.org/wiki/images/9/93/Aalto_Helsinki_Malja.jpg" class="img-responsive">
-      </div>
-    </div>
-
   	<h3>LED Rig</h3>
-	<p>
-  		To be able to expose our bacteria to light in a controlled manner, we designed a new kind of device from scratch. Inspired by the LTA developed by Tabor lab <sup>1</sup> we decided to build a simpler one, only with blue LED:s.
-  	</p>
-  	<p>
-  		Luckily we had some electronic knowledge in our team, too. With Pietu designing the rig we built a foam-padded transportable rig that can be put in an incubator overnight.
-  	</p>
-
-  	<h4>Microcontroller</h4>
-  	<p>
-  		The core of the rig is an Arduino Nanomicrocontroller. The Arduino is responsible for the logic behind our illumination patterns.
-  	</p>
-  	<p>
-  		The patterns in our experiments are fairly simple and could in theory be done without the Arduino, but we chose to use it due to its wide popularity and because we now could make advanced (and cool) animations on our rig. Also the Arduino acts as a 5v voltage regulator which provides the voltage for the second part of the rig: the Adafruit 16-channel 16-bit PWM controller.
-  	</p>
-
-    <div class="row margintop">
+    <div class="row">
         <div class="col-md-8 text-col-left">
-            <h4>LEDs</h4>
-            <p>
-                Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. In our project we used miniature leds because of their small power and small heat generation. It is important that the LED:s wont heat up the bacteria remarkably.
-            </p>
-            <p>
-                Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift  (Muthu et al., 2002)</em>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the led on and off very in very short interval, up to frequencies of 1.6kHz. By varying the time the led is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.
-            </p>
-            <p>
-                Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for this task. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino. Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements. The LED:s we used are 5mm Blue 470nm leds with an intensity of 1800mcd, 15° angle, Vf@20mA:3,5V (Liteon: LTL-2P3TBK). If you are building the same setup as us we recommend you to get good quality LED:s from a known manufacturer who can supply a specifications sheet for the components.
-            </p>
+			<p>
+		  		To be able to expose our bacteria to light in a controlled manner, we designed a new kind of device from scratch. Inspired by the LTA developed by Tabor lab <sup>1</sup> we decided to build a simpler one, only with blue LED:s.
+		  	</p>
+		  	<p>
+		  		Luckily we had some electronic knowledge in our team, too. With Pietu designing the rig we built a foam-padded transportable rig that can be put in an incubator overnight.
+		  	</p>
+
+		  	<h4>Microcontroller</h4>
+		  	<p>
+		  		The core of the rig is an Arduino Nanomicrocontroller. The Arduino is responsible for the logic behind our illumination patterns.
+		  	</p>
+		  	<p>
+		  		The patterns in our experiments are fairly simple and could in theory be done without the Arduino, but we chose to use it due to its wide popularity and because we now could make advanced (and cool) animations on our rig. Also the Arduino acts as a 5v voltage regulator which provides the voltage for the second part of the rig: the Adafruit 16-channel 16-bit PWM controller.
+		  	</p>
         </div>
         <div class="col-md-4 img-100">
             <img src="http://2014.igem.org/wiki/images/e/e1/Aalto_Helsinki_LEDrig4.jpg" class="img-responsive"></img>
@@ -437,13 +425,27 @@
         </div>
     </div>
 
+    <h4>LEDs</h4>
+    <p>
+        Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. In our project we used miniature leds because of their small power and small heat generation. It is important that the LED:s wont heat up the bacteria remarkably.
+    </p>
+    <p>
+    	Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift  (Muthu et al., 2002)</em>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the led on and off very in very short interval, up to frequencies of 1.6kHz. By varying the time the led is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.
+    </p>
+    <p>
+    	Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for this task. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino. Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements. The LED:s we used are 5mm Blue 470nm leds with an intensity of 1800mcd, 15° angle, Vf@20mA:3,5V (Liteon: LTL-2P3TBK). If you are building the same setup as us we recommend you to get good quality LED:s from a known manufacturer who can supply a specifications sheet for the components.
+    </p>
+
   	<div class="row row-eq-height">
-      <div class="col-md-6 feat-left">
-        <img src="http://2014.igem.org/wiki/images/4/43/Aalto_Helsinki_Peityled.jpg" class="img-responsive">
-      </div>
-      <div class="col-md-6 feat-right">
-        <img src="http://2014.igem.org/wiki/images/e/ed/Aalto_Helsinki_LEDrig2.jpg" class="img-responsive"></img>
-      </div>
+      	<div class="col-md-6 feat-left">
+        	<img src="http://2014.igem.org/wiki/images/e/ed/Aalto_Helsinki_LEDrig2.jpg" class="img-responsive"></img>
+      	</div>
+      	<div class="col-md-6 feat-center">
+        	<img src="http://2014.igem.org/wiki/images/4/43/Aalto_Helsinki_Peityled.jpg" class="img-responsive"></img>
+      	</div>
+      	<div class="col-md-6 feat-right">
+        	<img src="http://2014.igem.org/wiki/images/2/23/Aalto_Helsinki_LEDrig3.jpg" class="img-responsive"></img>
+      	</div>
     </div>
 
   	<h4>Constructing</h4>

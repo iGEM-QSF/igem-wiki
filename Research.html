@@ -186,7 +186,7 @@
 			</p>
 		</div>
 	</div>
-    
+
     <p>
        	Our setup was heavily inspired by Tabor lab. In their experiments they perform light exposure to bacterial cultures using a Light Tube Array, LTA. The LTA consists of 64 individually exposable slots for tubes and it can be placed inside an incubator in order to gather big amounts of data with precise control.
     </p>
@@ -458,7 +458,7 @@
         </div>
     </div>
 
-  	
+
   	<div class="row">
         <div class="img-center">
             <a href="http://www.youtube.com/embed/azzMXd8zj1E" target="_blank"><img src="http://2014.igem.org/wiki/images/e/ee/Aalto_Helsinki_LEDrig_Video.png" class="img-responsive"></a>
@@ -667,11 +667,52 @@
         In addition, we needed to examine how the bacteria would respond to varying intensity of light. We aimed to simulate the conditions inside a bioreactor. The biomass in the reactor would decrease in the light intensity as distance to the nearest LED increases. The culture in the bioreactor would be constantly mixed and we assumed that one cycle in the bioreactor takes approximately 8 minutes. If there are 4 horizontally spaced LED rigs, one cycle would take 1 minute. Thus, we set 8 LEDs in our LED rig to change intensity linearly from zero to maximum intensity in one minute cycle. Here, we need to state that the linear fit of the parameter is done in logarithmic scale as the log<sub>10</sub> of the parameter is directly proportional to the light intensity. We hypothesize the fluorscence in the case of the blinking light will be on the same level as the fluorescence under a constant blue light with half of the maximum intensity of the blinking light. That is, we suggest the effect to be proportional to the average intensity and that the blinking would not affect to the results.
     </p>
     <p>
-        In this experiment, we had three different black microtiter plates for three different sets of samples. On each microtiter plate, we had two positive and two negative control samples in wells without a LED. In addition, we had 20 light response element samples where 8 samples were incubated under constant light, 8 incubated under blinking LEDs and 4 samples which were without LED. Each plate had the same order of samples. We defined different conditions for each plate. One plate (called light) was incubated in 37C and constant light in the lab environment. The second plate (called dark-LED) was first incubated in complete darkness under an aluminum foil cover and after one hour, it was placed in the LED rig. The third plate (called LED-dark) was placed in the LED rig in the beginning of the experiment and after one hour it was placed in darkness under an aluminum foil cover. This installation was set to examine the dynamics of the light response element. In case of dark-LED, we can observe how bacteria will respond to different intensities of light, that is, how wast they are able to repress the production and what is the half-life of GFP-LVA. And vice versa: LED-dark will show us how fast the bacteria will be able to initiate the production when they are brought to darkness. To measure this dynamics properly, we must to have much more frequent measurements compared to two previous experiments.
+        In this experiment, we had three different black microtiter plates for three different sets of samples. On each microtiter plate, we had two positive and two negative control samples in wells without a LED. In addition, we had 20 light response element samples where 8 samples were incubated under constant light, 8 incubated under blinking LEDs and 4 samples which were without LED. Each plate had the same order of samples. We defined different conditions for each plate. One plate (called light) was incubated in 37C and constant light in the lab environment. The second plate (called dark-LED) was first incubated in complete darkness under an aluminum foil cover and after one hour, it was placed in the LED rig. The third plate (called LED-dark) was placed in the LED rig in the beginning of the experiment and after one hour it was placed in darkness under an aluminum foil cover. This installation was set to examine the dynamics of the light response element. In case of dark-LED, we can observe how bacteria will respond to different intensities of light, that is, how wast they are able to repress the production and what is the half-life of GFP-LVA. And vice versa: LED-dark will show us how fast the bacteria will be able to initiate the production when they are brought to darkness. To measure this dynamics properly, we must to have much more frequent measurements compared to two previous experiments. All the plates were incubated at 37 Celsius degrees.
     </p>
-    <p>
-         Moreover, we
-    </p>
+    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/f/fd/Aaltohelsinki_intensityseries_dark_steady.png" class="img-responsive" ref="darksteady"></img>
+            <p class="kuvateksti">
+                <b><span ref="darksteady">.</span></b>: Fluorescence of our light response element at different intensities. During the first four time points the samples were in identical conditions in complete darkness. After the fourth measurement, the samples were put in eight different constant intensities of blue light. The times indicated are times of the day, not incubation times.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/b/bb/Aaltohelsinki_intensityseries_dark_blink.png" class="img-responsive" ref="darkblink"></img>
+            <p class="kuvateksti">
+                <b><span ref="darkblink">.</span></b>: Fluorescence of our light response element at different intensities. During the first four time points the samples were in identical conditions in complete darkness. After the fourth measurement, the samples were put in eight different changing intensities of blue light. The LED lights were blinkin from dark to maximum intensity (see legend) with frequency of one cycle per minute. The times indicated are times of the day, not incubation times.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/5/52/Aaltohelsinki_intensityseries_LED_steady.png" class="img-responsive" ref="ledsteady"></img>
+            <p class="kuvateksti">
+                <b><span ref="ledsteady">.</span></b>: Fluorescence of our light response element at different intensities. During the first four time points the samples were in eight different constant intensities of blue light. After the fourth measurement, the samples were put in identical conditions in complete darkness. The times indicated are times of the day, not incubation times.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/6/61/Aaltohelsinki_intensityseries_LED_blink.png" class="img-responsive" ref="ledblink"></img>
+            <p class="kuvateksti">
+                <b><span ref="ledblink">.</span></b>: Fluorescence of our light response element at different intensities. During the first four time points the samples were in eight different changing intensities of blue light. The LED lights were blinkin from dark to maximum intensity (see legend) with frequency of one cycle per minute. After the fourth measurement, the samples were put in identical conditions in complete darkness. The times indicated are times of the day, not incubation times.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/9/92/Aaltohelsinki_intensityseries_light.png" class="img-responsive" ref="light"></img>
+            <p class="kuvateksti">
+                <b><span ref="light">.</span></b>: Fluorescence of our light response element in environmental light. The samples were incubated in normal lab lighining. The times indicated are times of the day, not incubation times.
+            </p>
+        </div>
+    </div>
     <p>
         difficulties: room temperature, others using the machine, measuring takes some time, blink phase?
     </p>

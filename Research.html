@@ -83,7 +83,7 @@
 		<div class="col-md-8 text-col-left">
 			<h3>Features</h3>
 			<p>
-				We chose YF1 fusion protein as the light receptor protein. The receptor autophosphorylates in darkness but in blue light, it is unphosphorylated. A phosphorylated YF1 protein acts as a kinase and activates FixJ transcription factor, which can then bind to a <i>FixK<sub>2</sub></i> binding site and activate the production of λ repressor protein CI. The kinase activity of YF1 is inversely proportional to blue light intensity and the effect is carried on to the acitve FixJ concentration. Thus, CI protein is not produced in bright blue light but the production increases when the blue light is dimmed down.
+				We chose YF1 fusion protein as the light receptor protein. The receptor autophosphorylates in darkness but in blue light, it is unphosphorylated. A phosphorylated YF1 protein acts as a kinase and activates FixJ transcription factor, which can then bind to a <em>FixK<sub>2</sub></em> binding site and activate the production of λ repressor protein CI. The kinase activity of YF1 is inversely proportional to blue light intensity and the effect is carried on to the acitve FixJ concentration. Thus, CI protein is not produced in bright blue light but the production increases when the blue light is dimmed down.
 			</p>
 			<p>
 				We used lambda repressor protein CI to regulate the genes in the switch.  Only <i>gene A</i> is active when there is no repressor protein CI. At medium concentrations of CI, <i>gene A</i> becomes deactivated and <i>gene B</i> is activated. At high concentrations of CI, only <i>gene C</i> is active. The activity and deactivity of the <i>gene C</i> is based on tetracycline repressor protein that is produced with <i>genes A</i> and <i>B</i>. When neither of those genes are active, <i>gene C</i> is activated. The activities of <i>genes A</i> and <i>B</i> are controlled with an interesting mechanism of lambda repressor, which is explained thoroughly under the background title on this page.
@@ -237,7 +237,7 @@
         Based on the work of Möglich et al. (2009) we describe the mechanism of YF1 blue light sensor in greater detail. YF1 is a water soluble chimeric fusionprotein that contains two domains linked together with a Jα linker sequence. The N terminal domain is a flavin nucleotide binding LOV domain (light-oxygen-voltage, a sub group of PAS sensor domains) from <i>Bacillus subtilis</i> YtvA. This domain incorporates noncovalently flavin mononucleotide and blue light facilitates formation of a covalent bond with a cysteine residue of the LOV domain. This induces a conformational change in this light sensory domain.
     </p>
     <p>
-        The C terminal domain of YF1 is a histidine kinase, the FixL effector domain from <i>Bradyrhizobium japonicum</i>. The original protein, FixL, is involved in regulating the nitrate respiration and nitrate fixation. The histidine kinase functions only when it is phosphorylated. It has autophosphorylation activity that is regulated by the sensor domain. Autophosphorylated histidine kinase activates a FixJ (<a href="http://parts.igem.org/Part:BBa_K592005">BBa_K592005</a>) response regulator by transferring a phosphoryl group. However, when the histidine kinase domain is unphosphorylated, it has actually phosphatase activity for the response regulator. Phosphorylated FixJ binds to <em>FixK</em><sub>2</sub> promoter (<a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a>) initiating the expression of the corresponding genes. This system should be completely orthogonal in <i>E. coli</i>.
+        The C terminal domain of YF1 is a histidine kinase, the FixL effector domain from <i>Bradyrhizobium japonicum</i>. The original protein, FixL, is involved in regulating the nitrate respiration and nitrate fixation. The histidine kinase functions only when it is phosphorylated. It has autophosphorylation activity that is regulated by the sensor domain. Autophosphorylated histidine kinase activates a FixJ (<a href="http://parts.igem.org/Part:BBa_K592005">BBa_K592005</a>) response regulator by transferring a phosphoryl group. However, when the histidine kinase domain is unphosphorylated, it has actually phosphatase activity for the response regulator (Diensthuber et al., 2013). Phosphorylated FixJ binds to <em>FixK</em><sub>2</sub> promoter (<a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a>) initiating the expression of the corresponding genes. This system should be completely orthogonal in <i>E. coli</i>.
     </p>
     <p>
         Möglich et al. (2009) proposed that the YF1 proteins form dimers. This would also bring the histdine kinase domains close to each other. It is proposed that the autophosphorylation actually work in trans within the dimer. They hypothesized the Jα helix linker to form a coiled coil with another YF1 protein. The linker would mediate the signal from the sensor domain to the effector domain inhibiting/enabling its kinase activity. The conformational change from the incorporated flavin domain is suggested to rotate the linker helix. The relative angle of the two domains greatly affect to the mechanism. If we add one amino acid to the Jα linker, the relative angle changes and the effect of the sensor domain is inverted: in presence of light the histidine kinase is active but in darkness, it is inactive. This presents interesting approaches and easy solution to invert the YF1 signal.
@@ -428,7 +428,12 @@
 		  		The most important thing to inderstand when varying the LED brightness is that the percieved brightness is logarithmic. So the difference between 1 and 3 is clearly visible to the eye, but the difference between 4095 and 4096 is not.
 		  		One can easily construct a lookup table for values with a logarithmic function, eg. 4095-4095*(lg(10-x*9)), x=0...1, where lg is the 10 logarithm.
 		  	</p>
-		  
+
+            <p><strong>
+                LED spectrum, power measurements and intensity measurements?
+                Heat production measurements?
+            </strong></p>
+
 		  	<h4>Technical Details</h4>
 		  	<ul>
 				<li>Arduino Nano microcontroller, http://arduino.cc/en/Main/arduinoBoardNano</li>
@@ -693,25 +698,48 @@
 <article>
 	<div class="link" id="Discussion"></div>
 
-  <h2>Discussion</h2>
-  <p>
-        efficient repression and short half-life
-        Mutaatiot operaattorialueisiin
+    <h2>Discussion</h2>
+    <p>
+        According to our experiments, our light response element seems to be capable of 4 fold repression of GFP-LVA with blue light. This is already very good results but we need to evaluate whether this is enough for our lambda repressor system. Dodd et al. (2001) made experiments constructing two mutated versions of <em>O</em><sub>R</sub>3 operator site. The other mutant (λr1) led to CI concentration of 2.3 compared to the wild type and the other mutation (λc12) led to 0.6 times increased concentration. This difference is of similar scale as in our experiments. They compared the effect of these mutations to prophage induction by UV light. λr1 was induced at 10% efficiency compared to wild type whereas λc12 efficiency was 170%. CI protein represses lytic genes including <em>cro</em> under <em>P</em><sub>R</sub> promoter. If the propability of prophage induction is proportional to CI concentration (as they showed in the paper), we can hypothesize that such difference in CI concentration would lead to 17 fold difference in <em>P</em><sub>R</sub> activity. According to the <a ref="cieffect"></a> the increase in CI concentration from 0.6 WLU to 2.3 WLU would be sufficient for <em>P</em><sub>RM</sub> repression in the wild type lambda repressor. Based to these observations, we estimate 4 fold repression with blue light to be sufficient range for our three channel system.
+    </p>
+    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/5/53/Aaltohelsinki_ci_effect.png" class="img-responsive" ref="ledblink"></img>
+            <p class="kuvateksti">
+                <b><span ref="cieffect">.</span></b> by Dodd et al. (2001): <em>P</em><sub>RM</sub> promoter activity with <em>lacZ</em> reporter system. In this experiment,<em>cI</em> was fused with <em>P</em><sub>lac</sub> promoter to control CI concentration with IPTG concentration. The figure shows the effect of CI concentration in wild type lysogenic units (WLU) to <em>P</em><sub>RM</sub> promoter.
+            </p>
+        </div>
+    </div>
+    <p>
+        As it can be clearly seen from the <a ref="cieffect"></a>, <em>P</em><sub>RM</sub> promoter will be derepressed efficiently already in low concentrations. In addition, we also observed that even at very high light intensities, the our measurement device for light response element shows clearly elevated fluorescence compared to negative control. This implies leakiness in the <em>FixK<sub>2</sub></em> promoter. As this promoter also controls the CI expression, we might experience significant levels of CI in high blue light intensity. This might pose a problem by repressing <em>P</em><sub>R</sub> promoter and derepressing <em>P</em><sub>RM</sub> promoter even at the highest intensity of blue light. We need to keep this possibility in mind in future experiments and possibly look for solutions to eliminate <em>FixK<sub>2</sub></em> leakiness.
+    </p>
+    <p>
+        In contrast to our initial expectations, the response time of our light response element was very short. This means that we can control the gene expression at <em>FixK<sub>2</sub></em> almost real time. Phosphorylation of YF1 and as well as FixJ seems to be very fast and responsive process and presumably most of the delay occure in transcription and translation of our reporter protein. The response to increase in light intensity is contributed by YF1 phosphatase activity (Diensthuber et al., 2013) but to be able observe the effect in the reporter concentration, we need to have short enough half-life. Indeed, it seems like our reporter, GFP-LVA, has short half-life. Although Andersen et al. (1998) suggest this half-life to be around 40 minutes, we observed a lot faster degradation of GFP-LVA. In the <a ref="darksteady"></a> between 4th and 5th timepoint, the fluorescence drops from 2.9 to 0.6 in 25 minutes. According to these values, the half-life of the GFP-LVA we used in our experiments, would be around 11 minutes, at maximum. Moreover, in our actual light response element <em>gfp</em> will be replaced by <em>cI</em>. The GFP half-life (26 hours, Corish et al., 1999) is approximately 2.6 times longer than that of CI (10 hours, (Parsell et al., 1990). As CI is not as stable as GFP also CI-LVA may be less stable compared to GFP-LVA potentially leading to even shorter half-life. Therefore, we estimate response to be around 15 minutes at promoter level in our three channel gene switch. We hypothesize that this enables sufficient temporal control for several industrial applications.
+    </p>
+    <p>
+        Blinking light
+    </p>
+    <p>
+        Improvements:
+            - Mutaatiot operaattorialueisiin
+            - Non-saturating intensity response
+    </p>
+    <p>
+        Questions that remain unanswered
         Plasmidissa ei DNA:ssa
         Solutason kohina solusyklissä
+    </p>
+    <p>
+        Phosphorylation transfer (modeling)
 
-        Results: Possible room for improvement?
-        LED spectrum, power measurements and intensity measurements?
-        Heat production measurements?
 
-        Red light
-        Phosphorylation transfer
-        Leakiness
-        Non-saturating intensity response
         Why we didn't get further?
 
         What's next?
+        List of required experiments
+        CI vs GFP
         OD measurements: Fluorescence as a function of OD
+        Red light
   </p>
 
 </article>
@@ -752,7 +780,13 @@
             Bell, C. E., Frescura, P., Hochschild, A., & Lewis, M. (2000). <em>Crystal Structure of the λ Repressor C-Terminal Domain Provides a Model for Cooperative Operator Binding.</em> Cell, 101(7), 801–811. doi:10.1016/S0092-8674(00)80891-0
         </li>
         <li>
+            Corish, P., & Tyler-Smith, C. (1999). Attenuation of green fluorescent protein half-life in mammalian cells. Protein Engineering, 12(12), 1035–40. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/10611396
+        </li>
+        <li>
             Cormack, B. P., Valdivia, R. H., & Falkow, S. (1996). <em>FACS-optimized mutants of the green fluorescent protein (GFP).</em> Gene, 173(1), 33–8. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/8707053
+        </li>
+        <li>
+            Diensthuber, R. P., Bommer, M., Gleichmann, T., & Möglich, A. (2013). Full-length structure of a sensor histidine kinase pinpoints coaxial coiled coils as signal transducers and modulators. Structure (London, England : 1993), 21(7), 1127–36. doi:10.1016/j.str.2013.04.024
         </li>
         <li>
             Dodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). OcDodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). <em>Octamerization of lambda CI repressor is needed for effective repression of P(RM) and efficient switching from lysogeny.</em> Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301tame. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301
@@ -793,6 +827,7 @@
         <li>
             Muthu S., Schuurmans F. and Pashley M. (2002). <em>Red, Green and Blue LED based white light generation: Issues and Control</em> 37th Annual IEEEIAS meeting, Vol. 1, pp. 327 – 333 (2002). DOI: 10.1109/IAS.2002.1044108
         </li>
+
 
         **Linkit proteiineista, promoottoreista ja BioBrickeistä vastaaville sivuille maininnanyhteydessä?**
     </ul>

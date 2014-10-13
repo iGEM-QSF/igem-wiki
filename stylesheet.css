@@ -259,6 +259,10 @@ header .navbar {
   margin-bottom: 2em;
 }
 
+.university-title {
+  padding-top: 0;
+}
+
 .margintop {
   margin-top: 2em;
 }

@@ -58,11 +58,11 @@
     correct table number. If span or anchor has "." as the inner html, the
     caption will be capitalized.
     */
-    var tables = $('table[tab]');
+    var tables = $('table[tab], img[tab]');
     $.each(tables, function(index, e){
             var tableName = e.getAttribute("tab");
             if (!e.id){
-                e.setAttribute("id","figure"+(index+1));
+                e.setAttribute("id","table"+(index+1));
             }
             $.each($('a[tab="'+tableName+'"]'), function(j, e2){
                 e2.setAttribute("href","#"+e.id);

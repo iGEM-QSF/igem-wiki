@@ -31,8 +31,8 @@ ul {
 }
 
 .modellatex, .modelimg {
-  padding-top: 4em;
-  padding-bottom: 2em;
+  padding-top: 3em;
+  padding-bottom: 1.5em;
 }
 
 @media only screen and (min-width : 992px) {
@@ -42,10 +42,6 @@ ul {
     padding-left: 15%;
     padding-right: 15%;
     font-size: 16px;
-  }
-
-  .memberrow > .col-md-8 {
-    padding-top: 100px;
   }
 
   .modelimg {
@@ -67,7 +63,7 @@ ul {
   padding-top: 100px;
 }
 
-h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   border-bottom: none;
   padding-top: 3em;
@@ -81,7 +77,11 @@ h1 {
 }
 
 h2 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  border-bottom: none;
   font-size: 2.5em;
+  padding-top: 1em;
+  padding-bottom: 0.3em;
   text-align: center;
 }
 
@@ -606,6 +606,10 @@ header .navbar {
   padding: 10px;
   text-align: -webkit-center;
   text-align: -moz-center
+}
+
+.sponsorrow > .text-col-right > h3 {
+  padding-top: 0;
 }
 
 #sponsorlogo {

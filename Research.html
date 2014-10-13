@@ -83,7 +83,7 @@
 		<div class="col-md-8 text-col-left">
 			<h3>Features</h3>
 			<p>
-				We chose YF1 fusion protein as the light receptor protein. The receptor autophosphorylates in darkness but in blue light, it is unphosphorylated. A phosphorylated YF1 protein acts as a kinase and activates FixJ transcription factor, which can then bind to a <i>FixK<sub>2</sub></i> binding site and activate the production of λ repressor protein CI. The kinase activity of YF1 is inversely proportional to blue light intensity and the effect is carried on to the acitve FixJ concentration. Thus, CI protein is not produced in bright blue light but the production increases when the blue light is dimmed down.
+				We chose YF1 fusion protein as the light receptor protein. The receptor autophosphorylates in darkness but in blue light, it is unphosphorylated. A phosphorylated YF1 protein acts as a kinase and activates FixJ transcription factor, which can then bind to a <em>FixK<sub>2</sub></em> binding site and activate the production of λ repressor protein CI. The kinase activity of YF1 is inversely proportional to blue light intensity and the effect is carried on to the acitve FixJ concentration. Thus, CI protein is not produced in bright blue light but the production increases when the blue light is dimmed down.
 			</p>
 			<p>
 				We used lambda repressor protein CI to regulate the genes in the switch.  Only <i>gene A</i> is active when there is no repressor protein CI. At medium concentrations of CI, <i>gene A</i> becomes deactivated and <i>gene B</i> is activated. At high concentrations of CI, only <i>gene C</i> is active. The activity and deactivity of the <i>gene C</i> is based on tetracycline repressor protein that is produced with <i>genes A</i> and <i>B</i>. When neither of those genes are active, <i>gene C</i> is activated. The activities of <i>genes A</i> and <i>B</i> are controlled with an interesting mechanism of lambda repressor, which is explained thoroughly under the background title on this page.
@@ -237,11 +237,12 @@
         Based on the work of Möglich et al. (2009) we describe the mechanism of YF1 blue light sensor in greater detail. YF1 is a water soluble chimeric fusionprotein that contains two domains linked together with a Jα linker sequence. The N terminal domain is a flavin nucleotide binding LOV domain (light-oxygen-voltage, a sub group of PAS sensor domains) from <i>Bacillus subtilis</i> YtvA. This domain incorporates noncovalently flavin mononucleotide and blue light facilitates formation of a covalent bond with a cysteine residue of the LOV domain. This induces a conformational change in this light sensory domain.
     </p>
     <p>
-        The C terminal domain of YF1 is a histidine kinase, the FixL effector domain from <i>Bradyrhizobium japonicum</i>. The original protein, FixL, is involved in regulating the nitrate respiration and nitrate fixation. The histidine kinase functions only when it is phosphorylated. It has autophosphorylation activity that is regulated by the sensor domain. Autophosphorylated histidine kinase activates a FixJ (<a href="http://parts.igem.org/Part:BBa_K592005">BBa_K592005</a>) response regulator by transferring a phosphoryl group. However, when the histidine kinase domain is unphosphorylated, it has actually phosphatase activity for the response regulator. Phosphorylated FixJ binds to <em>FixK</em><sub>2</sub> promoter (<a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a>) initiating the expression of the corresponding genes. This system should be completely orthogonal in <i>E. coli</i>.
+        The C terminal domain of YF1 is a histidine kinase, the FixL effector domain from <i>Bradyrhizobium japonicum</i>. The original protein, FixL, is involved in regulating the nitrate respiration and nitrate fixation. The histidine kinase functions only when it is phosphorylated. It has autophosphorylation activity that is regulated by the sensor domain. Autophosphorylated histidine kinase activates a FixJ (<a href="http://parts.igem.org/Part:BBa_K592005">BBa_K592005</a>) response regulator by transferring a phosphoryl group. However, when the histidine kinase domain is unphosphorylated, it has actually phosphatase activity for the response regulator (Diensthuber et al., 2013). Phosphorylated FixJ binds to <em>FixK</em><sub>2</sub> promoter (<a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a>) initiating the expression of the corresponding genes. This system should be completely orthogonal in <i>E. coli</i>.
     </p>
     <p>
         Möglich et al. (2009) proposed that the YF1 proteins form dimers. This would also bring the histdine kinase domains close to each other. It is proposed that the autophosphorylation actually work in trans within the dimer. They hypothesized the Jα helix linker to form a coiled coil with another YF1 protein. The linker would mediate the signal from the sensor domain to the effector domain inhibiting/enabling its kinase activity. The conformational change from the incorporated flavin domain is suggested to rotate the linker helix. The relative angle of the two domains greatly affect to the mechanism. If we add one amino acid to the Jα linker, the relative angle changes and the effect of the sensor domain is inverted: in presence of light the histidine kinase is active but in darkness, it is inactive. This presents interesting approaches and easy solution to invert the YF1 signal.
     </p>
+    <p>
         In our three channel switch, we fused a CI protein to the <i>Bradyrhizobium japonicum</i> <em>FixK</em><sub>2</sub> promoter. Thus, in the absence of blue light (470nm in our experiments), the angle between YF1 domains autophosphorylation of histidine kinase of YF1, which then transfers a phosphoryl group to FixJ activating it. The P-FixJ in binds to <em>FixK</em><sub>2</sub> promoter activating the CI transcription. The role of this CI protein in our switch is described in the next section.
     </p>
 
@@ -305,13 +306,10 @@
         /parts-lista-igem-template-säätö/
     </p>
     <p>
-        The final construct ended up being fairly large. The gene circuit consists of two different segments: the light sensor that produces CI according to the intensity of light and the actual switch that responds to the differences in the concentration of repressor protein CI.
+        The gene circuit consists of two different segments: the light sensor that produces CI according to the intensity of light and the actual switch that responds to the differences in the concentration of repressor protein CI. You can find the complete sequence of the switch from <a href="http://2014.igem.org/wiki/images/4/47/Aalto_Helsinki_Gene_Switch.txt">this file (click)</a>.
     </p>
     <p>
-        We used fairly many already existing parts that were in the 2014 iGEM BioBrick Distribution. The parts we created ourselves are.
-    </p>
-    <p>
-        Here’s a list of all the parts we used in our gene switch. They are in the same order as in our gene circuit.
+        Here’s a list of all the BioBricks that we used in our gene switch. They are in the same order as in our gene circuit, and the previously mentioned sequence file.
     </p>
     <h3>Parts in Our Gene Switch</h3>
     <ul>
@@ -319,26 +317,26 @@
 		<li><a href="http://parts.igem.org/Part:BBa_K592016">BBa_K592016</a> B0034-YF1-B0034-FixJ, blue light sensor and RR with RBS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a> Double terminator</li>
 
-		<li><a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a> FixK2 Promoter</li>
+		<li><a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a> <em>FixK</em><sub>2</sub> Promoter</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a> Elowitz Reference RBS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_K105004 ">BBa_K105004</a> CI protein CDS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a> Double terminator</li>
 
-		<li><a href="http://parts.igem.org/Part:BBa_K1443001">BBa_K1443001</a> Lambda Repressor OR1-OR2-OR3-pRM <strong>(Created by us!)</strong></li>
+		<li><a href="http://parts.igem.org/Part:BBa_K1443001">BBa_K1443001</a> Lambda Repressor <em>O</em><sub>R</sub>1-<em>O</em><sub>R</sub>2-<em>O</em><sub>R</sub>3-<em>P</em><sub>RM</sub> <strong>(Created by Aalto-Helsinki!)</strong></li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a> Elowitz Reference RBS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_E0022 ">BBa_E0022</a> Cyan Fluorescent protein + LVA (as <i>gene B</i>)</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0032">BBa_B0032</a> Medium Strength RBS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_C0040">BBa_C0040</a> Tetracycline repressor protein + LVA</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a> Double terminator</li>
 
-		<li><a href="http://parts.igem.org/Part:BBa_K1443002 ">BBa_K1443002</a> Lambda Repressor OR3-OR2-OR1-pR <strong>(Created by us!)</strong></li>
+		<li><a href="http://parts.igem.org/Part:BBa_K1443002 ">BBa_K1443002</a> Lambda Repressor <em>O</em><sub>R</sub>3-<em>O</em><sub>R</sub>2-<em>O</em><sub>R</sub>1-<em>P</em><sub>R</sub> <strong>(Created by Aalto-Helsinki!)</strong></li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a> Elowitz Reference RBS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_E0032 ">BBa_E0032</a> Yellow fluorescent protein + LVA (as <i>gene A</i>)</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0032">BBa_B0032</a> Medium Strength RBS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_C0040">BBa_C0040</a> Tetracycline repressor protein + LVA</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a> Double terminator</li>
 
-		<li><a href="http://parts.igem.org/Part:BBa_R0040 ">BBa_R0040</a> TetR repressible promoter</li>
+		<li><a href="http://parts.igem.org/Part:BBa_R0040 ">BBa_R0040</a> Tetracycline repressible promoter</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a> Elowitz Reference RBS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_K082003 ">BBa_K082003</a> Green Fluorescent protein + LVA (as <i>gene C</i>)</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a> Double terminator</li>
@@ -346,14 +344,11 @@
 	<h3>Parts That We Created</h3>
 	<ul>
 		<li><a href="http://parts.igem.org/Part:BBa_K1443000">BBa_K1443000</a> Blue light response element</li>
-		<li><a href="http://parts.igem.org/Part:BBa_K1443001">BBa_K1443001</a> Lambda Repressor OR1-OR2-OR3-pRM</li>
-		<li><a href="http://parts.igem.org/Part:BBa_K1443002">BBa_K1443002</a> Lambda Repressor OR3-OR2-OR1-pR</li>
+		<li><a href="http://parts.igem.org/Part:BBa_K1443001">BBa_K1443001</a> Lambda Repressor <em>O</em><sub>R</sub>1-<em>O</em><sub>R</sub>2-<em>O</em><sub>R</sub>3-<em>P</em><sub>RM</sub></li>
+		<li><a href="http://parts.igem.org/Part:BBa_K1443002">BBa_K1443002</a> Lambda Repressor <em>O</em><sub>R</sub>3-<em>O</em><sub>R</sub>2-<em>O</em><sub>R</sub>1-<em>P</em><sub>R</sub></li>
 		<li><a href="http://parts.igem.org/Part:BBa_K1443003">BBa_K1443003</a> RFP binding forward primer for backbone amplification</li>
 		<li><a href="http://parts.igem.org/Part:BBa_K1443004">BBa_K1443004</a> RFP binding reverse primer for backbone amplification</li>
 	</ul>
-    <p>
-        This is the complete sequence that we put together. The color codes are the same as in the previous list. <i>Gene A</i> has 20 Xs as placeholders, <i>gene B</i> has 20 Xs and <i>gene C</i> has 20 Xs. As anyone could decide the genes themselves, the placeholders are just to show the correct place in the sequence.
-    </p>
 
     <div class="row">
 		<div class="img-center">
@@ -392,7 +387,7 @@
     <div class="row">
         <div class="col-md-8 text-col-left">
 			<p>
-		  		To be able to expose our bacteria to light in a controlled manner, we designed a new kind of device from scratch. Inspired by the LTA developed by Tabor lab <sup>1</sup> we decided to build a simpler one, only with blue LED:s.
+		  		To be able to expose our bacteria to light in a controlled manner, we designed a new kind of device from scratch. Inspired by the LTA developed by Tabor lab (Olson et al., 2014) we decided to build a simpler one, only with blue LED:s.
 		  	</p>
 		  	<p>
 		  		Luckily we had some electronic knowledge in our team, too. With Pietu designing the rig we built a foam-padded transportable rig that can be put in an incubator overnight.
@@ -400,7 +395,7 @@
 
 		  	<h4>Microcontroller</h4>
 		  	<p>
-		  		The core of the rig is an Arduino Nanomicrocontroller. The Arduino is responsible for the logic behind our illumination patterns.
+		  		The core of the rig is an Arduino Nano microcontroller. The Arduino is responsible for the logic behind our illumination patterns.
 		  	</p>
 		  	<p>
 		  		The patterns in our experiments are fairly simple and could in theory be done without the Arduino, but we chose to use it due to its wide popularity and because we now could make advanced (and cool) animations on our rig. Also the Arduino acts as a 5v voltage regulator which provides the voltage for the second part of the rig: the Adafruit 16-channel 16-bit PWM controller.
@@ -408,13 +403,13 @@
 
 		  	<h4>LEDs</h4>
 		    <p>
-		        Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. In our project we used miniature leds because of their small power and small heat generation. It is important that the LED:s wont heat up the bacteria remarkably.
+		        Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. LED:s are great because they consume little power and don't generate much heat. It is important that the LED:s wont heat up the bacteria remarkably.
 		    </p>
 		    <p>
-		    	Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift  (Muthu et al., 2002)</em>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the led on and off very in very short interval, up to frequencies of 1.6kHz. By varying the time the led is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.
+		    	Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift  (Muthu et al., 2002)</em>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the LED on and off very in very short intervals, up to frequencies of 1.6kHz. By varying the time the LED is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.
 		    </p>
 		    <p>
-		    	Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for this task. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino. Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements. The LED:s we used are 5mm Blue 470nm leds with an intensity of 1800mcd, 15° angle, Vf@20mA:3,5V (Liteon: LTL-2P3TBK). If you are building the same setup as us we recommend you to get good quality LED:s from a known manufacturer who can supply a specifications sheet for the components.
+		    	Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for handling the PWM. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino (Light intensity is a integer from 0 to 4095). Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements. The LED:s we used are 5mm Blue 470nm leds with an intensity of 1800mcd, 15° angle, Vf@20mA:3,5V (Liteon: LTL-2P3TBK). <br />If you are building the same setup as us we recommend you to get good quality LED:s from a known manufacturer who can supply a specifications sheet for the components.
 		    </p>
 
 		    <h4>Constructing</h4>
@@ -422,18 +417,23 @@
 		  		We wanted to be able to illuminante a bacterial culture with a single led at multiple different intensities. We choose to grow our bacteria on microtiter plates. This choice was also affected by the fact that we had an access to a fluorometer (Thermo Scientific Varioskan) that measures fluorescence out of such microtiter plates.
 		  	</p>
 		  	<p>
-		  		We designed our LED rig so that an unmodified 96 well microtiter plate with the test cultures can be easily inerted. Our LEDs are attached to a lid that can be placed on a standard microtiter plate. 16 LEDs will illuminate the wells on columns 11,9,7,5 and rows B, D, F, H.
+		  		We designed our LED-rig so that an unmodified 96 well microtiter plate with the test cultures could be easily inserted. Our LEDs are attached to a lid that can be placed on a standard microtiter plate. 16 LEDs will illuminate the wells on columns 11,9,7,5 and rows B, D, F, H.
 		  	</p>
 		  	<p>
-		  		Our LEDs' spectrum peak at the value of 470nm. This value is specified by the manufacturer but the spectra of individual leds can vary considerably. Therefore we will measure the spectra of our LED:s with a spectrophotometer to be sure of the excitation wavelength.
+		  		Our LEDs' spectrum peak at the value of 470nm. This value is specified by the manufacturer but the spectra of individual leds can vary considerably. We will measure the emission spectra of LED:s with a spectrophotometer to be sure of the excitation wavelength, unfortunately we might not have time to publish the results.
 		  	</p>
 		  	<p>
 		        The Arduino source code used for the measurements is available on our github pages, and is discussed below.
 		  	</p>
 		  	<p>
-		  		Calibration of our device has not been done yet.
-		  		We have yet to measure the LED intensity. <strong>TODO: calibration</strong>
+		  		The most important thing to inderstand when varying the LED brightness is that the percieved brightness is logarithmic. So the difference between 1 and 3 is clearly visible to the eye, but the difference between 4095 and 4096 is not.
+		  		One can easily construct a lookup table for values with a logarithmic function, eg. 4095-4095*(lg(10-x*9)), x=0...1, where lg is the 10 logarithm.
 		  	</p>
+
+            <p><strong>
+                LED spectrum, power measurements and intensity measurements?
+                Heat production measurements?
+            </strong></p>
 
 		  	<h4>Technical Details</h4>
 		  	<ul>
@@ -495,7 +495,7 @@
     </p>
     <img src="http://2014.igem.org/wiki/images/4/46/AaltoHelsinki_GFPCormick.png" ref="GFPCormack" class="img-responsive"></img>
     <p class="kuvateksti">
-        <b><span ref="GFPCormack">.</span></b> Excitation and emission spectra for wild type and mutant GFPs. (A) Excitation spectra (emission 540 nm). Excitation maxima: wt GFP 395 nm, GFP mut 1 488 nm, GFP mut 2 481 nm and GFP mut 3 501 nm. (B) Emission spectra (excitation 395 nm for wild type and 450 nm for mutant types). Emission maxima: wt GFP 508 nm, GFP mut 1 507 nm, GFP mut 2 507 nm and GFP mut 3 511 nm.
+        <b><span ref="GFPCormack">.</span></b> Excitation and emission spectra for wild type and mutant GFPs. (A) Excitation spectra (emission 540 nm). Excitation maxima: wt GFP 395 nm, GFP mut 1 488 nm, GFP mut 2 481 nm and GFP mut 3 501 nm. (B) Emission spectra (excitation 395 nm for wild type and 450 nm for mutant types). Emission maxima: wt GFP 508 nm, GFP mut 1 507 nm, GFP mut 2 507 nm and GFP mut 3 511 nm (Cormack <em>et al</em>., 1996).
     </p>
     <p>In the end we settled for the following:
         <ul>
@@ -517,7 +517,7 @@
     <h2>Results</h2>
     <h3>GFP Fluorescence in High OD<sub>600</sub> Under Different Light Intensities</h3>
     <p>
-        In this experiment, we measured how cells will react to different intensities of blue light when grown in same conditions and very high cell density. In such conditions, the cells are not able to proliferate in a way that would affect to the measurements in short time period. This was the first experiment using different intensities of LED lights at 470 nm wavelength. Our purpose was to find out, how cells would respond to light in steady and high cell density and does the previous conditions affect to the fluorescence during a long time period. In addition, we were to observe the relative change between the highest and the lowest level of fluorescence. We had two kinds of samples: bacteria grown (overnight culture at 37C) in the darkness and in lit environment (usual lab lightning in addition to desk lamp directed to our sample). We also had a negative and a positive control for the fluorescence measurements.
+        In this experiment, we measured how cells will react to different intensities of blue light when grown in same conditions and very high cell density. In such conditions, the cells are not able to proliferate in a way that would affect to the measurements in short time period. This was the first experiment using different intensities of LED lights at 470 nm wavelength. Our purpose was to find out, how cells would respond to light in steady and high cell density and does the previous conditions affect to the fluorescence during a long time period. In addition, we were to observe the relative change between the highest and the lowest level of fluorescence. We had two kinds of samples: bacteria grown (LB as growth medium, overnight culture at 37C) in the darkness and in lit environment (usual lab lightning in addition to desk lamp directed to our sample). We also had a negative and a positive control for the fluorescence measurements.
     </p>
     <p>
         We constructed a testing device in order to estimate the concentration and the dynamics of the CI concentration. In the desting device, we replaced CI encoding sequence with GFP encoding sequence. The GFP was fused with LVA degradation tag. We excluded the lambda repressor and gene C parts. As a result, our testing device consisted of a blue light sensing element (constitutive promoter (<a href="http://parts.igem.org/Part:BBa_J23115">BBa_J23115</a>), RBS-YF1-RBS-FixJ (<a href="http://parts.igem.org/Part:BBa_K592016">BBa_K592016</a>) and a double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>) and the testing element (FixK2 promoter (<a href="http://parts.igem.org/Part:BBa_K592006">BBa_K592006</a>), RBS (<a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a>), GFP-LVA (<a href="http://parts.igem.org/Part:BBa_K082003">BBa_K082003</a>) and double terminator (<a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a>).
@@ -528,31 +528,7 @@
 
     <div class="row">
         <div class="img-center">
-            <table tab="intensities1">
-                <tr>
-                    <td>Intensity parameter</td>
-                    <td>4095</td>
-                    <td>1582</td>
-                    <td>650</td>
-                    <td>290</td>
-                    <td>120</td>
-                    <td>40</td>
-                    <td>10</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>log<sub>10</sub></td>
-                    <td>3.612</td>
-                    <td>3.199</td>
-                    <td>2.813</td>
-                    <td>2.463</td>
-                    <td>2.082</td>
-                    <td>1.612</td>
-                    <td>1.041</td>
-                    <td>0.301</td>
-                    <td>0.0</td>
-                </tr>
-            </table>
+            <img src="http://2014.igem.org/wiki/images/f/fa/Aaltohelsinki_research_table1.png" class="img-responsive" tab="intensities1"></img>
             <p class="kuvateksti">
                 <b><span tab="intensities1">.</span></b>: Different light intensity parameters and corresponding log<sub>10</sub> values used in this experiment.
             </p>
@@ -588,31 +564,14 @@
 
     <h3>GFP Fluorescence of Our Light Response Element Compared to Constitutive GFP Production Strain and Non-Fluorescent Strain</h3>
     <p>
-        We designed new experiments based on the previous results. First of all, we need to address how positive and negative control respond to light. We need to address the possibility that some of the effects are due to warming effects of the LED lights. Moreover, we need to measure the light response in bacterial  cultures in logarithmic growth state with lower cell density.
+        We designed new experiments based on the previous results. First of all, we need to address how positive and negative control respond to light. We need to address the possibility that some of the effects are due to warming effects of the LED lights. Moreover, we need to measure the light response in bacterial  cultures in logarithmic growth state with lower cell density. These experiments were carried out in transparent minimal medium to avoid fluorecent bias by LB medium. In the beginning of the experiment, all the cells were diluted to OD<sub>600</sub> of 0.5.
     </p>
     <p>
         We prepared three different samples (light response element, positive control and negative control) and placed them under five different intensities of blue light (<a tab="intensities2"></a>). The lowest intensity is actually a well without a led light, that is, darkness. However, we designate this intesity with parameter value of 1 instead of zero (which would translate to -infinity on the logarithmic scale). We had duplicate samples of our light response element and we measured the their average fluorescence in this experiment.
     </p>
     <div class="row">
         <div class="img-center">
-            <table tab="intensities2">
-                <tr>
-                    <td>Intensity parameter</td>
-                    <td>1</td>
-                    <td>10</td>
-                    <td>256</td>
-                    <td>1024</td>
-                    <td>4095</td>
-                </tr>
-                <tr>
-                    <td>log<sub>10</sub></td>
-                    <td>0.0</td>
-                    <td>1.0</td>
-                    <td>2.41</td>
-                    <td>3.01</td>
-                    <td>3.61</td>
-                </tr>
-            </table>
+            <img src="http://2014.igem.org/wiki/images/6/69/Aaltohelsinki_research_table2.png" class="img-responsive" tab="intensities2"></img>
             <p class="kuvateksti">
                 <b><span tab="intensities1">.</span></b>: Different light intensity parameters and corresponding log<sub>10</sub> values used in this experiment.
             </p>
@@ -661,7 +620,7 @@
     </p>
     <h3>Induction Dynamics and GFP Fluorescence Under Varying Light Intensity</h3>
     <p>
-        As we noticed in the previous measurement results, the response dynamics are too fast to be observed in the time scale of one hour. We designed a new experiment which aims to measure how fast the bacteria are able to respond to the differences in light intensity. There are two main factors in this feature: delay in transcription activation/deactivation and half-life of the protein being measured. We can define that the delay includes all the steps from YF1 phosphorylation to protein translation.
+        As we noticed in the previous measurement results, the response dynamics are too fast to be observed in the time scale of one hour. We designed a new experiment which aims to measure how fast the bacteria are able to respond to the differences in light intensity. There are two main factors in this feature: delay in transcription activation/deactivation and half-life of the protein being measured. We can define that the delay includes all the steps from YF1 phosphorylation to protein translation. These experiments were carried out in transparent minimal medium to avoid fluorecent bias by LB medium. In the beginning of the experiment, all the cells were diluted to OD<sub>600</sub> of 0.5.
     </p>
     <p>
         In addition, we needed to examine how the bacteria would respond to varying intensity of light. We aimed to simulate the conditions inside a bioreactor. The biomass in the reactor would decrease in the light intensity as distance to the nearest LED increases. The culture in the bioreactor would be constantly mixed and we assumed that one cycle in the bioreactor takes approximately 8 minutes. If there are 4 horizontally spaced LED rigs, one cycle would take 1 minute. Thus, we set 8 LEDs in our LED rig to change intensity linearly from zero to maximum intensity in one minute cycle. Here, we need to state that the linear fit of the parameter is done in logarithmic scale as the log<sub>10</sub> of the parameter is directly proportional to the light intensity. We hypothesize the fluorscence in the case of the blinking light will be on the same level as the fluorescence under a constant blue light with half of the maximum intensity of the blinking light. That is, we suggest the effect to be proportional to the average intensity and that the blinking would not affect to the results.
@@ -677,7 +636,6 @@
             </p>
         </div>
     </div>
-
     <div class="row">
         <div class="img-center">
             <img src="http://2014.igem.org/wiki/images/b/bb/Aaltohelsinki_intensityseries_dark_blink.png" class="img-responsive" ref="darkblink"></img>
@@ -686,7 +644,15 @@
             </p>
         </div>
     </div>
-
+    <p>
+        The dark-LED plate was first incubated in darkness. The figures <a ref="darksteady"></a> and <a ref="darkblink"></a> show clearly that all the samples have very similar expression profile in the first four timepoints. After this point, the fluorescence values diverge. In both cases, the higher the intensity (darker lines) the lower the fluorescence. All fluorescence levels are significantly higher than that of the control sample. The dark sample (dotted line) counditions should be same throughout the measurement but despite this fact, the fluorescence in the 4th measurement point seems to decrease. We hypothesize that the sample cooled down to room temperature while changing the plate environment causing stress to the bacteria. If the response time is short with respcet to the total length of the experiment, we could state that the dotted line represents the effect of bacterial growth, not change in gene expression.
+    </p>
+    <p>
+        Let's pay closer attention to <a ref="darksteady"></a>. Between the 4th and 5th timepoints, the flourescence levels diverge as a result of change in conditions, just as expected. We see again the 4 fold difference between the lowest and highest flourescence values as a result of intensity difference. What is noteworthy, it seems like the fluorescence levels reach their new levels before the 5th timepoint and stay on that level, especially in case of the darker lines (greater intesities). We do see some increase in intensity, but this is likely to be result of cell growth. This suggests that our measuring frequency was not good enough to capture the response dynamics! We cannot make reliable estimations on the average response times but we can limit the maximum response times to 25 minutes which is the time difference between 4th adn 5th timepoint. To further illustrate this point, to our knowledge, the response time may even be 10 seconds and we would get very similar data.
+    </p>
+    <p>
+        We can now evaluate our hypothesis about the effect of the blinking blue light on our light response element. We see a clear shift of fluorescence values at higher intensities in the <a ref="darksteady"></a>. The high intensity LEDs have now weaker impact on the fluorescence. At the first glance we could say that the difference is around 0.7 times the maximum intensity value (for example, the 3.61 blinking intensity has an effect approximately comparable to constant intensity of 2,65). Let's call this constant efficiency multiplier. However, we need to once again take into account the bias in the low values of the intensities on the logarithmic scale. We are unable to evaluate the parameter for complete darkness. If all the values would be set relative to complete darkness value, the efficiency multiplier would be lower and more accurate.
+    </p>
     <div class="row">
         <div class="img-center">
             <img src="http://2014.igem.org/wiki/images/5/52/Aaltohelsinki_intensityseries_LED_steady.png" class="img-responsive" ref="ledsteady"></img>
@@ -704,17 +670,28 @@
             </p>
         </div>
     </div>
-
+    <p>
+        The LED-dark plate was first incubated in the LED rig and after the first four timepoints, the plate was put into complete darkness. In the <a ref="ledsteady"></a> we see that the fluorescence levels diverge immediately and they are separate already in the second timepoint. Higher intensity levels lead again to lower fluorescence. However, each line also has an increasing trend during the 4 first timepoints which again may be result of bacterial growth. Already in the 5th timepoint the correlation between the intensities and fluorescence has disappeared. This state is comparable to the samples incubated in environmental light <a ref="light"></a>. In contrast to dark-LED measurements, the 4 fold difference is present only in the 2nd and 4th timepoint. This may be due to fluctuations in temperature between the measurements.
+    </p>
+    <p>
+        The fluorescence profiles in the <a ref="ledblink"></a> are very similar to that of <a ref="ledsteady"></a>. Whereas the fluorescence at the low intensity levels seem to remain somewhat unchanged, the high intensity curves have higher fluorescence in 2nd to 4th timepoint compared to the constant light. The separation of different fluorescence levels is not as big as in the steady light. This strengthens our former hypothesis of the fluorescence being dependent on the average intensity, not the highest or lowest value. The efficiency multiplier seems to be on the same scale as in the dark-LED measurements.
+    </p>
     <div class="row">
         <div class="img-center">
             <img src="http://2014.igem.org/wiki/images/9/92/Aaltohelsinki_intensityseries_light.png" class="img-responsive" ref="light"></img>
             <p class="kuvateksti">
-                <b><span ref="light">.</span></b>: Fluorescence of our light response element in environmental light. The samples were incubated in normal lab lighining. The times indicated are times of the day, not incubation times.
+                <b><span ref="light">.</span></b>: Fluorescence of our light response element in environmental light. The samples were incubated in normal lab lightining. The times indicated are times of the day, not incubation times.
             </p>
         </div>
     </div>
     <p>
-        difficulties: room temperature, others using the machine, measuring takes some time, blink phase?
+        The last plate was incubated in constant coditions (37 Celsius degrees and constan environmental light) throughtout the experiment. Moreover, the conditions for all 20 samples were identical. The results are shown in the <a ref="light"></a>. Our first observation is that all the sample fluorescence levels are very close to each other and all the samples have the same profile. It seems like only one sample has values different to the others (the sample with highest fluorescence in the end of the experiment). We also note that the fluorescence is very low in the first timepoint but already second timepoint has the same fluorescence levels as the rest of the points. This also suggest fast response to the change in conditions (here, change from the room temperature to 37 Celsius degrees right after the dilution). The fluorescence levels seems to correspond the constant blue light intensity 2.49 in <a ref="darksteady"></a>.
+    </p>
+    <p>
+        When we compare the results from constant light incubation, we see that the fluorescence level does not change significantly after the second timepoint. This contrasts to our hypothesis that cellular growth would affect the fluorescence levels. Otherwise we should able to see steady rise in fluorescence throughout time. As we see a steady growth in control sample fluorescence we can confirm that the cells are indeed growing in the experiment (assuming that the fluorescence in control sample is proportional to the cell density). The reason for such a steady fluorescence level remains to be undiscovered.
+    </p>
+    <p>
+        Even though we aimed to have as frequent measurements as possible, 20 minutes seems to be the shortes interval in the measurements. This limit is affected by many different factors. First of all, we need to be able to maintain the incubation temperature as well as possible. The measurements were carried out in room temperature which cools down our samples. We need to have long enough incubation period in between the measurements in order to let the cells thrive. Moreover, the measurements take some time, about 3 minutes per plate. It is reasonable to have incubation in 37 Celsius degrees for at least twice the time taken for measurements. Finally, there were other scientist using the Varioskan machine which caused variability in our measurement interval.
     </p>
 </article>
 <div class="update Results"></div>
@@ -722,21 +699,54 @@
 <article>
 	<div class="link" id="Discussion"></div>
 
-  <h2>Discussion</h2>
-  <p>
-        Mutaatiot operaattorialueisiin
-        Plasmidissa ei DNA:ssa
-        Solutason kohina solusyklissä
-
-        Results: Possible room for improvement?
-        LED spectrum, power measurements and intensity measurements?
-        Heat production measurements?
-
-        Red light
-        Phosphorylation transfer
-        Leakiness
-        Non-saturating intensity response
-  </p>
+    <h2>Discussion</h2>
+    <p>
+        According to our experiments, our light response element seems to be capable of 4 fold repression of GFP-LVA with blue light. This is already very good results but we need to evaluate whether this is enough for our lambda repressor system. Dodd et al. (2001) made experiments constructing two mutated versions of <em>O</em><sub>R</sub>3 operator site. The other mutant (λr1) led to CI concentration of 2.3 compared to the wild type and the other mutation (λc12) led to 0.6 times increased concentration. This difference is of similar scale as in our experiments. They compared the effect of these mutations to prophage induction by UV light. λr1 was induced at 10% efficiency compared to wild type whereas λc12 efficiency was 170%. CI protein represses lytic genes including <em>cro</em> under <em>P</em><sub>R</sub> promoter. If the propability of prophage induction is proportional to CI concentration (as they showed in the paper), we can hypothesize that such difference in CI concentration would lead to 17 fold difference in <em>P</em><sub>R</sub> activity. According to the <a ref="cieffect"></a> the increase in CI concentration from 0.6 WLU to 2.3 WLU would be sufficient for <em>P</em><sub>RM</sub> repression in the wild type lambda repressor. Based to these observations, we estimate 4 fold repression with blue light to be sufficient range for our three channel system.
+    </p>
+    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/5/53/Aaltohelsinki_ci_effect.png" class="img-responsive" ref="ledblink"></img>
+            <p class="kuvateksti">
+                <b><span ref="cieffect">.</span></b> by Dodd et al. (2001): <em>P</em><sub>RM</sub> promoter activity with <em>lacZ</em> reporter system. In this experiment,<em>cI</em> was fused with <em>P</em><sub>lac</sub> promoter to control CI concentration with IPTG concentration. The figure shows the effect of CI concentration in wild type lysogenic units (WLU) to <em>P</em><sub>RM</sub> promoter.
+            </p>
+        </div>
+    </div>
+    <p>
+        As it can be clearly seen from the <a ref="cieffect"></a>, <em>P</em><sub>RM</sub> promoter will be derepressed efficiently already in low concentrations. In addition, we also observed that even at very high light intensities, the our measurement device for light response element shows clearly elevated fluorescence compared to negative control. This implies leakiness in the <em>FixK<sub>2</sub></em> promoter. As this promoter also controls the CI expression, we might experience significant levels of CI in high blue light intensity. This might pose a problem by repressing <em>P</em><sub>R</sub> promoter and derepressing <em>P</em><sub>RM</sub> promoter even at the highest intensity of blue light. We need to keep this possibility in mind in future experiments and possibly look for solutions to eliminate <em>FixK<sub>2</sub></em> leakiness.
+    </p>
+    <p>
+        In contrast to our initial expectations, the response time of our light response element was very short. This means that we can control the gene expression at <em>FixK<sub>2</sub></em> almost real time. Phosphorylation of YF1 and as well as FixJ seems to be very fast and responsive process and presumably most of the delay occure in transcription and translation of our reporter protein. The response to increase in light intensity is contributed by YF1 phosphatase activity (Diensthuber et al., 2013) but to be able observe the effect in the reporter concentration, we need to have short enough half-life. Indeed, it seems like our reporter, GFP-LVA, has short half-life. Although Andersen et al. (1998) suggest this half-life to be around 40 minutes, we observed a lot faster degradation of GFP-LVA. In the <a ref="darksteady"></a> between 4th and 5th timepoint, the fluorescence drops from 2.9 to 0.6 in 25 minutes. According to these values, the half-life of the GFP-LVA we used in our experiments, would be around 11 minutes, at maximum. Moreover, in our actual light response element <em>gfp</em> will be replaced by <em>cI</em>. The GFP half-life (26 hours, Corish et al., 1999) is approximately 2.6 times longer than that of CI (10 hours, (Parsell et al., 1990). As CI is not as stable as GFP also CI-LVA may be less stable compared to GFP-LVA potentially leading to even shorter half-life. Therefore, we estimate response to be around 15 minutes at promoter level in our three channel gene switch. We hypothesize that this enables sufficient temporal control for several industrial applications.
+    </p>
+    <p>
+        In our experiments to address the effect of varying light intensity on our light response element, we observed that the average intensity seems to be the dominating factor for the response. However, we also noticed that the effect of blinking light is not exactly comparable to constant blue light with same average intensity. We may use an efficiency multiplier to compare blinking blue light (from zero to certain maximum intensity) to constant blue light. The maximum intensity of the blinking LED multiplied by the efficiency multiplier tells the comparable constant blue light intensity. We estimated emiprically the value of this efficiency multplier to be at the scale of 0.65 to 0.7 in our experiments. As long as the blinking frequency is short enough compared to the half life of the CI protein, the perturbations will be averaged out in the response of our system. This would enable use of the three channel gene switch in bioreactors where the intensity of the LEDs will be nonuniform. If the bacterial culture is mixed constantly in such conditions we should have a uniform response to blue light.
+    </p>
+    <p>
+        There are several options to optimize and improve our thee channel gene switch. First of all, as Dodd et al. (2001) have shown, the operator sites can be modified to modify the function of the lambda repressor element. We can tune the <em>P</em><sub>RM</sub> and <em>P</em><sub>R</sub> promoters to ehance or suppress the level of transcription associated with the promoter. This is very important as the promoters cannot be changed and different users have different needs for the promoter strength. One option is to modify the promoters to be as strong as possible and then tune the translation by using weaker RBS sites to get the desired level of protein production.
+    </p>
+    <p>
+        To address the leakiness of our system, we could engineer the <em>FixK<sub>2</sub></em> promoter to eliminate the leaky activity. We could also attempt to repress the basal expression level by duplicating the operator site in front of it. <strong>What else? look for references</strong>. The proper function of the promoter is crucial to our system and proper dynamics of the lambda repressor element. However, as we have observed in our experiments, we have not yet reached the saturating intensity of blue light. In each figure in the results section, we see that even at the fluorescence decreases even from the second highest to the highest intensity. We might be able to drive down the leakiness of the promoter by using even stronger LEDs. Of course, we also need to try to minimize the heat generated by these LEDs.
+    </p>
+    <p>
+        There are several hypotheses that are yet to be addressed and questions to remain unanswered. Despite our best efforts we hav enot been able to finish our construct at the moment of wiki freeze. We have not been able to test our hypotheses regarding the lambda repressor and we have not had enough time to test the light response element in greated detail. We are still working on it and possible future results will be published on the team website <a href="http://2014.aaltohelsinki.com/post-igem">post-iGEM section</a>.
+    </p>
+    <p>
+        All our experiments have been carried out in a population level and they average out the possible individual differences. As Zopf et al. (2013) have described, cell cycle affects greatly in the rate of transcription. Especially after division, transcription rates tend to be significantly lower than before the division. In proliferating cultures this may pose a problem. Our mechanism works on the cellular level but instead, we have been measuring the average level. It is true that we can affect to the expression of the GFP-LVA protein but how does this rate vary from cell to cell? Are we able to keep it stable enough in cell resolution to be able to reliably control protein levels and switch between genes? This issue needs to be taken seriously and it requires further analysis. Unfortunately singel cell experiments require equipment that we did not have access to.
+    </p>
+    <p>
+        The lambda phage integrates its DNA to the <em>E. coli</em> genome upon infection. The lambda repressor works robustly in the <em>E. coli</em> genome, but is it able to function properly in the plasmid? We know from experience that individual parts have been used successfully in synthetic plasmids in <em>E. coli</em> (this can be verified by searching these parts in the BioBrick foundation's registry of standard biological parts). For example DNA looping is complex enough mechanism to be affected by the plasmid context. Supercoiled plasmids may not have enough flexibility in order to enable such DNA looping. Even if it was possible, it might recuire very precise placement of <em>O</em><sub>R</sub> sites with respect to each other.
+    </p>
+    <p>
+        Our experiments were based on the assumption that GFP-LVA would have similar dynamics as the CI-LVA would. However, this should be evaluated in future experiments. CI-LVA half-life needs to be determined by using common protein concentration measurement methods. To monitor the effect of CI in the lambda repressor context we could fuse CI with GFP-LVA and associate <em>P</em><sub>RM</sub> or <em>P</em><sub>R</sub> promoter with a complementary reporter, such as <em>lacZ</em>. This would enable us to observe the effect of CI concentration. Another possibility is to use similar setting as Dodd et al. (2001) and produce CI from a spearate plasmid using lac promoter induced by IPTG. This enbles us to also monitor the effect of high CI concentration and evaluate, whether DNA looping takes place or not.
+    </p>
+    <p>
+        As discussed multiple times in the results section, we need to identify how much proliferation accounts for the rise in fluorescence in our measurements. We should include OD<sub>600</sub> measurements to our fluorescence measurements and have proper controls to evaluate, to what extent the fluorescence differences are caused by blue light intensity and what is the effect of cell proliferation on these measurement. Moreover, carrying out the experiments with 5 minute measurement interval in a room with 37 Celsius degrees would allow us to examine better the dynamics without affecting the growing conditions.
+    </p>
+    <p>
+        The experiments done for the blue light response element are very similar to those required for testing the entire three channel gene switch system. We would use LED rig to control the blue light intensity and would measure the effect of three different reporter systems. If feasible, these reporters could be three different fluorescent proteins whose excitation spectrum overlaps as little as possible. Alternatively, a LacZ reporter system could be used. The reponse of each different reporter system would be measured regularly during a several hour experiment. A second experiment would measure the dynamics of the system and evaluate, how fast and reliably is it possible to switch between the active genes.
+    </p>
+    <p>
+        Lastly, as one may note in our simulation, we have also planned to include another light sensing element for red light in our system. A good candidate for the light receptor would be engineered version of Cph8. The role of the red light would be regulating the rate of transcription of the the three target genes in contrast to blue light, which defines the gene being transcribed. The purpose is to have control over both rate of transcription and the gene being active. The red light response could be mediated by CRISPR/dCas9 system by associating the complex with light activated Krüppel-associated Box (KRAB) as described by Freiburg 2013 team. The system would identify a sequence assiociated with each target gene. Therefore, we could regulate the rate of transcription at each three genes using red light. However, the exact mechanism of such a system is yet to be designed and tested.
+    </p>
 
 </article>
 <div class="update Discussion"></div>
@@ -745,7 +755,9 @@
     <div class="link" id="Conclusions"></div>
 
   <h2>Conclusions</h2>
-
+  <p>
+      Our experiments show that our light response element works very well. Based on the observations we can conclude that the system is capable of 4 fold repression with blue light at 470 nm wavelength and its response time is likely to be less than 20 minutes. In addition, the system is resistant to perturbations in light intensity which makes it robust and applicable to changing conditions in a bioreactor. These are very good results and they form a good basis for our three channel switch. In addition, we were able to build an excellent device to control the incubation conditions. However, as a consequence of not being able to ligate our lambda repressor element together before wiki freeze, the gene switch system at its entire form remains to be evaluated at a later stage.
+  </p>
 </article>
 <div class="update Conclusions"></div>
 <div class="update References"></div>
@@ -774,7 +786,13 @@
             Bell, C. E., Frescura, P., Hochschild, A., & Lewis, M. (2000). <em>Crystal Structure of the λ Repressor C-Terminal Domain Provides a Model for Cooperative Operator Binding.</em> Cell, 101(7), 801–811. doi:10.1016/S0092-8674(00)80891-0
         </li>
         <li>
+            Corish, P., & Tyler-Smith, C. (1999). Attenuation of green fluorescent protein half-life in mammalian cells. Protein Engineering, 12(12), 1035–40. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/10611396
+        </li>
+        <li>
             Cormack, B. P., Valdivia, R. H., & Falkow, S. (1996). <em>FACS-optimized mutants of the green fluorescent protein (GFP).</em> Gene, 173(1), 33–8. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/8707053
+        </li>
+        <li>
+            Diensthuber, R. P., Bommer, M., Gleichmann, T., & Möglich, A. (2013). Full-length structure of a sensor histidine kinase pinpoints coaxial coiled coils as signal transducers and modulators. Structure (London, England : 1993), 21(7), 1127–36. doi:10.1016/j.str.2013.04.024
         </li>
         <li>
             Dodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). OcDodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). <em>Octamerization of lambda CI repressor is needed for effective repression of P(RM) and efficient switching from lysogeny.</em> Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301tame. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301
@@ -815,8 +833,6 @@
         <li>
             Muthu S., Schuurmans F. and Pashley M. (2002). <em>Red, Green and Blue LED based white light generation: Issues and Control</em> 37th Annual IEEEIAS meeting, Vol. 1, pp. 327 – 333 (2002). DOI: 10.1109/IAS.2002.1044108
         </li>
-
-        **Linkit proteiineista, promoottoreista ja BioBrickeistä vastaaville sivuille maininnanyhteydessä?**
     </ul>
 
 </article>

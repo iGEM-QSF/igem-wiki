@@ -1,9 +1,5 @@
 /* Yleiset */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-}
-
 a:link, a:visited, a:active, .right-menu li a {
   color: #0AA699;
   text-decoration: none !important;
@@ -32,6 +28,11 @@ ul {
 .cpright {
   text-align: right;
   padding-right: 1em;
+}
+
+.modellatex, .modelimg {
+  padding-top: 4em;
+  padding-bottom: 2em;
 }
 
 @media only screen and (min-width : 992px) {
@@ -66,18 +67,21 @@ ul {
   padding-top: 100px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   border-bottom: none;
-  margin-top: 30px;
+  padding-top: 3em;
+  padding-bottom: 1em;
 }
 
 h1 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  border-bottom: none;
   font-size: 6em;
 }
 
 h2 {
   font-size: 2.5em;
-  padding-bottom: 0.5em;
   text-align: center;
 }
 
@@ -253,6 +257,10 @@ header .navbar {
 .memberrow {
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.university-title {
+  padding-top: 0;
 }
 
 .margintop {
@@ -435,6 +443,10 @@ header .navbar {
 .omalogot {
   width: 60%;
   padding-top: 1em;
+}
+
+#ci-circle {
+  width: 20%;
 }
 
 #virginiabadge{

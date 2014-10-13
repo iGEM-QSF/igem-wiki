@@ -21,7 +21,7 @@
     correct figure number. If span or anchor has "." as the inner html, the
     caption will be capitalized.
     */
-    var images = $('img[ref], table[ref]');
+    var images = $('img[ref]');
     $.each(images, function(index, e){
             var referenceName = e.getAttribute("ref");
             if (!e.id){
@@ -58,7 +58,7 @@
     correct table number. If span or anchor has "." as the inner html, the
     caption will be capitalized.
     */
-    var tables = $('table[tab]');
+    var tables = $('table[tab], img[tab]');
     $.each(tables, function(index, e){
             var tableName = e.getAttribute("tab");
             if (!e.id){

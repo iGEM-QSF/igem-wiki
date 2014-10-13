@@ -68,6 +68,10 @@
 	<h2>Introduction</h2>
 
 	<p>
+
+	</p>
+
+	<p>
 		To get an idea of how our gene circuit would work in an ideal situation, we explored the structure and dynamics of our system by creating a mathematical model of the reaction kinetics and a simulation that can be controlled in real time. We started working with the mathematical model without any initial information. We derived differential equations to demonstrate how the use blue light and the changes in phosphorylated $YF1$ and $FixJ$ concentrations would control the production of our three target proteins. We labeled them simply $A$, $B$, and $C$, because the system is intended to be used with any three genes encoding different proteins.
 	</p>
 
@@ -86,10 +90,18 @@
 	<h3>Overview </h3>
 
 	<p>
+
+	</p>
+
+	<p>
 		Here we will discuss the dynamics and interactions of different proteins and promoters introduced in the research section. We have developed a mathematical model describing our system.
 	</p>
 
 	<h3>Simplifications</h3>
+
+	<p>
+
+	</p>
 
 	<p>
 		We assumed that the species identified from our gene circuit are the only ones that affect the overall concentrations inside the bacteria. The bonding of $CI$ to $O_R$ sites is assumed to be insignificant compared to the overall concentration. The model is also strictly deterministic and doesn’t take into account any noise. The phosphorylation, decay, bonding and production of proteins are assumed to be linear functions of concentration. We further assumed that the phosphorylation of $FixJ$ by phosphorylated $YF1$ would not involve phosphorous transition between the reacting molecules.
@@ -104,7 +116,16 @@
 	<h3>Equations for dynamics</h3>
 
 	<p>
+
+	</p>
+
+	<p>
 		Based on the assumptions made before, we arrived at following differential equations to describe the idealized dynamics of our system:
+
+	</p>
+
+	<p>
+
 	</p>
 
 	<div class="row modelimg">
@@ -155,11 +176,20 @@
 	</p>
 
 	<h3>Dynamics' coefficients</h3>
+
+	<p>
+
+	</p>
+
 	<p>
 		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of promoters. These change and $Rbs_1$&$Rbs_2$ the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $YF1$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $YF1$. The dephosphorylation here depends on the respective dephosphorylation coefficient $DP$(1&2 for $YF1$ and $FixJ$).
 	</p>
 
 	<h3>Equations for promoter activities</h3>
+
+	<p>
+
+	</p>
 
 	<div class="row modelimg">
 		<div class="img-center">
@@ -194,6 +224,10 @@
 	<h3>Promoters' coefficients</h3>
 
 	<p>
+
+	</p>
+
+	<p>
 		Here the $C_{P_n}$'s denote the respective promoter's maximum activity. The $N$ in front of $CI$ and $TetR$ concentrations is a normalization coefficient, which is needed to map the fitting part of concentrations' values to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The functions definitions must also change so that they never take negative values, which would make no sense when talking about promoter activity. We have simplified the model so that the promoters’ activity only depend on the concentration of $[CI]$ protein. We also assumed that the binding of $CI$ had insignificant effect on its concentration, and that the amount of $CI$ binded to the $O_R$ sites was proportional to $CI$ concentration.
 	</p>
 
@@ -208,11 +242,19 @@
 	<h3>Overview </h3>
 
 	<p>
+
+	</p>
+
+	<p>
 		Based on our mathematical model, we created an interactive simulation and a graphical user interface for it. This visualization, although idealized, is ideal for demonstrating the intended functioning of our gene circuit and gene switch system. We included two switches, one for red and one for blue light. With these, the user can see the effect of light intensity to a bacterial culture in real time. Proteins A, B and C are represented by GFP, RFP and BFP, and therefore the bacteria change color in different circumstances.
 
 	<p/>
 
 	<h3>Lights </h3>
+
+	<p>
+
+	</p>
 
 	<p>
 		In our system, the communication between user and the bacteria happens via illuminating the culture with blue light. Blue light phosphorylates the $YF1$-protein, which is the key to controlling the overall protein production inside the bacterium. In the simulation, this is represented by change in the $I_B$ parameter from the mathematical model. This takes values between 0 and 1, and the rest of system behaves as described previously.
@@ -224,7 +266,15 @@
 	<h3>Runge-Kutta method </h3>
 
 	<p>
+
+	</p>
+
+	<p>
 		The dynamics of our system were approximated using 4th order Runge-Kutta method (RK4) for the differential equations in our mathematical model. The point of this method is to approximate the function in question by it's derivatives without having to solve the function itself. The starting values of each concentration are assumed to be zero, so $y(0) = 0$. The simulation computes the next datapoint adding the derivative times a timestep $h$ to previous concentrations. The method uses a mean value of different derivatives (the different k's below) during timestep $h$ to get a more accurate approximation.
+	</p>
+
+	<p>
+
 	</p>
 
     <div class="row modelimg">
@@ -252,7 +302,15 @@
 	<h3>Software implementation</h3>
 
 	<p>
+
+	</p>
+
+	<p>
 		A computational model was created based on our mathematical model and the RK4 approximation. We made a real-time plotting function to illustrate the dynamics in a simple and clear graphic UI. We added two light switches so that the user can have an impact on our simulation in real time. This all was then further developed into a presentable, user-friendly form that is accessible from our website. The simulation itself was created using Python and translated into Javascript for web implementation.
+	</p>
+
+	<p>
+
 	</p>
 
 	<div class="row">
@@ -281,6 +339,10 @@
 	<div class="link" id="Discussion"></div>
 
 	<h2>Discussion</h2>
+
+	<p>
+
+	</p>
 
 	<p>
 		In biological systems, a huge number of variables affect the outcome of any process. Most of them are unknown, as in our case, so models generally include some noise to approximate these unknown factors. However, our model is simplified: it doesn’t take noise into consideration. Therefore all interactions produce smooth, good-looking curves in the graphic output. From another point of view, the clear graphics produced by the simulation are easily interpretable, so even someone not familiar with science can clearly see what's going on in our system.

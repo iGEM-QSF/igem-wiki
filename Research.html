@@ -305,13 +305,10 @@
         /parts-lista-igem-template-säätö/
     </p>
     <p>
-        The final construct ended up being fairly large. The gene circuit consists of two different segments: the light sensor that produces CI according to the intensity of light and the actual switch that responds to the differences in the concentration of repressor protein CI.
+        The gene circuit consists of two different segments: the light sensor that produces CI according to the intensity of light and the actual switch that responds to the differences in the concentration of repressor protein CI. You can find the complete sequence of the switch from <a href="http://2014.igem.org/wiki/images/4/47/Aalto_Helsinki_Gene_Switch.txt">this file (click)</a>.
     </p>
     <p>
-        We used fairly many already existing parts that were in the 2014 iGEM BioBrick Distribution. The parts we created ourselves are.
-    </p>
-    <p>
-        Here’s a list of all the parts we used in our gene switch. They are in the same order as in our gene circuit.
+        Here’s a list of all the BioBricks that we used in our gene switch. They are in the same order as in our gene circuit, and the previously mentioned sequence file.
     </p>
     <h3>Parts in Our Gene Switch</h3>
     <ul>
@@ -324,14 +321,14 @@
 		<li><a href="http://parts.igem.org/Part:BBa_K105004 ">BBa_K105004</a> CI protein CDS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a> Double terminator</li>
 
-		<li><a href="http://parts.igem.org/Part:BBa_K1443001">BBa_K1443001</a> Lambda Repressor OR1-OR2-OR3-pRM <strong>(Created by us!)</strong></li>
+		<li><a href="http://parts.igem.org/Part:BBa_K1443001">BBa_K1443001</a> Lambda Repressor OR1-OR2-OR3-pRM <strong>(Created by Aalto-Helsinki!)</strong></li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a> Elowitz Reference RBS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_E0022 ">BBa_E0022</a> Cyan Fluorescent protein + LVA (as <i>gene B</i>)</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0032">BBa_B0032</a> Medium Strength RBS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_C0040">BBa_C0040</a> Tetracycline repressor protein + LVA</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0015">BBa_B0015</a> Double terminator</li>
 
-		<li><a href="http://parts.igem.org/Part:BBa_K1443002 ">BBa_K1443002</a> Lambda Repressor OR3-OR2-OR1-pR <strong>(Created by us!)</strong></li>
+		<li><a href="http://parts.igem.org/Part:BBa_K1443002 ">BBa_K1443002</a> Lambda Repressor OR3-OR2-OR1-pR <strong>(Created by Aalto-Helsinki!)</strong></li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a> Elowitz Reference RBS</li>
 		<li><a href="http://parts.igem.org/Part:BBa_E0032 ">BBa_E0032</a> Yellow fluorescent protein + LVA (as <i>gene A</i>)</li>
 		<li><a href="http://parts.igem.org/Part:BBa_B0032">BBa_B0032</a> Medium Strength RBS</li>
@@ -351,9 +348,6 @@
 		<li><a href="http://parts.igem.org/Part:BBa_K1443003">BBa_K1443003</a> RFP binding forward primer for backbone amplification</li>
 		<li><a href="http://parts.igem.org/Part:BBa_K1443004">BBa_K1443004</a> RFP binding reverse primer for backbone amplification</li>
 	</ul>
-    <p>
-        This is the complete sequence that we put together. The color codes are the same as in the previous list. <i>Gene A</i> has 20 Xs as placeholders, <i>gene B</i> has 20 Xs and <i>gene C</i> has 20 Xs. As anyone could decide the genes themselves, the placeholders are just to show the correct place in the sequence.
-    </p>
 
     <div class="row">
 		<div class="img-center">
@@ -392,7 +386,7 @@
     <div class="row">
         <div class="col-md-8 text-col-left">
 			<p>
-		  		To be able to expose our bacteria to light in a controlled manner, we designed a new kind of device from scratch. Inspired by the LTA developed by Tabor lab <sup>1</sup> we decided to build a simpler one, only with blue LED:s.
+		  		To be able to expose our bacteria to light in a controlled manner, we designed a new kind of device from scratch. Inspired by the LTA developed by Tabor lab (Olson et al., 2014) we decided to build a simpler one, only with blue LED:s.
 		  	</p>
 		  	<p>
 		  		Luckily we had some electronic knowledge in our team, too. With Pietu designing the rig we built a foam-padded transportable rig that can be put in an incubator overnight.
@@ -400,7 +394,7 @@
 
 		  	<h4>Microcontroller</h4>
 		  	<p>
-		  		The core of the rig is an Arduino Nanomicrocontroller. The Arduino is responsible for the logic behind our illumination patterns.
+		  		The core of the rig is an Arduino Nano microcontroller. The Arduino is responsible for the logic behind our illumination patterns.
 		  	</p>
 		  	<p>
 		  		The patterns in our experiments are fairly simple and could in theory be done without the Arduino, but we chose to use it due to its wide popularity and because we now could make advanced (and cool) animations on our rig. Also the Arduino acts as a 5v voltage regulator which provides the voltage for the second part of the rig: the Adafruit 16-channel 16-bit PWM controller.
@@ -408,13 +402,13 @@
 
 		  	<h4>LEDs</h4>
 		    <p>
-		        Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. In our project we used miniature leds because of their small power and small heat generation. It is important that the LED:s wont heat up the bacteria remarkably.
+		        Light Emitting Diodes(LEDs) are current controlled components, and their intensity depends on the current passing trought them. LED:s are great because they consume little power and don't generate much heat. It is important that the LED:s wont heat up the bacteria remarkably.
 		    </p>
 		    <p>
-		    	Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift  (Muthu et al., 2002)</em>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the led on and off very in very short interval, up to frequencies of 1.6kHz. By varying the time the led is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.
+		    	Controlling the intensity of these leds is trivial by varying the current, but this will cause the emission spectra to shift  (Muthu et al., 2002)</em>. Hence we choose a different, and very popular, method for varying LED intensity: Pulse Width Modulation (PWM). The idea behind PWM is to turn the LED on and off very in very short intervals, up to frequencies of 1.6kHz. By varying the time the LED is on and off we will be able to make a percieved difference in intensity. The bigger the ratio of on-time versus off-time the brighter the LED.
 		    </p>
 		    <p>
-		    	Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for this task. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino. Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements. The LED:s we used are 5mm Blue 470nm leds with an intensity of 1800mcd, 15° angle, Vf@20mA:3,5V (Liteon: LTL-2P3TBK). If you are building the same setup as us we recommend you to get good quality LED:s from a known manufacturer who can supply a specifications sheet for the components.
+		    	Due to the hurry of making this rig we chose to use a pre-made Arduino "shield" for handling the PWM. We chose the a 16-channel 16-bit PWM shield from Adafruit. The 16-bits provide us much more range than the standard 8-bits of the Arduino (Light intensity is a integer from 0 to 4095). Additionally the Nano does not support as many channels so having 16 LEDs provides more flexibility in our measurements. The LED:s we used are 5mm Blue 470nm leds with an intensity of 1800mcd, 15° angle, Vf@20mA:3,5V (Liteon: LTL-2P3TBK). <br />If you are building the same setup as us we recommend you to get good quality LED:s from a known manufacturer who can supply a specifications sheet for the components.
 		    </p>
 
 		    <h4>Constructing</h4>
@@ -422,19 +416,19 @@
 		  		We wanted to be able to illuminante a bacterial culture with a single led at multiple different intensities. We choose to grow our bacteria on microtiter plates. This choice was also affected by the fact that we had an access to a fluorometer (Thermo Scientific Varioskan) that measures fluorescence out of such microtiter plates.
 		  	</p>
 		  	<p>
-		  		We designed our LED rig so that an unmodified 96 well microtiter plate with the test cultures can be easily inerted. Our LEDs are attached to a lid that can be placed on a standard microtiter plate. 16 LEDs will illuminate the wells on columns 11,9,7,5 and rows B, D, F, H.
+		  		We designed our LED-rig so that an unmodified 96 well microtiter plate with the test cultures could be easily inserted. Our LEDs are attached to a lid that can be placed on a standard microtiter plate. 16 LEDs will illuminate the wells on columns 11,9,7,5 and rows B, D, F, H.
 		  	</p>
 		  	<p>
-		  		Our LEDs' spectrum peak at the value of 470nm. This value is specified by the manufacturer but the spectra of individual leds can vary considerably. Therefore we will measure the spectra of our LED:s with a spectrophotometer to be sure of the excitation wavelength.
+		  		Our LEDs' spectrum peak at the value of 470nm. This value is specified by the manufacturer but the spectra of individual leds can vary considerably. We will measure the emission spectra of LED:s with a spectrophotometer to be sure of the excitation wavelength, unfortunately we might not have time to publish the results.
 		  	</p>
 		  	<p>
-		        The Arduino source code used for the measurements is available on our github pages, and is discussed below.
+		        	The Arduino source code used for the measurements is available on our github pages, and is discussed below.
 		  	</p>
 		  	<p>
-		  		Calibration of our device has not been done yet.
-		  		We have yet to measure the LED intensity. <strong>TODO: calibration</strong>
+		  		The most important thing to inderstand when varying the LED brightness is that the percieved brightness is logarithmic. So the difference between 1 and 3 is clearly visible to the eye, but the difference between 4095 and 4096 is not.
+		  		One can easily construct a lookup table for values with a logarithmic function, eg. 4095-4095*(lg(10-x*9)), x=0...1, where lg is the 10 logarithm.
 		  	</p>
-
+		  
 		  	<h4>Technical Details</h4>
 		  	<ul>
 				<li>Arduino Nano microcontroller, http://arduino.cc/en/Main/arduinoBoardNano</li>

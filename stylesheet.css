@@ -608,6 +608,10 @@ header .navbar {
   text-align: -moz-center
 }
 
+.sponsorrow > .text-col-right > h3 {
+  padding-top: 0;
+}
+
 #sponsorlogo {
   max-height: 150px;
   width: auto;

@@ -34,6 +34,11 @@ ul {
   padding-right: 1em;
 }
 
+.modellatex, .modelimg {
+  padding-top: 4em;
+  padding-bottom: 2em;
+}
+
 @media only screen and (min-width : 992px) {
   article {
     padding-top: 5px;
@@ -361,6 +366,11 @@ header .navbar {
   text-align: center;
   background-size: cover;
   text-shadow: 2px 2px 8px #4D4D4D;
+}
+
+.splash > h1 {
+  padding-top: 0;
+  padding-bottom: 0.5em;
 }
 
 .bigsplashtext {

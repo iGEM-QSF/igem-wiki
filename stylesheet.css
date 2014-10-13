@@ -437,6 +437,10 @@ header .navbar {
   padding-top: 1em;
 }
 
+#ci-circle {
+  width: 30%;
+}
+
 #virginiabadge{
   background: url("http://2014.igem.org/wiki/images/6/6a/Virginia_Badge2.png");
   background-size:250px;

@@ -456,7 +456,26 @@
 		  		We designed our LED-rig so that an unmodified 96 well microtiter plate with the test cultures could be easily inserted. Our LEDs are attached to a lid that can be placed on a standard microtiter plate. 16 LEDs will illuminate the wells on columns 11,9,7,5 and rows B, D, F, H.
 		  	</p>
 		  	<p>
-		  		Our LEDs' spectrum peak at the value of 470nm. This value is specified by the manufacturer but the spectra of individual leds can vary considerably. We will measure the emission spectra of LED:s with a spectrophotometer to be sure of the excitation wavelength, unfortunately we might not have time to publish the results.
+		  		Our LEDs' spectrum peak at the value of 470nm. This value is specified by the manufacturer but the spectra of individual leds can vary. Our aim was to measure the emission spectra of LED:s with a spectrophotometer to be sure of the excitation wavelength, but unfortunately the spectrofotometer at the aiding lab was not functioning and we were not able to get the emission spectra.
+				We did however measure the intensities of our LED:s at 470nm wavelength.
+			</p>
+			<p>
+				We measured intensities for two randomly selected LED:s (nr. 9 and 6) out of the total 16.
+				Measurements were done with a UDT instruments S450 Optometer and a 1m 3900micron optical fibre with a 180° cosine corrector.
+				The measurements were done in a dimmed room and measured at 470nm. We measured both LED:s when the LED-rig was supplied with a USB voltage of 5v (USB) and using 4 AAA-type batteries.
+				One of the leds was also measured with with nearly depleted batteries for reference.
+			</p>
+			<img src="" class="img-responsive" /><br />
+			    <div class="row">
+        <div class="img-center">
+            <img src="http://2014.igem.org/wiki/images/8/88/Aalto-Helsiinki_2014_led_intensity_00.jpg" class="img-responsive" ref="timeseries"></img>
+            <p class="kuvateksti">
+                <b><span ref="ledintensitymeasurements">.</span></b>: LED intensity as function of intensity parameter. The intensities were measured for two LED:s (Nr. 9 and 6) with different power-supplies attatched to the rig. USB refers to 5v input from computer and newbatt refers to 4 fresh batteries of AAA-type (LR3). Intensity of LED Nr.9 was also measured with nearly depleted batteries for reference (oldbatt).
+            </p>
+        </div>
+    </div>
+			<p>
+				<a ref="ledintensitymeasurements"></a>  maps the intensity parameters to absolute intensity values. We can conclude that the measured LED:s are very close in measured intensities and this suggests that the LED:s intensities of the different components don't vary much. We can also note that the LED intensity is a function of battery level, which is unfortunate. The design of the LED-rig is not perfect. We can tackle this problem, however, by always using fresh batteries or USB-power when available. A proper voltage-regulator on the LED supply voltage should be considered in future experiments. We can see from <a ref="ledintensitymeasurements"></a> <i>LED9 oldbatt</i> graph that the intensity decreases to a tenth of it's original value when the batteries are depleted.
 		  	</p>
 			<h4>Programming</h4>
 		  	<p>
@@ -467,10 +486,9 @@
 		  		One can easily construct a lookup table for values with a logarithmic function, eg. 4095-4095*(lg(10-x*9)), x=0...1, where lg is the 10 logarithm.
 		  	</p>
 
-            <p><strong>
-                LED spectrum, power measurements and intensity measurements?
-                Heat production measurements?
-            </strong></p>
+            <p>
+			
+			</p>
 
 		  	<h4>Technical Details</h4>
 		  	<ul>
@@ -492,9 +510,13 @@
             <p class="kuvateksti">
             	LED rig close-up.
             </p>
+			<img src="http://2014.igem.org/wiki/images/0/05/Aalto-Helsinki_2014_led_intensity.jpg" class="img-responsive"></img>
+            <p class="kuvateksti">
+            	Measuring the intensity levels of the LED:s. Did you expect to see something? We measured our LED:s in the dark!
+            </p>
 			<a href="http://2014.igem.org/wiki/images/9/9d/AaltoHelsinki_arduino_code_00.png"><img src="http://2014.igem.org/wiki/images/9/9d/AaltoHelsinki_arduino_code_00.png" class="img-responsive"></img></a>
             <p class="kuvateksti">
-            	ImageSource code of a basic program that initializes the LED-intensities to certain values.
+            	Source code of a basic program that initializes the LED-intensities to certain values.
             </p>
         </div>
     </div>

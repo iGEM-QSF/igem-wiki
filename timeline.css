@@ -4,6 +4,10 @@ img { border: 0; max-width: 100%; }
   width: 100%;
 }
 
+.tlsmallimg {
+  width: 50%;
+}
+
 .page-header h1 {
   font-size: 3.26em;
   text-align: center;

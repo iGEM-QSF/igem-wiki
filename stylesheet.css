@@ -260,7 +260,7 @@ header .navbar {
 }
 
 #laurakuva, #lassikuva, #minttukuva, #oskarikuva, #pietukuva, #mikkokuva,
-#niklaskuva, #ottokuva, #martinakuva, .advisorskuvat {
+#niklaskuva, #ottokuva, #martinakuva, #advisorskuvat {
   width: auto;
 }
 
@@ -339,6 +339,7 @@ header .navbar {
   background-color: rgba(95, 95, 95, 0.42);
   margin-bottom: -0.5em;
   padding: 0.5em;
+  padding-bottom: 0.75em;
   color: white;
   width: 100%;
 }

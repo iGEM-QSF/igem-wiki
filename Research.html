@@ -289,7 +289,7 @@
 		<div class="img-center">
 			<img src="http://2014.igem.org/wiki/images/c/cd/Aalto_Helsinki_lambda-loop.png" ref="lambdaloop" class="img-responsive"></img>
 			<p class="kuvateksti">
-				<b><span ref="lambdaloop">.</span></b>: Two tetramers at <em>O</em><sub>L</sub> and <em>O</em><sub>R</sub> sites form an octamer by looping the DNA. They proposed that this DNA looping juxtaposes <em>O</em><sub>R</sub>3 and <em>O</em><sub>L</sub>3 sites and allows them to be linked by a CI tetramer.
+				<b><span ref="lambdaloop">.</span></b>: Two tetramers at <em>O</em><sub>L</sub> and <em>O</em><sub>R</sub> sites form an octamer by looping the DNA. DNA looping juxtaposes <em>O</em><sub>R</sub>3 and <em>O</em><sub>L</sub>3 sites and allows them to be linked by a CI tetramer.
 			</p>
 		</div>
 	</div>
@@ -308,7 +308,7 @@
         To better match the BioBrick standards and the idea about being able to ligate BioBricks together as is, we wanted to make our promoters unidirectional. The <em>P</em><sub>RM</sub> and <em>P</em><sub>R</sub> promoters, however, point to opposite directions. This would require flipping the BioBricks added to the preceding strand or using reverse complement BioBricks. This would not be very convenient. Hence, we make a duplication of the OR sites, one coupled with <em>P</em><sub>RM</sub> and the other connected to <em>P</em><sub>R</sub> promoter. We suggest we are able to repress <em>P</em><sub>R</sub> promoter and activate <em>P</em><sub>R</sub> promoter with CI dimers despite this duplication.
     </p>
     <p>
-        The third hypothesis is related to the DNA looping as a result of CI octamerization at the operator sites (<a ref="lambdaloop"></a>). Originally, DNA looping takes place between <em>O</em><sub>R</sub> and <em>O</em><sub>L</sub> sites by octamerization of CI dimers bound to operator sites 1 and 2 ab both locations. As <em>O</em><sub>R</sub> and <em>O</em><sub>L</sub> regions resemble each other in terms of CI affinity and as the interacting factor seems to be CI and not the DNA sequence, we hypothesize that <em>O</em><sub>L</sub> could be replaced by <em>O</em><sub>R</sub> region without losing the DNA looping capability. This would also underline the significance of the previous assumption: as we have duplicated the <em>O</em><sub>R</sub> sites we already have the hypotetical factors required for DNA looping and <em>P</em><sub>RM</sub> repression. Therefore, if we duplicate the <em>O</em><sub>R</sub> region and separate them with correct number of bases, we might be able to form the DNA loop between these regions without having a <em>O</em><sub>L</sub> region.
+        The third hypothesis is related to the DNA looping as a result of CI octamerization at the operator sites (<a ref="lambdaloop"></a>). Originally, DNA looping takes place between <em>O</em><sub>R</sub> and <em>O</em><sub>L</sub> sites by octamerization of CI dimers bound to operator sites 1 and 2 ab both locations. As <em>O</em><sub>R</sub> and <em>O</em><sub>L</sub> regions resemble each other in terms of CI affinity and as the interacting factor seems to be CI and not the DNA sequence, we hypothesize that <em>O</em><sub>L</sub> could be replaced by <em>O</em><sub>R</sub> region without losing the DNA looping capability. This would also underline the significance of the previous assumption: as we have duplicated the <em>O</em><sub>R</sub> sites we already have the hypotetical factors required for DNA looping and <em>P</em><sub>RM</sub> repression. Therefore, if we duplicate the <em>O</em><sub>R</sub> region and separate them with correct number of bases, we might be able to form the DNA loop between these regions without having a <em>O</em><sub>L</sub> region as illustrated in <a ref="switchloop"></a>.
     </p>
     <p>
         The lambda repressor functions in lambda profage when the virus is in the lysogenic state. This means the lambda repressor is integrated as a part of the genome. It has been shown that the DNA looping takes place in the infected <em>E. coli</em> cells. However, we have not found evidence that this would happen also in the plasmids containing the lambda repressor region. It is possible the supercoiled structure of the plasmid prevents the normal function of the lambda repressor. We have identified three possible scenarios. Firstly, the lambda repressor could function within the plasmid as is. Alternatively, the loop size formed by lambda repressor may be changed or it may be easier or more difficult to be formed but it may work with some modifications. The worst scenario is that the lambda repressor does not work at all in the plasmid context. In such case, our three channel switch could be integrater to the <em>E. coli</em> genome.
@@ -334,13 +334,22 @@
     <h2>Parts</h2>
 
     <p>
-        The gene circuit consists of two different segments: the light sensor that produces CI according to the intensity of light and the actual switch that responds to the differences in the concentration of repressor protein CI. You can find the complete sequence of the switch from <a href="http://2014.igem.org/wiki/images/4/47/Aalto_Helsinki_Gene_Switch.txt">this file (click)</a>.
-    </p>
-    <p>
-        Here’s a list of all the BioBricks that we used in our gene switch. They are in the same order as they are in our gene circuit, and the previously mentioned sequence file.
+        The gene circuit consists of two different segments: the light sensor that produces CI according to the intensity of light and the actual switch that responds to the differences in the concentration of repressor protein CI. You can find the complete sequence of the switch from <a href="http://2014.igem.org/wiki/images/4/47/Aalto_Helsinki_Gene_Switch.txt" id="sequence">this file (click)</a>.
     </p>
 
+    <div class="row">
+		<div class="img-center">
+			<img src="http://2014.igem.org/wiki/images/f/f4/Aalto_Helsinki_Gene_Circuit.png" ref="genecircuit" class="img-responsive"></img>
+			<p class="kuvateksti">
+				<b><span ref="genecircuit">.</span></b>: This is our gene circuit. The upper part is the light sensing segment that produces the CI protein and the lower part reacts to differences in the CI concentration and switches the gene channel. The turquoise arrows are promoters, the turquoise circles are operator sites, the light blue circles are ribosome binding sites, the gray squares are expressed genes. The promoter of YF1 gene can be any constitutive promoter.
+			</p>
+		</div>
+	</div>
+
     <h4>Parts in Our Gene Switch</h4>
+    <p>
+        Here’s a list of all the BioBricks that we used in our gene switch. They are in the same order as they are in our gene circuit (<a ref="genecircuit"></a>), and the previously mentioned <a href="#Parts">sequence file</a>.
+    </p>
     <ul>
 		<li><a href="http://parts.igem.org/Part:BBa_K823008 ">BBa_K823008</a> Anderson Promoter J23106</li>
 		<li><a href="http://parts.igem.org/Part:BBa_K592016">BBa_K592016</a> B0034-YF1-B0034-FixJ, blue light sensor and RR with RBS</li>
@@ -373,7 +382,7 @@
 	
 	<h4>Parts That We Created</h4>
 	<p>
-		Here's the <a href="http://2014.igem.org/Team:Aalto-Helsinki/Parts">link to the official group parts table (click)</a>.
+		Here's the <a href="http://2014.igem.org/Team:Aalto-Helsinki/Parts">link to our official group parts table (click)</a>.
 	</p>
 	<p>
 		List of the parts:
@@ -385,15 +394,6 @@
 		<li><a href="http://parts.igem.org/Part:BBa_K1443003">BBa_K1443003</a> RFP binding forward primer for backbone amplification</li>
 		<li><a href="http://parts.igem.org/Part:BBa_K1443004">BBa_K1443004</a> RFP binding reverse primer for backbone amplification</li>
 	</ul>
-
-    <div class="row">
-		<div class="img-center">
-			<img src="http://2014.igem.org/wiki/images/f/f4/Aalto_Helsinki_Gene_Circuit.png" ref="genecircuit" class="img-responsive"></img>
-			<p class="kuvateksti">
-				<b><span ref="genecircuit">.</span></b>: This is our gene circuit. The upper part is the light sensing segment that produces the CI protein and the lower part reacts to differences in the CI concentration and switches the gene channel. The turquoise arrows are promoters, the turquoise circles are operator sites, the light blue circles are ribosome binding sites, the gray squares are expressed genes. The promoter of YF1 gene can be any constitutive promoter.
-			</p>
-		</div>
-	</div>
 
 </article>
 <div class="update Parts"></div>
@@ -460,7 +460,7 @@
 		  	</p>
 			<h4>Programming</h4>
 		  	<p>
-		        The Arduino source code used for the measurements is available on our <a href="https://github.com/iGEM-QSF/pwm-led-rig/">Github pages</a> . An example of the source code used can be seen in the image below.
+		        The Arduino source code used for the measurements is available on our <a href="http://github.com/iGEM-QSF/pwm-led-rig/">Github pages</a> . An example of the source code used can be seen in the image below.
 		  	</p>
 		  	<p>
 		  		The most important thing to inderstand when varying the LED brightness is that the percieved brightness is logarithmic. So the difference between 1 and 3 is clearly visible to the eye, but the difference between 4095 and 4096 is not.
@@ -786,7 +786,7 @@
         The experiments done for the blue light response element are very similar to those required for testing the entire three channel gene switch system. We would use LED rig to control the blue light intensity and would measure the effect of three different reporter systems. If feasible, these reporters could be three different fluorescent proteins whose excitation spectrum overlaps as little as possible. Alternatively, a LacZ reporter system could be used. The reponse of each different reporter system would be measured regularly during a several hour experiment. A second experiment would measure the dynamics of the system and evaluate, how fast and reliably is it possible to switch between the active genes.
     </p>
     <p>
-        Lastly, as one may note in our simulation, we have also planned to include another light sensing element for red light in our system. A good candidate for the light receptor would be engineered version of Cph8. The role of the red light would be regulating the rate of transcription of the the three target genes in contrast to blue light, which defines the gene being transcribed. The purpose is to have control over both rate of transcription and the gene being active. The red light response could be mediated by CRISPR/dCas9 system by associating the complex with light activated Krüppel-associated Box (KRAB) as described by Freiburg 2013 team. The system would identify a sequence assiociated with each target gene. Therefore, we could regulate the rate of transcription at each three genes using red light. However, the exact mechanism of such a system is yet to be designed and tested.
+        Lastly, as one may note in our <a href="http://2014.igem.org/Team:Aalto-Helsinki/Modeling#Simulation">simulation</a>, we have also planned to include another light sensing element for red light in our system. A good candidate for the light receptor would be engineered version of Cph8. The role of the red light would be regulating the rate of transcription of the the three target genes in contrast to blue light, which defines the gene being transcribed. The purpose is to have control over both rate of transcription and the gene being active. The red light response could be mediated by CRISPR/dCas9 system by associating the complex with light activated Krüppel-associated Box (KRAB) as described by Freiburg 2013 team. The system would identify a sequence assiociated with each target gene. Therefore, we could regulate the rate of transcription at each three genes using red light. However, the exact mechanism of such a system is yet to be designed and tested.
     </p>
 
 </article>
@@ -818,13 +818,13 @@
             Bell, C. E., Frescura, P., Hochschild, A., & Lewis, M. (2000). <em>Crystal Structure of the λ Repressor C-Terminal Domain Provides a Model for Cooperative Operator Binding.</em> Cell, 101(7), 801–811. doi:10.1016/S0092-8674(00)80891-0
         </li>
         <li>
-            Corish, P., & Tyler-Smith, C. (1999). Attenuation of green fluorescent protein half-life in mammalian cells. Protein Engineering, 12(12), 1035–40. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/10611396
+            Corish, P., & Tyler-Smith, C. (1999). <em>Attenuation of green fluorescent protein half-life in mammalian cells.</em> Protein Engineering, 12(12), 1035–40. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/10611396
         </li>
         <li>
             Cormack, B. P., Valdivia, R. H., & Falkow, S. (1996). <em>FACS-optimized mutants of the green fluorescent protein (GFP).</em> Gene, 173(1), 33–8. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/8707053
         </li>
         <li>
-            Diensthuber, R. P., Bommer, M., Gleichmann, T., & Möglich, A. (2013). Full-length structure of a sensor histidine kinase pinpoints coaxial coiled coils as signal transducers and modulators. Structure (London, England : 1993), 21(7), 1127–36. doi:10.1016/j.str.2013.04.024
+            Diensthuber, R. P., Bommer, M., Gleichmann, T., & Möglich, A. (2013). <em>Full-length structure of a sensor histidine kinase pinpoints coaxial coiled coils as signal transducers and modulators.</em> Structure (London, England : 1993), 21(7), 1127–36. doi:10.1016/j.str.2013.04.024
         </li>
         <li>
             Dodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). OcDodd, I. B., Perkins, A. J., Tsemitsidis, D., & Egan, J. B. (2001). <em>Octamerization of lambda CI repressor is needed for effective repression of P(RM) and efficient switching from lysogeny.</em> Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301tame. Genes & Development, 15(22), 3013–22. doi:10.1101/gad.937301

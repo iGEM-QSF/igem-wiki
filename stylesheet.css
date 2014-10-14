@@ -259,12 +259,21 @@ header .navbar {
   margin-bottom: 2em;
 }
 
+#laurakuva, #lassikuva, #minttukuva, #oskarikuva, #pietukuva, #mikkokuva,
+#niklaskuva, #ottokuva, #martinakuva, .advisorskuvat {
+  width: auto;
+}
+
 .university-title {
   padding-top: 0;
 }
 
 .margintop {
   margin-top: 2em;
+}
+
+.nopaddingtop {
+  padding-top: 0;
 }
 
 .text-col-right {
@@ -599,7 +608,7 @@ header .navbar {
 
 .sponsorrow {
   align-items: center;
-  margin: 20px 0;
+  margin: 4em 0;
 }
 
 .sponsorrow .col-md-4 {

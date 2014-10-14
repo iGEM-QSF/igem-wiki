@@ -166,6 +166,10 @@ img { border: 0; max-width: 100%; }
   margin-top: 5px;
 }
 
+.tl-body {
+  margin-bottom: 1em;
+}
+
 footer {
 	clear:both;
 }

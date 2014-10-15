@@ -842,3 +842,11 @@ footer {
 }
 
 /* Padit ja puhelimet loppu */
+
+/* Taustat */
+
+.abg-pcb {
+  background-image: url('http://2014.igem.org/wiki/images/b/ba/Aalto_Helsinki_PCB.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+}

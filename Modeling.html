@@ -285,6 +285,14 @@
 	</p>
 
 	<p>
+		While running the simulations, we noticed that when activating all the promoters while the $CI$ concentration was zero, both proteins $A$ and $C$ were produced simultaneously instead of just the anticipated $A$. When $TetR$ is further produced by the activation of $P_R$ promoter, $CI$ production is repressed and the concentration drops back to zero. We had no idea that a $CI$ spike would appear based on the theoretical model of our gene circuit, so this phenomenon was discovered entirely thanks to our model.
+	</p>
+
+	<p>
+		We also noticed that going from directly producing the protein $A$ to protein $C$, or reversely, from $C$ to $A$ is impossible wothout producing some protein $B$ on the way. We thus concluded that our Gene Switch is not entierely orthogonal between the three channels. The possible interactions with other products with protein $B$ are needed to be taken under consideration when designing applications that only use genes $A$ and $C$.
+	</p>
+
+	<p>
 		Upon later research, we found out the actual mechanism with which $FixJ$ was phosphorylated. Unlike in our model, the phosphate is actually transmitted from $YF1$ to $FixJ$. In their 2009 paper, Möglich, Ayers and Moffat showed that in a two-step reaction, $FixL$ first undergoes autophosphorylation  and then transfers the phosphate to its cognate, noncovalently bound, response regulator $FixJ$. The $YF1$ protein we used is a derivative of $FixL$ with one different domain, so it behaves the same way in this reaction. This wasn't however implemented in our model.
 	</p>
 

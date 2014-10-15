@@ -850,3 +850,9 @@ footer {
   background-repeat: no-repeat;
   background-position: right center;
 }
+
+.abg-dnaseq {
+  background-image: url('http://2014.igem.org/wiki/images/f/fc/Aalto_Helsinki_dnaseq.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+}

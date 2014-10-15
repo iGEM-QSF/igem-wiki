@@ -35,7 +35,7 @@ ul {
 }
 
 .modellatex, .modelimg {
-  padding-top: 3em;
+  padding-top: 2em;
   padding-bottom: 1.5em;
 }
 
@@ -279,6 +279,22 @@ header .navbar {
 
 .nopaddingtop {
   padding-top: 0;
+}
+
+.nopaddingbottom {
+  padding-bottom: 0;
+}
+
+.ykspaddingbottom {
+  padding-bottom: 1em;
+}
+
+.kakspaddingbottom {
+  padding-bottom: 2em;
+}
+
+.kakspaddingtop {
+  padding-top: 2em;
 }
 
 .text-col-right {

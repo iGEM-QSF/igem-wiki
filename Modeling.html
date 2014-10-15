@@ -76,7 +76,7 @@
 	</p>
 
 	<p>
-		Using our equations we constructed a simulation showing the effects of red and blue light on our system in real time. The user can control the input of both lights to see how they affect the production of proteins $A$, $B$ and $C$. We experimented with different values for all constants and with trial-and-error iteration we arrived to a visualized simulation that can be used to demonstrate the intended function of our system. This is an idealization. Based on present and future measurement data, the parameters can be adjusted to better fit the dynamics of our system.
+		Using our equations we constructed a simulation showing the effects of red and blue light on our system in real time. The user can control the input of both lights to see how they affect the production of proteins $A$, $B$ and $C$. We experimented with different values for all constants and with trial-and-error iteration we arrived to a visualized simulation that can be used to demonstrate the intended function of our system. This is an idealization. Based on present and future measurement data, the parameters can be adjusted to better the dynamics of our system.
 	</p>
 
 </article>
@@ -88,7 +88,6 @@
 	<h2>Mathematical model</h2>
 
 	<h3>Overview </h3>
-
 	<p>
 		Here we will discuss the dynamics and interactions of different proteins and promoters introduced in the research section. We have developed a mathematical model describing our system.
 	</p>
@@ -160,10 +159,10 @@
 	<h3>Rate coefficients</h3>
 
 	<p>
-		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of promoters. These change and $Rbs_1$ & $Rbs_2$ the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $YF1$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $YF1$. The dephosphorylation here depends on the respective dephosphorylation coefficient $DP$(1 & 2 for $YF1$ and $FixJ$).
+		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of promoters. These change and $Rbs_1$&$Rbs_2$ the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $YF1$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $YF1$. The dephosphorylation here depends on the respective dephosphorylation coefficient $DP$(1&2 for $YF1$ and $FixJ$).
 	</p>
 
-	<h3>Equations for promoter activities</h3>
+	<h3>Equations for Promoter Activities</h3>
 
 	<div class="row modelimg">
 		<div class="img-center">
@@ -198,7 +197,7 @@
 	<h3>Promoter coefficients</h3>
 
 	<p>
-		Here the $C_{P_n}$ denote the respective promoter's maximum activity. The $N$ in front of $CI$ and $TetR$ concentrations is a normalization coefficient, which is needed to map the fitting part of concentrations' values to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The functions' definitions must also change so that they never take negative values, which would make no sense when talking about promoter activity. We have simplified the model so that the promoters’ activities only depend on the concentration of $[CI]$ protein. We also assumed that the binding of $CI$ had insignificant effect on its concentration, and that the amount of $CI$ binded to the $O_R$ sites was proportional to $CI$ concentration.
+		Here the $C_{P_n}$'s denote the respective promoter's maximum activity. The $N$ in front of $CI$ and $TetR$ concentrations is a normalization coefficient, which is needed to map the fitting part of concentrations' values to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The functions definitions must also change so that they never take negative values, which would make no sense when talking about promoter activity. We have simplified the model so that the promoters’ activity only depend on the concentration of $[CI]$ protein. We also assumed that the binding of $CI$ had insignificant effect on its concentration, and that the amount of $CI$ binded to the $O_R$ sites was proportional to $CI$ concentration.
 	</p>
 
 </article>

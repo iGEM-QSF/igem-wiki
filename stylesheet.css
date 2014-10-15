@@ -115,6 +115,7 @@ blockquote:before {
   position: absolute;
   left: 0;
   top: -115px;
+  font-family: cursive;
 }
 
 blockquote cite {

@@ -133,8 +133,9 @@
 			<li><strong>$[TetR]$</strong> = concentration of $TetR$ protein</li>
 			<li><strong>$P_1$</strong> = relative strength of the first promoter in gene circuit</li>
 			<li><strong>$P_2$</strong> = relative strength of the $FixK_2$ promoter</li>
-			<li><strong>$P_A$</strong> = relative strength of the $P_R$ promoter, codes gene A</li>
-			<li><strong>$P_B$</strong> = relative strength of the $P_{RM}$ promoter, codes gene B</li>
+			<li><strong>$P_A$</strong> = relative strength of the $P_R$ promoter, codes gene $A$</li>
+			<li><strong>$P_B$</strong> = relative strength of the $P_{RM}$ promoter, codes gene $B$</li>
+			<li><strong>$P_C$</strong> = relative strength of the promoter coding gene $C$
 			<li><strong>$Rbs$</strong> = relative strengths of ribosome binding sites</li>
 			<li><strong>$Deg$</strong> = degradation coefficient</li>
 			<li><strong>$C_{phos}$</strong> = phosphorylation coefficient</li>
@@ -285,7 +286,7 @@
 	</p>
 
 	<p>
-		While running the simulations, we noticed that when activating all the promoters while the $CI$ concentration was zero, both proteins $A$ and $C$ were produced simultaneously instead of just the anticipated $A$. When $TetR$ is further produced by the activation of $P_R$ promoter, $CI$ production is repressed and the concentration drops back to zero. We had no idea that a $CI$ spike would appear based on the theoretical model of our gene circuit, so this phenomenon was discovered entirely thanks to our model.
+		While running the simulations, we noticed that when activating all the promoters while the $CI$ concentration was zero, both proteins $A$ and $C$ were produced simultaneously instead of just the anticipated $A$. When $TetR$ is further produced by the activation of $P_R$ promoter, $CI$ production is repressed and the concentration drops back to zero. Secondly, when blue light intensity is set to a level that corresponds to the maximum concentration of either $A$ or $B$, the promoter activity adjustable using the red light and it should only affect the said concentration. Again, when lowering the activity enough, we noticed that a spike in production of protein $C$ appeared again. This seemed to be caused by the lowered concentration of $TetR$ that allowed a leak in $P_C$ promoter. We had no idea that a $CI$ spike would appear based on the theoretical model of our gene circuit, so this phenomenon was discovered entirely thanks to our model.
 	</p>
 
 	<p>

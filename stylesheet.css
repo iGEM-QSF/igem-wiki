@@ -30,6 +30,10 @@ ul {
   padding-right: 1em;
 }
 
+.smallerimg {
+  width: 50%;
+}
+
 .modellatex, .modelimg {
   padding-top: 3em;
   padding-bottom: 1.5em;

@@ -281,6 +281,18 @@ header .navbar {
   padding-top: 0;
 }
 
+.nopaddingbottom {
+  padding-bottom: 0;
+}
+
+.ykspaddingbottom {
+  padding-bottom: 1em;
+}
+
+.kakspaddingtop {
+  padding-top: 2em;
+}
+
 .text-col-right {
   padding-left: 2em;
 }

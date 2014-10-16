@@ -68,11 +68,11 @@
 	<h2 class="kakspaddingbottom">Introduction</h2>
 
 	<p>
-		To get an idea of how our gene circuit would work in an ideal situation, we explored the structure and dynamics of our system by creating a mathematical model of the reaction kinetics and a simulation that can be controlled in real time. We started working with the mathematical model without any initial information. We derived differential equations to demonstrate how the use blue light and the changes in phosphorylated $YF1$ and $FixJ$ concentrations would control the production of our three target proteins. We labeled them simply $A$, $B$, and $C$, because the system is intended to be used with any three genes encoding different proteins.
+		To get an idea of how our gene circuit would work in an ideal situation, we explored the structure and dynamics of our system by creating a mathematical model of the reaction kinetics and a simulation that can be controlled in real time. We started working with the mathematical model without any detailed information about the system. We derived the differential equations to demonstrate how blue light and the changes in phosphorylated $YF1$ and $FixJ$ concentrations would affect the production of our three target proteins. We labeled them simply $A$, $B$ and $C$, because the system is intended to be used with any three genes encoding the proteins of choice.
 	</p>
 
 	<p>
-		Using our equations we constructed a simulation showing the effects of red and blue light on our system in real time. The user can control the input of both lights to see how they affect the production of proteins $A$, $B$ and $C$. We experimented with different values for all constants and with trial-and-error iteration we arrived to a visualized simulation that can be used to demonstrate the intended function of our system. This is an idealization. Based on present and future measurement data, the parameters can be adjusted to better the dynamics of our system.
+		Using our equations we constructed a simulation showing the effects of red and blue light on our system in real time. The user can control the input of both lights to see how they affect the production of proteins $A$, $B$ and $C$. We experimented with different values for all constants and via trial-and-error iteration we arrived to a visualized simulation that can be used to demonstrate the intended function of our system. This is an idealization. Based on present and future measurement data, the parameters can be adjusted to better the dynamics of our system.
 	</p>
 
 </article>
@@ -86,11 +86,11 @@
 	<h3 class="kakspaddingtop">Assumptions</h3>
 
 	<p>
-		We assumed that the species identified from our gene circuit are the only ones that affect the overall concentrations inside the bacteria. The bonding of $CI$ to $O_R$ sites is assumed to be insignificant compared to the overall concentration. The model is also strictly deterministic and doesn’t take into account any noise. The phosphorylation, decay, bonding and production of proteins are assumed to be linear functions of concentration. We further assumed that the phosphorylation of $FixJ$ by phosphorylated $YF1$ would not involve phosphorous transition between the reacting molecules.
+		We assumed that the species identified in our gene circuit are the only ones that affect the overall concentrations inside the bacteria. We further assumed that binding of $C$I to $O_R$ operator site does not impact the overall $CI$ concentration and that the amount of $CI$ bound to the $O_R$ sites was proportional to $CI$ concentration. The model is also strictly deterministic and doesn’t take any noise into account. The phosphorylation, decay, binding and production of proteins are assumed to be linear functions of concentration. We further assumed that the phosphorylation of $FixJ$ by phosphorylated $YF1$ would not involve phosphate transfer between the reacting molecules.
 	</p>
 
 	<p>
-		The first model that was constructed before our lab work had even begun involves many harsh simplifications. Our aim was to get a general picture of how the system could work in ideal conditions and how stable it was.
+		The first model was constructed before our lab work had even begun and it contains many harsh simplifications. Our aim was to get a general picture of how the system could work in ideal conditions and how stable it was.
 	</p>
 
 	<h3>Equations for Dynamics</h3>
@@ -145,13 +145,13 @@
     </div>
     <br><br>
 	<p>
-		These equations describe the essential proteins our system ($YF1$, $FixJ$, Phosphorylated $YF1$, Phosphorylated $FixJ$, $CI$, $TetR$). Proteins are produced with rates that depend on the strength of respective promoter and ribosome binding site, and also when phosphorylated protein (denoted with $phos$) is dephosphorylated back to its original form. The concentration of all proteins reduces by degradation, the rate of which depends on the concentration of protein in question.
+		These equations describe the essential proteins our system ($YF1$, $FixJ$, Phosphorylated $YF1$, Phosphorylated $FixJ$, $CI$, $TetR$). Proteins are produced with rates that depend on the strength of respective promoter and ribosome binding site, and also when phosphorylated protein (denoted with $phos$) is dephosphorylated back to its original form. The concentration of all proteins reduces by degradation and its depends on the concentration of protein in question.
 	</p>
 
 	<h3>Rate Coefficients</h3>
 
 	<p>
-		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of promoters. These change and $Rbs_1$&$Rbs_2$ the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $YF1$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $YF1$. The dephosphorylation here depends on the respective dephosphorylation coefficient $DP$(1&2 for $YF1$ and $FixJ$).
+		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of the promoters. $Rbs_1$&$Rbs_2$ are the relative strengths of ribosome binding sites, which both affect the mRNA translation rate linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $YF1$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $YF1$. The dephosphorylation here depends on the respective dephosphorylation coefficient $DP$(1&2 for $YF1$ and $FixJ$). Later on, we found out that non-phosphorylated YF1 acts as a phosphatase on FixJ. However, these effects are not taken into account in our model.
 	</p>
 
 	<h3 class="nopaddingbottom">Equations for Promoter Activities</h3>
@@ -189,7 +189,7 @@
 	<h3 class="nopaddingtop">Promoter Coefficients</h3>
 
 	<p>
-		Here the $C_{P_n}$'s denote the respective promoter's maximum activity. The $N$ in front of $CI$ and $TetR$ concentrations is a normalization coefficient, which is needed to map the fitting part of concentrations' values to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The functions definitions must also change so that they never take negative values, which would make no sense when talking about promoter activity. We have simplified the model so that the promoters’ activity only depend on the concentration of $[CI]$ protein. We also assumed that the binding of $CI$ had insignificant effect on its concentration, and that the amount of $CI$ binded to the $O_R$ sites was proportional to $CI$ concentration.
+		Here the $C_{P_n}$s denote the respective promoter's maximum activity. The $N$ in front of $CI$ and $TetR$ concentrations is a normalization coefficient, which is needed to map the fitting part of concentration values to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The functions definitions must also change so that they never take negative values, which would make no sense when it refers to promoter activity. We have simplified the model so that the promoters’ activity only depend on $[CI]$ and $[FixJ]$.
 	</p>
 
 </article>
@@ -203,23 +203,22 @@
 	<h3 class="kakspaddingtop">Overview </h3>
 
 	<p>
-		Based on our mathematical model, we created an interactive simulation and a graphical user interface for it. This visualization, although idealized, is ideal for demonstrating the intended functioning of our gene circuit and gene switch system. We included two switches, one for red and one for blue light. With these, the user can see the effect of light intensity to a bacterial culture in real time. Proteins A, B and C are represented by GFP, RFP and BFP, and therefore the bacteria change color in different circumstances.
-
+		Based on our mathematical model, we created an interactive simulation and a graphical user interface for it. This visualization, although idealized, is suitable for demonstrating the intended functioning of our gene circuit and the gene switch system. We included two sliders, one for red and one for blue light. With these, the user can see the effect of the light intensity to the simulated bacterial culture in real time. Proteins A, B and C are represented by GFP, RFP and BFP (green, red and blue fluorescent protein) and therefore the bacteria change color when lights’ intensities are changed.
 	<p/>
 
 	<h3>Lights </h3>
 
 	<p>
-		In our system, the communication between user and the bacteria happens via illuminating the culture with blue light. Blue light phosphorylates the $YF1$-protein, which is the key to controlling the overall protein production inside the bacterium. In the simulation, this is represented by change in the $I_B$ parameter from the mathematical model. This takes values between 0 and 1, and the rest of system behaves as described previously.
+		In our system, the communication between user and the bacteria happens via illuminating the culture with blue and red light. Blue light phosphorylates the $YF1$-protein, which is the key to controlling the production of $A$, $B$ and $C$ proteins inside the bacteria. In the simulation, this is represented by change in the $I_B$ parameter from the mathematical model. This takes values between 0 and 1, and the rest of the system behaves as described previously.
 	</p>
 	<p>
-		Our original design also had an intensity switch, operated by red light. Due to time constraits, this wasn't yet implemented in our gene circuit. In the simulation, we added a second user controlled parameter in front of every promoter. This takes values between 0 and 1, representing the no production at all -state and the production at maximum promoter activity. With this, the user has control of all protein concentrations. The assumed mechanism is idealized and has a linear effect on the activity.
+		Our original design also had a transcription intensity switch, controlled by red light. Due to time constrains, this wasn't yet implemented in our gene circuit. In the simulation, we added a second user controlled parameter in front of every promoter. This takes values between 0 and 1, representing the zero production state and the production at maximum promoter activity. With this, the user has control of all desired protein concentrations. The assumed mechanism is idealized and has a linear effect on the activity.
 	</p>
 
 	<h3>Runge-Kutta Method </h3>
 
 	<p>
-		The dynamics of our system were approximated using 4th order Runge-Kutta method (RK4) for the differential equations in our mathematical model. The point of this method is to approximate the function in question by it's derivatives without having to solve the function itself. The starting values of each concentration are assumed to be zero, so $y(0) = 0$. The simulation computes the next datapoint adding the derivative times a timestep $h$ to previous concentrations. The method uses a mean value of different derivatives (the different k's below) during timestep $h$ to get a more accurate approximation.
+		The dynamics of our system were approximated and computed using 4th order Runge-Kutta method (RK4) for the differential equations in our mathematical model. The point of this method is to approximate the function in question by it's derivatives without having to solve the function itself. The starting values of each concentration are assumed to be zero, so $y(0) = 0$. The simulation computes the next datapoint adding the derivative times a timestep $h$ to previous concentrations. The method uses a mean value of different derivatives (the different k's below) during timestep $h$ to get a more accurate approximation.
 	</p>
 
     <div class="row modelimg">
@@ -247,7 +246,7 @@
 	<h3 class="nopaddingtop">Software Implementation</h3>
 
 	<p>
-		A computational model was created based on our mathematical model and the RK4 approximation. We made a real-time plotting function to illustrate the dynamics in a simple and clear graphic UI. We added two light switches so that the user can have an impact on our simulation in real time. This all was then further developed into a presentable, user-friendly form that is accessible from our website. The simulation itself was created using Python and translated into Javascript for web implementation.
+		A computational model was created based on our mathematical model and the RK4 approximation. We made a real-time visualisation script to illustrate the dynamics in a simple and clear graphic UI. We added two light switches so that the user can have an impact on our simulation in real time. This all was then further developed into a presentable, user-friendly form that is accessible from our website. The simulation itself was created using Python and translated into Javascript for web implementation.
 	</p>
 
 	<div class="row">
@@ -261,11 +260,11 @@
 
 
 	<p>
-		To demonstrate our work to the general public in an event, <a href="http://2014.igem.org/Team:Aalto-Helsinki/Business#Sos">Summer of Startups Demo Day</a>, we made a <a href="http://igem-qsf.github.io/SimCircus/WebUI/">simulation</a> that shows our system in action. It shows an animated bacteria plate with adjustable light intensity sliders to remotely control the bacteria. The proteins the bacteria produce in this simulation are colors, so you can see how the changes in light intensity correlate to the color of the colonies on the plate. The simulation also has a nice graph that shows the protein levels in one second intervals so you can see more clearly what's going on in the cell.
+		To demonstrate our work for the general public in an event, <a href="http://2014.igem.org/Team:Aalto-Helsinki/Business#Sos">Summer of Startups Demo Day</a>, we used the <a href="http://igem-qsf.github.io/SimCircus/WebUI/">simulation</a> to show our system in action. It can be accessed with a web browser and shows an animated bacterial plate with adjustable light intensity sliders to remotely control the bacteria. The proteins the bacteria produce in this simulation are colors, so you can see how the changes in light intensity correlate to the color of the colonies on the plate. The simulation also has a nice graph that shows the protein levels in real time so you can see more clearly what's going on in the cell.
 	</p>
 
 	<p>
-		All of the code (including a more in-detail Python graph simulation) is available at the project's <a href="http://github.com/iGEM-QSF/SimCircus">GitHub page.</a>
+		All the code (including the Python simulation with more detailed graphs) is available at the project's <a href="http://github.com/iGEM-QSF/SimCircus">GitHub page.</a>
 	</p>
 </article>
 
@@ -278,7 +277,7 @@
 	<h2 class="ykspaddingbottom">Discussion</h2>
 
 	<p>
-		In biological systems, a huge number of variables affect the outcome of any process. Most of them are unknown, as in our case, so models generally include some noise to approximate these unknown factors. However, our model is simplified: it doesn’t take noise into consideration. Therefore all interactions produce smooth, good-looking curves in the graphic output. From another point of view, the clear graphics produced by the simulation are easily interpretable, so even someone not familiar with science can clearly see what's going on in our system.
+		Our model doesn’t take any noise into consideration. Therefore all interactions produce smooth, good-looking curves. On the other hand, the clear graphics generated by the simulation are easily interpretable, so even someone not familiar with science can clearly see what's going on in our system.
 	</p>
 
 	<p>
@@ -286,19 +285,19 @@
 	</p>
 
 	<p>
-		While running the simulations, we noticed that when activating all the promoters while the $CI$ concentration was zero, both proteins $A$ and $C$ were produced simultaneously instead of just the anticipated $A$. When $TetR$ is further produced by the activation of $P_R$ promoter, $CI$ production is repressed and the concentration drops back to zero. Secondly, when blue light intensity is set to a level that corresponds to the maximum concentration of either $A$ or $B$, the promoter activity adjustable using the red light and it should only affect the said concentration. Again, when lowering the activity enough, we noticed that a spike in production of protein $C$ appeared again. This seemed to be caused by the lowered concentration of $TetR$ that allowed a leak in $P_C$ promoter. We had no idea that a $CI$ spike would appear based on the theoretical model of our gene circuit, so this phenomenon was discovered entirely thanks to our model.
+		Some unexpected observations were made after running the simulation several times. We noticed that when activating all the promoters while the $CI$ concentration was zero, both proteins $A$ and $C$ were produced simultaneously instead of just the anticipated $A$. When $TetR$ is further produced by the activation of $PR$ promoter, $C$ production is repressed and the concentration drops back to zero. Secondly, when blue light intensity is set to a level that corresponds to the maximum concentration of either $A$ or $B$, the promoter activity adjustable using the red light and it should only affect the said concentration. Again, when lowering the activity enough, we noticed that a spike in production of protein $C$ appeared again. This seemed to be caused by the lowered concentration of $TetR$ that allowed a leak in $P_C$ promoter. We had no idea that a $C$ spike would appear based on the theoretical model of our gene circuit, so this phenomenon was discovered early thanks to our simulation.
 	</p>
 
 	<p>
-		We also noticed that going from directly producing the protein $A$ to protein $C$, or reversely, from $C$ to $A$ is impossible wothout producing some protein $B$ on the way. We thus concluded that our Gene Switch is not entierely orthogonal between the three channels. The possible interactions with other products with protein $B$ are needed to be taken under consideration when designing applications that only use genes $A$ and $C$.
+		We also noticed that going from directly producing the protein $A$ to protein $C$, or reversely, from $C$ to $A$ is virtually impossible without producing some protein $B$ along the way. We thus concluded that our Gene Switch is not entirely orthogonal between the three channels. The possible interactions with other products with protein $B$ are needed to be taken under consideration when designing applications that only use genes $A$ and $C$.
 	</p>
 
 	<p>
-		Upon later research, we found out the actual mechanism with which $FixJ$ was phosphorylated. Unlike in our model, the phosphate is actually transmitted from $YF1$ to $FixJ$. In their 2009 paper, Möglich, Ayers and Moffat showed that in a two-step reaction, $FixL$ first undergoes autophosphorylation  and then transfers the phosphate to its cognate, noncovalently bound, response regulator $FixJ$. The $YF1$ protein we used is a derivative of $FixL$ with one different domain, so it behaves the same way in this reaction. This wasn't however implemented in our model.
+		Upon later research, we found out the actual mechanism with which $FixJ$ was phosphorylated. In contrast to our model, the phosphate is actually transmitted from $YF1$ to $FixJ$. In their paper, Möglich et al. (2009, reference in research section) showed that in a two-step reaction, $FixL$ first undergoes autophosphorylation and then transfers the phosphate to its cognate, noncovalently bound, response regulator $FixJ$. The $YF1$ protein is a derivative of $FixL$ with different sensory domain, so it behaves the same way in this reaction. This wasn't however implemented in our model.
 	</p>
 
 	<p>
-		In it's current state the simulation gives a good idea on how the system should work. Making it realistic and really accurate requires a lot of measurement of appropriate parameters, research on appropriate scientific publications, and loads of tuning. Still, this version is ideal for demonstration of our idea, bringing the visual UI a lot of business value.
+		In it's current state the simulation gives a good idea on how the system should work. Making it realistic and accurate requires measuring the appropriate parameters, research on appropriate scientific publications, and tuning. Still, this version is ideal for demonstration of our idea, bringing the visual UI a significant marketing value.
 	</p>
 
 </article>

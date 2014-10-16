@@ -12,7 +12,7 @@
 		<div class="col-md-6">
 			<h1>Research</h1>
 			<p class="bigsplashtext">
-				The theory behind our customisable, light-controlled three-channel switch.
+				Everything about our customisable light-controlled three-channel switch.
 			</p>
 		</div>
 		<div class="col-md-3">
@@ -70,32 +70,26 @@
 
 	<h3>Introduction</h3>
 	<p>
-		We engineered a three-channel switch that can be controlled with the intensity of blue light. By utilizing the mechanisms of lambda (λ) repressor and linking it to a blue light sensor protein, we would be able to swiftly switch between the expressions of three different genes. This mechanism could provide a nearly real-time control over the chosen genes, which could advance a variety of industrial bioprocesses, speed up research projects and benefit metabolic engineering. The switch has a modular structure, and thus, the users can decide the genes themselves without needing to modify the actual mechanism at all.
+		We engineered a three-channel switch that can be controlled with the intensity of blue light. With a modified lambda (λ) repressor mechanism of lambda (λ) repressor linked to a blue light sensor protein sensor protein, we would be able to swiftly switch between the expressions of three different genes. This mechanism could provide a nearly real-time control over the chosen genes, which could advance a variety of industrial bioprocesses, speed up research projects and benefit metabolic engineering. The switch has a modular structure so the users can decide the genes themselves and changes to the mechanism itself should not be needed.
 	</p>
-    <p>
-        Previously gene regulation was controlled by chemical effectors, such as tetracycline and IPTG. In many cultures, a constant and uniform level of concentration is hard to maintain as the chemicals get absorbed, degraded and modified by the cells and environment. Moreover, export of these chemicals is hard and time consuming or even impossible and the response time is limited by the rate of chemical addition and diffusion. On top of all, the effector chemicals may even be toxic or bind unknown receptors leading to unwanted effects in the culture. (Schmidl et al., 2014)
-    </p>
-    <p>
-        Light signals, on the other hand, are non-toxic and we have full control over it: it is very easy to increase and decrease the light intensity. In many cases, light is orthogonal signal that is does not affect to the indigenous cell mechanisms and pathways. Such is the case in for ecample <em>E. coli</em>. We are also able to target light very specifically to single colonies or even single cells allowing unprecedented accuracy. This allows very precise spatial and temporal control over the light signal. And lastly, the light signals can be emitted using LEDs which are widely available, durable and very inexpensive even in a large scale.
-    </p>
 
     <h3>Features</h3>
 	<div class="row">
 		<div class="col-md-8 text-col-left">
 			<p>
-				We chose YF1 fusion protein as the light receptor protein. The receptor autophosphorylates in darkness but in blue light, it is unphosphorylated. A phosphorylated YF1 protein acts as a kinase and activates FixJ transcription factor, which can then bind to a <em>FixK<sub>2</sub></em> binding site and activate the production of λ repressor protein CI. The kinase activity of YF1 is inversely proportional to blue light intensity and the effect is carried on to the acitve FixJ concentration. Thus, CI protein is not produced in bright blue light but the production increases when the blue light is dimmed down.
+				We chose <b>YF1</b> fusion protein as the light receptor protein. The receptor autophosphorylates in darkness but in blue light, it is unphosphorylated. A phosphorylated YF1 protein acts as a kinase and activates <b>FixJ</b> transcription factor, which can then bind to a <b><em>FixK<sub>2</sub></em></b> binding site and activate the production of <b>λ repressor protein CI</b>. The kinase activity of YF1 is inversely proportional to blue light intensity and the effect is carried on to the active FixJ concentration. Thus, CI protein is not produced in bright blue light but the production increases as the blue light is dimmed down.
 			</p>
 			<p>
-				We used lambda repressor protein CI to regulate the genes in the switch.  Only <i>gene A</i> is active when there is no repressor protein CI. At medium concentrations of CI, <i>gene A</i> becomes deactivated and <i>gene B</i> is activated. At high concentrations of CI, only <i>gene C</i> is active. The activity and deactivity of the <i>gene C</i> is based on tetracycline repressor protein that is produced with <i>genes A</i> and <i>B</i>. When neither of those genes are active, <i>gene C</i> is activated. The activities of <i>genes A</i> and <i>B</i> are controlled with an interesting mechanism of lambda repressor, which is explained thoroughly under the background title on this page.
+				We used lambda repressor protein CI to regulate the genes in the switch.  Only <i>gene A</i> is active when there is no repressor protein CI. At medium concentrations of CI, <i>gene A</i> becomes deactivated and <i>gene B</i> is activated. At high concentrations of CI, only <i>gene C</i> is active. The activity and inactivity of the <i>gene C</i> is based on tetracycline repressor protein that is produced with <i>genes A</i> and <i>B</i>. <i>Gene C</i> is active only when both of the other <i>genes (A and B)</i> are inactive. The activities of <i>genes A</i> and <i>B</i> are controlled with a modified lambda repressor mechanism, which is explained thoroughly later on this page.
 			</p>
 			<p>
-				So, to put it all together, in blue light the switch activates <i>gene A</i>, in dim blue light <i>gene B</i>, and in darkness <i>gene C</i>. The image illustrates this functionality.
+				So, to put it all together, in blue light the switch activates <i>gene A</i>, in dim blue light <i>gene B</i>, and in darkness <i>gene C</i> as illustrated in <a ref="lamppukuva"></a>.
 			</p>
 		</div>
 		<div class="col-md-4 img-100">
-			<img src="http://2014.igem.org/wiki/images/f/fe/Aalto_Helsinki_Lamppukuva.png" class="img-responsive">
+			<img src="http://2014.igem.org/wiki/images/f/fe/Aalto_Helsinki_Lamppukuva.png" ref="lamppukuva" class="img-responsive">
 			<p class="kuvateksti">
-				In blue light the switch activates <i>gene A</i>, in dim blue light <i>gene B</i>, and in darkness <i>gene C</i>. The changes are based on differences in the concentration of the λ repressor protein CI.
+				<b><span ref="lamppukuva">.</span></b>: In blue light the switch activates <i>gene A</i>, in dim blue light <i>gene B</i>, and in darkness <i>gene C</i>. The changes are based on differences in the concentration of the λ repressor protein CI.
 			</p>
 		</div>
 	</div>
@@ -135,7 +129,7 @@
         		We started our BioBrick learning practice project mid May and the Summer of Startups programme early June. As we got forward, we realized that our idea is not very realistic. Implementation of such a separate unmaintained container would be very challenging and in addition, we cannot bring genetically modified bacteria outside laboratory conditions (it's defined in the gene technology legislation). We decided to solely focus on one element of our nest box idea. Constructing the interface between the bacteria and the user or a computer is not trivial. So, we redefined our direction which was maintained to the end. We wanted to develop a three channel switch that would allow us to activate one of the three genes at a time using only the intensity of single wavelength light. We could then connect this switch with fragrance producing genes, for example.
     		</p>
 			<p>
-			Later we realized that it would fit better in a <a href="http://2014.igem.org/Team:Aalto-Helsinki/Business#our-business-idea">bioreactor</a> in order to take precise control of gene transcription.
+				Later we realized that it would fit better in a <a href="http://2014.igem.org/Team:Aalto-Helsinki/Business#our-business-idea">bioreactor</a> in order to take precise control of gene transcription.
 			</p>
 		</div>
 		<div class="col-md-4 img-100">
@@ -162,6 +156,14 @@
     <h3>Earlier Research</h3>
     <div class="row">
 		<div class="col-md-8 text-col-left">
+			<h4>Why to Use Light</h4>
+			<p>
+		        Previously gene regulation was controlled by chemical effectors, such as tetracycline and IPTG. In many cultures, a constant and uniform level of concentration is hard to maintain as the chemicals get absorbed, degraded and modified by the cells and environment. Moreover, export of these chemicals is hard and time consuming or even impossible and the response time is limited by the rate of chemical addition and diffusion. On top of all, the effector chemicals may even be toxic or bind unknown receptors leading to unwanted effects in the culture. (Schmidl et al., 2014)
+		    </p>
+		    <p>
+		        Light signals, on the other hand, are non-toxic and we have full control over it: it is very easy to increase and decrease the light intensity. In many cases, light is orthogonal signal that is does not affect to the indigenous cell mechanisms and pathways. Such is the case in for example <em>E. coli</em>. We are also able to target light very specifically to single colonies or even single cells allowing unprecedented accuracy. This allows very precise spatial and temporal control over the light signal. And lastly, the light signals can be emitted using LEDs which are widely available, durable and very inexpensive even in a large scale.
+		    </p>
+		    <h4>Light in Earlier Research</h4>
 			<p>
 		        Optical control over molecular interactions has been harnessed in metabolic signaling, dimerization systems and light activated adrenergic receptors and neuronal ion channels. Most importantly in terms of synthetic biology we can now regulate transcription with light. One of the foundational papers were written in 2005 by Levskaya et al. <em>Synthetic biology: engineering Escherichia coli to see light</em>. Since then, many different light sensors and light regulators have been built. This toolbox enables more precise spatial and temporal control over the synthetic biological systems. Hence, light regulation has been part of many iGEM projects. Light sensors are arguably one of the most important elements in controlling gene expression in synthetic biology. In contrast to chemicals, we have full control over light intensity.
 		    </p>
@@ -327,7 +329,7 @@
   		<div class="img-center">
 			<img src="http://2014.igem.org/wiki/images/3/3d/Aalto_Helsinki_geneaactive.png" ref="geneaactive" class="img-responsive kakspaddingbot"></img>
 			<p class="kuvateksti">
-				<b><span ref="geneaactive">.</span></b>: This is our unidirectional version of Lambda repressor with duplicated <em>O</em><sub>R</sub> sites and planned genes A and B. When there is no CI present, only <i>gene A</i> will be active.
+				<b><span ref="geneaactive">.</span></b>: This is our unidirectional version of Lambda repressor with duplicated <em>O</em><sub>R</sub> sites and planned <i>genes A and B</i>. When there is no CI present, only <i>gene A</i> will be active.
 			</p>
 		</div>
 		<div class="img-center">
@@ -497,7 +499,7 @@
 		  	</p>
 			<h4>Programming</h4>
 		  	<p>
-		        The Arduino source code used for the measurements is available on our <a href="http://github.com/iGEM-QSF/pwm-led-rig/">Github pages</a> . An example of the source code used can be seen in the image below.
+		        The Arduino source code used for the measurements is available on our <a href="http://github.com/iGEM-QSF/pwm-led-rig/">GitHub pages</a> . An example of the source code used can be seen in the image below.
 		  	</p>
 		  	<p>
 		  		The most important thing to inderstand when varying the LED brightness is that the percieved brightness is logarithmic. So the difference between 1 and 2 is clearly visible to the eye, but the difference between 2000 and 4000 is not.

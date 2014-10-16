@@ -86,7 +86,7 @@
 	<h3 class="kakspaddingtop">Assumptions</h3>
 
 	<p>
-		We assumed that the species identified in our gene circuit are the only ones that affect the overall concentrations inside the bacteria. We further assumed that binding of $C$I to $O_R$ operator site does not impact the overall $CI$ concentration and that the amount of $CI$ bound to the $O_R$ sites was proportional to $CI$ concentration. The model is also strictly deterministic and doesn’t take any noise into account. The phosphorylation, decay, binding and production of proteins are assumed to be linear functions of concentration. We further assumed that the phosphorylation of $FixJ$ by phosphorylated $YF1$ would not involve phosphate transfer between the reacting molecules.
+		We assumed that the species identified in our gene circuit are the only ones that affect the overall concentrations inside the bacteria. We further assumed that binding of $CI$ to $O_R$ operator site does not impact the overall $CI$ concentration and that the amount of $CI$ bound to the $O_R$ sites was proportional to $CI$ concentration. The model is also strictly deterministic and doesn’t take any noise into account. The phosphorylation, decay, binding and production of proteins are assumed to be linear functions of concentration. We further assumed that the phosphorylation of $FixJ$ by phosphorylated $YF1$ would not involve phosphate transfer between the reacting molecules.
 	</p>
 
 	<p>
@@ -164,19 +164,19 @@
 
 	<p class="modellatex">
 		\begin{eqnarray*}
-		& & P_2  = C_{P_2}N[CI] \\
+		& & P_2  = C_{P_2}N_1[CI] \\
 		\\
 		& & P_A =
 		\begin{cases}
-		C_{P_A}N[CI] \quad \text{if} \quad N[CI] \leq 1 \\
-		0 \quad \text{if} \quad N[CI] > 1
+		C_{P_A}N_1[CI] \quad \text{if} \quad N_1[CI] \leq 1 \\
+		0 \quad \text{if} \quad N_1[CI] > 1
 		\end{cases} \\
 		\\
 		& & P_B =
 		\begin{cases}
-		C_{P_B}N[CI] \quad \text{if} \quad N[CI] < 1 \\
-		C_{P_B}(1-(N[CI] - 1)) \quad \text{if} \quad 1 \leq N[CI] < 2 \\
-		0 \quad \text{if} \quad N[CI] \geq 2
+		C_{P_B}N[CI] \quad \text{if} \quad N_1[CI] < 1 \\
+		C_{P_B}(1-(N_1[CI] - 1)) \quad \text{if} \quad 1 \leq N_1[CI] < 2 \\
+		0 \quad \text{if} \quad N_1[CI] \geq 2
 		\end{cases} \\
 		\\
 		& & P_C =
@@ -189,7 +189,7 @@
 	<h3 class="nopaddingtop">Promoter Coefficients</h3>
 
 	<p>
-		Here the $C_{P_n}$s denote the respective promoter's maximum activity. The $N$ in front of $CI$ and $TetR$ concentrations is a normalization coefficient, which is needed to map the fitting part of concentration values to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The functions definitions must also change so that they never take negative values, which would make no sense when it refers to promoter activity. We have simplified the model so that the promoters’ activity only depend on $[CI]$ and $[FixJ]$.
+		Here the $C_{P_n}$s denote the respective promoter's maximum activity. The $N_1$ and $N_2$ in front of $CI$ and $TetR$ concentrations are normalization coefficients, which are needed to map the values of $[CI]$ to the interval $(0,3)$ and values of $[TetR]$ to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The functions definitions must also change so that they never take negative values, which would make no sense when it refers to promoter activity. We have simplified the model so that the promoters’ activity only depend on $[CI]$ and $[FixJ]$.
 	</p>
 
 </article>
@@ -203,7 +203,7 @@
 	<h3 class="kakspaddingtop">Overview </h3>
 
 	<p>
-		Based on our mathematical model, we created an interactive simulation and a graphical user interface for it. This visualization, although idealized, is suitable for demonstrating the intended functioning of our gene circuit and the gene switch system. We included two sliders, one for red and one for blue light. With these, the user can see the effect of the light intensity to the simulated bacterial culture in real time. Proteins A, B and C are represented by GFP, RFP and BFP (green, red and blue fluorescent protein) and therefore the bacteria change color when lights’ intensities are changed.
+		Based on our mathematical model, we created an interactive simulation and a graphical user interface for it. This visualization, although idealized, is suitable for demonstrating the intended functioning of our gene circuit and the gene switch system. We included two sliders, one for red and one for blue light. With these, the user can see the effect of the light intensity to the simulated bacterial culture in real time. Proteins $A$, $B$ and $C$ are represented by GFP, RFP and BFP (green, red and blue fluorescent protein) and therefore the bacteria change color when lights’ intensities are changed.
 	<p/>
 
 	<h3>Lights </h3>
@@ -285,7 +285,7 @@
 	</p>
 
 	<p>
-		Some unexpected observations were made after running the simulation several times. We noticed that when activating all the promoters while the $CI$ concentration was zero, both proteins $A$ and $C$ were produced simultaneously instead of just the anticipated $A$. When $TetR$ is further produced by the activation of $PR$ promoter, $C$ production is repressed and the concentration drops back to zero. Secondly, when blue light intensity is set to a level that corresponds to the maximum concentration of either $A$ or $B$, the promoter activity adjustable using the red light and it should only affect the said concentration. Again, when lowering the activity enough, we noticed that a spike in production of protein $C$ appeared again. This seemed to be caused by the lowered concentration of $TetR$ that allowed a leak in $P_C$ promoter. We had no idea that a $C$ spike would appear based on the theoretical model of our gene circuit, so this phenomenon was discovered early thanks to our simulation.
+		Some unexpected observations were made after running the simulation several times. We noticed that when activating all the promoters while the $CI$ concentration was zero, both proteins $A$ and $C$ were produced simultaneously instead of just the anticipated $A$. When $TetR$ is further produced by the activation of $P_R$ promoter, $C$ production is repressed and the concentration drops back to zero. Secondly, when blue light intensity is set to a level that corresponds to the maximum concentration of either $A$ or $B$, the promoter activity adjustable using the red light and it should only affect the said concentration. Again, when lowering the activity enough, we noticed that a spike in production of protein $C$ appeared again. This seemed to be caused by the lowered concentration of $TetR$ that allowed a leak in $P_C$ promoter. We had no idea that a $C$ spike would appear based on the theoretical model of our gene circuit, so this phenomenon was discovered early thanks to our simulation.
 	</p>
 
 	<p>

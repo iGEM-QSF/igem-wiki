@@ -50,7 +50,7 @@ def upload(page, file, headerfooter = True):
 
     #---- read requested file ----#
     try:
-        with open (file, "r") as myfile:
+        with open (file, "r", encoding="utf8") as myfile:
             file_data=myfile.read()
     except FileNotFoundError:
         #print("File {:s} not found".format(file))

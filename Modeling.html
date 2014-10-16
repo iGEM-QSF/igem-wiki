@@ -93,7 +93,7 @@
 		The first model that was constructed before our lab work had even begun involves many harsh simplifications. Our aim was to get a general picture of how the system could work in ideal conditions and how stable it was.
 	</p>
 
-	<h3>Equations for dynamics</h3>
+	<h3>Equations for Dynamics</h3>
 
 	<p>
 		Based on the assumptions made before, we arrived at following differential equations to describe the idealized dynamics of our system:
@@ -148,7 +148,7 @@
 		These equations describe the essential proteins our system ($YF1$, $FixJ$, Phosphorylated $YF1$, Phosphorylated $FixJ$, $CI$, $TetR$). Proteins are produced with rates that depend on the strength of respective promoter and ribosome binding site, and also when phosphorylated protein (denoted with $phos$) is dephosphorylated back to its original form. The concentration of all proteins reduces by degradation, the rate of which depends on the concentration of protein in question.
 	</p>
 
-	<h3>Rate coefficients</h3>
+	<h3>Rate Coefficients</h3>
 
 	<p>
 		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of promoters. These change and $Rbs_1$&$Rbs_2$ the relative strengths of ribosome binding sites, which both affect the protein synthesis linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $YF1$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $YF1$. The dephosphorylation here depends on the respective dephosphorylation coefficient $DP$(1&2 for $YF1$ and $FixJ$).
@@ -186,7 +186,7 @@
 		\end{cases}
 		\end{eqnarray*}
 	</p>
-	<h3 class="nopaddingtop">Promoter coefficients</h3>
+	<h3 class="nopaddingtop">Promoter Coefficients</h3>
 
 	<p>
 		Here the $C_{P_n}$'s denote the respective promoter's maximum activity. The $N$ in front of $CI$ and $TetR$ concentrations is a normalization coefficient, which is needed to map the fitting part of concentrations' values to the interval $(0,1)$. This way, when multiplied by the promoters' maximum activity values, we get values in the interval $(0, C_{P_n})$  The functions definitions must also change so that they never take negative values, which would make no sense when talking about promoter activity. We have simplified the model so that the promoters’ activity only depend on the concentration of $[CI]$ protein. We also assumed that the binding of $CI$ had insignificant effect on its concentration, and that the amount of $CI$ binded to the $O_R$ sites was proportional to $CI$ concentration.
@@ -216,7 +216,7 @@
 		Our original design also had an intensity switch, operated by red light. Due to time constraits, this wasn't yet implemented in our gene circuit. In the simulation, we added a second user controlled parameter in front of every promoter. This takes values between 0 and 1, representing the no production at all -state and the production at maximum promoter activity. With this, the user has control of all protein concentrations. The assumed mechanism is idealized and has a linear effect on the activity.
 	</p>
 
-	<h3>Runge-Kutta method </h3>
+	<h3>Runge-Kutta Method </h3>
 
 	<p>
 		The dynamics of our system were approximated using 4th order Runge-Kutta method (RK4) for the differential equations in our mathematical model. The point of this method is to approximate the function in question by it's derivatives without having to solve the function itself. The starting values of each concentration are assumed to be zero, so $y(0) = 0$. The simulation computes the next datapoint adding the derivative times a timestep $h$ to previous concentrations. The method uses a mean value of different derivatives (the different k's below) during timestep $h$ to get a more accurate approximation.

@@ -108,16 +108,16 @@
 
 	<p class="modellatex">
 		\begin{eqnarray*}
-		& & \frac{d[YF1]}{dt} = P_1Rbs_1 + DP_1[YF1]_{phos} - (Deg_{YF1}+I_B)[YF1] \\ \quad \\
+		& & \frac{d[YF1]}{dt} = P_1Rbs_{YF1}} + DP_1[YF1]_{phos} - (Deg_{YF1}+I_B)[YF1] \\ \quad \\
 		& & \frac{d[YF1]_{phos}}{dt} = I_B[YF1] - (Deg_{\text{YF1}} + DP_1)[YF1]_{phos} \\
 		\
-		& & \frac{d[FixJ]}{dt} = P_1Rbs_1 + DP_2[FixJ]_{phos} - (C_{phos}[YF1]_{phos} + Deg_{FixJ})[FixJ] \\
+		& & \frac{d[FixJ]}{dt} = P_1Rbs_{FixJ} + DP_2[FixJ]_{phos} - (C_{phos}[YF1]_{phos} + Deg_{FixJ})[FixJ] \\
 		\\
 		& & \frac{d[FixJ]_{phos}}{dt} = C_{phos}[YF1]_{phos}[FixJ] - (DP_2[FixJ]_{phos} + Deg_{FixJ}[FixJ]) \\
 		\\
-		& & \frac{d[CI]}{dt} = P_2Rbs_1 - Deg_{CI}[CI] \\
+		& & \frac{d[CI]}{dt} = P_2Rbs_{CI} - Deg_{CI}[CI] \\
 		\\
-		& & \frac{d[TetR]}{dt} = (P_A + P_B)Rbs_2 - Deg_{TetR}[TetR]
+		& & \frac{d[TetR]}{dt} = P_ARbs_{TetR_A} + P_BRbs_{TetR_B} - Deg_{TetR}[TetR]
 		\end{eqnarray*}
 	</p>
 
@@ -151,7 +151,7 @@
 	<h3>Rate Coefficients</h3>
 
 	<p>
-		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of the promoters. $Rbs_1$&$Rbs_2$ are the relative strengths of ribosome binding sites, which both affect the mRNA translation rate linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $YF1$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $YF1$. The dephosphorylation here depends on the respective dephosphorylation coefficient $DP$(1&2 for $YF1$ and $FixJ$). Later on, we found out that non-phosphorylated YF1 acts as a phosphatase on FixJ. However, these effects are not taken into account in our model.
+		$P_1$, $P_2$, $P_A$ and $P_B$ denote the relative strengths of the promoters. $Rbs$s are the relative strengths of ribosome binding sites, which both affect the mRNA translation rate linearly. Each protein has its own degradation coefficient (denoted $Deg$). $I_B$ is the combined effect of blue light that affects the phosphorylation of $YF1$. The phosphorylation of $FixJ$ is assumed to depend on phosphorylation coefficient $C_{phos}$ and the concentration of phosphorylated $YF1$. The dephosphorylation here depends on the respective dephosphorylation coefficient $DP$(1&2 for $YF1$ and $FixJ$). Later on, we found out that non-phosphorylated YF1 acts as a phosphatase on FixJ. However, these effects are not taken into account in our model.
 	</p>
 
 	<h3 class="nopaddingbottom">Equations for Promoter Activities</h3>
